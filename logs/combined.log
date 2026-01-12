@@ -1,0 +1,465 @@
+2026-01-09 10:25:19 [INFO]: Database connected successfully
+2026-01-09 10:25:19 [INFO]: Server is running on port 3000 {"port":3000,"env":"development"}
+2026-01-09 10:26:02 [INFO]: Database connected successfully
+2026-01-09 10:26:02 [INFO]: Server is running on port 3000 {"port":3000,"env":"development"}
+{"level":"info","message":"Database connected successfully","timestamp":"2026-01-09 10:28:17"}
+{"env":"development","level":"info","message":"Server is running on port 3000","port":3000,"timestamp":"2026-01-09 10:28:17"}
+{"level":"info","message":"🗄️  Database PostgreSQL connected successfully","timestamp":"2026-01-09 10:28:51"}
+{"apiUrl":"http://localhost:3000/api","env":"development","healthCheck":"http://localhost:3000/api/health","level":"info","message":"🚀 Server started successfully","port":3000,"timestamp":"2026-01-09 10:28:51"}
+{"level":"info","message":"📚 API Documentation available at http://localhost:3000/api","timestamp":"2026-01-09 10:28:51"}
+{"level":"warn","message":"Route not found","method":"GET","path":"/","timestamp":"2026-01-09 10:29:00"}
+{"duration":"10ms","ip":"::1","level":"info","message":"HTTP ⚠️ GET / - 404","method":"GET","path":"/","status":404,"timestamp":"2026-01-09 10:29:00","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"warn","message":"Route not found","method":"GET","path":"/api/auth/signin","timestamp":"2026-01-09 10:29:05"}
+{"duration":"3ms","ip":"::1","level":"info","message":"HTTP ⚠️ GET /api/auth/signin - 404","method":"GET","path":"/api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2F","status":404,"timestamp":"2026-01-09 10:29:05","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"warn","message":"Route not found","method":"GET","path":"/favicon.ico","timestamp":"2026-01-09 10:29:05"}
+{"duration":"2ms","ip":"::1","level":"info","message":"HTTP ⚠️ GET /favicon.ico - 404","method":"GET","path":"/favicon.ico","status":404,"timestamp":"2026-01-09 10:29:05","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"warn","message":"Route not found","method":"GET","path":"/","timestamp":"2026-01-09 10:29:30"}
+{"duration":"3ms","ip":"::1","level":"info","message":"HTTP ⚠️ GET / - 404","method":"GET","path":"/","status":404,"timestamp":"2026-01-09 10:29:30","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"warn","message":"Route not found","method":"GET","path":"/","timestamp":"2026-01-09 10:29:33"}
+{"duration":"2ms","ip":"::1","level":"info","message":"HTTP ⚠️ GET / - 404","method":"GET","path":"/","status":404,"timestamp":"2026-01-09 10:29:33","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"duration":"2ms","ip":"::1","level":"info","message":"HTTP ✅ GET /health - 200","method":"GET","path":"/api/health","status":200,"timestamp":"2026-01-09 10:30:55","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"warn","message":"Route not found","method":"GET","path":"/api","timestamp":"2026-01-09 10:31:02"}
+{"duration":"6ms","ip":"::1","level":"info","message":"HTTP ⚠️ GET /api - 404","method":"GET","path":"/api","status":404,"timestamp":"2026-01-09 10:31:02","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"🗄️  Database PostgreSQL connected successfully","timestamp":"2026-01-09 13:47:05"}
+{"apiUrl":"http://localhost:3000/api","env":"development","healthCheck":"http://localhost:3000/api/health","level":"info","message":"🚀 Server started successfully","port":3000,"timestamp":"2026-01-09 13:47:05"}
+{"level":"info","message":"📚 API Documentation available at http://localhost:3000/api","timestamp":"2026-01-09 13:47:05"}
+{"level":"info","message":"⏰ Scheduler disabled: Set ENABLE_SCHEDULER=true to enable auto-generation","timestamp":"2026-01-09 13:47:05"}
+{"level":"info","message":"🗄️  Database PostgreSQL connected successfully","timestamp":"2026-01-09 13:53:42"}
+{"apiUrl":"http://localhost:3000/api","env":"development","healthCheck":"http://localhost:3000/api/health","level":"info","message":"🚀 Server started successfully","port":3000,"timestamp":"2026-01-09 13:53:42"}
+{"level":"info","message":"📚 API Documentation available at http://localhost:3000/api","timestamp":"2026-01-09 13:53:42"}
+{"level":"info","message":"⏰ Scheduler disabled: Set ENABLE_SCHEDULER=true to enable auto-generation","timestamp":"2026-01-09 13:53:42"}
+{"level":"info","message":"🗄️  Database PostgreSQL connected successfully","timestamp":"2026-01-09 13:58:21"}
+{"apiUrl":"http://localhost:3000/api","env":"development","healthCheck":"http://localhost:3000/api/health","level":"info","message":"🚀 Server started successfully","port":3000,"timestamp":"2026-01-09 13:58:21"}
+{"level":"info","message":"📚 API Documentation available at http://localhost:3000/api","timestamp":"2026-01-09 13:58:21"}
+{"level":"info","message":"⏰ Scheduler disabled: Set ENABLE_SCHEDULER=true to enable auto-generation","timestamp":"2026-01-09 13:58:21"}
+{"level":"info","message":"🗄️  Database PostgreSQL connected successfully","timestamp":"2026-01-09 14:02:38"}
+{"apiUrl":"http://localhost:3000/api","env":"development","healthCheck":"http://localhost:3000/api/health","level":"info","message":"🚀 Server started successfully","port":3000,"timestamp":"2026-01-09 14:02:38"}
+{"level":"info","message":"📚 API Documentation available at http://localhost:3000/api","timestamp":"2026-01-09 14:02:38"}
+{"level":"info","message":"⏰ Scheduler disabled: Set ENABLE_SCHEDULER=true to enable auto-generation","timestamp":"2026-01-09 14:02:38"}
+{"level":"warn","message":"Route not found","method":"GET","path":"/_next/webpack-hmr","timestamp":"2026-01-09 14:02:39"}
+{"duration":"20ms","ip":"::ffff:127.0.0.1","level":"info","message":"HTTP ⚠️ GET /_next/webpack-hmr - 404","method":"GET","path":"/_next/webpack-hmr","status":404,"timestamp":"2026-01-09 14:02:39","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"🗄️  Database PostgreSQL connected successfully","timestamp":"2026-01-09 14:04:56"}
+{"apiUrl":"http://localhost:3000/api","env":"development","healthCheck":"http://localhost:3000/api/health","level":"info","message":"🚀 Server started successfully","port":3000,"timestamp":"2026-01-09 14:04:56"}
+{"level":"info","message":"📚 API Documentation available at http://localhost:3000/api","timestamp":"2026-01-09 14:04:56"}
+{"level":"info","message":"⏰ Scheduler disabled: Set ENABLE_SCHEDULER=true to enable auto-generation","timestamp":"2026-01-09 14:04:56"}
+{"level":"info","message":"🗄️  Database PostgreSQL connected successfully","timestamp":"2026-01-09 14:07:51"}
+{"apiUrl":"http://localhost:3000/api","env":"development","healthCheck":"http://localhost:3000/api/health","level":"info","message":"🚀 Server started successfully","port":3000,"timestamp":"2026-01-09 14:07:51"}
+{"level":"info","message":"📚 API Documentation available at http://localhost:3000/api","timestamp":"2026-01-09 14:07:51"}
+{"level":"info","message":"⏰ Scheduler disabled: Set ENABLE_SCHEDULER=true to enable auto-generation","timestamp":"2026-01-09 14:07:51"}
+{"level":"warn","message":"Route not found","method":"GET","path":"/karyawan","timestamp":"2026-01-09 14:08:08"}
+{"duration":"37ms","ip":"::1","level":"info","message":"HTTP ⚠️ GET /karyawan - 404","method":"GET","path":"/karyawan","status":404,"timestamp":"2026-01-09 14:08:08","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"warn","message":"Route not found","method":"GET","path":"/favicon.ico","timestamp":"2026-01-09 14:08:08"}
+{"duration":"8ms","ip":"::1","level":"info","message":"HTTP ⚠️ GET /favicon.ico - 404","method":"GET","path":"/favicon.ico","status":404,"timestamp":"2026-01-09 14:08:08","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"🗄️  Database PostgreSQL connected successfully","timestamp":"2026-01-09 14:27:28"}
+{"apiUrl":"http://localhost:3000/api","env":"development","healthCheck":"http://localhost:3000/api/health","level":"info","message":"🚀 Server started successfully","port":3000,"timestamp":"2026-01-09 14:27:28"}
+{"level":"info","message":"📚 API Documentation available at http://localhost:3000/api","timestamp":"2026-01-09 14:27:28"}
+{"level":"info","message":"⏰ Scheduler disabled: Set ENABLE_SCHEDULER=true to enable auto-generation","timestamp":"2026-01-09 14:27:28"}
+{"level":"info","message":"KaryawanController: Get all karyawan request","query":{},"timestamp":"2026-01-09 14:28:25"}
+{"level":"info","message":"KaryawanAgent: Fetching all karyawan","timestamp":"2026-01-09 14:28:25"}
+{"level":"info","message":"CutiTahunanController: Get rekap cuti tahunan","query":{"tahun":"2026"},"timestamp":"2026-01-09 14:28:25"}
+{"level":"info","message":"CutiTahunanAgent: Fetching rekap cuti tahunan","tahun":2026,"timestamp":"2026-01-09 14:28:25"}
+{"level":"info","message":"CutiController: Get all cuti","query":{"bulan":"1","tahun":"2026"},"timestamp":"2026-01-09 14:28:25"}
+{"level":"info","limit":20,"message":"CutiAgent: Fetching cuti list","page":1,"tahun":2026,"timestamp":"2026-01-09 14:28:25"}
+{"count":0,"level":"info","message":"KaryawanAgent: Fetched karyawan","timestamp":"2026-01-09 14:28:25"}
+{"duration":"306ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/karyawan","status":200,"timestamp":"2026-01-09 14:28:25","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"count":0,"level":"info","message":"CutiTahunanAgent: Rekap fetched","timestamp":"2026-01-09 14:28:25"}
+{"duration":"227ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti-tahunan?tahun=2026","status":200,"timestamp":"2026-01-09 14:28:25","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"count":0,"level":"info","message":"CutiAgent: Cuti list fetched","timestamp":"2026-01-09 14:28:25","total":0}
+{"duration":"209ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti?bulan=1&tahun=2026","status":200,"timestamp":"2026-01-09 14:28:25","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"KaryawanController: Get all karyawan request","query":{},"timestamp":"2026-01-09 14:31:01"}
+{"level":"info","message":"KaryawanAgent: Fetching all karyawan","timestamp":"2026-01-09 14:31:01"}
+{"level":"info","message":"CutiTahunanController: Get rekap cuti tahunan","query":{"tahun":"2026"},"timestamp":"2026-01-09 14:31:01"}
+{"level":"info","message":"CutiTahunanAgent: Fetching rekap cuti tahunan","tahun":2026,"timestamp":"2026-01-09 14:31:01"}
+{"count":0,"level":"info","message":"KaryawanAgent: Fetched karyawan","timestamp":"2026-01-09 14:31:01"}
+{"duration":"111ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/karyawan","status":200,"timestamp":"2026-01-09 14:31:01","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"count":0,"level":"info","message":"CutiTahunanAgent: Rekap fetched","timestamp":"2026-01-09 14:31:01"}
+{"duration":"113ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti-tahunan?tahun=2026","status":200,"timestamp":"2026-01-09 14:31:01","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"CutiController: Get all cuti","query":{"bulan":"1","tahun":"2026"},"timestamp":"2026-01-09 14:31:58"}
+{"level":"info","limit":20,"message":"CutiAgent: Fetching cuti list","page":1,"tahun":2026,"timestamp":"2026-01-09 14:31:58"}
+{"count":0,"level":"info","message":"CutiAgent: Cuti list fetched","timestamp":"2026-01-09 14:31:58","total":0}
+{"duration":"409ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti?bulan=1&tahun=2026","status":200,"timestamp":"2026-01-09 14:31:58","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"CutiController: Get all cuti","query":{"bulan":"1","tahun":"2026"},"timestamp":"2026-01-09 14:34:18"}
+{"level":"info","limit":20,"message":"CutiAgent: Fetching cuti list","page":1,"tahun":2026,"timestamp":"2026-01-09 14:34:18"}
+{"count":0,"level":"info","message":"CutiAgent: Cuti list fetched","timestamp":"2026-01-09 14:34:18","total":0}
+{"duration":"117ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti?bulan=1&tahun=2026","status":200,"timestamp":"2026-01-09 14:34:18","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"KaryawanController: Get all karyawan request","query":{},"timestamp":"2026-01-09 14:37:25"}
+{"level":"info","message":"KaryawanAgent: Fetching all karyawan","timestamp":"2026-01-09 14:37:25"}
+{"level":"info","message":"CutiTahunanController: Get rekap cuti tahunan","query":{"tahun":"2026"},"timestamp":"2026-01-09 14:37:25"}
+{"level":"info","message":"CutiTahunanAgent: Fetching rekap cuti tahunan","tahun":2026,"timestamp":"2026-01-09 14:37:25"}
+{"level":"info","message":"CutiController: Get all cuti","query":{"bulan":"1","tahun":"2026"},"timestamp":"2026-01-09 14:37:25"}
+{"level":"info","limit":20,"message":"CutiAgent: Fetching cuti list","page":1,"tahun":2026,"timestamp":"2026-01-09 14:37:25"}
+{"count":0,"level":"info","message":"KaryawanAgent: Fetched karyawan","timestamp":"2026-01-09 14:37:25"}
+{"duration":"121ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/karyawan","status":200,"timestamp":"2026-01-09 14:37:25","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"count":0,"level":"info","message":"CutiTahunanAgent: Rekap fetched","timestamp":"2026-01-09 14:37:25"}
+{"duration":"126ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti-tahunan?tahun=2026","status":200,"timestamp":"2026-01-09 14:37:25","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"count":0,"level":"info","message":"CutiAgent: Cuti list fetched","timestamp":"2026-01-09 14:37:25","total":0}
+{"duration":"156ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti?bulan=1&tahun=2026","status":200,"timestamp":"2026-01-09 14:37:25","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"CutiController: Get all cuti","query":{"bulan":"1","tahun":"2026"},"timestamp":"2026-01-09 14:39:58"}
+{"level":"info","limit":20,"message":"CutiAgent: Fetching cuti list","page":1,"tahun":2026,"timestamp":"2026-01-09 14:39:58"}
+{"count":0,"level":"info","message":"CutiAgent: Cuti list fetched","timestamp":"2026-01-09 14:39:58","total":0}
+{"duration":"202ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti?bulan=1&tahun=2026","status":200,"timestamp":"2026-01-09 14:39:58","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"CutiController: Get all cuti","query":{"bulan":"1","tahun":"2026"},"timestamp":"2026-01-09 14:40:50"}
+{"level":"info","limit":20,"message":"CutiAgent: Fetching cuti list","page":1,"tahun":2026,"timestamp":"2026-01-09 14:40:50"}
+{"count":0,"level":"info","message":"CutiAgent: Cuti list fetched","timestamp":"2026-01-09 14:40:51","total":0}
+{"duration":"124ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti?bulan=1&tahun=2026","status":200,"timestamp":"2026-01-09 14:40:51","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"KaryawanController: Get all karyawan request","query":{},"timestamp":"2026-01-09 14:41:45"}
+{"level":"info","message":"KaryawanAgent: Fetching all karyawan","timestamp":"2026-01-09 14:41:45"}
+{"level":"info","message":"CutiTahunanController: Get rekap cuti tahunan","query":{"tahun":"2026"},"timestamp":"2026-01-09 14:41:45"}
+{"level":"info","message":"CutiTahunanAgent: Fetching rekap cuti tahunan","tahun":2026,"timestamp":"2026-01-09 14:41:45"}
+{"count":0,"level":"info","message":"KaryawanAgent: Fetched karyawan","timestamp":"2026-01-09 14:41:45"}
+{"duration":"123ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/karyawan","status":200,"timestamp":"2026-01-09 14:41:45","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"count":0,"level":"info","message":"CutiTahunanAgent: Rekap fetched","timestamp":"2026-01-09 14:41:45"}
+{"duration":"109ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti-tahunan?tahun=2026","status":200,"timestamp":"2026-01-09 14:41:45","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"CutiController: Get all cuti","query":{"bulan":"1","status":"APPROVED","tahun":"2026"},"timestamp":"2026-01-09 14:41:49"}
+{"level":"info","limit":20,"message":"CutiAgent: Fetching cuti list","page":1,"tahun":2026,"timestamp":"2026-01-09 14:41:49"}
+{"count":0,"level":"info","message":"CutiAgent: Cuti list fetched","timestamp":"2026-01-09 14:41:49","total":0}
+{"duration":"17ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti?status=APPROVED&bulan=1&tahun=2026","status":200,"timestamp":"2026-01-09 14:41:49","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"CutiController: Get all cuti","query":{"bulan":"1","tahun":"2026"},"timestamp":"2026-01-09 14:41:51"}
+{"level":"info","limit":20,"message":"CutiAgent: Fetching cuti list","page":1,"tahun":2026,"timestamp":"2026-01-09 14:41:51"}
+{"count":0,"level":"info","message":"CutiAgent: Cuti list fetched","timestamp":"2026-01-09 14:41:51","total":0}
+{"duration":"10ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti?bulan=1&tahun=2026","status":200,"timestamp":"2026-01-09 14:41:51","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"body":{"alamat":"dsn. iasdasnda","email":"arssy@sundaya.com","jabatan":"IT","nama":"Test 1","nik":"AJB451","no_hp":"089683801781","status_karyawan":"AKTIF","tanggal_bergabung":"2025-04-16"},"level":"info","message":"KaryawanController: Create karyawan request","timestamp":"2026-01-09 14:43:12"}
+{"level":"error","message":"[ErrorHandler] [\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"tanggalMasuk\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  }\n]","stack":"ZodError: [\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"tanggalMasuk\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  }\n]\n    at KaryawanController.create (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\src\\controllers\\karyawan.controller.ts:36:50)\n    at <anonymous> (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\src\\routes\\karyawan.routes.ts:12:57)\n    at Layer.handleRequest (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\node_modules\\router\\lib\\route.js:157:13)\n    at Route.dispatch (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\node_modules\\router\\lib\\route.js:117:3)\n    at handle (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\node_modules\\router\\index.js:435:11)\n    at Layer.handleRequest (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\node_modules\\router\\lib\\layer.js:152:17)\n    at C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\node_modules\\router\\index.js:295:15\n    at processParams (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\node_modules\\router\\index.js:582:12)\n    at next (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\node_modules\\router\\index.js:291:5)","timestamp":"2026-01-09 14:43:12"}
+{"errors":[{"field":"tanggalMasuk","message":"Invalid input: expected string, received undefined"}],"level":"warn","message":"Validation error occurred","method":"POST","path":"/api/karyawan","timestamp":"2026-01-09 14:43:12"}
+{"duration":"21ms","ip":"::1","level":"info","message":"HTTP ⚠️ POST /api/karyawan - 400","method":"POST","path":"/api/karyawan","status":400,"timestamp":"2026-01-09 14:43:12","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"🗄️  Database PostgreSQL connected successfully","timestamp":"2026-01-09 14:45:31"}
+{"apiUrl":"http://localhost:3000/api","env":"development","healthCheck":"http://localhost:3000/api/health","level":"info","message":"🚀 Server started successfully","port":3000,"timestamp":"2026-01-09 14:45:31"}
+{"level":"info","message":"📚 API Documentation available at http://localhost:3000/api","timestamp":"2026-01-09 14:45:31"}
+{"level":"info","message":"⏰ Scheduler disabled: Set ENABLE_SCHEDULER=true to enable auto-generation","timestamp":"2026-01-09 14:45:31"}
+{"level":"info","message":"🗄️  Database PostgreSQL connected successfully","timestamp":"2026-01-09 14:45:55"}
+{"apiUrl":"http://localhost:3000/api","env":"development","healthCheck":"http://localhost:3000/api/health","level":"info","message":"🚀 Server started successfully","port":3000,"timestamp":"2026-01-09 14:45:55"}
+{"level":"info","message":"📚 API Documentation available at http://localhost:3000/api","timestamp":"2026-01-09 14:45:55"}
+{"level":"info","message":"⏰ Scheduler disabled: Set ENABLE_SCHEDULER=true to enable auto-generation","timestamp":"2026-01-09 14:45:55"}
+{"body":{"alamat":"dsn. iasdasnda","email":"arssykerja@gmail.com","jabatan":"IT","nama":"Test 1","nik":"AJB451","no_hp":"089683801781","status_karyawan":"AKTIF","tanggal_bergabung":"2026-01-09"},"level":"info","message":"KaryawanController: Create karyawan request","timestamp":"2026-01-09 14:46:09"}
+{"level":"error","message":"[ErrorHandler] [\n  {\n    \"origin\": \"string\",\n    \"code\": \"invalid_format\",\n    \"format\": \"datetime\",\n    \"pattern\": \"/^(?:(?:\\\\d\\\\d[2468][048]|\\\\d\\\\d[13579][26]|\\\\d\\\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\\\d|30)|(?:02)-(?:0[1-9]|1\\\\d|2[0-8])))T(?:(?:[01]\\\\d|2[0-3]):[0-5]\\\\d(?::[0-5]\\\\d(?:\\\\.\\\\d+)?)?(?:Z))$/\",\n    \"path\": [\n      \"tanggal_bergabung\"\n    ],\n    \"message\": \"Format tanggal tidak valid\"\n  }\n]","stack":"ZodError: [\n  {\n    \"origin\": \"string\",\n    \"code\": \"invalid_format\",\n    \"format\": \"datetime\",\n    \"pattern\": \"/^(?:(?:\\\\d\\\\d[2468][048]|\\\\d\\\\d[13579][26]|\\\\d\\\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\\\d|30)|(?:02)-(?:0[1-9]|1\\\\d|2[0-8])))T(?:(?:[01]\\\\d|2[0-3]):[0-5]\\\\d(?::[0-5]\\\\d(?:\\\\.\\\\d+)?)?(?:Z))$/\",\n    \"path\": [\n      \"tanggal_bergabung\"\n    ],\n    \"message\": \"Format tanggal tidak valid\"\n  }\n]\n    at KaryawanController.create (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\src\\controllers\\karyawan.controller.ts:41:50)\n    at <anonymous> (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\src\\routes\\karyawan.routes.ts:12:57)\n    at Layer.handleRequest (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\node_modules\\router\\lib\\route.js:157:13)\n    at Route.dispatch (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\node_modules\\router\\lib\\route.js:117:3)\n    at handle (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\node_modules\\router\\index.js:435:11)\n    at Layer.handleRequest (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\node_modules\\router\\lib\\layer.js:152:17)\n    at C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\node_modules\\router\\index.js:295:15\n    at processParams (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\node_modules\\router\\index.js:582:12)\n    at next (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\node_modules\\router\\index.js:291:5)","timestamp":"2026-01-09 14:46:09"}
+{"errors":[{"field":"tanggal_bergabung","message":"Format tanggal tidak valid"}],"level":"warn","message":"Validation error occurred","method":"POST","path":"/api/karyawan","timestamp":"2026-01-09 14:46:09"}
+{"duration":"17ms","ip":"::1","level":"info","message":"HTTP ⚠️ POST /api/karyawan - 400","method":"POST","path":"/api/karyawan","status":400,"timestamp":"2026-01-09 14:46:09","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"🗄️  Database PostgreSQL connected successfully","timestamp":"2026-01-09 14:46:55"}
+{"apiUrl":"http://localhost:3000/api","env":"development","healthCheck":"http://localhost:3000/api/health","level":"info","message":"🚀 Server started successfully","port":3000,"timestamp":"2026-01-09 14:46:55"}
+{"level":"info","message":"📚 API Documentation available at http://localhost:3000/api","timestamp":"2026-01-09 14:46:55"}
+{"level":"info","message":"⏰ Scheduler disabled: Set ENABLE_SCHEDULER=true to enable auto-generation","timestamp":"2026-01-09 14:46:55"}
+{"body":{"alamat":"dsn. iasdasnda","email":"arssykerja@gmail.com","jabatan":"IT","nama":"Test 1","nik":"AJB451","no_hp":"089683801781","status_karyawan":"AKTIF","tanggalMasuk":"2026-01-09"},"level":"info","message":"KaryawanController: Create karyawan request","timestamp":"2026-01-09 14:53:35"}
+{"level":"error","message":"[ErrorHandler] [\n  {\n    \"origin\": \"string\",\n    \"code\": \"invalid_format\",\n    \"format\": \"datetime\",\n    \"pattern\": \"/^(?:(?:\\\\d\\\\d[2468][048]|\\\\d\\\\d[13579][26]|\\\\d\\\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\\\d|30)|(?:02)-(?:0[1-9]|1\\\\d|2[0-8])))T(?:(?:[01]\\\\d|2[0-3]):[0-5]\\\\d(?::[0-5]\\\\d(?:\\\\.\\\\d+)?)?(?:Z))$/\",\n    \"path\": [\n      \"tanggalMasuk\"\n    ],\n    \"message\": \"Format tanggal tidak valid\"\n  }\n]","stack":"ZodError: [\n  {\n    \"origin\": \"string\",\n    \"code\": \"invalid_format\",\n    \"format\": \"datetime\",\n    \"pattern\": \"/^(?:(?:\\\\d\\\\d[2468][048]|\\\\d\\\\d[13579][26]|\\\\d\\\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\\\d|30)|(?:02)-(?:0[1-9]|1\\\\d|2[0-8])))T(?:(?:[01]\\\\d|2[0-3]):[0-5]\\\\d(?::[0-5]\\\\d(?:\\\\.\\\\d+)?)?(?:Z))$/\",\n    \"path\": [\n      \"tanggalMasuk\"\n    ],\n    \"message\": \"Format tanggal tidak valid\"\n  }\n]\n    at KaryawanController.create (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\src\\controllers\\karyawan.controller.ts:41:50)\n    at <anonymous> (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\src\\routes\\karyawan.routes.ts:12:57)\n    at Layer.handleRequest (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\node_modules\\router\\lib\\route.js:157:13)\n    at Route.dispatch (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\node_modules\\router\\lib\\route.js:117:3)\n    at handle (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\node_modules\\router\\index.js:435:11)\n    at Layer.handleRequest (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\node_modules\\router\\lib\\layer.js:152:17)\n    at C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\node_modules\\router\\index.js:295:15\n    at processParams (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\node_modules\\router\\index.js:582:12)\n    at next (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\node_modules\\router\\index.js:291:5)","timestamp":"2026-01-09 14:53:35"}
+{"errors":[{"field":"tanggalMasuk","message":"Format tanggal tidak valid"}],"level":"warn","message":"Validation error occurred","method":"POST","path":"/api/karyawan","timestamp":"2026-01-09 14:53:35"}
+{"duration":"14ms","ip":"::1","level":"info","message":"HTTP ⚠️ POST /api/karyawan - 400","method":"POST","path":"/api/karyawan","status":400,"timestamp":"2026-01-09 14:53:35","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"CutiController: Get all cuti","query":{"tahun":"2026"},"timestamp":"2026-01-09 15:13:25"}
+{"level":"info","limit":20,"message":"CutiAgent: Fetching cuti list","page":1,"tahun":2026,"timestamp":"2026-01-09 15:13:25"}
+{"level":"info","message":"KaryawanController: Get all karyawan request","query":{},"timestamp":"2026-01-09 15:13:25"}
+{"level":"info","message":"KaryawanAgent: Fetching all karyawan","timestamp":"2026-01-09 15:13:25"}
+{"level":"info","message":"CutiTahunanController: Get rekap cuti tahunan","query":{"tahun":"2026"},"timestamp":"2026-01-09 15:13:25"}
+{"level":"info","message":"CutiTahunanAgent: Fetching rekap cuti tahunan","tahun":2026,"timestamp":"2026-01-09 15:13:25"}
+{"count":0,"level":"info","message":"KaryawanAgent: Fetched karyawan","timestamp":"2026-01-09 15:13:25"}
+{"duration":"174ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/karyawan","status":200,"timestamp":"2026-01-09 15:13:25","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"count":0,"level":"info","message":"CutiTahunanAgent: Rekap fetched","timestamp":"2026-01-09 15:13:25"}
+{"duration":"173ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti-tahunan?tahun=2026","status":200,"timestamp":"2026-01-09 15:13:25","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"count":0,"level":"info","message":"CutiAgent: Cuti list fetched","timestamp":"2026-01-09 15:13:25","total":0}
+{"duration":"309ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti?tahun=2026","status":200,"timestamp":"2026-01-09 15:13:25","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"body":{"departemen":"IT","jabatan":"IT","nama":"Test 1","nik":"AJB451","tanggalMasuk":"2026-01-09"},"level":"info","message":"KaryawanController: Create karyawan request","timestamp":"2026-01-09 15:13:41"}
+{"level":"error","message":"[ErrorHandler] [\n  {\n    \"origin\": \"string\",\n    \"code\": \"invalid_format\",\n    \"format\": \"datetime\",\n    \"pattern\": \"/^(?:(?:\\\\d\\\\d[2468][048]|\\\\d\\\\d[13579][26]|\\\\d\\\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\\\d|30)|(?:02)-(?:0[1-9]|1\\\\d|2[0-8])))T(?:(?:[01]\\\\d|2[0-3]):[0-5]\\\\d(?::[0-5]\\\\d(?:\\\\.\\\\d+)?)?(?:Z))$/\",\n    \"path\": [\n      \"tanggalMasuk\"\n    ],\n    \"message\": \"Format tanggal tidak valid\"\n  }\n]","stack":"ZodError: [\n  {\n    \"origin\": \"string\",\n    \"code\": \"invalid_format\",\n    \"format\": \"datetime\",\n    \"pattern\": \"/^(?:(?:\\\\d\\\\d[2468][048]|\\\\d\\\\d[13579][26]|\\\\d\\\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\\\d|30)|(?:02)-(?:0[1-9]|1\\\\d|2[0-8])))T(?:(?:[01]\\\\d|2[0-3]):[0-5]\\\\d(?::[0-5]\\\\d(?:\\\\.\\\\d+)?)?(?:Z))$/\",\n    \"path\": [\n      \"tanggalMasuk\"\n    ],\n    \"message\": \"Format tanggal tidak valid\"\n  }\n]\n    at KaryawanController.create (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\src\\controllers\\karyawan.controller.ts:41:50)\n    at <anonymous> (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\src\\routes\\karyawan.routes.ts:12:57)\n    at Layer.handleRequest (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\node_modules\\router\\lib\\route.js:157:13)\n    at Route.dispatch (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\node_modules\\router\\lib\\route.js:117:3)\n    at handle (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\node_modules\\router\\index.js:435:11)\n    at Layer.handleRequest (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\node_modules\\router\\lib\\layer.js:152:17)\n    at C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\node_modules\\router\\index.js:295:15\n    at processParams (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\node_modules\\router\\index.js:582:12)\n    at next (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\node_modules\\router\\index.js:291:5)","timestamp":"2026-01-09 15:13:41"}
+{"errors":[{"field":"tanggalMasuk","message":"Format tanggal tidak valid"}],"level":"warn","message":"Validation error occurred","method":"POST","path":"/api/karyawan","timestamp":"2026-01-09 15:13:41"}
+{"duration":"4ms","ip":"::1","level":"info","message":"HTTP ⚠️ POST /api/karyawan - 400","method":"POST","path":"/api/karyawan","status":400,"timestamp":"2026-01-09 15:13:41","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"body":{"departemen":"IT","jabatan":"IT","nama":"Test 1","nik":"AJB451","tanggalMasuk":"2026-01-09T00:00:00.000Z"},"level":"info","message":"KaryawanController: Create karyawan request","timestamp":"2026-01-09 16:03:40"}
+{"level":"info","message":"KaryawanAgent: Creating new karyawan","nik":"AJB451","timestamp":"2026-01-09 16:03:40"}
+{"id":"d9b25131-372c-4bbc-b52f-f176ffe9cd1e","level":"info","message":"KaryawanAgent: Karyawan created successfully","nik":"AJB451","timestamp":"2026-01-09 16:03:40"}
+{"duration":"99ms","ip":"::1","level":"info","message":"HTTP ✅ POST / - 201","method":"POST","path":"/api/karyawan","status":201,"timestamp":"2026-01-09 16:03:40","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"KaryawanController: Get all karyawan request","query":{},"timestamp":"2026-01-09 16:03:40"}
+{"level":"info","message":"KaryawanAgent: Fetching all karyawan","timestamp":"2026-01-09 16:03:40"}
+{"count":1,"level":"info","message":"KaryawanAgent: Fetched karyawan","timestamp":"2026-01-09 16:03:40"}
+{"duration":"36ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/karyawan","status":200,"timestamp":"2026-01-09 16:03:40","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"CutiTahunanController: Get rekap cuti tahunan","query":{"tahun":"2026"},"timestamp":"2026-01-09 16:03:43"}
+{"level":"info","message":"CutiTahunanAgent: Fetching rekap cuti tahunan","tahun":2026,"timestamp":"2026-01-09 16:03:43"}
+{"count":0,"level":"info","message":"CutiTahunanAgent: Rekap fetched","timestamp":"2026-01-09 16:03:44"}
+{"duration":"29ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti-tahunan?tahun=2026","status":200,"timestamp":"2026-01-09 16:03:44","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"body":{"karyawanId":"d9b25131-372c-4bbc-b52f-f176ffe9cd1e","tahun":2026},"level":"info","message":"CutiTahunanController: Generate cuti tahunan request","timestamp":"2026-01-09 16:04:06"}
+{"karyawanId":"d9b25131-372c-4bbc-b52f-f176ffe9cd1e","level":"info","message":"CutiTahunanAgent: Generating cuti tahunan","tahun":2026,"timestamp":"2026-01-09 16:04:06"}
+{"carryForward":0,"id":"20b82a04-f3f2-40e0-98dd-f0da8193d59d","jatahDasar":12,"karyawanId":"d9b25131-372c-4bbc-b52f-f176ffe9cd1e","level":"info","message":"CutiTahunanAgent: Cuti tahunan generated","tahun":2026,"timestamp":"2026-01-09 16:04:06","totalHakCuti":12}
+{"duration":"100ms","ip":"::1","level":"info","message":"HTTP ✅ POST /generate - 201","method":"POST","path":"/api/cuti-tahunan/generate","status":201,"timestamp":"2026-01-09 16:04:07","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"CutiTahunanController: Get rekap cuti tahunan","query":{"tahun":"2026"},"timestamp":"2026-01-09 16:04:07"}
+{"level":"info","message":"CutiTahunanAgent: Fetching rekap cuti tahunan","tahun":2026,"timestamp":"2026-01-09 16:04:07"}
+{"count":1,"level":"info","message":"CutiTahunanAgent: Rekap fetched","timestamp":"2026-01-09 16:04:07"}
+{"duration":"18ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti-tahunan?tahun=2026","status":200,"timestamp":"2026-01-09 16:04:07","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"id":"20b82a04-f3f2-40e0-98dd-f0da8193d59d","level":"info","message":"CutiTahunanController: Get cuti tahunan by ID","timestamp":"2026-01-09 16:04:17"}
+{"id":"20b82a04-f3f2-40e0-98dd-f0da8193d59d","level":"info","message":"CutiTahunanAgent: Fetching cuti tahunan by ID","timestamp":"2026-01-09 16:04:17"}
+{"level":"info","message":"CutiController: Get all cuti","query":{},"timestamp":"2026-01-09 16:04:17"}
+{"level":"info","limit":20,"message":"CutiAgent: Fetching cuti list","page":1,"timestamp":"2026-01-09 16:04:17"}
+{"count":0,"level":"info","message":"CutiAgent: Cuti list fetched","timestamp":"2026-01-09 16:04:17","total":0}
+{"duration":"174ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti","status":200,"timestamp":"2026-01-09 16:04:17","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"duration":"327ms","ip":"::1","level":"info","message":"HTTP ✅ GET /20b82a04-f3f2-40e0-98dd-f0da8193d59d - 200","method":"GET","path":"/api/cuti-tahunan/20b82a04-f3f2-40e0-98dd-f0da8193d59d","status":200,"timestamp":"2026-01-09 16:04:17","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"CutiController: Get all cuti","query":{"karyawanId":"d9b25131-372c-4bbc-b52f-f176ffe9cd1e","tahun":"2026"},"timestamp":"2026-01-09 16:04:17"}
+{"karyawanId":"d9b25131-372c-4bbc-b52f-f176ffe9cd1e","level":"info","limit":20,"message":"CutiAgent: Fetching cuti list","page":1,"tahun":2026,"timestamp":"2026-01-09 16:04:17"}
+{"count":0,"level":"info","message":"CutiAgent: Cuti list fetched","timestamp":"2026-01-09 16:04:17","total":0}
+{"duration":"16ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti?karyawanId=d9b25131-372c-4bbc-b52f-f176ffe9cd1e&tahun=2026","status":200,"timestamp":"2026-01-09 16:04:17","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"CutiController: Get all cuti","query":{"tahun":"2026"},"timestamp":"2026-01-09 16:04:28"}
+{"level":"info","limit":20,"message":"CutiAgent: Fetching cuti list","page":1,"tahun":2026,"timestamp":"2026-01-09 16:04:28"}
+{"count":0,"level":"info","message":"CutiAgent: Cuti list fetched","timestamp":"2026-01-09 16:04:28","total":0}
+{"duration":"106ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti?tahun=2026","status":200,"timestamp":"2026-01-09 16:04:28","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"CutiTahunanController: Get rekap cuti tahunan","query":{"karyawanId":"d9b25131-372c-4bbc-b52f-f176ffe9cd1e","tahun":"2026"},"timestamp":"2026-01-09 16:04:31"}
+{"karyawanId":"d9b25131-372c-4bbc-b52f-f176ffe9cd1e","level":"info","message":"CutiTahunanAgent: Fetching rekap cuti tahunan","tahun":2026,"timestamp":"2026-01-09 16:04:31"}
+{"count":1,"level":"info","message":"CutiTahunanAgent: Rekap fetched","timestamp":"2026-01-09 16:04:31"}
+{"duration":"17ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti-tahunan?tahun=2026&karyawanId=d9b25131-372c-4bbc-b52f-f176ffe9cd1e","status":200,"timestamp":"2026-01-09 16:04:31","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"body":{"alasan":"testing","jenis":"TAHUNAN","karyawanId":"d9b25131-372c-4bbc-b52f-f176ffe9cd1e","tanggalMulai":"2026-01-09T00:00:00.000Z","tanggalSelesai":"2026-01-12T00:00:00.000Z"},"level":"info","message":"CutiController: Create cuti request","timestamp":"2026-01-09 16:05:42"}
+{"jenis":"TAHUNAN","karyawanId":"d9b25131-372c-4bbc-b52f-f176ffe9cd1e","level":"info","message":"CutiAgent: Creating new cuti","timestamp":"2026-01-09 16:05:42"}
+{"karyawanId":"d9b25131-372c-4bbc-b52f-f176ffe9cd1e","level":"info","message":"CutiTahunanAgent: Fetching cuti tahunan","tahun":2026,"timestamp":"2026-01-09 16:05:42"}
+{"id":"ab38fe8c-adc0-4f9a-85c2-1d94aa68ca31","jenis":"TAHUNAN","jumlahHari":2,"karyawanId":"d9b25131-372c-4bbc-b52f-f176ffe9cd1e","level":"info","message":"CutiAgent: Cuti created successfully","timestamp":"2026-01-09 16:05:42"}
+{"duration":"129ms","ip":"::1","level":"info","message":"HTTP ✅ POST / - 201","method":"POST","path":"/api/cuti","status":201,"timestamp":"2026-01-09 16:05:42","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"CutiTahunanController: Get rekap cuti tahunan","query":{"karyawanId":"d9b25131-372c-4bbc-b52f-f176ffe9cd1e","tahun":"2026"},"timestamp":"2026-01-09 16:05:42"}
+{"karyawanId":"d9b25131-372c-4bbc-b52f-f176ffe9cd1e","level":"info","message":"CutiTahunanAgent: Fetching rekap cuti tahunan","tahun":2026,"timestamp":"2026-01-09 16:05:42"}
+{"count":1,"level":"info","message":"CutiTahunanAgent: Rekap fetched","timestamp":"2026-01-09 16:05:42"}
+{"duration":"16ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti-tahunan?tahun=2026&karyawanId=d9b25131-372c-4bbc-b52f-f176ffe9cd1e","status":200,"timestamp":"2026-01-09 16:05:42","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"CutiController: Get all cuti","query":{"tahun":"2026"},"timestamp":"2026-01-09 16:05:42"}
+{"level":"info","limit":20,"message":"CutiAgent: Fetching cuti list","page":1,"tahun":2026,"timestamp":"2026-01-09 16:05:42"}
+{"count":1,"level":"info","message":"CutiAgent: Cuti list fetched","timestamp":"2026-01-09 16:05:42","total":1}
+{"duration":"84ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti?tahun=2026","status":200,"timestamp":"2026-01-09 16:05:42","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"KaryawanController: Get all karyawan request","query":{},"timestamp":"2026-01-09 16:06:00"}
+{"level":"info","message":"KaryawanAgent: Fetching all karyawan","timestamp":"2026-01-09 16:06:00"}
+{"level":"info","message":"CutiTahunanController: Get rekap cuti tahunan","query":{"tahun":"2026"},"timestamp":"2026-01-09 16:06:00"}
+{"level":"info","message":"CutiTahunanAgent: Fetching rekap cuti tahunan","tahun":2026,"timestamp":"2026-01-09 16:06:00"}
+{"count":1,"level":"info","message":"KaryawanAgent: Fetched karyawan","timestamp":"2026-01-09 16:06:00"}
+{"duration":"82ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/karyawan","status":200,"timestamp":"2026-01-09 16:06:00","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"count":1,"level":"info","message":"CutiTahunanAgent: Rekap fetched","timestamp":"2026-01-09 16:06:00"}
+{"duration":"86ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti-tahunan?tahun=2026","status":200,"timestamp":"2026-01-09 16:06:00","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"id":"20b82a04-f3f2-40e0-98dd-f0da8193d59d","level":"info","message":"CutiTahunanController: Get cuti tahunan by ID","timestamp":"2026-01-09 16:06:06"}
+{"id":"20b82a04-f3f2-40e0-98dd-f0da8193d59d","level":"info","message":"CutiTahunanAgent: Fetching cuti tahunan by ID","timestamp":"2026-01-09 16:06:06"}
+{"level":"info","message":"CutiController: Get all cuti","query":{"karyawanId":"d9b25131-372c-4bbc-b52f-f176ffe9cd1e","tahun":"2026"},"timestamp":"2026-01-09 16:06:06"}
+{"karyawanId":"d9b25131-372c-4bbc-b52f-f176ffe9cd1e","level":"info","limit":20,"message":"CutiAgent: Fetching cuti list","page":1,"tahun":2026,"timestamp":"2026-01-09 16:06:06"}
+{"count":1,"level":"info","message":"CutiAgent: Cuti list fetched","timestamp":"2026-01-09 16:06:06","total":1}
+{"duration":"75ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti?karyawanId=d9b25131-372c-4bbc-b52f-f176ffe9cd1e&tahun=2026","status":200,"timestamp":"2026-01-09 16:06:06","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"duration":"102ms","ip":"::1","level":"info","message":"HTTP ✅ GET /20b82a04-f3f2-40e0-98dd-f0da8193d59d - 200","method":"GET","path":"/api/cuti-tahunan/20b82a04-f3f2-40e0-98dd-f0da8193d59d","status":200,"timestamp":"2026-01-09 16:06:06","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"KaryawanController: Get all karyawan request","query":{},"timestamp":"2026-01-09 16:07:48"}
+{"level":"info","message":"KaryawanAgent: Fetching all karyawan","timestamp":"2026-01-09 16:07:48"}
+{"level":"info","message":"CutiTahunanController: Get rekap cuti tahunan","query":{"tahun":"2026"},"timestamp":"2026-01-09 16:07:48"}
+{"level":"info","message":"CutiTahunanAgent: Fetching rekap cuti tahunan","tahun":2026,"timestamp":"2026-01-09 16:07:48"}
+{"level":"info","message":"CutiController: Get all cuti","query":{"tahun":"2026"},"timestamp":"2026-01-09 16:07:48"}
+{"level":"info","limit":20,"message":"CutiAgent: Fetching cuti list","page":1,"tahun":2026,"timestamp":"2026-01-09 16:07:48"}
+{"count":1,"level":"info","message":"KaryawanAgent: Fetched karyawan","timestamp":"2026-01-09 16:07:48"}
+{"duration":"223ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/karyawan","status":200,"timestamp":"2026-01-09 16:07:48","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"count":1,"level":"info","message":"CutiTahunanAgent: Rekap fetched","timestamp":"2026-01-09 16:07:49"}
+{"duration":"347ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti-tahunan?tahun=2026","status":200,"timestamp":"2026-01-09 16:07:49","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"count":1,"level":"info","message":"CutiAgent: Cuti list fetched","timestamp":"2026-01-09 16:07:49","total":1}
+{"duration":"446ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti?tahun=2026","status":200,"timestamp":"2026-01-09 16:07:49","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"CutiTahunanController: Get rekap cuti tahunan","query":{"tahun":"2026"},"timestamp":"2026-01-09 16:08:18"}
+{"level":"info","message":"CutiTahunanAgent: Fetching rekap cuti tahunan","tahun":2026,"timestamp":"2026-01-09 16:08:18"}
+{"level":"info","message":"KaryawanController: Get all karyawan request","query":{},"timestamp":"2026-01-09 16:08:18"}
+{"level":"info","message":"KaryawanAgent: Fetching all karyawan","timestamp":"2026-01-09 16:08:18"}
+{"level":"info","message":"CutiController: Get all cuti","query":{"tahun":"2026"},"timestamp":"2026-01-09 16:08:18"}
+{"level":"info","limit":20,"message":"CutiAgent: Fetching cuti list","page":1,"tahun":2026,"timestamp":"2026-01-09 16:08:18"}
+{"count":1,"level":"info","message":"CutiTahunanAgent: Rekap fetched","timestamp":"2026-01-09 16:08:19"}
+{"duration":"104ms","ip":"::ffff:192.168.2.66","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti-tahunan?tahun=2026","status":200,"timestamp":"2026-01-09 16:08:19","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"count":1,"level":"info","message":"KaryawanAgent: Fetched karyawan","timestamp":"2026-01-09 16:08:19"}
+{"duration":"134ms","ip":"::ffff:192.168.2.66","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/karyawan","status":200,"timestamp":"2026-01-09 16:08:19","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"count":1,"level":"info","message":"CutiAgent: Cuti list fetched","timestamp":"2026-01-09 16:08:19","total":1}
+{"duration":"156ms","ip":"::ffff:192.168.2.66","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti?tahun=2026","status":200,"timestamp":"2026-01-09 16:08:19","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"id":"20b82a04-f3f2-40e0-98dd-f0da8193d59d","level":"info","message":"CutiTahunanController: Get cuti tahunan by ID","timestamp":"2026-01-09 16:09:07"}
+{"id":"20b82a04-f3f2-40e0-98dd-f0da8193d59d","level":"info","message":"CutiTahunanAgent: Fetching cuti tahunan by ID","timestamp":"2026-01-09 16:09:07"}
+{"level":"info","message":"CutiController: Get all cuti","query":{},"timestamp":"2026-01-09 16:09:07"}
+{"level":"info","limit":20,"message":"CutiAgent: Fetching cuti list","page":1,"timestamp":"2026-01-09 16:09:07"}
+{"count":1,"level":"info","message":"CutiAgent: Cuti list fetched","timestamp":"2026-01-09 16:09:08","total":1}
+{"duration":"181ms","ip":"::ffff:192.168.2.66","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti","status":200,"timestamp":"2026-01-09 16:09:08","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"duration":"204ms","ip":"::ffff:192.168.2.66","level":"info","message":"HTTP ✅ GET /20b82a04-f3f2-40e0-98dd-f0da8193d59d - 200","method":"GET","path":"/api/cuti-tahunan/20b82a04-f3f2-40e0-98dd-f0da8193d59d","status":200,"timestamp":"2026-01-09 16:09:08","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"CutiController: Get all cuti","query":{"karyawanId":"d9b25131-372c-4bbc-b52f-f176ffe9cd1e","tahun":"2026"},"timestamp":"2026-01-09 16:09:08"}
+{"karyawanId":"d9b25131-372c-4bbc-b52f-f176ffe9cd1e","level":"info","limit":20,"message":"CutiAgent: Fetching cuti list","page":1,"tahun":2026,"timestamp":"2026-01-09 16:09:08"}
+{"count":1,"level":"info","message":"CutiAgent: Cuti list fetched","timestamp":"2026-01-09 16:09:08","total":1}
+{"duration":"11ms","ip":"::ffff:192.168.2.66","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti?karyawanId=d9b25131-372c-4bbc-b52f-f176ffe9cd1e&tahun=2026","status":200,"timestamp":"2026-01-09 16:09:08","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"CutiController: Get all cuti","query":{"tahun":"2026"},"timestamp":"2026-01-09 16:12:49"}
+{"level":"info","limit":20,"message":"CutiAgent: Fetching cuti list","page":1,"tahun":2026,"timestamp":"2026-01-09 16:12:49"}
+{"count":1,"level":"info","message":"CutiAgent: Cuti list fetched","timestamp":"2026-01-09 16:12:49","total":1}
+{"duration":"81ms","ip":"::ffff:192.168.2.66","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti?tahun=2026","status":200,"timestamp":"2026-01-09 16:12:49","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"CutiTahunanController: Get rekap cuti tahunan","query":{"tahun":"2026"},"timestamp":"2026-01-09 16:12:55"}
+{"level":"info","message":"CutiTahunanAgent: Fetching rekap cuti tahunan","tahun":2026,"timestamp":"2026-01-09 16:12:55"}
+{"count":1,"level":"info","message":"CutiTahunanAgent: Rekap fetched","timestamp":"2026-01-09 16:12:55"}
+{"duration":"8ms","ip":"::ffff:192.168.2.66","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti-tahunan?tahun=2026","status":200,"timestamp":"2026-01-09 16:12:55","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"KaryawanController: Get all karyawan request","query":{},"timestamp":"2026-01-09 16:12:55"}
+{"level":"info","message":"KaryawanAgent: Fetching all karyawan","timestamp":"2026-01-09 16:12:55"}
+{"count":1,"level":"info","message":"KaryawanAgent: Fetched karyawan","timestamp":"2026-01-09 16:12:55"}
+{"duration":"4ms","ip":"::ffff:192.168.2.66","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/karyawan","status":200,"timestamp":"2026-01-09 16:12:55","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"CutiTahunanController: Get rekap cuti tahunan","query":{"karyawanId":"d9b25131-372c-4bbc-b52f-f176ffe9cd1e","tahun":"2026"},"timestamp":"2026-01-09 16:12:58"}
+{"karyawanId":"d9b25131-372c-4bbc-b52f-f176ffe9cd1e","level":"info","message":"CutiTahunanAgent: Fetching rekap cuti tahunan","tahun":2026,"timestamp":"2026-01-09 16:12:58"}
+{"count":1,"level":"info","message":"CutiTahunanAgent: Rekap fetched","timestamp":"2026-01-09 16:12:58"}
+{"duration":"6ms","ip":"::ffff:192.168.2.66","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti-tahunan?tahun=2026&karyawanId=d9b25131-372c-4bbc-b52f-f176ffe9cd1e","status":200,"timestamp":"2026-01-09 16:12:58","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"body":{"alasan":"lkklkl","jenis":"TAHUNAN","karyawanId":"d9b25131-372c-4bbc-b52f-f176ffe9cd1e","tanggalMulai":"2026-01-15T00:00:00.000Z","tanggalSelesai":"2026-01-21T00:00:00.000Z"},"level":"info","message":"CutiController: Create cuti request","timestamp":"2026-01-09 16:13:41"}
+{"jenis":"TAHUNAN","karyawanId":"d9b25131-372c-4bbc-b52f-f176ffe9cd1e","level":"info","message":"CutiAgent: Creating new cuti","timestamp":"2026-01-09 16:13:41"}
+{"karyawanId":"d9b25131-372c-4bbc-b52f-f176ffe9cd1e","level":"info","message":"CutiTahunanAgent: Fetching cuti tahunan","tahun":2026,"timestamp":"2026-01-09 16:13:41"}
+{"id":"059a44c5-f07d-40f3-b820-45a4c84d502a","jenis":"TAHUNAN","jumlahHari":5,"karyawanId":"d9b25131-372c-4bbc-b52f-f176ffe9cd1e","level":"info","message":"CutiAgent: Cuti created successfully","timestamp":"2026-01-09 16:13:41"}
+{"duration":"95ms","ip":"::ffff:192.168.2.66","level":"info","message":"HTTP ✅ POST / - 201","method":"POST","path":"/api/cuti","status":201,"timestamp":"2026-01-09 16:13:41","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"CutiTahunanController: Get rekap cuti tahunan","query":{"karyawanId":"d9b25131-372c-4bbc-b52f-f176ffe9cd1e","tahun":"2026"},"timestamp":"2026-01-09 16:13:41"}
+{"karyawanId":"d9b25131-372c-4bbc-b52f-f176ffe9cd1e","level":"info","message":"CutiTahunanAgent: Fetching rekap cuti tahunan","tahun":2026,"timestamp":"2026-01-09 16:13:41"}
+{"count":1,"level":"info","message":"CutiTahunanAgent: Rekap fetched","timestamp":"2026-01-09 16:13:41"}
+{"duration":"8ms","ip":"::ffff:192.168.2.66","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti-tahunan?tahun=2026&karyawanId=d9b25131-372c-4bbc-b52f-f176ffe9cd1e","status":200,"timestamp":"2026-01-09 16:13:41","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"CutiController: Get all cuti","query":{"tahun":"2026"},"timestamp":"2026-01-09 16:13:41"}
+{"level":"info","limit":20,"message":"CutiAgent: Fetching cuti list","page":1,"tahun":2026,"timestamp":"2026-01-09 16:13:41"}
+{"count":2,"level":"info","message":"CutiAgent: Cuti list fetched","timestamp":"2026-01-09 16:13:41","total":2}
+{"duration":"61ms","ip":"::ffff:192.168.2.66","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti?tahun=2026","status":200,"timestamp":"2026-01-09 16:13:41","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"CutiTahunanController: Get rekap cuti tahunan","query":{"tahun":"2026"},"timestamp":"2026-01-09 16:13:49"}
+{"level":"info","message":"CutiTahunanAgent: Fetching rekap cuti tahunan","tahun":2026,"timestamp":"2026-01-09 16:13:49"}
+{"count":1,"level":"info","message":"CutiTahunanAgent: Rekap fetched","timestamp":"2026-01-09 16:13:49"}
+{"duration":"10ms","ip":"::ffff:192.168.2.66","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti-tahunan?tahun=2026","status":200,"timestamp":"2026-01-09 16:13:49","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"id":"20b82a04-f3f2-40e0-98dd-f0da8193d59d","level":"info","message":"CutiTahunanController: Get cuti tahunan by ID","timestamp":"2026-01-09 16:13:53"}
+{"id":"20b82a04-f3f2-40e0-98dd-f0da8193d59d","level":"info","message":"CutiTahunanAgent: Fetching cuti tahunan by ID","timestamp":"2026-01-09 16:13:53"}
+{"level":"info","message":"CutiController: Get all cuti","query":{"karyawanId":"d9b25131-372c-4bbc-b52f-f176ffe9cd1e","tahun":"2026"},"timestamp":"2026-01-09 16:13:53"}
+{"karyawanId":"d9b25131-372c-4bbc-b52f-f176ffe9cd1e","level":"info","limit":20,"message":"CutiAgent: Fetching cuti list","page":1,"tahun":2026,"timestamp":"2026-01-09 16:13:53"}
+{"duration":"127ms","ip":"::ffff:192.168.2.66","level":"info","message":"HTTP ✅ GET /20b82a04-f3f2-40e0-98dd-f0da8193d59d - 200","method":"GET","path":"/api/cuti-tahunan/20b82a04-f3f2-40e0-98dd-f0da8193d59d","status":200,"timestamp":"2026-01-09 16:13:54","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"count":2,"level":"info","message":"CutiAgent: Cuti list fetched","timestamp":"2026-01-09 16:13:54","total":2}
+{"duration":"147ms","ip":"::ffff:192.168.2.66","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti?karyawanId=d9b25131-372c-4bbc-b52f-f176ffe9cd1e&tahun=2026","status":200,"timestamp":"2026-01-09 16:13:54","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"KaryawanController: Get all karyawan request","query":{},"timestamp":"2026-01-09 16:13:57"}
+{"level":"info","message":"KaryawanAgent: Fetching all karyawan","timestamp":"2026-01-09 16:13:57"}
+{"count":1,"level":"info","message":"KaryawanAgent: Fetched karyawan","timestamp":"2026-01-09 16:13:57"}
+{"duration":"7ms","ip":"::ffff:192.168.2.66","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/karyawan","status":200,"timestamp":"2026-01-09 16:13:57","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"body":{"departemen":"SATPAM","jabatan":"Exim Local Support","nama":"TEST 2","nik":"JKL89","tanggalMasuk":"2025-09-01T00:00:00.000Z"},"level":"info","message":"KaryawanController: Create karyawan request","timestamp":"2026-01-09 16:15:49"}
+{"level":"info","message":"KaryawanAgent: Creating new karyawan","nik":"JKL89","timestamp":"2026-01-09 16:15:49"}
+{"id":"c33c743f-6fb2-4bf8-a10b-34201e97d75c","level":"info","message":"KaryawanAgent: Karyawan created successfully","nik":"JKL89","timestamp":"2026-01-09 16:15:49"}
+{"duration":"71ms","ip":"::ffff:192.168.2.66","level":"info","message":"HTTP ✅ POST / - 201","method":"POST","path":"/api/karyawan","status":201,"timestamp":"2026-01-09 16:15:49","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"KaryawanController: Get all karyawan request","query":{},"timestamp":"2026-01-09 16:15:49"}
+{"level":"info","message":"KaryawanAgent: Fetching all karyawan","timestamp":"2026-01-09 16:15:49"}
+{"count":2,"level":"info","message":"KaryawanAgent: Fetched karyawan","timestamp":"2026-01-09 16:15:49"}
+{"duration":"8ms","ip":"::ffff:192.168.2.66","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/karyawan","status":200,"timestamp":"2026-01-09 16:15:49","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"CutiTahunanController: Get rekap cuti tahunan","query":{"tahun":"2026"},"timestamp":"2026-01-09 16:15:53"}
+{"level":"info","message":"CutiTahunanAgent: Fetching rekap cuti tahunan","tahun":2026,"timestamp":"2026-01-09 16:15:53"}
+{"count":1,"level":"info","message":"CutiTahunanAgent: Rekap fetched","timestamp":"2026-01-09 16:15:53"}
+{"duration":"6ms","ip":"::ffff:192.168.2.66","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti-tahunan?tahun=2026","status":200,"timestamp":"2026-01-09 16:15:53","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"body":{"karyawanId":"c33c743f-6fb2-4bf8-a10b-34201e97d75c","tahun":2026},"level":"info","message":"CutiTahunanController: Generate cuti tahunan request","timestamp":"2026-01-09 16:16:05"}
+{"karyawanId":"c33c743f-6fb2-4bf8-a10b-34201e97d75c","level":"info","message":"CutiTahunanAgent: Generating cuti tahunan","tahun":2026,"timestamp":"2026-01-09 16:16:05"}
+{"carryForward":0,"id":"4a91ffb9-bccc-435a-a959-1ac7c576799c","jatahDasar":12,"karyawanId":"c33c743f-6fb2-4bf8-a10b-34201e97d75c","level":"info","message":"CutiTahunanAgent: Cuti tahunan generated","tahun":2026,"timestamp":"2026-01-09 16:16:05","totalHakCuti":12}
+{"duration":"71ms","ip":"::ffff:192.168.2.66","level":"info","message":"HTTP ✅ POST /generate - 201","method":"POST","path":"/api/cuti-tahunan/generate","status":201,"timestamp":"2026-01-09 16:16:05","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"CutiTahunanController: Get rekap cuti tahunan","query":{"tahun":"2026"},"timestamp":"2026-01-09 16:16:05"}
+{"level":"info","message":"CutiTahunanAgent: Fetching rekap cuti tahunan","tahun":2026,"timestamp":"2026-01-09 16:16:05"}
+{"count":2,"level":"info","message":"CutiTahunanAgent: Rekap fetched","timestamp":"2026-01-09 16:16:05"}
+{"duration":"10ms","ip":"::ffff:192.168.2.66","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti-tahunan?tahun=2026","status":200,"timestamp":"2026-01-09 16:16:05","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"KaryawanController: Get all karyawan request","query":{},"timestamp":"2026-01-09 16:30:58"}
+{"level":"info","message":"KaryawanAgent: Fetching all karyawan","timestamp":"2026-01-09 16:30:58"}
+{"level":"info","message":"CutiTahunanController: Get rekap cuti tahunan","query":{"tahun":"2026"},"timestamp":"2026-01-09 16:30:58"}
+{"level":"info","message":"CutiTahunanAgent: Fetching rekap cuti tahunan","tahun":2026,"timestamp":"2026-01-09 16:30:58"}
+{"count":2,"level":"info","message":"CutiTahunanAgent: Rekap fetched","timestamp":"2026-01-09 16:30:58"}
+{"duration":"96ms","ip":"::ffff:192.168.3.171","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti-tahunan?tahun=2026","status":200,"timestamp":"2026-01-09 16:30:58","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"count":2,"level":"info","message":"KaryawanAgent: Fetched karyawan","timestamp":"2026-01-09 16:30:58"}
+{"duration":"107ms","ip":"::ffff:192.168.3.171","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/karyawan","status":200,"timestamp":"2026-01-09 16:30:58","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"id":"4a91ffb9-bccc-435a-a959-1ac7c576799c","level":"info","message":"CutiTahunanController: Get cuti tahunan by ID","timestamp":"2026-01-09 16:32:00"}
+{"id":"4a91ffb9-bccc-435a-a959-1ac7c576799c","level":"info","message":"CutiTahunanAgent: Fetching cuti tahunan by ID","timestamp":"2026-01-09 16:32:00"}
+{"level":"info","message":"CutiController: Get all cuti","query":{},"timestamp":"2026-01-09 16:32:00"}
+{"level":"info","limit":20,"message":"CutiAgent: Fetching cuti list","page":1,"timestamp":"2026-01-09 16:32:00"}
+{"duration":"159ms","ip":"::ffff:192.168.3.171","level":"info","message":"HTTP ✅ GET /4a91ffb9-bccc-435a-a959-1ac7c576799c - 200","method":"GET","path":"/api/cuti-tahunan/4a91ffb9-bccc-435a-a959-1ac7c576799c","status":200,"timestamp":"2026-01-09 16:32:00","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"CutiController: Get all cuti","query":{"karyawanId":"c33c743f-6fb2-4bf8-a10b-34201e97d75c","tahun":"2026"},"timestamp":"2026-01-09 16:32:00"}
+{"karyawanId":"c33c743f-6fb2-4bf8-a10b-34201e97d75c","level":"info","limit":20,"message":"CutiAgent: Fetching cuti list","page":1,"tahun":2026,"timestamp":"2026-01-09 16:32:00"}
+{"count":0,"level":"info","message":"CutiAgent: Cuti list fetched","timestamp":"2026-01-09 16:32:00","total":0}
+{"duration":"66ms","ip":"::ffff:192.168.3.171","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti?karyawanId=c33c743f-6fb2-4bf8-a10b-34201e97d75c&tahun=2026","status":200,"timestamp":"2026-01-09 16:32:00","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"count":2,"level":"info","message":"CutiAgent: Cuti list fetched","timestamp":"2026-01-09 16:32:00","total":2}
+{"duration":"258ms","ip":"::ffff:192.168.3.171","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti","status":200,"timestamp":"2026-01-09 16:32:00","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"KaryawanController: Get all karyawan request","query":{},"timestamp":"2026-01-09 16:32:02"}
+{"level":"info","message":"KaryawanAgent: Fetching all karyawan","timestamp":"2026-01-09 16:32:02"}
+{"level":"info","message":"CutiTahunanController: Get rekap cuti tahunan","query":{"tahun":"2026"},"timestamp":"2026-01-09 16:32:02"}
+{"level":"info","message":"CutiTahunanAgent: Fetching rekap cuti tahunan","tahun":2026,"timestamp":"2026-01-09 16:32:02"}
+{"count":2,"level":"info","message":"KaryawanAgent: Fetched karyawan","timestamp":"2026-01-09 16:32:02"}
+{"duration":"23ms","ip":"::ffff:192.168.3.171","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/karyawan","status":200,"timestamp":"2026-01-09 16:32:02","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"count":2,"level":"info","message":"CutiTahunanAgent: Rekap fetched","timestamp":"2026-01-09 16:32:02"}
+{"duration":"34ms","ip":"::ffff:192.168.3.171","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti-tahunan?tahun=2026","status":200,"timestamp":"2026-01-09 16:32:02","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"CutiController: Get all cuti","query":{"tahun":"2026"},"timestamp":"2026-01-09 16:32:04"}
+{"level":"info","limit":20,"message":"CutiAgent: Fetching cuti list","page":1,"tahun":2026,"timestamp":"2026-01-09 16:32:04"}
+{"count":2,"level":"info","message":"CutiAgent: Cuti list fetched","timestamp":"2026-01-09 16:32:04","total":2}
+{"duration":"37ms","ip":"::ffff:192.168.3.171","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti?tahun=2026","status":200,"timestamp":"2026-01-09 16:32:04","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"🗄️  Database PostgreSQL connected successfully","timestamp":"2026-01-09 17:02:19"}
+{"apiUrl":"http://localhost:3000/api","env":"development","healthCheck":"http://localhost:3000/api/health","level":"info","message":"🚀 Server started successfully","port":3000,"timestamp":"2026-01-09 17:02:19"}
+{"level":"info","message":"📚 API Documentation available at http://localhost:3000/api","timestamp":"2026-01-09 17:02:19"}
+{"level":"info","message":"⏰ Scheduler disabled: Set ENABLE_SCHEDULER=true to enable auto-generation","timestamp":"2026-01-09 17:02:19"}
+{"level":"info","message":"🗄️  Database PostgreSQL connected successfully","timestamp":"2026-01-09 17:03:59"}
+{"apiUrl":"http://localhost:3000/api","env":"development","healthCheck":"http://localhost:3000/api/health","level":"info","message":"🚀 Server started successfully","port":3000,"timestamp":"2026-01-09 17:03:59"}
+{"level":"info","message":"📚 API Documentation available at http://localhost:3000/api","timestamp":"2026-01-09 17:03:59"}
+{"level":"info","message":"⏰ Scheduler disabled: Set ENABLE_SCHEDULER=true to enable auto-generation","timestamp":"2026-01-09 17:03:59"}
+{"level":"info","message":"🗄️  Database PostgreSQL connected successfully","timestamp":"2026-01-12 08:57:00"}
+{"apiUrl":"http://localhost:3000/api","env":"development","healthCheck":"http://localhost:3000/api/health","level":"info","message":"🚀 Server started successfully","port":3000,"timestamp":"2026-01-12 08:57:00"}
+{"level":"info","message":"📚 API Documentation available at http://localhost:3000/api","timestamp":"2026-01-12 08:57:00"}
+{"level":"info","message":"⏰ Scheduler disabled: Set ENABLE_SCHEDULER=true to enable auto-generation","timestamp":"2026-01-12 08:57:00"}
+{"level":"info","message":"KaryawanController: Get all karyawan request","query":{},"timestamp":"2026-01-12 08:59:50"}
+{"level":"info","message":"KaryawanAgent: Fetching all karyawan","timestamp":"2026-01-12 08:59:50"}
+{"level":"info","message":"CutiTahunanController: Get rekap cuti tahunan","query":{"tahun":"2026"},"timestamp":"2026-01-12 08:59:50"}
+{"level":"info","message":"CutiTahunanAgent: Fetching rekap cuti tahunan","tahun":2026,"timestamp":"2026-01-12 08:59:50"}
+{"level":"info","message":"CutiController: Get all cuti","query":{"tahun":"2026"},"timestamp":"2026-01-12 08:59:50"}
+{"level":"info","limit":20,"message":"CutiAgent: Fetching cuti list","page":1,"tahun":2026,"timestamp":"2026-01-12 08:59:50"}
+{"count":2,"level":"info","message":"KaryawanAgent: Fetched karyawan","timestamp":"2026-01-12 08:59:51"}
+{"duration":"494ms","ip":"::ffff:192.168.3.171","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/karyawan","status":200,"timestamp":"2026-01-12 08:59:51","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"count":2,"level":"info","message":"CutiTahunanAgent: Rekap fetched","timestamp":"2026-01-12 08:59:51"}
+{"duration":"366ms","ip":"::ffff:192.168.3.171","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti-tahunan?tahun=2026","status":200,"timestamp":"2026-01-12 08:59:51","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"count":2,"level":"info","message":"CutiAgent: Cuti list fetched","timestamp":"2026-01-12 08:59:51","total":2}
+{"duration":"333ms","ip":"::ffff:192.168.3.171","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti?tahun=2026","status":200,"timestamp":"2026-01-12 08:59:51","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"body":{"departemen":"IT","jabatan":"IT","nama":"Test 3","nik":"NJA-123","tanggalMasuk":"2025-01-10T00:00:00.000Z"},"level":"info","message":"KaryawanController: Create karyawan request","timestamp":"2026-01-12 09:02:53"}
+{"level":"info","message":"KaryawanAgent: Creating new karyawan","nik":"NJA-123","timestamp":"2026-01-12 09:02:53"}
+{"id":"8debe3bd-482b-4b56-8af7-5a8720affe2b","level":"info","message":"KaryawanAgent: Karyawan created successfully","nik":"NJA-123","timestamp":"2026-01-12 09:02:53"}
+{"duration":"112ms","ip":"::ffff:192.168.3.171","level":"info","message":"HTTP ✅ POST / - 201","method":"POST","path":"/api/karyawan","status":201,"timestamp":"2026-01-12 09:02:53","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"KaryawanController: Get all karyawan request","query":{},"timestamp":"2026-01-12 09:02:54"}
+{"level":"info","message":"KaryawanAgent: Fetching all karyawan","timestamp":"2026-01-12 09:02:54"}
+{"count":3,"level":"info","message":"KaryawanAgent: Fetched karyawan","timestamp":"2026-01-12 09:02:54"}
+{"duration":"23ms","ip":"::ffff:192.168.3.171","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/karyawan","status":200,"timestamp":"2026-01-12 09:02:54","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"CutiTahunanController: Get rekap cuti tahunan","query":{"tahun":"2026"},"timestamp":"2026-01-12 09:03:00"}
+{"level":"info","message":"CutiTahunanAgent: Fetching rekap cuti tahunan","tahun":2026,"timestamp":"2026-01-12 09:03:00"}
+{"count":2,"level":"info","message":"CutiTahunanAgent: Rekap fetched","timestamp":"2026-01-12 09:03:00"}
+{"duration":"52ms","ip":"::ffff:192.168.3.171","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti-tahunan?tahun=2026","status":200,"timestamp":"2026-01-12 09:03:00","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"body":{"karyawanId":"8debe3bd-482b-4b56-8af7-5a8720affe2b","tahun":2026},"level":"info","message":"CutiTahunanController: Generate cuti tahunan request","timestamp":"2026-01-12 09:03:08"}
+{"karyawanId":"8debe3bd-482b-4b56-8af7-5a8720affe2b","level":"info","message":"CutiTahunanAgent: Generating cuti tahunan","tahun":2026,"timestamp":"2026-01-12 09:03:08"}
+{"carryForward":0,"cutiTerpakaiTotal":0,"id":"e30ac682-4f2b-438a-be40-a945839b9167","jatahDasar":12,"karyawanId":"8debe3bd-482b-4b56-8af7-5a8720affe2b","level":"info","message":"CutiTahunanAgent: Cuti tahunan generated","sisaCuti":12,"tahun":2026,"timestamp":"2026-01-12 09:03:08","totalHakCuti":12}
+{"duration":"49ms","ip":"::ffff:192.168.3.171","level":"info","message":"HTTP ✅ POST /generate - 201","method":"POST","path":"/api/cuti-tahunan/generate","status":201,"timestamp":"2026-01-12 09:03:08","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"CutiTahunanController: Get rekap cuti tahunan","query":{"tahun":"2026"},"timestamp":"2026-01-12 09:03:08"}
+{"level":"info","message":"CutiTahunanAgent: Fetching rekap cuti tahunan","tahun":2026,"timestamp":"2026-01-12 09:03:08"}
+{"count":3,"level":"info","message":"CutiTahunanAgent: Rekap fetched","timestamp":"2026-01-12 09:03:08"}
+{"duration":"12ms","ip":"::ffff:192.168.3.171","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti-tahunan?tahun=2026","status":200,"timestamp":"2026-01-12 09:03:08","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"KaryawanController: Get all karyawan request","query":{},"timestamp":"2026-01-12 09:04:17"}
+{"level":"info","message":"KaryawanAgent: Fetching all karyawan","timestamp":"2026-01-12 09:04:17"}
+{"count":3,"level":"info","message":"KaryawanAgent: Fetched karyawan","timestamp":"2026-01-12 09:04:17"}
+{"duration":"89ms","ip":"::ffff:192.168.3.171","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/karyawan","status":200,"timestamp":"2026-01-12 09:04:17","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"body":{"departemen":"IT","jabatan":"IT","nama":"Test 4","nik":"NJA-1212","tanggalMasuk":"2025-02-12T00:00:00.000Z"},"level":"info","message":"KaryawanController: Create karyawan request","timestamp":"2026-01-12 09:05:14"}
+{"level":"info","message":"KaryawanAgent: Creating new karyawan","nik":"NJA-1212","timestamp":"2026-01-12 09:05:14"}
+{"id":"8d7ca8d6-b9c7-4d8f-b963-ea3465ea8942","level":"info","message":"KaryawanAgent: Karyawan created successfully","nik":"NJA-1212","timestamp":"2026-01-12 09:05:14"}
+{"duration":"77ms","ip":"::ffff:192.168.3.171","level":"info","message":"HTTP ✅ POST / - 201","method":"POST","path":"/api/karyawan","status":201,"timestamp":"2026-01-12 09:05:14","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"KaryawanController: Get all karyawan request","query":{},"timestamp":"2026-01-12 09:05:14"}
+{"level":"info","message":"KaryawanAgent: Fetching all karyawan","timestamp":"2026-01-12 09:05:14"}
+{"count":4,"level":"info","message":"KaryawanAgent: Fetched karyawan","timestamp":"2026-01-12 09:05:14"}
+{"duration":"37ms","ip":"::ffff:192.168.3.171","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/karyawan","status":200,"timestamp":"2026-01-12 09:05:14","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"CutiTahunanController: Get rekap cuti tahunan","query":{"tahun":"2026"},"timestamp":"2026-01-12 09:05:16"}
+{"level":"info","message":"CutiTahunanAgent: Fetching rekap cuti tahunan","tahun":2026,"timestamp":"2026-01-12 09:05:16"}
+{"count":3,"level":"info","message":"CutiTahunanAgent: Rekap fetched","timestamp":"2026-01-12 09:05:16"}
+{"duration":"54ms","ip":"::ffff:192.168.3.171","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti-tahunan?tahun=2026","status":200,"timestamp":"2026-01-12 09:05:16","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"body":{"karyawanId":"8d7ca8d6-b9c7-4d8f-b963-ea3465ea8942","tahun":2026},"level":"info","message":"CutiTahunanController: Generate cuti tahunan request","timestamp":"2026-01-12 09:05:23"}
+{"karyawanId":"8d7ca8d6-b9c7-4d8f-b963-ea3465ea8942","level":"info","message":"CutiTahunanAgent: Generating cuti tahunan","tahun":2026,"timestamp":"2026-01-12 09:05:23"}
+{"carryForward":0,"cutiTerpakaiTotal":0,"id":"418df357-d010-44f6-8f18-80b1a19e0306","jatahDasar":12,"karyawanId":"8d7ca8d6-b9c7-4d8f-b963-ea3465ea8942","level":"info","message":"CutiTahunanAgent: Cuti tahunan generated","sisaCuti":12,"tahun":2026,"timestamp":"2026-01-12 09:05:23","totalHakCuti":12}
+{"duration":"26ms","ip":"::ffff:192.168.3.171","level":"info","message":"HTTP ✅ POST /generate - 201","method":"POST","path":"/api/cuti-tahunan/generate","status":201,"timestamp":"2026-01-12 09:05:23","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"CutiTahunanController: Get rekap cuti tahunan","query":{"tahun":"2026"},"timestamp":"2026-01-12 09:05:23"}
+{"level":"info","message":"CutiTahunanAgent: Fetching rekap cuti tahunan","tahun":2026,"timestamp":"2026-01-12 09:05:23"}
+{"count":4,"level":"info","message":"CutiTahunanAgent: Rekap fetched","timestamp":"2026-01-12 09:05:23"}
+{"duration":"13ms","ip":"::ffff:192.168.3.171","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti-tahunan?tahun=2026","status":200,"timestamp":"2026-01-12 09:05:23","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"CutiController: Get all cuti","query":{"tahun":"2026"},"timestamp":"2026-01-12 09:09:11"}
+{"level":"info","limit":20,"message":"CutiAgent: Fetching cuti list","page":1,"tahun":2026,"timestamp":"2026-01-12 09:09:11"}
+{"count":2,"level":"info","message":"CutiAgent: Cuti list fetched","timestamp":"2026-01-12 09:09:12","total":2}
+{"duration":"209ms","ip":"::ffff:192.168.3.171","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti?tahun=2026","status":200,"timestamp":"2026-01-12 09:09:12","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"KaryawanController: Get all karyawan request","query":{},"timestamp":"2026-01-12 09:09:19"}
+{"level":"info","message":"KaryawanAgent: Fetching all karyawan","timestamp":"2026-01-12 09:09:19"}
+{"level":"info","message":"CutiTahunanController: Get rekap cuti tahunan","query":{"tahun":"2026"},"timestamp":"2026-01-12 09:09:20"}
+{"level":"info","message":"CutiTahunanAgent: Fetching rekap cuti tahunan","tahun":2026,"timestamp":"2026-01-12 09:09:20"}
+{"count":4,"level":"info","message":"KaryawanAgent: Fetched karyawan","timestamp":"2026-01-12 09:09:20"}
+{"duration":"57ms","ip":"::ffff:192.168.3.171","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/karyawan","status":200,"timestamp":"2026-01-12 09:09:20","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"count":4,"level":"info","message":"CutiTahunanAgent: Rekap fetched","timestamp":"2026-01-12 09:09:20"}
+{"duration":"49ms","ip":"::ffff:192.168.3.171","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti-tahunan?tahun=2026","status":200,"timestamp":"2026-01-12 09:09:20","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"body":{"departemen":"IT","jabatan":"IT","nama":"Test 5","nik":"AJB-4512","tanggalMasuk":"2025-11-20T00:00:00.000Z"},"level":"info","message":"KaryawanController: Create karyawan request","timestamp":"2026-01-12 09:10:20"}
+{"level":"info","message":"KaryawanAgent: Creating new karyawan","nik":"AJB-4512","timestamp":"2026-01-12 09:10:20"}
+{"id":"fcb7e6ae-3fb2-4534-be68-326f80797ed5","level":"info","message":"KaryawanAgent: Karyawan created successfully","nik":"AJB-4512","timestamp":"2026-01-12 09:10:20"}
+{"duration":"128ms","ip":"::ffff:192.168.3.171","level":"info","message":"HTTP ✅ POST / - 201","method":"POST","path":"/api/karyawan","status":201,"timestamp":"2026-01-12 09:10:20","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"KaryawanController: Get all karyawan request","query":{},"timestamp":"2026-01-12 09:10:20"}
+{"level":"info","message":"KaryawanAgent: Fetching all karyawan","timestamp":"2026-01-12 09:10:20"}
+{"count":5,"level":"info","message":"KaryawanAgent: Fetched karyawan","timestamp":"2026-01-12 09:10:20"}
+{"duration":"85ms","ip":"::ffff:192.168.3.171","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/karyawan","status":200,"timestamp":"2026-01-12 09:10:21","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"CutiController: Get all cuti","query":{"tahun":"2026"},"timestamp":"2026-01-12 09:10:23"}
+{"level":"info","limit":20,"message":"CutiAgent: Fetching cuti list","page":1,"tahun":2026,"timestamp":"2026-01-12 09:10:23"}
+{"count":2,"level":"info","message":"CutiAgent: Cuti list fetched","timestamp":"2026-01-12 09:10:23","total":2}
+{"duration":"153ms","ip":"::ffff:192.168.3.171","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti?tahun=2026","status":200,"timestamp":"2026-01-12 09:10:23","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"CutiTahunanController: Get rekap cuti tahunan","query":{"tahun":"2026"},"timestamp":"2026-01-12 09:10:25"}
+{"level":"info","message":"CutiTahunanAgent: Fetching rekap cuti tahunan","tahun":2026,"timestamp":"2026-01-12 09:10:25"}
+{"count":4,"level":"info","message":"CutiTahunanAgent: Rekap fetched","timestamp":"2026-01-12 09:10:25"}
+{"duration":"66ms","ip":"::ffff:192.168.3.171","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti-tahunan?tahun=2026","status":200,"timestamp":"2026-01-12 09:10:25","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"CutiTahunanController: Get rekap cuti tahunan","query":{"karyawanId":"fcb7e6ae-3fb2-4534-be68-326f80797ed5","tahun":"2026"},"timestamp":"2026-01-12 09:10:27"}
+{"karyawanId":"fcb7e6ae-3fb2-4534-be68-326f80797ed5","level":"info","message":"CutiTahunanAgent: Fetching rekap cuti tahunan","tahun":2026,"timestamp":"2026-01-12 09:10:27"}
+{"count":0,"level":"info","message":"CutiTahunanAgent: Rekap fetched","timestamp":"2026-01-12 09:10:27"}
+{"duration":"41ms","ip":"::ffff:192.168.3.171","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti-tahunan?tahun=2026&karyawanId=fcb7e6ae-3fb2-4534-be68-326f80797ed5","status":200,"timestamp":"2026-01-12 09:10:27","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"🗄️  Database PostgreSQL connected successfully","timestamp":"2026-01-12 09:11:24"}
+{"apiUrl":"http://localhost:3000/api","env":"development","healthCheck":"http://localhost:3000/api/health","level":"info","message":"🚀 Server started successfully","port":3000,"timestamp":"2026-01-12 09:11:24"}
+{"level":"info","message":"📚 API Documentation available at http://localhost:3000/api","timestamp":"2026-01-12 09:11:24"}
+{"level":"info","message":"⏰ Scheduler disabled: Set ENABLE_SCHEDULER=true to enable auto-generation","timestamp":"2026-01-12 09:11:24"}
+{"level":"info","message":"🗄️  Database PostgreSQL connected successfully","timestamp":"2026-01-12 10:00:01"}
+{"apiUrl":"http://localhost:3000/api","env":"development","healthCheck":"http://localhost:3000/api/health","level":"info","message":"🚀 Server started successfully","port":3000,"timestamp":"2026-01-12 10:00:01"}
+{"level":"info","message":"📚 API Documentation available at http://localhost:3000/api","timestamp":"2026-01-12 10:00:01"}
+{"level":"info","message":"⏰ Scheduler disabled: Set ENABLE_SCHEDULER=true to enable auto-generation","timestamp":"2026-01-12 10:00:01"}

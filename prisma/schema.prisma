@@ -1,0 +1,105 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+// =========================
+// ENUM
+// =========================
+
+enum StatusKaryawan {
+  AKTIF
+  NONAKTIF
+}
+
+enum TipeCutiTahunan {
+  PROBATION
+  PRORATE
+  FULL
+}
+
+enum JenisCuti {
+  TAHUNAN
+  SAKIT
+  IZIN
+  LAINNYA
+}
+
+// =========================
+// MODEL KARYAWAN (MASTER)
+// =========================
+
+model Karyawan {
+  id            String         @id @default(uuid())
+  nik           String         @unique
+  nama          String
+  jabatan       String?
+  departemen    String?
+  tanggalMasuk  DateTime
+  status        StatusKaryawan @default(AKTIF)
+
+  cutiTahunan   CutiTahunan[]
+  cuti          Cuti[]
+
+  createdAt     DateTime       @default(now())
+  updatedAt     DateTime       @updatedAt
+}
+
+// =========================
+// MODEL CUTI TAHUNAN
+// 1 karyawan = 1 record per tahun
+// =========================
+
+model CutiTahunan {
+  id             String          @id @default(uuid())
+  karyawanId     String
+  tahun          Int
+
+  jatahDasar     Int             // 0 / 7 / 12
+  carryForward   Int             @default(0)
+  totalHakCuti   Int             // jatahDasar + carryForward
+  cutiTerpakai   Int             @default(0)
+  sisaCuti       Int
+
+  tipe           TipeCutiTahunan // PROBATION / PRORATE / FULL
+
+  karyawan       Karyawan        @relation(fields: [karyawanId], references: [id])
+  cuti           Cuti[]
+
+  createdAt      DateTime        @default(now())
+
+  @@unique([karyawanId, tahun])
+}
+
+// =========================
+// MODEL TRANSAKSI CUTI
+// (Pencatatan langsung, tanpa approval)
+// =========================
+
+model Cuti {
+  id             String        @id @default(uuid())
+  karyawanId     String
+  cutiTahunanId  String
+
+  tahun          Int
+  jenis          JenisCuti
+  alasan         String
+
+  tanggalMulai   DateTime
+  tanggalSelesai DateTime
+  jumlahHari     Int
+
+  karyawan       Karyawan      @relation(fields: [karyawanId], references: [id])
+  cutiTahunan    CutiTahunan   @relation(fields: [cutiTahunanId], references: [id])
+
+  createdAt      DateTime      @default(now())
+}
