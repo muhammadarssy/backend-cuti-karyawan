@@ -1,0 +1,962 @@
+[
+  {
+    "nik": "A09-015",
+    "nama": "Ade Abdul Azis",
+    "tanggalMasuk": "1995-09-05",
+    "status": "AKTIF",
+    "cutiTahunan": {
+      "tahun": 2026,
+      "jatahDasar": 12,
+      "carryForward": 5,
+      "totalHakCuti": 17,
+      "cutiTerpakai": 0,
+      "sisaCuti": 17,
+      "tipe": "FULL"
+    }
+  },
+  {
+    "nik": "A09-014",
+    "nama": "Adil Simanjuntak",
+    "tanggalMasuk": "1995-09-11",
+    "status": "AKTIF",
+    "cutiTahunan": {
+      "tahun": 2026,
+      "jatahDasar": 12,
+      "carryForward": 10,
+      "totalHakCuti": 22,
+      "cutiTerpakai": 0,
+      "sisaCuti": 22,
+      "tipe": "FULL"
+    }
+  },
+  {
+    "nik": "AD07-752",
+    "nama": "Adinda Risty Kumala",
+    "tanggalMasuk": "2024-07-01",
+    "status": "AKTIF",
+    "cutiTahunan": {
+      "tahun": 2026,
+      "jatahDasar": 6,
+      "carryForward": 5,
+      "totalHakCuti": 11,
+      "cutiTerpakai": 0,
+      "sisaCuti": 11,
+      "tipe": "FULL"
+    }
+  },
+  {
+    "nik": "I07-005",
+    "nama": "Agus Salim",
+    "tanggalMasuk": "2023-07-18",
+    "status": "AKTIF",
+    "cutiTahunan": {
+      "tahun": 2026,
+      "jatahDasar": 12,
+      "carryForward": 7,
+      "totalHakCuti": 19,
+      "cutiTerpakai": 0,
+      "sisaCuti": 19,
+      "tipe": "FULL"
+    }
+  },
+  {
+    "nik": "AA07-727",
+    "nama": "Alif Ayatulloh Ar-Rizqy",
+    "tanggalMasuk": "2021-07-01",
+    "status": "AKTIF",
+    "cutiTahunan": {
+      "tahun": 2026,
+      "jatahDasar": 12,
+      "carryForward": 2,
+      "totalHakCuti": 14,
+      "cutiTerpakai": 0,
+      "sisaCuti": 14,
+      "tipe": "FULL"
+    }
+  },
+  {
+    "nik": "AB10-743",
+    "nama": "Andri Priyandi",
+    "tanggalMasuk": "2022-10-31",
+    "status": "AKTIF",
+    "cutiTahunan": {
+      "tahun": 2026,
+      "jatahDasar": 12,
+      "carryForward": 13,
+      "totalHakCuti": 25,
+      "cutiTerpakai": 0,
+      "sisaCuti": 25,
+      "tipe": "FULL"
+    }
+  },
+  {
+    "nik": "AD12-755",
+    "nama": "Angga Praditya Dwi Kurniawan",
+    "tanggalMasuk": "2024-12-02",
+    "status": "AKTIF",
+    "cutiTahunan": {
+      "tahun": 2026,
+      "jatahDasar": 1,
+      "carryForward": 8,
+      "totalHakCuti": 9,
+      "cutiTerpakai": 0,
+      "sisaCuti": 9,
+      "tipe": "FULL"
+    }
+  },
+  {
+    "nik": "J12-228",
+    "nama": "Atang Komara",
+    "tanggalMasuk": "2004-12-01",
+    "status": "AKTIF",
+    "cutiTahunan": {
+      "tahun": 2026,
+      "jatahDasar": 12,
+      "carryForward": 18,
+      "totalHakCuti": 30,
+      "cutiTerpakai": 0,
+      "sisaCuti": 30,
+      "tipe": "FULL"
+    }
+  },
+  {
+    "nik": "AE06-757",
+    "nama": "Asep Alamsyah",
+    "tanggalMasuk": "2025-06-03",
+    "status": "AKTIF",
+    "cutiTahunan": {
+      "tahun": 2026,
+      "jatahDasar": 0,
+      "carryForward": 0,
+      "totalHakCuti": 0,
+      "cutiTerpakai": 0,
+      "sisaCuti": 0,
+      "tipe": "FULL"
+    }
+  },
+  {
+    "nik": "O08-283",
+    "nama": "Binner Roygen Simbolon",
+    "tanggalMasuk": "2011-10-10",
+    "status": "AKTIF",
+    "cutiTahunan": {
+      "tahun": 2026,
+      "jatahDasar": 12,
+      "carryForward": 3,
+      "totalHakCuti": 15,
+      "cutiTerpakai": 0,
+      "sisaCuti": 15,
+      "tipe": "FULL"
+    }
+  },
+  {
+    "nik": "C09-028",
+    "nama": "Chamdanah",
+    "tanggalMasuk": "1997-09-01",
+    "status": "AKTIF",
+    "cutiTahunan": {
+      "tahun": 2026,
+      "jatahDasar": 12,
+      "carryForward": -1,
+      "totalHakCuti": 11,
+      "cutiTerpakai": 0,
+      "sisaCuti": 11,
+      "tipe": "FULL"
+    }
+  },
+  {
+    "nik": "Y12-5315",
+    "nama": "Cipto Mangun Kusumo",
+    "tanggalMasuk": "2019-12-06",
+    "status": "AKTIF",
+    "cutiTahunan": {
+      "tahun": 2026,
+      "jatahDasar": 12,
+      "carryForward": -1,
+      "totalHakCuti": 11,
+      "cutiTerpakai": 0,
+      "sisaCuti": 11,
+      "tipe": "FULL"
+    }
+  },
+  {
+    "nik": "AC01-744",
+    "nama": "Dahlia Hutabarat",
+    "tanggalMasuk": "2023-01-02",
+    "status": "AKTIF",
+    "cutiTahunan": {
+      "tahun": 2026,
+      "jatahDasar": 12,
+      "carryForward": 19,
+      "totalHakCuti": 31,
+      "cutiTerpakai": 0,
+      "sisaCuti": 31,
+      "tipe": "FULL"
+    }
+  },
+  {
+    "nik": "X07-699",
+    "nama": "Dea Yuliestia Apriatna",
+    "tanggalMasuk": "2018-06-25",
+    "status": "AKTIF",
+    "cutiTahunan": {
+      "tahun": 2026,
+      "jatahDasar": 12,
+      "carryForward": 3,
+      "totalHakCuti": 15,
+      "cutiTerpakai": 0,
+      "sisaCuti": 15,
+      "tipe": "FULL"
+    }
+  },
+  {
+    "nik": "AA04-725",
+    "nama": "Deni Effendi",
+    "tanggalMasuk": "2021-04-30",
+    "status": "AKTIF",
+    "cutiTahunan": {
+      "tahun": 2026,
+      "jatahDasar": 12,
+      "carryForward": 32,
+      "totalHakCuti": 44,
+      "cutiTerpakai": 0,
+      "sisaCuti": 44,
+      "tipe": "FULL"
+    }
+  },
+  {
+    "nik": "R04-607",
+    "nama": "Desy Fianty",
+    "tanggalMasuk": "2012-04-02",
+    "status": "AKTIF",
+    "cutiTahunan": {
+      "tahun": 2026,
+      "jatahDasar": 12,
+      "carryForward": 19,
+      "totalHakCuti": 31,
+      "cutiTerpakai": 0,
+      "sisaCuti": 31,
+      "tipe": "FULL"
+    }
+  },
+  {
+    "nik": "AB08-741",
+    "nama": "Dimas Purnomo",
+    "tanggalMasuk": "2022-08-01",
+    "status": "AKTIF",
+    "cutiTahunan": {
+      "tahun": 2026,
+      "jatahDasar": 12,
+      "carryForward": 15,
+      "totalHakCuti": 27,
+      "cutiTerpakai": 0,
+      "sisaCuti": 27,
+      "tipe": "FULL"
+    }
+  },
+  {
+    "nik": "Z02-717",
+    "nama": "Fadil Gunawan",
+    "tanggalMasuk": "2020-03-02",
+    "status": "AKTIF",
+    "cutiTahunan": {
+      "tahun": 2026,
+      "jatahDasar": 12,
+      "carryForward": 14,
+      "totalHakCuti": 26,
+      "cutiTerpakai": 0,
+      "sisaCuti": 26,
+      "tipe": "FULL"
+    }
+  },
+  {
+    "nik": "AC01-747",
+    "nama": "Farry Manoppo",
+    "tanggalMasuk": "2023-01-24",
+    "status": "AKTIF",
+    "cutiTahunan": {
+      "tahun": 2026,
+      "jatahDasar": 12,
+      "carryForward": 1,
+      "totalHakCuti": 13,
+      "cutiTerpakai": 0,
+      "sisaCuti": 13,
+      "tipe": "FULL"
+    }
+  },
+  {
+    "nik": "AC02-748",
+    "nama": "Gesa Rizky Nugraha",
+    "tanggalMasuk": "2023-02-28",
+    "status": "NONAKTIF",
+    "cutiTahunan": {
+      "tahun": 2026,
+      "jatahDasar": 12,
+      "carryForward": 0,
+      "totalHakCuti": 12,
+      "cutiTerpakai": 0,
+      "sisaCuti": 12,
+      "tipe": "FULL"
+    }
+  },
+  {
+    "nik": "AB07-740",
+    "nama": "Gozali",
+    "tanggalMasuk": "2022-07-18",
+    "status": "AKTIF",
+    "cutiTahunan": {
+      "tahun": 2026,
+      "jatahDasar": 12,
+      "carryForward": -1,
+      "totalHakCuti": 11,
+      "cutiTerpakai": 0,
+      "sisaCuti": 11,
+      "tipe": "FULL"
+    }
+  },
+  {
+    "nik": "E04-031",
+    "nama": "Haja Ibrahim",
+    "tanggalMasuk": "2000-04-25",
+    "status": "AKTIF",
+    "cutiTahunan": {
+      "tahun": 2026,
+      "jatahDasar": 12,
+      "carryForward": 9,
+      "totalHakCuti": 21,
+      "cutiTerpakai": 0,
+      "sisaCuti": 21,
+      "tipe": "FULL"
+    }
+  },
+  {
+    "nik": "N04-261",
+    "nama": "Hayuni Rahmalia",
+    "tanggalMasuk": "2008-04-21",
+    "status": "AKTIF",
+    "cutiTahunan": {
+      "tahun": 2026,
+      "jatahDasar": 12,
+      "carryForward": 0,
+      "totalHakCuti": 12,
+      "cutiTerpakai": 0,
+      "sisaCuti": 12,
+      "tipe": "FULL"
+    }
+  },
+  {
+    "nik": "Z09-721",
+    "nama": "Ike Boi Biro Sinaga",
+    "tanggalMasuk": "2020-09-02",
+    "status": "AKTIF",
+    "cutiTahunan": {
+      "tahun": 2026,
+      "jatahDasar": 12,
+      "carryForward": 43,
+      "totalHakCuti": 55,
+      "cutiTerpakai": 0,
+      "sisaCuti": 55,
+      "tipe": "FULL"
+    }
+  },
+  {
+    "nik": "Y08-707",
+    "nama": "Ilham Tajudin",
+    "tanggalMasuk": "2019-08-14",
+    "status": "AKTIF",
+    "cutiTahunan": {
+      "tahun": 2026,
+      "jatahDasar": 12,
+      "carryForward": 1,
+      "totalHakCuti": 13,
+      "cutiTerpakai": 0,
+      "sisaCuti": 13,
+      "tipe": "FULL"
+    }
+  },
+  {
+    "nik": "O08-315",
+    "nama": "Imas Munawaroh",
+    "tanggalMasuk": "2009-08-03",
+    "status": "AKTIF",
+    "cutiTahunan": {
+      "tahun": 2026,
+      "jatahDasar": 12,
+      "carryForward": 11,
+      "totalHakCuti": 23,
+      "cutiTerpakai": 0,
+      "sisaCuti": 23,
+      "tipe": "FULL"
+    }
+  },
+  {
+    "nik": "E06-033",
+    "nama": "Ismail Fahmi",
+    "tanggalMasuk": "1999-06-22",
+    "status": "AKTIF",
+    "cutiTahunan": {
+      "tahun": 2026,
+      "jatahDasar": 12,
+      "carryForward": 10,
+      "totalHakCuti": 22,
+      "cutiTerpakai": 0,
+      "sisaCuti": 22,
+      "tipe": "FULL"
+    }
+  },
+  {
+    "nik": "Y01-5312",
+    "nama": "Jaganat Siagian",
+    "tanggalMasuk": "2019-01-03",
+    "status": "AKTIF",
+    "cutiTahunan": {
+      "tahun": 2026,
+      "jatahDasar": 12,
+      "carryForward": 28,
+      "totalHakCuti": 40,
+      "cutiTerpakai": 0,
+      "sisaCuti": 40,
+      "tipe": "FULL"
+    }
+  },
+  {
+    "nik": "Y02-5313",
+    "nama": "Joni",
+    "tanggalMasuk": "2019-02-22",
+    "status": "AKTIF",
+    "cutiTahunan": {
+      "tahun": 2026,
+      "jatahDasar": 12,
+      "carryForward": 45,
+      "totalHakCuti": 57,
+      "cutiTerpakai": 0,
+      "sisaCuti": 57,
+      "tipe": "FULL"
+    }
+  },
+  {
+    "nik": "O08-298",
+    "nama": "Juandi Situmorang",
+    "tanggalMasuk": "2011-10-07",
+    "status": "AKTIF",
+    "cutiTahunan": {
+      "tahun": 2026,
+      "jatahDasar": 12,
+      "carryForward": 7,
+      "totalHakCuti": 19,
+      "cutiTerpakai": 0,
+      "sisaCuti": 19,
+      "tipe": "FULL"
+    }
+  },
+  {
+    "nik": "X01-697",
+    "nama": "M. Fahmi Maulana",
+    "tanggalMasuk": "2018-01-15",
+    "status": "AKTIF",
+    "cutiTahunan": {
+      "tahun": 2026,
+      "jatahDasar": 12,
+      "carryForward": 1,
+      "totalHakCuti": 13,
+      "cutiTerpakai": 0,
+      "sisaCuti": 13,
+      "tipe": "FULL"
+    }
+  },
+  {
+    "nik": "A11-003",
+    "nama": "Mailon Sitanggang",
+    "tanggalMasuk": "1995-11-01",
+    "status": "AKTIF",
+    "cutiTahunan": {
+      "tahun": 2026,
+      "jatahDasar": 12,
+      "carryForward": 26,
+      "totalHakCuti": 38,
+      "cutiTerpakai": 0,
+      "sisaCuti": 38,
+      "tipe": "FULL"
+    }
+  },
+  {
+    "nik": "P02-411",
+    "nama": "Martauli Sinaga",
+    "tanggalMasuk": "2011-10-07",
+    "status": "AKTIF",
+    "cutiTahunan": {
+      "tahun": 2026,
+      "jatahDasar": 12,
+      "carryForward": 7,
+      "totalHakCuti": 19,
+      "cutiTerpakai": 0,
+      "sisaCuti": 19,
+      "tipe": "FULL"
+    }
+  },
+  {
+    "nik": "O08-376",
+    "nama": "Mita",
+    "tanggalMasuk": "2009-04-27",
+    "status": "NONAKTIF",
+    "cutiTahunan": {
+      "tahun": 2026,
+      "jatahDasar": 12,
+      "carryForward": 0,
+      "totalHakCuti": 12,
+      "cutiTerpakai": 0,
+      "sisaCuti": 12,
+      "tipe": "FULL"
+    }
+  },
+  {
+    "nik": "AB05-733",
+    "nama": "Mohamad Hardiansyah",
+    "tanggalMasuk": "2022-05-10",
+    "status": "NONAKTIF",
+    "cutiTahunan": {
+      "tahun": 2026,
+      "jatahDasar": 12,
+      "carryForward": 0,
+      "totalHakCuti": 12,
+      "cutiTerpakai": 0,
+      "sisaCuti": 12,
+      "tipe": "FULL"
+    }
+  },
+  {
+    "nik": "AB05-734",
+    "nama": "Muhamad Dimas Sahbrani",
+    "tanggalMasuk": "2022-05-19",
+    "status": "AKTIF",
+    "cutiTahunan": {
+      "tahun": 2026,
+      "jatahDasar": 12,
+      "carryForward": 15,
+      "totalHakCuti": 27,
+      "cutiTerpakai": 0,
+      "sisaCuti": 27,
+      "tipe": "FULL"
+    }
+  },
+  {
+    "nik": "AB05-735",
+    "nama": "Muhamad Raka Januarsyah",
+    "tanggalMasuk": "2022-05-17",
+    "status": "AKTIF",
+    "cutiTahunan": {
+      "tahun": 2026,
+      "jatahDasar": 12,
+      "carryForward": 8,
+      "totalHakCuti": 20,
+      "cutiTerpakai": 0,
+      "sisaCuti": 20,
+      "tipe": "FULL"
+    }
+  },
+  {
+    "nik": "Y03-703",
+    "nama": "Muhamad Rosul",
+    "tanggalMasuk": "2019-03-07",
+    "status": "AKTIF",
+    "cutiTahunan": {
+      "tahun": 2026,
+      "jatahDasar": 12,
+      "carryForward": -1,
+      "totalHakCuti": 11,
+      "cutiTerpakai": 0,
+      "sisaCuti": 11,
+      "tipe": "FULL"
+    }
+  },
+  {
+    "nik": "AA10-731",
+    "nama": "Muhammad Fachrizal",
+    "tanggalMasuk": "2021-10-01",
+    "status": "AKTIF",
+    "cutiTahunan": {
+      "tahun": 2026,
+      "jatahDasar": 12,
+      "carryForward": 1,
+      "totalHakCuti": 13,
+      "cutiTerpakai": 0,
+      "sisaCuti": 13,
+      "tipe": "FULL"
+    }
+  },
+  {
+    "nik": "AC01-746",
+    "nama": "Muhammad Nur Arssy",
+    "tanggalMasuk": "2023-01-16",
+    "status": "AKTIF",
+    "cutiTahunan": {
+      "tahun": 2026,
+      "jatahDasar": 12,
+      "carryForward": 4,
+      "totalHakCuti": 16,
+      "cutiTerpakai": 0,
+      "sisaCuti": 16,
+      "tipe": "FULL"
+    }
+  },
+  {
+    "nik": "F07-122",
+    "nama": "Mukhlisin",
+    "tanggalMasuk": "2000-07-13",
+    "status": "AKTIF",
+    "cutiTahunan": {
+      "tahun": 2026,
+      "jatahDasar": 12,
+      "carryForward": 23,
+      "totalHakCuti": 35,
+      "cutiTerpakai": 0,
+      "sisaCuti": 35,
+      "tipe": "FULL"
+    }
+  },
+  {
+    "nik": "P02-422",
+    "nama": "Multajam",
+    "tanggalMasuk": "2011-10-07",
+    "status": "AKTIF",
+    "cutiTahunan": {
+      "tahun": 2026,
+      "jatahDasar": 12,
+      "carryForward": 26,
+      "totalHakCuti": 38,
+      "cutiTerpakai": 0,
+      "sisaCuti": 38,
+      "tipe": "FULL"
+    }
+  },
+  {
+    "nik": "AD12-756",
+    "nama": "Nazarul Fikri",
+    "tanggalMasuk": "2024-12-09",
+    "status": "AKTIF",
+    "cutiTahunan": {
+      "tahun": 2026,
+      "jatahDasar": 1,
+      "carryForward": 8,
+      "totalHakCuti": 9,
+      "cutiTerpakai": 0,
+      "sisaCuti": 9,
+      "tipe": "FULL"
+    }
+  },
+  {
+    "nik": "E07-7007",
+    "nama": "Pungki Ardiansyah",
+    "tanggalMasuk": "2019-07-18",
+    "status": "AKTIF",
+    "cutiTahunan": {
+      "tahun": 2026,
+      "jatahDasar": 12,
+      "carryForward": 1,
+      "totalHakCuti": 13,
+      "cutiTerpakai": 0,
+      "sisaCuti": 13,
+      "tipe": "FULL"
+    }
+  },
+  {
+    "nik": "A11-7001",
+    "nama": "Reni Fitriani",
+    "tanggalMasuk": "2014-09-08",
+    "status": "AKTIF",
+    "cutiTahunan": {
+      "tahun": 2026,
+      "jatahDasar": 12,
+      "carryForward": 3,
+      "totalHakCuti": 15,
+      "cutiTerpakai": 0,
+      "sisaCuti": 15,
+      "tipe": "FULL"
+    }
+  },
+  {
+    "nik": "O08-304",
+    "nama": "Ridwan Sarmedi",
+    "tanggalMasuk": "2009-08-03",
+    "status": "AKTIF",
+    "cutiTahunan": {
+      "tahun": 2026,
+      "jatahDasar": 12,
+      "carryForward": 15,
+      "totalHakCuti": 27,
+      "cutiTerpakai": 0,
+      "sisaCuti": 27,
+      "tipe": "FULL"
+    }
+  },
+  {
+    "nik": "AE09-758",
+    "nama": "Sidik Purnomo",
+    "tanggalMasuk": "2025-09-08",
+    "status": "AKTIF",
+    "cutiTahunan": {
+      "tahun": 2026,
+      "jatahDasar": 0,
+      "carryForward": -1,
+      "totalHakCuti": -1,
+      "cutiTerpakai": 0,
+      "sisaCuti": -1,
+      "tipe": "FULL"
+    }
+  },
+  {
+    "nik": "AC10-750",
+    "nama": "Silviana Nur Azizah",
+    "tanggalMasuk": "2023-10-02",
+    "status": "AKTIF",
+    "cutiTahunan": {
+      "tahun": 2026,
+      "jatahDasar": 12,
+      "carryForward": 0,
+      "totalHakCuti": 12,
+      "cutiTerpakai": 0,
+      "sisaCuti": 12,
+      "tipe": "FULL"
+    }
+  },
+  {
+    "nik": "AA08-729",
+    "nama": "Stanley Wyatt Adema",
+    "tanggalMasuk": "2021-08-09",
+    "status": "AKTIF",
+    "cutiTahunan": {
+      "tahun": 2026,
+      "jatahDasar": 12,
+      "carryForward": 24,
+      "totalHakCuti": 36,
+      "cutiTerpakai": 0,
+      "sisaCuti": 36,
+      "tipe": "FULL"
+    }
+  },
+  {
+    "nik": "O08-374",
+    "nama": "Suhendra",
+    "tanggalMasuk": "2010-02-03",
+    "status": "AKTIF",
+    "cutiTahunan": {
+      "tahun": 2026,
+      "jatahDasar": 12,
+      "carryForward": 6,
+      "totalHakCuti": 18,
+      "cutiTerpakai": 0,
+      "sisaCuti": 18,
+      "tipe": "FULL"
+    }
+  },
+  {
+    "nik": "M03-247",
+    "nama": "Surjana",
+    "tanggalMasuk": "2007-05-29",
+    "status": "AKTIF",
+    "cutiTahunan": {
+      "tahun": 2026,
+      "jatahDasar": 12,
+      "carryForward": 19,
+      "totalHakCuti": 31,
+      "cutiTerpakai": 0,
+      "sisaCuti": 31,
+      "tipe": "FULL"
+    }
+  },
+  {
+    "nik": "S10-552",
+    "nama": "Sutrisno",
+    "tanggalMasuk": "2013-01-07",
+    "status": "AKTIF",
+    "cutiTahunan": {
+      "tahun": 2026,
+      "jatahDasar": 12,
+      "carryForward": 19,
+      "totalHakCuti": 31,
+      "cutiTerpakai": 0,
+      "sisaCuti": 31,
+      "tipe": "FULL"
+    }
+  },
+  {
+    "nik": "P01-407",
+    "nama": "Syaefudin",
+    "tanggalMasuk": "2011-01-21",
+    "status": "AKTIF",
+    "cutiTahunan": {
+      "tahun": 2026,
+      "jatahDasar": 12,
+      "carryForward": 4,
+      "totalHakCuti": 16,
+      "cutiTerpakai": 0,
+      "sisaCuti": 16,
+      "tipe": "FULL"
+    }
+  },
+  {
+    "nik": "Y12-714",
+    "nama": "Syaipulloh",
+    "tanggalMasuk": "2019-12-10",
+    "status": "AKTIF",
+    "cutiTahunan": {
+      "tahun": 2026,
+      "jatahDasar": 12,
+      "carryForward": 0,
+      "totalHakCuti": 12,
+      "cutiTerpakai": 0,
+      "sisaCuti": 12,
+      "tipe": "FULL"
+    }
+  },
+  {
+    "nik": "AD10-754",
+    "nama": "Tasya Rossie Jenisa Sitorus",
+    "tanggalMasuk": "2024-10-03",
+    "status": "AKTIF",
+    "cutiTahunan": {
+      "tahun": 2026,
+      "jatahDasar": 3,
+      "carryForward": 8,
+      "totalHakCuti": 11,
+      "cutiTerpakai": 0,
+      "sisaCuti": 11,
+      "tipe": "FULL"
+    }
+  },
+  {
+    "nik": "F06-086",
+    "nama": "Taufik",
+    "tanggalMasuk": "2000-06-29",
+    "status": "AKTIF",
+    "cutiTahunan": {
+      "tahun": 2026,
+      "jatahDasar": 12,
+      "carryForward": 0,
+      "totalHakCuti": 12,
+      "cutiTerpakai": 0,
+      "sisaCuti": 12,
+      "tipe": "FULL"
+    }
+  },
+  {
+    "nik": "F04-072",
+    "nama": "Taufiq Hidayat",
+    "tanggalMasuk": "2000-04-19",
+    "status": "AKTIF",
+    "cutiTahunan": {
+      "tahun": 2026,
+      "jatahDasar": 12,
+      "carryForward": 7,
+      "totalHakCuti": 19,
+      "cutiTerpakai": 0,
+      "sisaCuti": 19,
+      "tipe": "FULL"
+    }
+  },
+  {
+    "nik": "F04-068",
+    "nama": "Termidzi Manoppo",
+    "tanggalMasuk": "2000-04-17",
+    "status": "AKTIF",
+    "cutiTahunan": {
+      "tahun": 2026,
+      "jatahDasar": 12,
+      "carryForward": -9,
+      "totalHakCuti": 3,
+      "cutiTerpakai": 0,
+      "sisaCuti": 3,
+      "tipe": "FULL"
+    }
+  },
+  {
+    "nik": "AD10-753",
+    "nama": "Tomi Aditya",
+    "tanggalMasuk": "2024-10-01",
+    "status": "AKTIF",
+    "cutiTahunan": {
+      "tahun": 2026,
+      "jatahDasar": 3,
+      "carryForward": 8,
+      "totalHakCuti": 11,
+      "cutiTerpakai": 0,
+      "sisaCuti": 11,
+      "tipe": "FULL"
+    }
+  },
+  {
+    "nik": "I02-183",
+    "nama": "Tri Hermanto",
+    "tanggalMasuk": "2003-02-10",
+    "status": "AKTIF",
+    "cutiTahunan": {
+      "tahun": 2026,
+      "jatahDasar": 12,
+      "carryForward": 6,
+      "totalHakCuti": 18,
+      "cutiTerpakai": 0,
+      "sisaCuti": 18,
+      "tipe": "FULL"
+    }
+  },
+  {
+    "nik": "O02-267",
+    "nama": "Tulus Sinaga",
+    "tanggalMasuk": "2009-02-23",
+    "status": "AKTIF",
+    "cutiTahunan": {
+      "tahun": 2026,
+      "jatahDasar": 12,
+      "carryForward": 14,
+      "totalHakCuti": 26,
+      "cutiTerpakai": 0,
+      "sisaCuti": 26,
+      "tipe": "FULL"
+    }
+  },
+  {
+    "nik": "P03-427",
+    "nama": "Ucah",
+    "tanggalMasuk": "2012-09-28",
+    "status": "AKTIF",
+    "cutiTahunan": {
+      "tahun": 2026,
+      "jatahDasar": 12,
+      "carryForward": 45,
+      "totalHakCuti": 57,
+      "cutiTerpakai": 0,
+      "sisaCuti": 57,
+      "tipe": "FULL"
+    }
+  },
+  {
+    "nik": "O08-352",
+    "nama": "Wiwin Rahayu",
+    "tanggalMasuk": "2009-08-03",
+    "status": "AKTIF",
+    "cutiTahunan": {
+      "tahun": 2026,
+      "jatahDasar": 12,
+      "carryForward": 5,
+      "totalHakCuti": 17,
+      "cutiTerpakai": 0,
+      "sisaCuti": 17,
+      "tipe": "FULL"
+    }
+  },
+  {
+    "nik": "O08-332",
+    "nama": "Yudas Firmansyah",
+    "tanggalMasuk": "2009-08-03",
+    "status": "NONAKTIF",
+    "cutiTahunan": {
+      "tahun": 2026,
+      "jatahDasar": 12,
+      "carryForward": 0,
+      "totalHakCuti": 12,
+      "cutiTerpakai": 0,
+      "sisaCuti": 12,
+      "tipe": "FULL"
+    }
+  }
+]
