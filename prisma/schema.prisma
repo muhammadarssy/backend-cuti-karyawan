@@ -31,6 +31,8 @@ enum JenisCuti {
   TAHUNAN
   SAKIT
   IZIN
+  BAKU
+  TANPA_KETERANGAN
   LAINNYA
 }
 

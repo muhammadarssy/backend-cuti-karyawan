@@ -23,6 +23,9 @@ router.get('/:id', (req, res, next) => cutiController.findById(req, res, next));
 // GET /api/cuti - Get list cuti
 router.get('/', (req, res, next) => cutiController.findAll(req, res, next));
 
+// PUT /api/cuti/:id - Update cuti
+router.put('/:id', (req, res, next) => cutiController.update(req, res, next));
+
 // DELETE /api/cuti/:id - Delete/rollback cuti
 router.delete('/:id', (req, res, next) => cutiController.delete(req, res, next));
 

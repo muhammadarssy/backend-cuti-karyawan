@@ -149,6 +149,69 @@ GET /karyawan?status=AKTIF
 
 ---
 
+### PUT /cuti/:id
+Update data cuti
+
+**URL Parameters:**
+- `id` (required): UUID cuti yang akan diupdate
+
+**Request Body:**
+Semua field bersifat optional, kirim hanya field yang ingin diubah:
+```json
+{
+  "jenis": "SAKIT", // optional: TAHUNAN | SAKIT | IZIN | BAKU | TANPA_KETERANGAN | LAINNYA
+  "alasan": "Alasan baru", // optional
+  "tanggalMulai": "2026-01-20T00:00:00.000Z", // optional: ISO 8601 datetime
+  "tanggalSelesai": "2026-01-22T00:00:00.000Z" // optional: ISO 8601 datetime
+}
+```
+
+**Response (200):**
+```json
+{
+  "success": true,
+  "message": "Cuti berhasil diupdate",
+  "data": {
+    "id": "uuid",
+    "karyawanId": "uuid",
+    "cutiTahunanId": "uuid",
+    "tahun": 2026,
+    "jenis": "SAKIT",
+    "alasan": "Alasan baru",
+    "tanggalMulai": "2026-01-20T00:00:00.000Z",
+    "tanggalSelesai": "2026-01-22T00:00:00.000Z",
+    "jumlahHari": 3,
+    "createdAt": "2026-01-13T10:00:00.000Z",
+    "updatedAt": "2026-01-13T11:00:00.000Z",
+    "karyawan": {
+      "id": "uuid",
+      "nik": "123456789",
+      "nama": "John Doe"
+    }
+  }
+}
+```
+
+**Business Logic:**
+- Saldo cuti lama akan di-rollback terlebih dahulu (jika jenis TAHUNAN)
+- Durasi baru akan dihitung otomatis jika tanggal diubah
+- Saldo baru akan dipotong sesuai durasi baru (jika jenis TAHUNAN)
+- Jika tahun berubah, data akan dipindah ke cutiTahunan tahun yang sesuai
+- Tahun ditentukan dari tanggalMulai
+
+**Validation Rules:**
+- Semua field optional, minimal satu field harus diisi
+- `jenis`: Harus salah satu dari enum yang valid
+- `alasan`: Minimal 1 karakter jika diisi
+- `tanggalMulai` & `tanggalSelesai`: Format ISO 8601 datetime
+- `tanggalSelesai` harus >= `tanggalMulai`
+
+**Error Responses:**
+- `400 Bad Request`: Validation error
+- `404 Not Found`: Cuti tidak ditemukan
+
+---
+
 ### GET /karyawan/:id
 Get karyawan by ID
 
@@ -773,6 +836,8 @@ enum JenisCuti {
   TAHUNAN = "TAHUNAN",   // Mengurangi saldo cuti tahunan
   SAKIT = "SAKIT",       // Tidak mengurangi saldo
   IZIN = "IZIN",         // Tidak mengurangi saldo
+  BAKU = "BAKU",         // Tidak mengurangi saldo
+  TANPA_KETERANGAN = "TANPA_KETERANGAN", // Tidak mengurangi saldo
   LAINNYA = "LAINNYA"    // Tidak mengurangi saldo
 }
 ```
@@ -817,7 +882,7 @@ enum JenisCuti {
 | karyawanId | UUID | Foreign key to Karyawan |
 | cutiTahunanId | UUID | Foreign key to CutiTahunan |
 | tahun | Int | Year |
-| jenis | JenisCuti | TAHUNAN/SAKIT/IZIN/LAINNYA |
+| jenis | JenisCuti | TAHUNAN/SAKIT/IZIN/BAKU/TANPA_KETERANGAN/LAINNYA |
 | alasan | String | Reason for leave |
 | tanggalMulai | DateTime | Start date |
 | tanggalSelesai | DateTime | End date |
