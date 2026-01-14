@@ -1634,3 +1634,479 @@
 {"groupBy":"item","level":"info","message":"PengeluaranAgent: Getting rekap pengeluaran","tanggalMulai":"2026-01-01","tanggalSelesai":"2026-01-14","timestamp":"2026-01-14 10:28:29"}
 {"duration":"164ms","ip":"::1","level":"info","message":"HTTP ✅ GET /rekap - 200","method":"GET","path":"/api/pembelian/rekap?tanggalMulai=2026-01-01&tanggalSelesai=2026-01-14&groupBy=item","status":200,"timestamp":"2026-01-14 10:28:29","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
 {"duration":"366ms","ip":"::1","level":"info","message":"HTTP ✅ GET /rekap - 200","method":"GET","path":"/api/pengeluaran/rekap?tanggalMulai=2026-01-01&tanggalSelesai=2026-01-14&groupBy=item","status":200,"timestamp":"2026-01-14 10:28:29","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"CutiTahunanController: Get rekap cuti tahunan","query":{"tahun":"2026"},"timestamp":"2026-01-14 11:10:36"}
+{"level":"info","message":"CutiTahunanAgent: Fetching rekap cuti tahunan","tahun":2026,"timestamp":"2026-01-14 11:10:36"}
+{"level":"info","message":"CutiController: Get all cuti","query":{"tahun":"2026"},"timestamp":"2026-01-14 11:10:37"}
+{"level":"info","limit":20,"message":"CutiAgent: Fetching cuti list","page":1,"tahun":2026,"timestamp":"2026-01-14 11:10:37"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"1000","page":"1"},"timestamp":"2026-01-14 11:10:37"}
+{"level":"info","limit":1000,"message":"ItemAgent: Fetching items","page":1,"stokMenipis":false,"timestamp":"2026-01-14 11:10:37"}
+{"level":"info","message":"KaryawanController: Get all karyawan request","query":{},"timestamp":"2026-01-14 11:10:37"}
+{"level":"info","message":"KaryawanAgent: Fetching all karyawan","timestamp":"2026-01-14 11:10:37"}
+{"count":0,"level":"info","message":"CutiTahunanAgent: Rekap fetched","timestamp":"2026-01-14 11:10:37"}
+{"duration":"622ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti-tahunan?tahun=2026","status":200,"timestamp":"2026-01-14 11:10:37","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"count":0,"level":"info","message":"KaryawanAgent: Fetched karyawan","timestamp":"2026-01-14 11:10:37"}
+{"duration":"570ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/karyawan","status":200,"timestamp":"2026-01-14 11:10:37","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"count":125,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 11:10:37","total":125}
+{"duration":"785ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?page=1&limit=1000","status":200,"timestamp":"2026-01-14 11:10:37","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"count":0,"level":"info","message":"CutiAgent: Cuti list fetched","timestamp":"2026-01-14 11:10:37","total":0}
+{"duration":"895ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti?tahun=2026","status":200,"timestamp":"2026-01-14 11:10:37","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"10","page":"1"},"timestamp":"2026-01-14 11:10:40"}
+{"level":"info","limit":10,"message":"ItemAgent: Fetching items","page":1,"stokMenipis":false,"timestamp":"2026-01-14 11:10:40"}
+{"count":10,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 11:10:40","total":125}
+{"duration":"142ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?page=1&limit=10","status":200,"timestamp":"2026-01-14 11:10:40","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"body":{"kategori":"ATK","keterangan":"","kode":"ATK-12313","nama":"Test 3","satuan":"pcs","stokMinimal":10,"stokSekarang":15},"level":"info","message":"ItemController: Create item request","timestamp":"2026-01-14 11:13:24"}
+{"kategori":"ATK","kode":"ATK-12313","level":"info","message":"ItemAgent: Creating new item","timestamp":"2026-01-14 11:13:24"}
+{"id":"13dc720a-facd-41ea-bebd-8b3d98bcbee6","kode":"ATK-12313","level":"info","message":"ItemAgent: Item created successfully","timestamp":"2026-01-14 11:13:24"}
+{"duration":"390ms","ip":"::1","level":"info","message":"HTTP ✅ POST / - 201","method":"POST","path":"/api/item","status":201,"timestamp":"2026-01-14 11:13:24","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"10","page":"1"},"timestamp":"2026-01-14 11:13:25"}
+{"level":"info","limit":10,"message":"ItemAgent: Fetching items","page":1,"stokMenipis":false,"timestamp":"2026-01-14 11:13:25"}
+{"count":10,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 11:13:26","total":126}
+{"duration":"473ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?page=1&limit=10","status":200,"timestamp":"2026-01-14 11:13:26","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"id":"13dc720a-facd-41ea-bebd-8b3d98bcbee6","level":"info","message":"ItemController: Get item by ID","timestamp":"2026-01-14 11:14:37"}
+{"id":"13dc720a-facd-41ea-bebd-8b3d98bcbee6","level":"info","message":"ItemAgent: Fetching item by ID","timestamp":"2026-01-14 11:14:37"}
+{"duration":"1124ms","ip":"::1","level":"info","message":"HTTP ✅ GET /13dc720a-facd-41ea-bebd-8b3d98bcbee6 - 200","method":"GET","path":"/api/item/13dc720a-facd-41ea-bebd-8b3d98bcbee6","status":200,"timestamp":"2026-01-14 11:14:38","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"10","page":"1"},"timestamp":"2026-01-14 11:15:26"}
+{"level":"info","limit":10,"message":"ItemAgent: Fetching items","page":1,"stokMenipis":false,"timestamp":"2026-01-14 11:15:26"}
+{"count":10,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 11:15:26","total":126}
+{"duration":"416ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?page=1&limit=10","status":200,"timestamp":"2026-01-14 11:15:26","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"body":{"kategori":"ATK","keterangan":"test","kode":"ATK-12313","nama":"Test 3","satuan":"pcs","stokMinimal":10,"stokSekarang":15},"id":"13dc720a-facd-41ea-bebd-8b3d98bcbee6","level":"info","message":"ItemController: Update item","timestamp":"2026-01-14 11:15:40"}
+{"data":{"keterangan":"test","nama":"Test 3","satuan":"pcs","stokMinimal":10},"id":"13dc720a-facd-41ea-bebd-8b3d98bcbee6","level":"info","message":"ItemAgent: Updating item","timestamp":"2026-01-14 11:15:40"}
+{"id":"13dc720a-facd-41ea-bebd-8b3d98bcbee6","level":"info","message":"ItemAgent: Item updated successfully","timestamp":"2026-01-14 11:15:40"}
+{"duration":"733ms","ip":"::1","level":"info","message":"HTTP ✅ PUT /13dc720a-facd-41ea-bebd-8b3d98bcbee6 - 200","method":"PUT","path":"/api/item/13dc720a-facd-41ea-bebd-8b3d98bcbee6","status":200,"timestamp":"2026-01-14 11:15:40","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"id":"13dc720a-facd-41ea-bebd-8b3d98bcbee6","level":"info","message":"ItemController: Get item by ID","timestamp":"2026-01-14 11:15:40"}
+{"id":"13dc720a-facd-41ea-bebd-8b3d98bcbee6","level":"info","message":"ItemAgent: Fetching item by ID","timestamp":"2026-01-14 11:15:41"}
+{"duration":"624ms","ip":"::1","level":"info","message":"HTTP ✅ GET /13dc720a-facd-41ea-bebd-8b3d98bcbee6 - 200","method":"GET","path":"/api/item/13dc720a-facd-41ea-bebd-8b3d98bcbee6","status":200,"timestamp":"2026-01-14 11:15:41","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"10","page":"1"},"timestamp":"2026-01-14 11:15:42"}
+{"level":"info","limit":10,"message":"ItemAgent: Fetching items","page":1,"stokMenipis":false,"timestamp":"2026-01-14 11:15:42"}
+{"count":10,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 11:15:42","total":126}
+{"duration":"156ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?page=1&limit=10","status":200,"timestamp":"2026-01-14 11:15:42","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"body":{"kategori":"ATK","keterangan":"test","kode":"ATK-12313","nama":"Test 3","satuan":"pcs","stokMinimal":11,"stokSekarang":15},"id":"13dc720a-facd-41ea-bebd-8b3d98bcbee6","level":"info","message":"ItemController: Update item","timestamp":"2026-01-14 11:15:51"}
+{"data":{"keterangan":"test","nama":"Test 3","satuan":"pcs","stokMinimal":11},"id":"13dc720a-facd-41ea-bebd-8b3d98bcbee6","level":"info","message":"ItemAgent: Updating item","timestamp":"2026-01-14 11:15:51"}
+{"id":"13dc720a-facd-41ea-bebd-8b3d98bcbee6","level":"info","message":"ItemAgent: Item updated successfully","timestamp":"2026-01-14 11:15:51"}
+{"duration":"79ms","ip":"::1","level":"info","message":"HTTP ✅ PUT /13dc720a-facd-41ea-bebd-8b3d98bcbee6 - 200","method":"PUT","path":"/api/item/13dc720a-facd-41ea-bebd-8b3d98bcbee6","status":200,"timestamp":"2026-01-14 11:15:51","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"id":"13dc720a-facd-41ea-bebd-8b3d98bcbee6","level":"info","message":"ItemController: Get item by ID","timestamp":"2026-01-14 11:15:51"}
+{"id":"13dc720a-facd-41ea-bebd-8b3d98bcbee6","level":"info","message":"ItemAgent: Fetching item by ID","timestamp":"2026-01-14 11:15:51"}
+{"duration":"92ms","ip":"::1","level":"info","message":"HTTP ✅ GET /13dc720a-facd-41ea-bebd-8b3d98bcbee6 - 200","method":"GET","path":"/api/item/13dc720a-facd-41ea-bebd-8b3d98bcbee6","status":200,"timestamp":"2026-01-14 11:15:51","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"10","page":"1"},"timestamp":"2026-01-14 11:15:51"}
+{"level":"info","limit":10,"message":"ItemAgent: Fetching items","page":1,"stokMenipis":false,"timestamp":"2026-01-14 11:15:51"}
+{"count":10,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 11:15:52","total":126}
+{"duration":"77ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?page=1&limit=10","status":200,"timestamp":"2026-01-14 11:15:52","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"id":"13dc720a-facd-41ea-bebd-8b3d98bcbee6","level":"info","message":"ItemController: Delete item","timestamp":"2026-01-14 11:15:55"}
+{"id":"13dc720a-facd-41ea-bebd-8b3d98bcbee6","level":"info","message":"ItemAgent: Deleting item","timestamp":"2026-01-14 11:15:55"}
+{"id":"13dc720a-facd-41ea-bebd-8b3d98bcbee6","level":"info","message":"ItemAgent: Item deleted successfully","timestamp":"2026-01-14 11:15:55"}
+{"duration":"279ms","ip":"::1","level":"info","message":"HTTP ✅ DELETE /13dc720a-facd-41ea-bebd-8b3d98bcbee6 - 200","method":"DELETE","path":"/api/item/13dc720a-facd-41ea-bebd-8b3d98bcbee6","status":200,"timestamp":"2026-01-14 11:15:55","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"10","page":"1"},"timestamp":"2026-01-14 11:15:55"}
+{"level":"info","limit":10,"message":"ItemAgent: Fetching items","page":1,"stokMenipis":false,"timestamp":"2026-01-14 11:15:55"}
+{"count":10,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 11:15:55","total":125}
+{"duration":"57ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?page=1&limit=10","status":200,"timestamp":"2026-01-14 11:15:55","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"10","nama":"p","page":"1"},"timestamp":"2026-01-14 11:16:05"}
+{"level":"info","limit":10,"message":"ItemAgent: Fetching items","nama":"p","page":1,"stokMenipis":false,"timestamp":"2026-01-14 11:16:05"}
+{"count":10,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 11:16:05","total":85}
+{"duration":"121ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?nama=p&page=1&limit=10","status":200,"timestamp":"2026-01-14 11:16:05","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"10","nama":"pu","page":"1"},"timestamp":"2026-01-14 11:16:05"}
+{"level":"info","limit":10,"message":"ItemAgent: Fetching items","nama":"pu","page":1,"stokMenipis":false,"timestamp":"2026-01-14 11:16:05"}
+{"count":10,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 11:16:05","total":45}
+{"duration":"104ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?nama=pu&page=1&limit=10","status":200,"timestamp":"2026-01-14 11:16:05","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"10","nama":"pul","page":"1"},"timestamp":"2026-01-14 11:16:06"}
+{"level":"info","limit":10,"message":"ItemAgent: Fetching items","nama":"pul","page":1,"stokMenipis":false,"timestamp":"2026-01-14 11:16:06"}
+{"count":10,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 11:16:06","total":45}
+{"duration":"14ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?nama=pul&page=1&limit=10","status":200,"timestamp":"2026-01-14 11:16:06","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"10","nama":"pulp","page":"1"},"timestamp":"2026-01-14 11:16:07"}
+{"level":"info","limit":10,"message":"ItemAgent: Fetching items","nama":"pulp","page":1,"stokMenipis":false,"timestamp":"2026-01-14 11:16:07"}
+{"count":10,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 11:16:07","total":45}
+{"duration":"17ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?nama=pulp&page=1&limit=10","status":200,"timestamp":"2026-01-14 11:16:07","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"10","nama":"pulpe","page":"1"},"timestamp":"2026-01-14 11:16:07"}
+{"level":"info","limit":10,"message":"ItemAgent: Fetching items","nama":"pulpe","page":1,"stokMenipis":false,"timestamp":"2026-01-14 11:16:07"}
+{"count":10,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 11:16:07","total":45}
+{"duration":"29ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?nama=pulpe&page=1&limit=10","status":200,"timestamp":"2026-01-14 11:16:07","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"10","nama":"pulpen","page":"1"},"timestamp":"2026-01-14 11:16:07"}
+{"level":"info","limit":10,"message":"ItemAgent: Fetching items","nama":"pulpen","page":1,"stokMenipis":false,"timestamp":"2026-01-14 11:16:07"}
+{"count":10,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 11:16:07","total":45}
+{"duration":"22ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?nama=pulpen&page=1&limit=10","status":200,"timestamp":"2026-01-14 11:16:07","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"10","nama":"pulpen ","page":"1"},"timestamp":"2026-01-14 11:16:07"}
+{"level":"info","limit":10,"message":"ItemAgent: Fetching items","nama":"pulpen ","page":1,"stokMenipis":false,"timestamp":"2026-01-14 11:16:07"}
+{"count":10,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 11:16:07","total":45}
+{"duration":"27ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?nama=pulpen+&page=1&limit=10","status":200,"timestamp":"2026-01-14 11:16:07","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"10","nama":"pulpen h","page":"1"},"timestamp":"2026-01-14 11:16:10"}
+{"level":"info","limit":10,"message":"ItemAgent: Fetching items","nama":"pulpen h","page":1,"stokMenipis":false,"timestamp":"2026-01-14 11:16:10"}
+{"count":10,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 11:16:10","total":45}
+{"duration":"102ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?nama=pulpen+h&page=1&limit=10","status":200,"timestamp":"2026-01-14 11:16:10","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"10","nama":"pulpen hi","page":"1"},"timestamp":"2026-01-14 11:16:10"}
+{"level":"info","limit":10,"message":"ItemAgent: Fetching items","nama":"pulpen hi","page":1,"stokMenipis":false,"timestamp":"2026-01-14 11:16:10"}
+{"count":10,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 11:16:11","total":45}
+{"duration":"138ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?nama=pulpen+hi&page=1&limit=10","status":200,"timestamp":"2026-01-14 11:16:11","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"10","nama":"pulpen hit","page":"1"},"timestamp":"2026-01-14 11:16:11"}
+{"level":"info","limit":10,"message":"ItemAgent: Fetching items","nama":"pulpen hit","page":1,"stokMenipis":false,"timestamp":"2026-01-14 11:16:11"}
+{"count":10,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 11:16:11","total":45}
+{"duration":"110ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?nama=pulpen+hit&page=1&limit=10","status":200,"timestamp":"2026-01-14 11:16:11","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"10","nama":"pulpen hita","page":"1"},"timestamp":"2026-01-14 11:16:11"}
+{"level":"info","limit":10,"message":"ItemAgent: Fetching items","nama":"pulpen hita","page":1,"stokMenipis":false,"timestamp":"2026-01-14 11:16:11"}
+{"count":10,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 11:16:11","total":45}
+{"duration":"123ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?nama=pulpen+hita&page=1&limit=10","status":200,"timestamp":"2026-01-14 11:16:11","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"10","nama":"pulpen hitam","page":"1"},"timestamp":"2026-01-14 11:16:11"}
+{"level":"info","limit":10,"message":"ItemAgent: Fetching items","nama":"pulpen hitam","page":1,"stokMenipis":false,"timestamp":"2026-01-14 11:16:11"}
+{"count":10,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 11:16:11","total":45}
+{"duration":"19ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?nama=pulpen+hitam&page=1&limit=10","status":200,"timestamp":"2026-01-14 11:16:11","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"10","nama":"pulpen hitam ","page":"1"},"timestamp":"2026-01-14 11:16:11"}
+{"level":"info","limit":10,"message":"ItemAgent: Fetching items","nama":"pulpen hitam ","page":1,"stokMenipis":false,"timestamp":"2026-01-14 11:16:11"}
+{"count":3,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 11:16:11","total":3}
+{"duration":"29ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?nama=pulpen+hitam+&page=1&limit=10","status":200,"timestamp":"2026-01-14 11:16:11","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"PembelianController: Get all pembelian","query":{"limit":"10","page":"1"},"timestamp":"2026-01-14 11:16:21"}
+{"level":"info","limit":10,"message":"PembelianAgent: Fetching pembelian list","page":1,"timestamp":"2026-01-14 11:16:21"}
+{"count":10,"level":"info","message":"PembelianAgent: Pembelian list fetched","timestamp":"2026-01-14 11:16:21","total":33}
+{"duration":"83ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/pembelian?page=1&limit=10","status":200,"timestamp":"2026-01-14 11:16:21","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"100","page":"1"},"timestamp":"2026-01-14 11:16:26"}
+{"level":"info","limit":100,"message":"ItemAgent: Fetching items","page":1,"stokMenipis":false,"timestamp":"2026-01-14 11:16:26"}
+{"count":100,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 11:16:26","total":125}
+{"duration":"204ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?page=1&limit=100","status":200,"timestamp":"2026-01-14 11:16:26","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"PengeluaranController: Get all pengeluaran","query":{"limit":"10","page":"1"},"timestamp":"2026-01-14 11:16:34"}
+{"level":"info","limit":10,"message":"PengeluaranAgent: Fetching pengeluaran list","page":1,"timestamp":"2026-01-14 11:16:34"}
+{"count":10,"level":"info","message":"PengeluaranAgent: Pengeluaran list fetched","timestamp":"2026-01-14 11:16:34","total":40}
+{"duration":"137ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/pengeluaran?page=1&limit=10","status":200,"timestamp":"2026-01-14 11:16:34","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"100","page":"1"},"timestamp":"2026-01-14 11:18:17"}
+{"level":"info","limit":100,"message":"ItemAgent: Fetching items","page":1,"stokMenipis":false,"timestamp":"2026-01-14 11:18:17"}
+{"count":100,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 11:18:18","total":125}
+{"duration":"206ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?page=1&limit=100","status":200,"timestamp":"2026-01-14 11:18:18","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"100","page":"1"},"timestamp":"2026-01-14 11:19:12"}
+{"level":"info","limit":100,"message":"ItemAgent: Fetching items","page":1,"stokMenipis":false,"timestamp":"2026-01-14 11:19:12"}
+{"count":100,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 11:19:12","total":125}
+{"duration":"264ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?page=1&limit=100","status":200,"timestamp":"2026-01-14 11:19:12","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"10","page":"1"},"timestamp":"2026-01-14 11:19:27"}
+{"level":"info","limit":10,"message":"ItemAgent: Fetching items","page":1,"stokMenipis":false,"timestamp":"2026-01-14 11:19:27"}
+{"count":10,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 11:19:27","total":125}
+{"duration":"165ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?page=1&limit=10","status":200,"timestamp":"2026-01-14 11:19:27","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"id":"4ce53109-71db-4cae-afcf-a9938890f0ef","level":"info","message":"ItemController: Delete item","timestamp":"2026-01-14 11:19:32"}
+{"id":"4ce53109-71db-4cae-afcf-a9938890f0ef","level":"info","message":"ItemAgent: Deleting item","timestamp":"2026-01-14 11:19:32"}
+{"id":"4ce53109-71db-4cae-afcf-a9938890f0ef","level":"info","message":"ItemAgent: Item deleted successfully","timestamp":"2026-01-14 11:19:32"}
+{"duration":"56ms","ip":"::1","level":"info","message":"HTTP ✅ DELETE /4ce53109-71db-4cae-afcf-a9938890f0ef - 200","method":"DELETE","path":"/api/item/4ce53109-71db-4cae-afcf-a9938890f0ef","status":200,"timestamp":"2026-01-14 11:19:32","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"10","page":"1"},"timestamp":"2026-01-14 11:19:33"}
+{"level":"info","limit":10,"message":"ItemAgent: Fetching items","page":1,"stokMenipis":false,"timestamp":"2026-01-14 11:19:33"}
+{"count":10,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 11:19:33","total":124}
+{"duration":"26ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?page=1&limit=10","status":200,"timestamp":"2026-01-14 11:19:33","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"body":{"kategori":"ATK","keterangan":"","kode":"ATK-1231","nama":"Test 1","satuan":"pcs","stokMinimal":10,"stokSekarang":20},"level":"info","message":"ItemController: Create item request","timestamp":"2026-01-14 11:19:46"}
+{"kategori":"ATK","kode":"ATK-1231","level":"info","message":"ItemAgent: Creating new item","timestamp":"2026-01-14 11:19:46"}
+{"id":"6fcb42e7-eb57-473c-9334-799e7aa46d3a","kode":"ATK-1231","level":"info","message":"ItemAgent: Item created successfully","timestamp":"2026-01-14 11:19:46"}
+{"duration":"114ms","ip":"::1","level":"info","message":"HTTP ✅ POST / - 201","method":"POST","path":"/api/item","status":201,"timestamp":"2026-01-14 11:19:46","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"10","page":"1"},"timestamp":"2026-01-14 11:19:46"}
+{"level":"info","limit":10,"message":"ItemAgent: Fetching items","page":1,"stokMenipis":false,"timestamp":"2026-01-14 11:19:46"}
+{"count":10,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 11:19:46","total":125}
+{"duration":"185ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?page=1&limit=10","status":200,"timestamp":"2026-01-14 11:19:46","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"PengeluaranController: Get all pengeluaran","query":{"limit":"10","page":"1"},"timestamp":"2026-01-14 11:19:48"}
+{"level":"info","limit":10,"message":"PengeluaranAgent: Fetching pengeluaran list","page":1,"timestamp":"2026-01-14 11:19:48"}
+{"count":10,"level":"info","message":"PengeluaranAgent: Pengeluaran list fetched","timestamp":"2026-01-14 11:19:48","total":40}
+{"duration":"61ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/pengeluaran?page=1&limit=10","status":200,"timestamp":"2026-01-14 11:19:48","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"100","page":"1"},"timestamp":"2026-01-14 11:19:49"}
+{"level":"info","limit":100,"message":"ItemAgent: Fetching items","page":1,"stokMenipis":false,"timestamp":"2026-01-14 11:19:49"}
+{"count":100,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 11:19:49","total":125}
+{"duration":"53ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?page=1&limit=100","status":200,"timestamp":"2026-01-14 11:19:49","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"body":{"itemId":"6fcb42e7-eb57-473c-9334-799e7aa46d3a","jumlah":25,"keperluan":"test","keterangan":"","penerima":"test","tanggal":"2026-01-14T00:00:00.000Z"},"level":"info","message":"PengeluaranController: Create pengeluaran request","timestamp":"2026-01-14 11:20:03"}
+{"itemId":"6fcb42e7-eb57-473c-9334-799e7aa46d3a","level":"info","message":"PengeluaranAgent: Creating new pengeluaran","timestamp":"2026-01-14 11:20:03"}
+{"id":"fda48111-9856-40f4-a083-c8bea65fd50c","jumlah":25,"level":"info","message":"PengeluaranAgent: Pengeluaran created and stock updated","timestamp":"2026-01-14 11:20:03"}
+{"duration":"173ms","ip":"::1","level":"info","message":"HTTP ✅ POST / - 201","method":"POST","path":"/api/pengeluaran","status":201,"timestamp":"2026-01-14 11:20:03","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"100","page":"1"},"timestamp":"2026-01-14 11:20:03"}
+{"level":"info","limit":100,"message":"ItemAgent: Fetching items","page":1,"stokMenipis":false,"timestamp":"2026-01-14 11:20:03"}
+{"count":100,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 11:20:03","total":125}
+{"duration":"157ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?page=1&limit=100","status":200,"timestamp":"2026-01-14 11:20:03","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"PengeluaranController: Get all pengeluaran","query":{"limit":"10","page":"1"},"timestamp":"2026-01-14 11:20:03"}
+{"level":"info","limit":10,"message":"PengeluaranAgent: Fetching pengeluaran list","page":1,"timestamp":"2026-01-14 11:20:03"}
+{"count":10,"level":"info","message":"PengeluaranAgent: Pengeluaran list fetched","timestamp":"2026-01-14 11:20:03","total":41}
+{"duration":"92ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/pengeluaran?page=1&limit=10","status":200,"timestamp":"2026-01-14 11:20:03","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"10","page":"1"},"timestamp":"2026-01-14 11:20:09"}
+{"level":"info","limit":10,"message":"ItemAgent: Fetching items","page":1,"stokMenipis":false,"timestamp":"2026-01-14 11:20:09"}
+{"count":10,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 11:20:09","total":125}
+{"duration":"19ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?page=1&limit=10","status":200,"timestamp":"2026-01-14 11:20:09","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"🗄️  Database PostgreSQL connected successfully","timestamp":"2026-01-14 11:21:31"}
+{"apiUrl":"http://localhost:3000/api","env":"development","healthCheck":"http://localhost:3000/api/health","level":"info","message":"🚀 Server started successfully","port":3000,"timestamp":"2026-01-14 11:21:31"}
+{"level":"info","message":"📚 API Documentation available at http://localhost:3000/api","timestamp":"2026-01-14 11:21:31"}
+{"level":"info","message":"⏰ Scheduler disabled: Set ENABLE_SCHEDULER=true to enable auto-generation","timestamp":"2026-01-14 11:21:31"}
+{"level":"info","message":"🗄️  Database PostgreSQL connected successfully","timestamp":"2026-01-14 11:21:52"}
+{"apiUrl":"http://localhost:3000/api","env":"development","healthCheck":"http://localhost:3000/api/health","level":"info","message":"🚀 Server started successfully","port":3000,"timestamp":"2026-01-14 11:21:52"}
+{"level":"info","message":"📚 API Documentation available at http://localhost:3000/api","timestamp":"2026-01-14 11:21:52"}
+{"level":"info","message":"⏰ Scheduler disabled: Set ENABLE_SCHEDULER=true to enable auto-generation","timestamp":"2026-01-14 11:21:52"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"10","page":"1"},"timestamp":"2026-01-14 11:21:59"}
+{"level":"info","limit":10,"message":"ItemAgent: Fetching items","page":1,"stokMenipis":false,"timestamp":"2026-01-14 11:21:59"}
+{"count":10,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 11:21:59","total":125}
+{"duration":"406ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?page=1&limit=10","status":200,"timestamp":"2026-01-14 11:21:59","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"id":"6fcb42e7-eb57-473c-9334-799e7aa46d3a","level":"info","message":"ItemController: Delete item","timestamp":"2026-01-14 11:22:07"}
+{"id":"6fcb42e7-eb57-473c-9334-799e7aa46d3a","level":"info","message":"ItemAgent: Deleting item","timestamp":"2026-01-14 11:22:07"}
+{"code":"BUSINESS_LOGIC_ERROR","level":"error","message":"[ErrorHandler] Item tidak bisa dihapus karena memiliki history transaksi","stack":"BusinessLogicError: Item tidak bisa dihapus karena memiliki history transaksi\n    at ItemAgent.delete (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\src\\agents\\item.agent.ts:200:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async ItemController.delete (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\src\\controllers\\item.controller.ts:105:20)","statusCode":422,"timestamp":"2026-01-14 11:22:07"}
+{"code":"BUSINESS_LOGIC_ERROR","level":"warn","message":"Application error occurred Item tidak bisa dihapus karena memiliki history transaksi","method":"DELETE","path":"/api/item/6fcb42e7-eb57-473c-9334-799e7aa46d3a","statusCode":422,"timestamp":"2026-01-14 11:22:07"}
+{"duration":"190ms","ip":"::1","level":"info","message":"HTTP ⚠️ DELETE /api/item/6fcb42e7-eb57-473c-9334-799e7aa46d3a - 422","method":"DELETE","path":"/api/item/6fcb42e7-eb57-473c-9334-799e7aa46d3a","status":422,"timestamp":"2026-01-14 11:22:07","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"10","page":"1"},"timestamp":"2026-01-14 11:22:11"}
+{"level":"info","limit":10,"message":"ItemAgent: Fetching items","page":1,"stokMenipis":false,"timestamp":"2026-01-14 11:22:11"}
+{"count":10,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 11:22:11","total":125}
+{"duration":"19ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?page=1&limit=10","status":200,"timestamp":"2026-01-14 11:22:11","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"id":"6fcb42e7-eb57-473c-9334-799e7aa46d3a","level":"info","message":"ItemController: Delete item","timestamp":"2026-01-14 11:22:14"}
+{"id":"6fcb42e7-eb57-473c-9334-799e7aa46d3a","level":"info","message":"ItemAgent: Deleting item","timestamp":"2026-01-14 11:22:14"}
+{"code":"BUSINESS_LOGIC_ERROR","level":"error","message":"[ErrorHandler] Item tidak bisa dihapus karena memiliki history transaksi","stack":"BusinessLogicError: Item tidak bisa dihapus karena memiliki history transaksi\n    at ItemAgent.delete (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\src\\agents\\item.agent.ts:200:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async ItemController.delete (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\src\\controllers\\item.controller.ts:105:20)","statusCode":422,"timestamp":"2026-01-14 11:22:14"}
+{"code":"BUSINESS_LOGIC_ERROR","level":"warn","message":"Application error occurred Item tidak bisa dihapus karena memiliki history transaksi","method":"DELETE","path":"/api/item/6fcb42e7-eb57-473c-9334-799e7aa46d3a","statusCode":422,"timestamp":"2026-01-14 11:22:14"}
+{"duration":"13ms","ip":"::1","level":"info","message":"HTTP ⚠️ DELETE /api/item/6fcb42e7-eb57-473c-9334-799e7aa46d3a - 422","method":"DELETE","path":"/api/item/6fcb42e7-eb57-473c-9334-799e7aa46d3a","status":422,"timestamp":"2026-01-14 11:22:14","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"10","page":"1"},"timestamp":"2026-01-14 11:23:29"}
+{"level":"info","limit":10,"message":"ItemAgent: Fetching items","page":1,"stokMenipis":false,"timestamp":"2026-01-14 11:23:29"}
+{"count":10,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 11:23:29","total":125}
+{"duration":"132ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?page=1&limit=10","status":200,"timestamp":"2026-01-14 11:23:29","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"id":"6fcb42e7-eb57-473c-9334-799e7aa46d3a","level":"info","message":"ItemController: Delete item","timestamp":"2026-01-14 11:23:45"}
+{"id":"6fcb42e7-eb57-473c-9334-799e7aa46d3a","level":"info","message":"ItemAgent: Deleting item","timestamp":"2026-01-14 11:23:45"}
+{"code":"BUSINESS_LOGIC_ERROR","level":"error","message":"[ErrorHandler] Item tidak bisa dihapus karena memiliki history transaksi","stack":"BusinessLogicError: Item tidak bisa dihapus karena memiliki history transaksi\n    at ItemAgent.delete (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\src\\agents\\item.agent.ts:200:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async ItemController.delete (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\src\\controllers\\item.controller.ts:105:20)","statusCode":422,"timestamp":"2026-01-14 11:23:45"}
+{"code":"BUSINESS_LOGIC_ERROR","level":"warn","message":"Application error occurred Item tidak bisa dihapus karena memiliki history transaksi","method":"DELETE","path":"/api/item/6fcb42e7-eb57-473c-9334-799e7aa46d3a","statusCode":422,"timestamp":"2026-01-14 11:23:45"}
+{"duration":"285ms","ip":"::1","level":"info","message":"HTTP ⚠️ DELETE /api/item/6fcb42e7-eb57-473c-9334-799e7aa46d3a - 422","method":"DELETE","path":"/api/item/6fcb42e7-eb57-473c-9334-799e7aa46d3a","status":422,"timestamp":"2026-01-14 11:23:45","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"10","page":"1"},"timestamp":"2026-01-14 11:23:51"}
+{"level":"info","limit":10,"message":"ItemAgent: Fetching items","page":1,"stokMenipis":false,"timestamp":"2026-01-14 11:23:51"}
+{"count":10,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 11:23:51","total":125}
+{"duration":"23ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?page=1&limit=10","status":200,"timestamp":"2026-01-14 11:23:51","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"id":"6fcb42e7-eb57-473c-9334-799e7aa46d3a","level":"info","message":"ItemController: Delete item","timestamp":"2026-01-14 11:23:54"}
+{"id":"6fcb42e7-eb57-473c-9334-799e7aa46d3a","level":"info","message":"ItemAgent: Deleting item","timestamp":"2026-01-14 11:23:54"}
+{"code":"BUSINESS_LOGIC_ERROR","level":"error","message":"[ErrorHandler] Item tidak bisa dihapus karena memiliki history transaksi","stack":"BusinessLogicError: Item tidak bisa dihapus karena memiliki history transaksi\n    at ItemAgent.delete (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\src\\agents\\item.agent.ts:200:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async ItemController.delete (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\src\\controllers\\item.controller.ts:105:20)","statusCode":422,"timestamp":"2026-01-14 11:23:54"}
+{"code":"BUSINESS_LOGIC_ERROR","level":"warn","message":"Application error occurred Item tidak bisa dihapus karena memiliki history transaksi","method":"DELETE","path":"/api/item/6fcb42e7-eb57-473c-9334-799e7aa46d3a","statusCode":422,"timestamp":"2026-01-14 11:23:54"}
+{"duration":"85ms","ip":"::1","level":"info","message":"HTTP ⚠️ DELETE /api/item/6fcb42e7-eb57-473c-9334-799e7aa46d3a - 422","method":"DELETE","path":"/api/item/6fcb42e7-eb57-473c-9334-799e7aa46d3a","status":422,"timestamp":"2026-01-14 11:23:54","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"10","page":"1"},"timestamp":"2026-01-14 11:25:10"}
+{"level":"info","limit":10,"message":"ItemAgent: Fetching items","page":1,"stokMenipis":false,"timestamp":"2026-01-14 11:25:10"}
+{"count":10,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 11:25:10","total":125}
+{"duration":"188ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?page=1&limit=10","status":200,"timestamp":"2026-01-14 11:25:10","userAgent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Mobile Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"10","page":"1"},"timestamp":"2026-01-14 11:25:29"}
+{"level":"info","limit":10,"message":"ItemAgent: Fetching items","page":1,"stokMenipis":false,"timestamp":"2026-01-14 11:25:29"}
+{"count":10,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 11:25:29","total":125}
+{"duration":"412ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?page=1&limit=10","status":200,"timestamp":"2026-01-14 11:25:29","userAgent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Mobile Safari/537.36"}
+{"id":"6fcb42e7-eb57-473c-9334-799e7aa46d3a","level":"info","message":"ItemController: Delete item","timestamp":"2026-01-14 11:25:36"}
+{"id":"6fcb42e7-eb57-473c-9334-799e7aa46d3a","level":"info","message":"ItemAgent: Deleting item","timestamp":"2026-01-14 11:25:36"}
+{"code":"BUSINESS_LOGIC_ERROR","level":"error","message":"[ErrorHandler] Item tidak bisa dihapus karena memiliki history transaksi","stack":"BusinessLogicError: Item tidak bisa dihapus karena memiliki history transaksi\n    at ItemAgent.delete (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\src\\agents\\item.agent.ts:200:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async ItemController.delete (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\src\\controllers\\item.controller.ts:105:20)","statusCode":422,"timestamp":"2026-01-14 11:25:37"}
+{"code":"BUSINESS_LOGIC_ERROR","level":"warn","message":"Application error occurred Item tidak bisa dihapus karena memiliki history transaksi","method":"DELETE","path":"/api/item/6fcb42e7-eb57-473c-9334-799e7aa46d3a","statusCode":422,"timestamp":"2026-01-14 11:25:37"}
+{"duration":"134ms","ip":"::1","level":"info","message":"HTTP ⚠️ DELETE /api/item/6fcb42e7-eb57-473c-9334-799e7aa46d3a - 422","method":"DELETE","path":"/api/item/6fcb42e7-eb57-473c-9334-799e7aa46d3a","status":422,"timestamp":"2026-01-14 11:25:37","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"PembelianController: Get all pembelian","query":{"limit":"10","page":"1"},"timestamp":"2026-01-14 11:25:44"}
+{"level":"info","limit":10,"message":"PembelianAgent: Fetching pembelian list","page":1,"timestamp":"2026-01-14 11:25:44"}
+{"count":10,"level":"info","message":"PembelianAgent: Pembelian list fetched","timestamp":"2026-01-14 11:25:45","total":33}
+{"duration":"225ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/pembelian?page=1&limit=10","status":200,"timestamp":"2026-01-14 11:25:45","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"PengeluaranController: Get all pengeluaran","query":{"limit":"10","page":"1"},"timestamp":"2026-01-14 11:25:47"}
+{"level":"info","limit":10,"message":"PengeluaranAgent: Fetching pengeluaran list","page":1,"timestamp":"2026-01-14 11:25:47"}
+{"count":10,"level":"info","message":"PengeluaranAgent: Pengeluaran list fetched","timestamp":"2026-01-14 11:25:47","total":41}
+{"duration":"70ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/pengeluaran?page=1&limit=10","status":200,"timestamp":"2026-01-14 11:25:47","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"id":"fda48111-9856-40f4-a083-c8bea65fd50c","level":"info","message":"PengeluaranController: Delete pengeluaran","timestamp":"2026-01-14 11:25:51"}
+{"id":"fda48111-9856-40f4-a083-c8bea65fd50c","level":"info","message":"PengeluaranAgent: Deleting pengeluaran","timestamp":"2026-01-14 11:25:51"}
+{"id":"fda48111-9856-40f4-a083-c8bea65fd50c","level":"info","message":"PengeluaranAgent: Pengeluaran deleted and stock rolled back","timestamp":"2026-01-14 11:25:51"}
+{"duration":"133ms","ip":"::1","level":"info","message":"HTTP ✅ DELETE /fda48111-9856-40f4-a083-c8bea65fd50c - 200","method":"DELETE","path":"/api/pengeluaran/fda48111-9856-40f4-a083-c8bea65fd50c","status":200,"timestamp":"2026-01-14 11:25:51","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"PengeluaranController: Get all pengeluaran","query":{"limit":"10","page":"1"},"timestamp":"2026-01-14 11:25:51"}
+{"level":"info","limit":10,"message":"PengeluaranAgent: Fetching pengeluaran list","page":1,"timestamp":"2026-01-14 11:25:51"}
+{"count":10,"level":"info","message":"PengeluaranAgent: Pengeluaran list fetched","timestamp":"2026-01-14 11:25:51","total":40}
+{"duration":"52ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/pengeluaran?page=1&limit=10","status":200,"timestamp":"2026-01-14 11:25:51","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"10","page":"1"},"timestamp":"2026-01-14 11:25:53"}
+{"level":"info","limit":10,"message":"ItemAgent: Fetching items","page":1,"stokMenipis":false,"timestamp":"2026-01-14 11:25:53"}
+{"count":10,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 11:25:53","total":125}
+{"duration":"27ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?page=1&limit=10","status":200,"timestamp":"2026-01-14 11:25:53","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"id":"6fcb42e7-eb57-473c-9334-799e7aa46d3a","level":"info","message":"ItemController: Delete item","timestamp":"2026-01-14 11:25:56"}
+{"id":"6fcb42e7-eb57-473c-9334-799e7aa46d3a","level":"info","message":"ItemAgent: Deleting item","timestamp":"2026-01-14 11:25:56"}
+{"id":"6fcb42e7-eb57-473c-9334-799e7aa46d3a","level":"info","message":"ItemAgent: Item deleted successfully","timestamp":"2026-01-14 11:25:56"}
+{"duration":"98ms","ip":"::1","level":"info","message":"HTTP ✅ DELETE /6fcb42e7-eb57-473c-9334-799e7aa46d3a - 200","method":"DELETE","path":"/api/item/6fcb42e7-eb57-473c-9334-799e7aa46d3a","status":200,"timestamp":"2026-01-14 11:25:56","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"10","page":"1"},"timestamp":"2026-01-14 11:25:56"}
+{"level":"info","limit":10,"message":"ItemAgent: Fetching items","page":1,"stokMenipis":false,"timestamp":"2026-01-14 11:25:56"}
+{"count":10,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 11:25:56","total":124}
+{"duration":"51ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?page=1&limit=10","status":200,"timestamp":"2026-01-14 11:25:56","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"PembelianController: Get all pembelian","query":{"limit":"10","page":"1"},"timestamp":"2026-01-14 11:26:05"}
+{"level":"info","limit":10,"message":"PembelianAgent: Fetching pembelian list","page":1,"timestamp":"2026-01-14 11:26:05"}
+{"count":10,"level":"info","message":"PembelianAgent: Pembelian list fetched","timestamp":"2026-01-14 11:26:05","total":33}
+{"duration":"10ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/pembelian?page=1&limit=10","status":200,"timestamp":"2026-01-14 11:26:05","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"10","page":"1"},"timestamp":"2026-01-14 11:26:20"}
+{"level":"info","limit":10,"message":"ItemAgent: Fetching items","page":1,"stokMenipis":false,"timestamp":"2026-01-14 11:26:20"}
+{"count":10,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 11:26:20","total":124}
+{"duration":"176ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?page=1&limit=10","status":200,"timestamp":"2026-01-14 11:26:20","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"body":{"kategori":"ATK","keterangan":"","kode":"ATK-1231","nama":"Test 1","satuan":"pcs","stokMinimal":10,"stokSekarang":20},"level":"info","message":"ItemController: Create item request","timestamp":"2026-01-14 11:26:34"}
+{"kategori":"ATK","kode":"ATK-1231","level":"info","message":"ItemAgent: Creating new item","timestamp":"2026-01-14 11:26:34"}
+{"id":"acb34784-5ddd-4d19-8c75-c8f2254fac06","kode":"ATK-1231","level":"info","message":"ItemAgent: Item created successfully","timestamp":"2026-01-14 11:26:34"}
+{"duration":"123ms","ip":"::1","level":"info","message":"HTTP ✅ POST / - 201","method":"POST","path":"/api/item","status":201,"timestamp":"2026-01-14 11:26:34","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"10","page":"1"},"timestamp":"2026-01-14 11:26:35"}
+{"level":"info","limit":10,"message":"ItemAgent: Fetching items","page":1,"stokMenipis":false,"timestamp":"2026-01-14 11:26:35"}
+{"count":10,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 11:26:35","total":125}
+{"duration":"133ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?page=1&limit=10","status":200,"timestamp":"2026-01-14 11:26:35","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"PengeluaranController: Get all pengeluaran","query":{"limit":"10","page":"1"},"timestamp":"2026-01-14 11:26:38"}
+{"level":"info","limit":10,"message":"PengeluaranAgent: Fetching pengeluaran list","page":1,"timestamp":"2026-01-14 11:26:38"}
+{"count":10,"level":"info","message":"PengeluaranAgent: Pengeluaran list fetched","timestamp":"2026-01-14 11:26:38","total":40}
+{"duration":"47ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/pengeluaran?page=1&limit=10","status":200,"timestamp":"2026-01-14 11:26:38","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"100","page":"1"},"timestamp":"2026-01-14 11:26:40"}
+{"level":"info","limit":100,"message":"ItemAgent: Fetching items","page":1,"stokMenipis":false,"timestamp":"2026-01-14 11:26:40"}
+{"count":100,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 11:26:40","total":125}
+{"duration":"44ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?page=1&limit=100","status":200,"timestamp":"2026-01-14 11:26:40","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"body":{"itemId":"acb34784-5ddd-4d19-8c75-c8f2254fac06","jumlah":25,"keperluan":"test","keterangan":"","penerima":"test","tanggal":"2026-01-14T00:00:00.000Z"},"level":"info","message":"PengeluaranController: Create pengeluaran request","timestamp":"2026-01-14 11:26:48"}
+{"itemId":"acb34784-5ddd-4d19-8c75-c8f2254fac06","level":"info","message":"PengeluaranAgent: Creating new pengeluaran","timestamp":"2026-01-14 11:26:48"}
+{"code":"VALIDATION_ERROR","level":"error","message":"[ErrorHandler] Stok tidak mencukupi. Stok tersedia: 20, Jumlah diminta: 25","stack":"ValidationError: Stok tidak mencukupi. Stok tersedia: 20, Jumlah diminta: 25\n    at PengeluaranAgent.create (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\src\\agents\\pengeluaran.agent.ts:50:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PengeluaranController.create (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\src\\controllers\\pengeluaran.controller.ts:37:27)","statusCode":400,"timestamp":"2026-01-14 11:26:48"}
+{"code":"VALIDATION_ERROR","level":"warn","message":"Application error occurred Stok tidak mencukupi. Stok tersedia: 20, Jumlah diminta: 25","method":"POST","path":"/api/pengeluaran","statusCode":400,"timestamp":"2026-01-14 11:26:48"}
+{"duration":"28ms","ip":"::1","level":"info","message":"HTTP ⚠️ POST /api/pengeluaran - 400","method":"POST","path":"/api/pengeluaran","status":400,"timestamp":"2026-01-14 11:26:48","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"100","page":"1"},"timestamp":"2026-01-14 11:28:07"}
+{"level":"info","limit":100,"message":"ItemAgent: Fetching items","page":1,"stokMenipis":false,"timestamp":"2026-01-14 11:28:07"}
+{"count":100,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 11:28:07","total":125}
+{"duration":"469ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?page=1&limit=100","status":200,"timestamp":"2026-01-14 11:28:07","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"body":{"itemId":"acb34784-5ddd-4d19-8c75-c8f2254fac06","jumlah":25,"keperluan":"test","keterangan":"","penerima":"test","tanggal":"2026-01-14T00:00:00.000Z"},"level":"info","message":"PengeluaranController: Create pengeluaran request","timestamp":"2026-01-14 11:28:58"}
+{"itemId":"acb34784-5ddd-4d19-8c75-c8f2254fac06","level":"info","message":"PengeluaranAgent: Creating new pengeluaran","timestamp":"2026-01-14 11:28:58"}
+{"code":"VALIDATION_ERROR","level":"error","message":"[ErrorHandler] Stok tidak mencukupi. Stok tersedia: 20, Jumlah diminta: 25","stack":"ValidationError: Stok tidak mencukupi. Stok tersedia: 20, Jumlah diminta: 25\n    at PengeluaranAgent.create (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\src\\agents\\pengeluaran.agent.ts:50:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PengeluaranController.create (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\src\\controllers\\pengeluaran.controller.ts:37:27)","statusCode":400,"timestamp":"2026-01-14 11:28:58"}
+{"code":"VALIDATION_ERROR","level":"warn","message":"Application error occurred Stok tidak mencukupi. Stok tersedia: 20, Jumlah diminta: 25","method":"POST","path":"/api/pengeluaran","statusCode":400,"timestamp":"2026-01-14 11:28:58"}
+{"duration":"126ms","ip":"::1","level":"info","message":"HTTP ⚠️ POST /api/pengeluaran - 400","method":"POST","path":"/api/pengeluaran","status":400,"timestamp":"2026-01-14 11:28:58","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"body":{"itemId":"acb34784-5ddd-4d19-8c75-c8f2254fac06","jumlah":25,"keperluan":"test","keterangan":"","penerima":"test","tanggal":"2026-01-14T00:00:00.000Z"},"level":"info","message":"PengeluaranController: Create pengeluaran request","timestamp":"2026-01-14 11:29:03"}
+{"itemId":"acb34784-5ddd-4d19-8c75-c8f2254fac06","level":"info","message":"PengeluaranAgent: Creating new pengeluaran","timestamp":"2026-01-14 11:29:03"}
+{"code":"VALIDATION_ERROR","level":"error","message":"[ErrorHandler] Stok tidak mencukupi. Stok tersedia: 20, Jumlah diminta: 25","stack":"ValidationError: Stok tidak mencukupi. Stok tersedia: 20, Jumlah diminta: 25\n    at PengeluaranAgent.create (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\src\\agents\\pengeluaran.agent.ts:50:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PengeluaranController.create (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\src\\controllers\\pengeluaran.controller.ts:37:27)","statusCode":400,"timestamp":"2026-01-14 11:29:03"}
+{"code":"VALIDATION_ERROR","level":"warn","message":"Application error occurred Stok tidak mencukupi. Stok tersedia: 20, Jumlah diminta: 25","method":"POST","path":"/api/pengeluaran","statusCode":400,"timestamp":"2026-01-14 11:29:03"}
+{"duration":"6ms","ip":"::1","level":"info","message":"HTTP ⚠️ POST /api/pengeluaran - 400","method":"POST","path":"/api/pengeluaran","status":400,"timestamp":"2026-01-14 11:29:03","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"body":{"itemId":"acb34784-5ddd-4d19-8c75-c8f2254fac06","jumlah":25,"keperluan":"test","keterangan":"","penerima":"test","tanggal":"2026-01-14T00:00:00.000Z"},"level":"info","message":"PengeluaranController: Create pengeluaran request","timestamp":"2026-01-14 11:29:04"}
+{"itemId":"acb34784-5ddd-4d19-8c75-c8f2254fac06","level":"info","message":"PengeluaranAgent: Creating new pengeluaran","timestamp":"2026-01-14 11:29:04"}
+{"code":"VALIDATION_ERROR","level":"error","message":"[ErrorHandler] Stok tidak mencukupi. Stok tersedia: 20, Jumlah diminta: 25","stack":"ValidationError: Stok tidak mencukupi. Stok tersedia: 20, Jumlah diminta: 25\n    at PengeluaranAgent.create (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\src\\agents\\pengeluaran.agent.ts:50:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PengeluaranController.create (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\src\\controllers\\pengeluaran.controller.ts:37:27)","statusCode":400,"timestamp":"2026-01-14 11:29:04"}
+{"code":"VALIDATION_ERROR","level":"warn","message":"Application error occurred Stok tidak mencukupi. Stok tersedia: 20, Jumlah diminta: 25","method":"POST","path":"/api/pengeluaran","statusCode":400,"timestamp":"2026-01-14 11:29:04"}
+{"duration":"32ms","ip":"::1","level":"info","message":"HTTP ⚠️ POST /api/pengeluaran - 400","method":"POST","path":"/api/pengeluaran","status":400,"timestamp":"2026-01-14 11:29:04","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"100","page":"1"},"timestamp":"2026-01-14 11:29:08"}
+{"level":"info","limit":100,"message":"ItemAgent: Fetching items","page":1,"stokMenipis":false,"timestamp":"2026-01-14 11:29:08"}
+{"count":100,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 11:29:08","total":125}
+{"duration":"171ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?page=1&limit=100","status":200,"timestamp":"2026-01-14 11:29:08","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"body":{"itemId":"acb34784-5ddd-4d19-8c75-c8f2254fac06","jumlah":30,"keperluan":"test","keterangan":"","penerima":"test","tanggal":"2026-01-14T00:00:00.000Z"},"level":"info","message":"PengeluaranController: Create pengeluaran request","timestamp":"2026-01-14 11:29:16"}
+{"itemId":"acb34784-5ddd-4d19-8c75-c8f2254fac06","level":"info","message":"PengeluaranAgent: Creating new pengeluaran","timestamp":"2026-01-14 11:29:16"}
+{"code":"VALIDATION_ERROR","level":"error","message":"[ErrorHandler] Stok tidak mencukupi. Stok tersedia: 20, Jumlah diminta: 30","stack":"ValidationError: Stok tidak mencukupi. Stok tersedia: 20, Jumlah diminta: 30\n    at PengeluaranAgent.create (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\src\\agents\\pengeluaran.agent.ts:50:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PengeluaranController.create (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\src\\controllers\\pengeluaran.controller.ts:37:27)","statusCode":400,"timestamp":"2026-01-14 11:29:16"}
+{"code":"VALIDATION_ERROR","level":"warn","message":"Application error occurred Stok tidak mencukupi. Stok tersedia: 20, Jumlah diminta: 30","method":"POST","path":"/api/pengeluaran","statusCode":400,"timestamp":"2026-01-14 11:29:16"}
+{"duration":"88ms","ip":"::1","level":"info","message":"HTTP ⚠️ POST /api/pengeluaran - 400","method":"POST","path":"/api/pengeluaran","status":400,"timestamp":"2026-01-14 11:29:16","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"100","page":"1"},"timestamp":"2026-01-14 11:29:36"}
+{"level":"info","limit":100,"message":"ItemAgent: Fetching items","page":1,"stokMenipis":false,"timestamp":"2026-01-14 11:29:36"}
+{"count":100,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 11:29:37","total":125}
+{"duration":"399ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?page=1&limit=100","status":200,"timestamp":"2026-01-14 11:29:37","userAgent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Mobile Safari/537.36"}
+{"body":{"itemId":"acb34784-5ddd-4d19-8c75-c8f2254fac06","jumlah":25,"keperluan":"test","keterangan":"","penerima":"test","tanggal":"2026-01-14T00:00:00.000Z"},"level":"info","message":"PengeluaranController: Create pengeluaran request","timestamp":"2026-01-14 11:29:45"}
+{"itemId":"acb34784-5ddd-4d19-8c75-c8f2254fac06","level":"info","message":"PengeluaranAgent: Creating new pengeluaran","timestamp":"2026-01-14 11:29:45"}
+{"code":"VALIDATION_ERROR","level":"error","message":"[ErrorHandler] Stok tidak mencukupi. Stok tersedia: 20, Jumlah diminta: 25","stack":"ValidationError: Stok tidak mencukupi. Stok tersedia: 20, Jumlah diminta: 25\n    at PengeluaranAgent.create (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\src\\agents\\pengeluaran.agent.ts:50:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PengeluaranController.create (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\src\\controllers\\pengeluaran.controller.ts:37:27)","statusCode":400,"timestamp":"2026-01-14 11:29:45"}
+{"code":"VALIDATION_ERROR","level":"warn","message":"Application error occurred Stok tidak mencukupi. Stok tersedia: 20, Jumlah diminta: 25","method":"POST","path":"/api/pengeluaran","statusCode":400,"timestamp":"2026-01-14 11:29:45"}
+{"duration":"15ms","ip":"::1","level":"info","message":"HTTP ⚠️ POST /api/pengeluaran - 400","method":"POST","path":"/api/pengeluaran","status":400,"timestamp":"2026-01-14 11:29:45","userAgent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Mobile Safari/537.36"}
+{"body":{"itemId":"acb34784-5ddd-4d19-8c75-c8f2254fac06","jumlah":15,"keperluan":"test","keterangan":"","penerima":"test","tanggal":"2026-01-14T00:00:00.000Z"},"level":"info","message":"PengeluaranController: Create pengeluaran request","timestamp":"2026-01-14 11:30:15"}
+{"itemId":"acb34784-5ddd-4d19-8c75-c8f2254fac06","level":"info","message":"PengeluaranAgent: Creating new pengeluaran","timestamp":"2026-01-14 11:30:15"}
+{"id":"273ebb0e-c9c6-4c7e-9130-fb7fefbd1a2c","jumlah":15,"level":"info","message":"PengeluaranAgent: Pengeluaran created and stock updated","timestamp":"2026-01-14 11:30:15"}
+{"duration":"305ms","ip":"::1","level":"info","message":"HTTP ✅ POST / - 201","method":"POST","path":"/api/pengeluaran","status":201,"timestamp":"2026-01-14 11:30:15","userAgent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Mobile Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"100","page":"1"},"timestamp":"2026-01-14 11:30:15"}
+{"level":"info","limit":100,"message":"ItemAgent: Fetching items","page":1,"stokMenipis":false,"timestamp":"2026-01-14 11:30:15"}
+{"count":100,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 11:30:16","total":125}
+{"duration":"241ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?page=1&limit=100","status":200,"timestamp":"2026-01-14 11:30:16","userAgent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Mobile Safari/537.36"}
+{"level":"info","message":"PengeluaranController: Get all pengeluaran","query":{"limit":"10","page":"1"},"timestamp":"2026-01-14 11:30:16"}
+{"level":"info","limit":10,"message":"PengeluaranAgent: Fetching pengeluaran list","page":1,"timestamp":"2026-01-14 11:30:17"}
+{"count":10,"level":"info","message":"PengeluaranAgent: Pengeluaran list fetched","timestamp":"2026-01-14 11:30:17","total":41}
+{"duration":"222ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/pengeluaran?page=1&limit=10","status":200,"timestamp":"2026-01-14 11:30:17","userAgent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Mobile Safari/537.36"}
+{"level":"info","message":"CutiTahunanController: Get rekap cuti tahunan","query":{"tahun":"2026"},"timestamp":"2026-01-14 11:30:23"}
+{"level":"info","message":"CutiTahunanAgent: Fetching rekap cuti tahunan","tahun":2026,"timestamp":"2026-01-14 11:30:23"}
+{"level":"info","message":"KaryawanController: Get all karyawan request","query":{},"timestamp":"2026-01-14 11:30:23"}
+{"level":"info","message":"KaryawanAgent: Fetching all karyawan","timestamp":"2026-01-14 11:30:23"}
+{"count":0,"level":"info","message":"KaryawanAgent: Fetched karyawan","timestamp":"2026-01-14 11:30:23"}
+{"duration":"139ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/karyawan","status":200,"timestamp":"2026-01-14 11:30:24","userAgent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Mobile Safari/537.36"}
+{"count":0,"level":"info","message":"CutiTahunanAgent: Rekap fetched","timestamp":"2026-01-14 11:30:24"}
+{"duration":"418ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti-tahunan?tahun=2026","status":200,"timestamp":"2026-01-14 11:30:24","userAgent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Mobile Safari/537.36"}
+{"level":"info","message":"PembelianController: Get all pembelian","query":{"limit":"10","page":"1"},"timestamp":"2026-01-14 11:30:28"}
+{"level":"info","limit":10,"message":"PembelianAgent: Fetching pembelian list","page":1,"timestamp":"2026-01-14 11:30:28"}
+{"count":10,"level":"info","message":"PembelianAgent: Pembelian list fetched","timestamp":"2026-01-14 11:30:28","total":33}
+{"duration":"59ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/pembelian?page=1&limit=10","status":200,"timestamp":"2026-01-14 11:30:28","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"10","page":"1"},"timestamp":"2026-01-14 11:30:43"}
+{"level":"info","limit":10,"message":"ItemAgent: Fetching items","page":1,"stokMenipis":false,"timestamp":"2026-01-14 11:30:43"}
+{"count":10,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 11:30:44","total":125}
+{"duration":"213ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?page=1&limit=10","status":200,"timestamp":"2026-01-14 11:30:44","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"id":"273ebb0e-c9c6-4c7e-9130-fb7fefbd1a2c","level":"info","message":"PengeluaranController: Delete pengeluaran","timestamp":"2026-01-14 11:30:51"}
+{"id":"273ebb0e-c9c6-4c7e-9130-fb7fefbd1a2c","level":"info","message":"PengeluaranAgent: Deleting pengeluaran","timestamp":"2026-01-14 11:30:51"}
+{"id":"273ebb0e-c9c6-4c7e-9130-fb7fefbd1a2c","level":"info","message":"PengeluaranAgent: Pengeluaran deleted and stock rolled back","timestamp":"2026-01-14 11:30:51"}
+{"duration":"37ms","ip":"::1","level":"info","message":"HTTP ✅ DELETE /273ebb0e-c9c6-4c7e-9130-fb7fefbd1a2c - 200","method":"DELETE","path":"/api/pengeluaran/273ebb0e-c9c6-4c7e-9130-fb7fefbd1a2c","status":200,"timestamp":"2026-01-14 11:30:51","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"PengeluaranController: Get all pengeluaran","query":{"limit":"10","page":"1"},"timestamp":"2026-01-14 11:30:51"}
+{"level":"info","limit":10,"message":"PengeluaranAgent: Fetching pengeluaran list","page":1,"timestamp":"2026-01-14 11:30:51"}
+{"count":10,"level":"info","message":"PengeluaranAgent: Pengeluaran list fetched","timestamp":"2026-01-14 11:30:51","total":40}
+{"duration":"23ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/pengeluaran?page=1&limit=10","status":200,"timestamp":"2026-01-14 11:30:51","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"100","page":"1"},"timestamp":"2026-01-14 11:30:56"}
+{"level":"info","limit":100,"message":"ItemAgent: Fetching items","page":1,"stokMenipis":false,"timestamp":"2026-01-14 11:30:56"}
+{"count":100,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 11:30:56","total":125}
+{"duration":"50ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?page=1&limit=100","status":200,"timestamp":"2026-01-14 11:30:56","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"body":{"hargaSatuan":5000,"itemId":"acb34784-5ddd-4d19-8c75-c8f2254fac06","jumlah":10,"keterangan":"","supplier":"po","tanggal":"2026-01-14T00:00:00.000Z"},"level":"info","message":"PembelianController: Create pembelian request","timestamp":"2026-01-14 11:31:14"}
+{"itemId":"acb34784-5ddd-4d19-8c75-c8f2254fac06","level":"info","message":"PembelianAgent: Creating new pembelian","timestamp":"2026-01-14 11:31:14"}
+{"id":"e71ba307-1175-4cb1-bc09-da998ac48d15","jumlah":10,"level":"info","message":"PembelianAgent: Pembelian created and stock updated","timestamp":"2026-01-14 11:31:14"}
+{"duration":"135ms","ip":"::1","level":"info","message":"HTTP ✅ POST / - 201","method":"POST","path":"/api/pembelian","status":201,"timestamp":"2026-01-14 11:31:14","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"100","page":"1"},"timestamp":"2026-01-14 11:31:14"}
+{"level":"info","limit":100,"message":"ItemAgent: Fetching items","page":1,"stokMenipis":false,"timestamp":"2026-01-14 11:31:14"}
+{"count":100,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 11:31:14","total":125}
+{"duration":"143ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?page=1&limit=100","status":200,"timestamp":"2026-01-14 11:31:14","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"PembelianController: Get all pembelian","query":{"limit":"10","page":"1"},"timestamp":"2026-01-14 11:31:14"}
+{"level":"info","limit":10,"message":"PembelianAgent: Fetching pembelian list","page":1,"timestamp":"2026-01-14 11:31:14"}
+{"count":10,"level":"info","message":"PembelianAgent: Pembelian list fetched","timestamp":"2026-01-14 11:31:14","total":34}
+{"duration":"73ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/pembelian?page=1&limit=10","status":200,"timestamp":"2026-01-14 11:31:14","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"10","page":"1"},"timestamp":"2026-01-14 11:31:17"}
+{"level":"info","limit":10,"message":"ItemAgent: Fetching items","page":1,"stokMenipis":false,"timestamp":"2026-01-14 11:31:17"}
+{"count":10,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 11:31:17","total":125}
+{"duration":"14ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?page=1&limit=10","status":200,"timestamp":"2026-01-14 11:31:17","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"id":"e71ba307-1175-4cb1-bc09-da998ac48d15","level":"info","message":"PembelianController: Delete pembelian","timestamp":"2026-01-14 11:31:21"}
+{"id":"e71ba307-1175-4cb1-bc09-da998ac48d15","level":"info","message":"PembelianAgent: Deleting pembelian","timestamp":"2026-01-14 11:31:21"}
+{"id":"e71ba307-1175-4cb1-bc09-da998ac48d15","level":"info","message":"PembelianAgent: Pembelian deleted and stock rolled back","timestamp":"2026-01-14 11:31:21"}
+{"duration":"29ms","ip":"::1","level":"info","message":"HTTP ✅ DELETE /e71ba307-1175-4cb1-bc09-da998ac48d15 - 200","method":"DELETE","path":"/api/pembelian/e71ba307-1175-4cb1-bc09-da998ac48d15","status":200,"timestamp":"2026-01-14 11:31:21","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"PembelianController: Get all pembelian","query":{"limit":"10","page":"1"},"timestamp":"2026-01-14 11:31:22"}
+{"level":"info","limit":10,"message":"PembelianAgent: Fetching pembelian list","page":1,"timestamp":"2026-01-14 11:31:22"}
+{"count":10,"level":"info","message":"PembelianAgent: Pembelian list fetched","timestamp":"2026-01-14 11:31:22","total":33}
+{"duration":"39ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/pembelian?page=1&limit=10","status":200,"timestamp":"2026-01-14 11:31:22","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"10","page":"1"},"timestamp":"2026-01-14 11:31:23"}
+{"level":"info","limit":10,"message":"ItemAgent: Fetching items","page":1,"stokMenipis":false,"timestamp":"2026-01-14 11:31:23"}
+{"count":10,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 11:31:23","total":125}
+{"duration":"41ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?page=1&limit=10","status":200,"timestamp":"2026-01-14 11:31:23","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"PembelianController: Get rekap pembelian","query":{"groupBy":"item","tanggalMulai":"2026-01-01","tanggalSelesai":"2026-01-14"},"timestamp":"2026-01-14 11:31:27"}
+{"groupBy":"item","level":"info","message":"PembelianAgent: Getting rekap pembelian","tanggalMulai":"2026-01-01","tanggalSelesai":"2026-01-14","timestamp":"2026-01-14 11:31:27"}
+{"level":"info","message":"PengeluaranController: Get rekap pengeluaran","query":{"groupBy":"item","tanggalMulai":"2026-01-01","tanggalSelesai":"2026-01-14"},"timestamp":"2026-01-14 11:31:27"}
+{"groupBy":"item","level":"info","message":"PengeluaranAgent: Getting rekap pengeluaran","tanggalMulai":"2026-01-01","tanggalSelesai":"2026-01-14","timestamp":"2026-01-14 11:31:27"}
+{"duration":"67ms","ip":"::1","level":"info","message":"HTTP ✅ GET /rekap - 200","method":"GET","path":"/api/pembelian/rekap?tanggalMulai=2026-01-01&tanggalSelesai=2026-01-14&groupBy=item","status":200,"timestamp":"2026-01-14 11:31:27","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"duration":"66ms","ip":"::1","level":"info","message":"HTTP ✅ GET /rekap - 200","method":"GET","path":"/api/pengeluaran/rekap?tanggalMulai=2026-01-01&tanggalSelesai=2026-01-14&groupBy=item","status":200,"timestamp":"2026-01-14 11:31:28","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"10","page":"1"},"timestamp":"2026-01-14 11:33:34"}
+{"level":"info","limit":10,"message":"ItemAgent: Fetching items","page":1,"stokMenipis":false,"timestamp":"2026-01-14 11:33:34"}
+{"count":10,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 11:33:35","total":125}
+{"duration":"126ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?page=1&limit=10","status":200,"timestamp":"2026-01-14 11:33:35","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"PengeluaranController: Get all pengeluaran","query":{"limit":"10","page":"1"},"timestamp":"2026-01-14 11:33:35"}
+{"level":"info","limit":10,"message":"PengeluaranAgent: Fetching pengeluaran list","page":1,"timestamp":"2026-01-14 11:33:35"}
+{"count":10,"level":"info","message":"PengeluaranAgent: Pengeluaran list fetched","timestamp":"2026-01-14 11:33:35","total":40}
+{"duration":"20ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/pengeluaran?page=1&limit=10","status":200,"timestamp":"2026-01-14 11:33:35","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"100","page":"1"},"timestamp":"2026-01-14 11:33:37"}
+{"level":"info","limit":100,"message":"ItemAgent: Fetching items","page":1,"stokMenipis":false,"timestamp":"2026-01-14 11:33:37"}
+{"count":100,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 11:33:37","total":125}
+{"duration":"78ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?page=1&limit=100","status":200,"timestamp":"2026-01-14 11:33:37","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"body":{"itemId":"acb34784-5ddd-4d19-8c75-c8f2254fac06","jumlah":15,"keperluan":"test","keterangan":"","penerima":"test","tanggal":"2026-01-14T00:00:00.000Z"},"level":"info","message":"PengeluaranController: Create pengeluaran request","timestamp":"2026-01-14 11:34:03"}
+{"itemId":"acb34784-5ddd-4d19-8c75-c8f2254fac06","level":"info","message":"PengeluaranAgent: Creating new pengeluaran","timestamp":"2026-01-14 11:34:03"}
+{"id":"eefb78e3-7b4d-47c7-b644-362c2773c86a","jumlah":15,"level":"info","message":"PengeluaranAgent: Pengeluaran created and stock updated","timestamp":"2026-01-14 11:34:03"}
+{"duration":"158ms","ip":"::1","level":"info","message":"HTTP ✅ POST / - 201","method":"POST","path":"/api/pengeluaran","status":201,"timestamp":"2026-01-14 11:34:03","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"100","page":"1"},"timestamp":"2026-01-14 11:34:03"}
+{"level":"info","limit":100,"message":"ItemAgent: Fetching items","page":1,"stokMenipis":false,"timestamp":"2026-01-14 11:34:03"}
+{"count":100,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 11:34:03","total":125}
+{"duration":"161ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?page=1&limit=100","status":200,"timestamp":"2026-01-14 11:34:03","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"PengeluaranController: Get all pengeluaran","query":{"limit":"10","page":"1"},"timestamp":"2026-01-14 11:34:04"}
+{"level":"info","limit":10,"message":"PengeluaranAgent: Fetching pengeluaran list","page":1,"timestamp":"2026-01-14 11:34:04"}
+{"count":10,"level":"info","message":"PengeluaranAgent: Pengeluaran list fetched","timestamp":"2026-01-14 11:34:04","total":41}
+{"duration":"28ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/pengeluaran?page=1&limit=10","status":200,"timestamp":"2026-01-14 11:34:04","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"10","page":"1"},"timestamp":"2026-01-14 11:34:11"}
+{"level":"info","limit":10,"message":"ItemAgent: Fetching items","page":1,"stokMenipis":false,"timestamp":"2026-01-14 11:34:11"}
+{"count":10,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 11:34:11","total":125}
+{"duration":"22ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?page=1&limit=10","status":200,"timestamp":"2026-01-14 11:34:11","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"id":"eefb78e3-7b4d-47c7-b644-362c2773c86a","level":"info","message":"PengeluaranController: Delete pengeluaran","timestamp":"2026-01-14 11:34:18"}
+{"id":"eefb78e3-7b4d-47c7-b644-362c2773c86a","level":"info","message":"PengeluaranAgent: Deleting pengeluaran","timestamp":"2026-01-14 11:34:18"}
+{"id":"eefb78e3-7b4d-47c7-b644-362c2773c86a","level":"info","message":"PengeluaranAgent: Pengeluaran deleted and stock rolled back","timestamp":"2026-01-14 11:34:18"}
+{"duration":"42ms","ip":"::1","level":"info","message":"HTTP ✅ DELETE /eefb78e3-7b4d-47c7-b644-362c2773c86a - 200","method":"DELETE","path":"/api/pengeluaran/eefb78e3-7b4d-47c7-b644-362c2773c86a","status":200,"timestamp":"2026-01-14 11:34:18","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"PengeluaranController: Get all pengeluaran","query":{"limit":"10","page":"1"},"timestamp":"2026-01-14 11:34:18"}
+{"level":"info","limit":10,"message":"PengeluaranAgent: Fetching pengeluaran list","page":1,"timestamp":"2026-01-14 11:34:18"}
+{"count":10,"level":"info","message":"PengeluaranAgent: Pengeluaran list fetched","timestamp":"2026-01-14 11:34:18","total":40}
+{"duration":"40ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/pengeluaran?page=1&limit=10","status":200,"timestamp":"2026-01-14 11:34:18","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"100","page":"1"},"timestamp":"2026-01-14 11:34:22"}
+{"level":"info","limit":100,"message":"ItemAgent: Fetching items","page":1,"stokMenipis":false,"timestamp":"2026-01-14 11:34:22"}
+{"count":100,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 11:34:22","total":125}
+{"duration":"44ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?page=1&limit=100","status":200,"timestamp":"2026-01-14 11:34:22","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"100","page":"1"},"timestamp":"2026-01-14 11:35:31"}
+{"level":"info","limit":100,"message":"ItemAgent: Fetching items","page":1,"stokMenipis":false,"timestamp":"2026-01-14 11:35:31"}
+{"count":100,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 11:35:31","total":125}
+{"duration":"142ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?page=1&limit=100","status":200,"timestamp":"2026-01-14 11:35:31","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"PembelianController: Get all pembelian","query":{"limit":"10","page":"1"},"timestamp":"2026-01-14 11:37:12"}
+{"level":"info","limit":10,"message":"PembelianAgent: Fetching pembelian list","page":1,"timestamp":"2026-01-14 11:37:12"}
+{"count":10,"level":"info","message":"PembelianAgent: Pembelian list fetched","timestamp":"2026-01-14 11:37:12","total":33}
+{"duration":"179ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/pembelian?page=1&limit=10","status":200,"timestamp":"2026-01-14 11:37:12","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"100","page":"1"},"timestamp":"2026-01-14 11:37:14"}
+{"level":"info","limit":100,"message":"ItemAgent: Fetching items","page":1,"stokMenipis":false,"timestamp":"2026-01-14 11:37:14"}
+{"count":100,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 11:37:14","total":125}
+{"duration":"54ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?page=1&limit=100","status":200,"timestamp":"2026-01-14 11:37:14","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"PembelianController: Get rekap pembelian","query":{"groupBy":"item","tanggalMulai":"2026-01-01","tanggalSelesai":"2026-01-14"},"timestamp":"2026-01-14 11:38:56"}
+{"groupBy":"item","level":"info","message":"PembelianAgent: Getting rekap pembelian","tanggalMulai":"2026-01-01","tanggalSelesai":"2026-01-14","timestamp":"2026-01-14 11:38:56"}
+{"level":"info","message":"PengeluaranController: Get rekap pengeluaran","query":{"groupBy":"item","tanggalMulai":"2026-01-01","tanggalSelesai":"2026-01-14"},"timestamp":"2026-01-14 11:38:56"}
+{"groupBy":"item","level":"info","message":"PengeluaranAgent: Getting rekap pengeluaran","tanggalMulai":"2026-01-01","tanggalSelesai":"2026-01-14","timestamp":"2026-01-14 11:38:56"}
+{"duration":"183ms","ip":"::1","level":"info","message":"HTTP ✅ GET /rekap - 200","method":"GET","path":"/api/pembelian/rekap?tanggalMulai=2026-01-01&tanggalSelesai=2026-01-14&groupBy=item","status":200,"timestamp":"2026-01-14 11:38:56","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"duration":"219ms","ip":"::1","level":"info","message":"HTTP ✅ GET /rekap - 200","method":"GET","path":"/api/pengeluaran/rekap?tanggalMulai=2026-01-01&tanggalSelesai=2026-01-14&groupBy=item","status":200,"timestamp":"2026-01-14 11:38:57","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"PengeluaranController: Get all pengeluaran","query":{"limit":"10","page":"1"},"timestamp":"2026-01-14 11:38:57"}
+{"level":"info","limit":10,"message":"PengeluaranAgent: Fetching pengeluaran list","page":1,"timestamp":"2026-01-14 11:38:57"}
+{"count":10,"level":"info","message":"PengeluaranAgent: Pengeluaran list fetched","timestamp":"2026-01-14 11:38:57","total":40}
+{"duration":"37ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/pengeluaran?page=1&limit=10","status":200,"timestamp":"2026-01-14 11:38:57","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"PembelianController: Get all pembelian","query":{"limit":"10","page":"1"},"timestamp":"2026-01-14 11:38:58"}
+{"level":"info","limit":10,"message":"PembelianAgent: Fetching pembelian list","page":1,"timestamp":"2026-01-14 11:38:58"}
+{"count":10,"level":"info","message":"PembelianAgent: Pembelian list fetched","timestamp":"2026-01-14 11:38:58","total":33}
+{"duration":"60ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/pembelian?page=1&limit=10","status":200,"timestamp":"2026-01-14 11:38:58","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"10","page":"1"},"timestamp":"2026-01-14 11:38:59"}
+{"level":"info","limit":10,"message":"ItemAgent: Fetching items","page":1,"stokMenipis":false,"timestamp":"2026-01-14 11:38:59"}
+{"count":10,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 11:38:59","total":125}
+{"duration":"24ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?page=1&limit=10","status":200,"timestamp":"2026-01-14 11:38:59","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
