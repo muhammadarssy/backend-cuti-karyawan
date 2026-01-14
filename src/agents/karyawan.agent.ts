@@ -58,25 +58,41 @@ export class KaryawanAgent {
   /**
    * Get all karyawan with optional filters
    */
-  async findAll(status?: StatusKaryawan) {
-    logger.info('KaryawanAgent: Fetching all karyawan', { status });
+  async findAll(status?: StatusKaryawan, page: number = 1, limit: number = 20) {
+    logger.info('KaryawanAgent: Fetching all karyawan', { status, page, limit });
 
-    const karyawan = await prisma.karyawan.findMany({
-      where: status ? { status } : undefined,
-      orderBy: { nama: 'asc' },
-      include: {
-        _count: {
-          select: {
-            cutiTahunan: true,
-            cuti: true,
+    const where = status ? { status } : undefined;
+    const skip = (page - 1) * limit;
+
+    const [karyawan, total] = await Promise.all([
+      prisma.karyawan.findMany({
+        where,
+        skip,
+        take: limit,
+        orderBy: { nama: 'asc' },
+        include: {
+          _count: {
+            select: {
+              cutiTahunan: true,
+              cuti: true,
+            },
           },
         },
+      }),
+      prisma.karyawan.count({ where }),
+    ]);
+
+    logger.info('KaryawanAgent: Fetched karyawan', { count: karyawan.length, total });
+
+    return {
+      data: karyawan,
+      pagination: {
+        page,
+        limit,
+        total,
+        totalPages: Math.ceil(total / limit),
       },
-    });
-
-    logger.info('KaryawanAgent: Fetched karyawan', { count: karyawan.length });
-
-    return karyawan;
+    };
   }
 
   /**

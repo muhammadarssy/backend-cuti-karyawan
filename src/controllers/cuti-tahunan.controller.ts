@@ -1,7 +1,7 @@
 import type { Request, Response, NextFunction } from 'express';
 import { z } from 'zod';
 import { cutiTahunanAgent } from '../agents/cuti-tahunan.agent.js';
-import { successResponse } from '../utils/response.js';
+import { successResponse, paginatedResponse } from '../utils/response.js';
 import { logger } from '../utils/logger.js';
 import { getCurrentYear } from '../utils/date.js';
 
@@ -53,12 +53,14 @@ export class CutiTahunanController {
 
       const tahun = req.query.tahun ? parseInt(req.query.tahun as string) : undefined;
       const karyawanId = req.query.karyawanId as string | undefined;
+      const page = req.query.page ? parseInt(req.query.page as string) : 1;
+      const limit = req.query.limit ? parseInt(req.query.limit as string) : 20;
 
       // Call agent
-      const rekap = await cutiTahunanAgent.getRekapCutiTahunan(tahun, karyawanId);
+      const result = await cutiTahunanAgent.getRekapCutiTahunan(tahun, karyawanId, page, limit);
 
       // Send response
-      res.json(successResponse('Rekap cuti tahunan berhasil diambil', rekap));
+      res.json(paginatedResponse('Rekap cuti tahunan berhasil diambil', result.data, result.pagination));
     } catch (error) {
       next(error);
     }

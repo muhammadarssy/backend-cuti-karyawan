@@ -1,7 +1,7 @@
 import type { Request, Response, NextFunction } from 'express';
 import { z } from 'zod';
 import { karyawanAgent } from '../agents/karyawan.agent.js';
-import { successResponse } from '../utils/response.js';
+import { successResponse, paginatedResponse } from '../utils/response.js';
 import { logger } from '../utils/logger.js';
 
 // Validation schemas
@@ -67,16 +67,18 @@ export class KaryawanController {
       logger.info('KaryawanController: Get all karyawan request', { query: req.query });
 
       const { status } = req.query;
+      const page = req.query.page ? parseInt(req.query.page as string) : 1;
+      const limit = req.query.limit ? parseInt(req.query.limit as string) : 20;
 
       // Validasi status jika ada
       const validStatus =
         status && (status === 'AKTIF' || status === 'NONAKTIF') ? status : undefined;
 
       // Call agent
-      const karyawan = await karyawanAgent.findAll(validStatus);
+      const result = await karyawanAgent.findAll(validStatus, page, limit);
 
       // Send response
-      res.json(successResponse('Data karyawan berhasil diambil', karyawan));
+      res.json(paginatedResponse('Data karyawan berhasil diambil', result.data, result.pagination));
     } catch (error) {
       next(error);
     }

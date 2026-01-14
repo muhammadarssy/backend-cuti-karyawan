@@ -224,36 +224,71 @@ export class CutiTahunanAgent {
   /**
    * Get rekap cuti tahunan dengan filter
    */
-  async getRekapCutiTahunan(tahun?: number, karyawanId?: string) {
-    logger.info('CutiTahunanAgent: Fetching rekap cuti tahunan', { tahun, karyawanId });
+  async getRekapCutiTahunan(tahun?: number, karyawanId?: string, page: number = 1, limit: number = 20) {
+    const currentYear = tahun || getCurrentYear();
 
-    const where: {
-      tahun?: number;
-      karyawanId?: string;
-    } = {};
-
-    if (tahun) where.tahun = tahun;
-    if (karyawanId) where.karyawanId = karyawanId;
-
-    const rekap = await prisma.cutiTahunan.findMany({
-      where,
-      include: {
-        karyawan: {
-          select: {
-            id: true,
-            nik: true,
-            nama: true,
-            jabatan: true,
-            departemen: true,
-          },
-        },
-      },
-      orderBy: [{ tahun: 'desc' }, { karyawan: { nama: 'asc' } }],
+    logger.info('CutiTahunanAgent: Getting rekap cuti tahunan', {
+      tahun: currentYear,
+      karyawanId,
+      page,
+      limit,
     });
 
-    logger.info('CutiTahunanAgent: Rekap fetched', { count: rekap.length });
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const where: any = {
+      tahun: currentYear,
+    };
 
-    return rekap;
+    if (karyawanId) {
+      where.karyawanId = karyawanId;
+    }
+
+    const skip = (page - 1) * limit;
+
+    const [rekap, total] = await Promise.all([
+      prisma.cutiTahunan.findMany({
+        where,
+        skip,
+        take: limit,
+        include: {
+          karyawan: {
+            select: {
+              id: true,
+              nik: true,
+              nama: true,
+              jabatan: true,
+              departemen: true,
+              tanggalMasuk: true,
+              status: true,
+            },
+          },
+          cuti: {
+            select: {
+              id: true,
+              tanggalMulai: true,
+              tanggalSelesai: true,
+              jumlahHari: true,
+            },
+          },
+        },
+        orderBy: {
+          tahun: 'desc',
+        },
+      }),
+      prisma.cutiTahunan.count({ where }),
+    ]);
+
+    logger.info('CutiTahunanAgent: Rekap fetched', { count: rekap.length, total });
+
+    return {
+      data: rekap,
+      pagination: {
+        page,
+        limit,
+        total,
+        totalPages: Math.ceil(total / limit),
+      },
+    };
   }
 
   /**
