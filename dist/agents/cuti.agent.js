@@ -139,6 +139,117 @@ export class CutiAgent {
         return cuti;
     }
     /**
+     * Update cuti
+     * Rollback saldo lama dan potong saldo baru jika diperlukan
+     */
+    async update(id, data) {
+        logger.info('CutiAgent: Updating cuti', { id, data });
+        // Ambil data cuti lama
+        const oldCuti = await prisma.cuti.findUnique({
+            where: { id },
+            include: {
+                cutiTahunan: true,
+            },
+        });
+        if (!oldCuti) {
+            throw new NotFoundError('Data cuti tidak ditemukan');
+        }
+        // Hitung data baru
+        let tanggalMulai = oldCuti.tanggalMulai;
+        let tanggalSelesai = oldCuti.tanggalSelesai;
+        let jumlahHari = oldCuti.jumlahHari;
+        const jenis = data.jenis || oldCuti.jenis;
+        // Jika tanggal diubah, hitung ulang
+        if (data.tanggalMulai || data.tanggalSelesai) {
+            tanggalMulai = data.tanggalMulai ? parseDate(data.tanggalMulai) : oldCuti.tanggalMulai;
+            tanggalSelesai = data.tanggalSelesai ? parseDate(data.tanggalSelesai) : oldCuti.tanggalSelesai;
+            if (!validateDateRange(tanggalMulai, tanggalSelesai)) {
+                throw new ValidationError('Tanggal selesai harus lebih besar atau sama dengan tanggal mulai');
+            }
+            jumlahHari = calculateWorkingDays(tanggalMulai, tanggalSelesai);
+            if (jumlahHari <= 0) {
+                throw new ValidationError('Jumlah hari cuti harus lebih dari 0');
+            }
+        }
+        // Tentukan tahun dari tanggal mulai
+        const tahun = getYearFromDate(tanggalMulai);
+        // Jika tahun berubah, ambil data cuti tahunan yang baru
+        let cutiTahunan = oldCuti.cutiTahunan;
+        if (tahun !== oldCuti.tahun) {
+            try {
+                cutiTahunan = await cutiTahunanAgent.findByKaryawanAndTahun(oldCuti.karyawanId, tahun);
+            }
+            catch (error) {
+                if (error instanceof NotFoundError) {
+                    logger.info('CutiAgent: Cuti tahunan not found for new year, generating...', {
+                        karyawanId: oldCuti.karyawanId,
+                        tahun,
+                    });
+                    cutiTahunan = await cutiTahunanAgent.generateCutiTahunan(oldCuti.karyawanId, tahun);
+                }
+                else {
+                    throw error;
+                }
+            }
+        }
+        // Transaksi: Update cuti dan adjust saldo
+        const updatedCuti = await prisma.$transaction(async (tx) => {
+            // Rollback saldo lama untuk jenis TAHUNAN
+            if (oldCuti.jenis === 'TAHUNAN') {
+                await tx.cutiTahunan.update({
+                    where: { id: oldCuti.cutiTahunanId },
+                    data: {
+                        cutiTerpakai: oldCuti.cutiTahunan.cutiTerpakai - oldCuti.jumlahHari,
+                        sisaCuti: oldCuti.cutiTahunan.sisaCuti + oldCuti.jumlahHari,
+                    },
+                });
+            }
+            // Update data cuti
+            const updated = await tx.cuti.update({
+                where: { id },
+                data: {
+                    ...(data.jenis && { jenis: data.jenis }),
+                    ...(data.alasan && { alasan: data.alasan }),
+                    ...(data.tanggalMulai && { tanggalMulai }),
+                    ...(data.tanggalSelesai && { tanggalSelesai }),
+                    ...(data.tanggalMulai || data.tanggalSelesai ? { jumlahHari } : {}),
+                    ...(tahun !== oldCuti.tahun && { tahun, cutiTahunanId: cutiTahunan.id }),
+                },
+                include: {
+                    karyawan: {
+                        select: {
+                            id: true,
+                            nik: true,
+                            nama: true,
+                        },
+                    },
+                },
+            });
+            // Potong saldo baru untuk jenis TAHUNAN
+            if (jenis === 'TAHUNAN') {
+                // Refresh data cutiTahunan jika tahun berubah
+                const targetCutiTahunan = tahun !== oldCuti.tahun ? cutiTahunan : oldCuti.cutiTahunan;
+                const currentSaldo = tahun !== oldCuti.tahun
+                    ? targetCutiTahunan.sisaCuti
+                    : targetCutiTahunan.sisaCuti + oldCuti.jumlahHari; // sudah di-rollback di atas
+                await tx.cutiTahunan.update({
+                    where: { id: targetCutiTahunan.id },
+                    data: {
+                        cutiTerpakai: { increment: jumlahHari },
+                        sisaCuti: currentSaldo - jumlahHari,
+                    },
+                });
+            }
+            return updated;
+        });
+        logger.info('CutiAgent: Cuti updated successfully', {
+            id,
+            oldJumlahHari: oldCuti.jumlahHari,
+            newJumlahHari: jumlahHari,
+        });
+        return updatedCuti;
+    }
+    /**
      * Get cuti by ID
      */
     async findById(id) {

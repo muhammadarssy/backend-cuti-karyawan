@@ -1027,3 +1027,610 @@
 {"karyawanId":"bb0519bc-22e1-4630-82a7-753e4f8c1026","level":"info","limit":10,"message":"CutiAgent: Fetching cuti list","page":1,"tahun":2026,"timestamp":"2026-01-13 15:00:43"}
 {"count":6,"level":"info","message":"CutiAgent: Cuti list fetched","timestamp":"2026-01-13 15:00:43","total":6}
 {"duration":"18ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti?karyawanId=bb0519bc-22e1-4630-82a7-753e4f8c1026&tahun=2026&page=1&limit=10","status":200,"timestamp":"2026-01-13 15:00:43","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"🗄️  Database PostgreSQL connected successfully","timestamp":"2026-01-13 16:06:01"}
+{"apiUrl":"http://localhost:3000/api","env":"development","healthCheck":"http://localhost:3000/api/health","level":"info","message":"🚀 Server started successfully","port":3000,"timestamp":"2026-01-13 16:06:01"}
+{"level":"info","message":"📚 API Documentation available at http://localhost:3000/api","timestamp":"2026-01-13 16:06:01"}
+{"level":"info","message":"⏰ Scheduler disabled: Set ENABLE_SCHEDULER=true to enable auto-generation","timestamp":"2026-01-13 16:06:01"}
+{"level":"info","message":"🗄️  Database PostgreSQL connected successfully","timestamp":"2026-01-13 16:06:34"}
+{"apiUrl":"http://localhost:3000/api","env":"development","healthCheck":"http://localhost:3000/api/health","level":"info","message":"🚀 Server started successfully","port":3000,"timestamp":"2026-01-13 16:06:34"}
+{"level":"info","message":"📚 API Documentation available at http://localhost:3000/api","timestamp":"2026-01-13 16:06:34"}
+{"level":"info","message":"⏰ Scheduler disabled: Set ENABLE_SCHEDULER=true to enable auto-generation","timestamp":"2026-01-13 16:06:34"}
+{"level":"info","message":"🗄️  Database PostgreSQL connected successfully","timestamp":"2026-01-13 16:28:00"}
+{"apiUrl":"http://localhost:3000/api","env":"development","healthCheck":"http://localhost:3000/api/health","level":"info","message":"🚀 Server started successfully","port":3000,"timestamp":"2026-01-13 16:28:00"}
+{"level":"info","message":"📚 API Documentation available at http://localhost:3000/api","timestamp":"2026-01-13 16:28:00"}
+{"level":"info","message":"⏰ Scheduler disabled: Set ENABLE_SCHEDULER=true to enable auto-generation","timestamp":"2026-01-13 16:28:00"}
+{"level":"info","message":"KaryawanController: Get all karyawan request","query":{},"timestamp":"2026-01-13 16:39:35"}
+{"level":"info","message":"KaryawanAgent: Fetching all karyawan","timestamp":"2026-01-13 16:39:35"}
+{"level":"info","message":"CutiTahunanController: Get rekap cuti tahunan","query":{"tahun":"2026"},"timestamp":"2026-01-13 16:39:35"}
+{"level":"info","message":"CutiTahunanAgent: Fetching rekap cuti tahunan","tahun":2026,"timestamp":"2026-01-13 16:39:35"}
+{"level":"info","message":"CutiController: Get all cuti","query":{"tahun":"2026"},"timestamp":"2026-01-13 16:39:35"}
+{"level":"info","limit":20,"message":"CutiAgent: Fetching cuti list","page":1,"tahun":2026,"timestamp":"2026-01-13 16:39:35"}
+{"count":0,"level":"info","message":"KaryawanAgent: Fetched karyawan","timestamp":"2026-01-13 16:39:35"}
+{"duration":"424ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/karyawan","status":200,"timestamp":"2026-01-13 16:39:35","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"count":0,"level":"info","message":"CutiTahunanAgent: Rekap fetched","timestamp":"2026-01-13 16:39:35"}
+{"duration":"350ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti-tahunan?tahun=2026","status":200,"timestamp":"2026-01-13 16:39:35","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"count":0,"level":"info","message":"CutiAgent: Cuti list fetched","timestamp":"2026-01-13 16:39:35","total":0}
+{"duration":"346ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti?tahun=2026","status":200,"timestamp":"2026-01-13 16:39:35","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"🗄️  Database PostgreSQL connected successfully","timestamp":"2026-01-14 08:52:56"}
+{"apiUrl":"http://localhost:3000/api","env":"development","healthCheck":"http://localhost:3000/api/health","level":"info","message":"🚀 Server started successfully","port":3000,"timestamp":"2026-01-14 08:52:56"}
+{"level":"info","message":"📚 API Documentation available at http://localhost:3000/api","timestamp":"2026-01-14 08:52:56"}
+{"level":"info","message":"⏰ Scheduler disabled: Set ENABLE_SCHEDULER=true to enable auto-generation","timestamp":"2026-01-14 08:52:56"}
+{"level":"info","message":"🗄️  Database PostgreSQL connected successfully","timestamp":"2026-01-14 08:53:40"}
+{"apiUrl":"http://localhost:3000/api","env":"development","healthCheck":"http://localhost:3000/api/health","level":"info","message":"🚀 Server started successfully","port":3000,"timestamp":"2026-01-14 08:53:40"}
+{"level":"info","message":"📚 API Documentation available at http://localhost:3000/api","timestamp":"2026-01-14 08:53:40"}
+{"level":"info","message":"⏰ Scheduler disabled: Set ENABLE_SCHEDULER=true to enable auto-generation","timestamp":"2026-01-14 08:53:40"}
+{"level":"info","message":"KaryawanController: Get all karyawan request","query":{},"timestamp":"2026-01-14 08:54:05"}
+{"level":"info","message":"KaryawanAgent: Fetching all karyawan","timestamp":"2026-01-14 08:54:05"}
+{"level":"info","message":"CutiTahunanController: Get rekap cuti tahunan","query":{"tahun":"2026"},"timestamp":"2026-01-14 08:54:05"}
+{"level":"info","message":"CutiTahunanAgent: Fetching rekap cuti tahunan","tahun":2026,"timestamp":"2026-01-14 08:54:05"}
+{"level":"info","message":"CutiController: Get all cuti","query":{"tahun":"2026"},"timestamp":"2026-01-14 08:54:05"}
+{"level":"info","limit":20,"message":"CutiAgent: Fetching cuti list","page":1,"tahun":2026,"timestamp":"2026-01-14 08:54:05"}
+{"count":0,"level":"info","message":"KaryawanAgent: Fetched karyawan","timestamp":"2026-01-14 08:54:06"}
+{"duration":"1065ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/karyawan","status":200,"timestamp":"2026-01-14 08:54:06","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"count":0,"level":"info","message":"CutiAgent: Cuti list fetched","timestamp":"2026-01-14 08:54:06","total":0}
+{"duration":"829ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti?tahun=2026","status":200,"timestamp":"2026-01-14 08:54:06","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"count":0,"level":"info","message":"CutiTahunanAgent: Rekap fetched","timestamp":"2026-01-14 08:54:06"}
+{"duration":"942ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti-tahunan?tahun=2026","status":200,"timestamp":"2026-01-14 08:54:06","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"1000","page":"1"},"timestamp":"2026-01-14 08:54:16"}
+{"level":"info","limit":1000,"message":"ItemAgent: Fetching items","page":1,"stokMenipis":false,"timestamp":"2026-01-14 08:54:16"}
+{"level":"info","message":"ItemController: Get stok menipis","query":{"kategori":"ATK"},"timestamp":"2026-01-14 08:54:16"}
+{"kategori":"ATK","level":"info","message":"ItemAgent: Fetching items dengan stok menipis","timestamp":"2026-01-14 08:54:16"}
+{"level":"info","message":"ItemController: Get stok menipis","query":{"kategori":"OBAT"},"timestamp":"2026-01-14 08:54:16"}
+{"kategori":"OBAT","level":"info","message":"ItemAgent: Fetching items dengan stok menipis","timestamp":"2026-01-14 08:54:16"}
+{"level":"info","message":"ItemController: Get stok menipis","query":{},"timestamp":"2026-01-14 08:54:16"}
+{"level":"info","message":"ItemAgent: Fetching items dengan stok menipis","timestamp":"2026-01-14 08:54:16"}
+{"count":124,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 08:54:16","total":124}
+{"duration":"434ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?page=1&limit=1000","status":200,"timestamp":"2026-01-14 08:54:16","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"count":8,"level":"info","message":"ItemAgent: Stok menipis items fetched","timestamp":"2026-01-14 08:54:16"}
+{"duration":"347ms","ip":"::1","level":"info","message":"HTTP ✅ GET /stok-menipis - 200","method":"GET","path":"/api/item/stok-menipis?kategori=ATK","status":200,"timestamp":"2026-01-14 08:54:16","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"count":0,"level":"info","message":"ItemAgent: Stok menipis items fetched","timestamp":"2026-01-14 08:54:16"}
+{"duration":"285ms","ip":"::1","level":"info","message":"HTTP ✅ GET /stok-menipis - 200","method":"GET","path":"/api/item/stok-menipis?kategori=OBAT","status":200,"timestamp":"2026-01-14 08:54:16","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"count":8,"level":"info","message":"ItemAgent: Stok menipis items fetched","timestamp":"2026-01-14 08:54:16"}
+{"duration":"589ms","ip":"::1","level":"info","message":"HTTP ✅ GET /stok-menipis - 200","method":"GET","path":"/api/item/stok-menipis?","status":200,"timestamp":"2026-01-14 08:54:16","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"KaryawanController: Get all karyawan request","query":{},"timestamp":"2026-01-14 08:55:18"}
+{"level":"info","message":"KaryawanAgent: Fetching all karyawan","timestamp":"2026-01-14 08:55:18"}
+{"level":"info","message":"CutiTahunanController: Get rekap cuti tahunan","query":{"tahun":"2026"},"timestamp":"2026-01-14 08:55:18"}
+{"level":"info","message":"CutiTahunanAgent: Fetching rekap cuti tahunan","tahun":2026,"timestamp":"2026-01-14 08:55:18"}
+{"level":"info","message":"CutiController: Get all cuti","query":{"tahun":"2026"},"timestamp":"2026-01-14 08:55:18"}
+{"level":"info","limit":20,"message":"CutiAgent: Fetching cuti list","page":1,"tahun":2026,"timestamp":"2026-01-14 08:55:18"}
+{"count":0,"level":"info","message":"CutiTahunanAgent: Rekap fetched","timestamp":"2026-01-14 08:55:19"}
+{"duration":"304ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti-tahunan?tahun=2026","status":200,"timestamp":"2026-01-14 08:55:19","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"count":0,"level":"info","message":"KaryawanAgent: Fetched karyawan","timestamp":"2026-01-14 08:55:19"}
+{"duration":"425ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/karyawan","status":200,"timestamp":"2026-01-14 08:55:19","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"count":0,"level":"info","message":"CutiAgent: Cuti list fetched","timestamp":"2026-01-14 08:55:19","total":0}
+{"duration":"370ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti?tahun=2026","status":200,"timestamp":"2026-01-14 08:55:19","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"10","page":"1"},"timestamp":"2026-01-14 08:55:23"}
+{"level":"info","limit":10,"message":"ItemAgent: Fetching items","page":1,"stokMenipis":false,"timestamp":"2026-01-14 08:55:23"}
+{"count":10,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 08:55:24","total":124}
+{"duration":"94ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?page=1&limit=10","status":200,"timestamp":"2026-01-14 08:55:24","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"KaryawanController: Get all karyawan request","query":{},"timestamp":"2026-01-14 08:55:43"}
+{"level":"info","message":"KaryawanAgent: Fetching all karyawan","timestamp":"2026-01-14 08:55:43"}
+{"count":0,"level":"info","message":"KaryawanAgent: Fetched karyawan","timestamp":"2026-01-14 08:55:43"}
+{"duration":"118ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/karyawan","status":200,"timestamp":"2026-01-14 08:55:43","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"ItemController: Get stok menipis","query":{"kategori":"ATK"},"timestamp":"2026-01-14 08:58:24"}
+{"kategori":"ATK","level":"info","message":"ItemAgent: Fetching items dengan stok menipis","timestamp":"2026-01-14 08:58:24"}
+{"level":"info","message":"ItemController: Get stok menipis","query":{"kategori":"OBAT"},"timestamp":"2026-01-14 08:58:24"}
+{"kategori":"OBAT","level":"info","message":"ItemAgent: Fetching items dengan stok menipis","timestamp":"2026-01-14 08:58:24"}
+{"level":"info","message":"ItemController: Get stok menipis","query":{},"timestamp":"2026-01-14 08:58:24"}
+{"level":"info","message":"ItemAgent: Fetching items dengan stok menipis","timestamp":"2026-01-14 08:58:24"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"1000","page":"1"},"timestamp":"2026-01-14 08:58:24"}
+{"level":"info","limit":1000,"message":"ItemAgent: Fetching items","page":1,"stokMenipis":false,"timestamp":"2026-01-14 08:58:24"}
+{"count":0,"level":"info","message":"ItemAgent: Stok menipis items fetched","timestamp":"2026-01-14 08:58:24"}
+{"duration":"328ms","ip":"::1","level":"info","message":"HTTP ✅ GET /stok-menipis - 200","method":"GET","path":"/api/item/stok-menipis?kategori=OBAT","status":200,"timestamp":"2026-01-14 08:58:24","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"count":8,"level":"info","message":"ItemAgent: Stok menipis items fetched","timestamp":"2026-01-14 08:58:24"}
+{"duration":"394ms","ip":"::1","level":"info","message":"HTTP ✅ GET /stok-menipis - 200","method":"GET","path":"/api/item/stok-menipis?","status":200,"timestamp":"2026-01-14 08:58:24","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"count":8,"level":"info","message":"ItemAgent: Stok menipis items fetched","timestamp":"2026-01-14 08:58:24"}
+{"duration":"594ms","ip":"::1","level":"info","message":"HTTP ✅ GET /stok-menipis - 200","method":"GET","path":"/api/item/stok-menipis?kategori=ATK","status":200,"timestamp":"2026-01-14 08:58:24","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"count":124,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 08:58:24","total":124}
+{"duration":"587ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?page=1&limit=1000","status":200,"timestamp":"2026-01-14 08:58:24","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"10","page":"1"},"timestamp":"2026-01-14 08:58:34"}
+{"level":"info","limit":10,"message":"ItemAgent: Fetching items","page":1,"stokMenipis":false,"timestamp":"2026-01-14 08:58:34"}
+{"count":10,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 08:58:34","total":124}
+{"duration":"29ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?page=1&limit=10","status":200,"timestamp":"2026-01-14 08:58:34","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"10","page":"1"},"timestamp":"2026-01-14 08:59:08"}
+{"level":"info","limit":10,"message":"ItemAgent: Fetching items","page":1,"stokMenipis":false,"timestamp":"2026-01-14 08:59:08"}
+{"count":10,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 08:59:09","total":124}
+{"duration":"483ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?page=1&limit=10","status":200,"timestamp":"2026-01-14 08:59:09","userAgent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Mobile Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"10","page":"1"},"timestamp":"2026-01-14 09:00:38"}
+{"level":"info","limit":10,"message":"ItemAgent: Fetching items","page":1,"stokMenipis":false,"timestamp":"2026-01-14 09:00:38"}
+{"count":10,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 09:00:39","total":124}
+{"duration":"985ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?page=1&limit=10","status":200,"timestamp":"2026-01-14 09:00:39","userAgent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Mobile Safari/537.36"}
+{"level":"info","message":"ItemController: Get stok menipis","query":{"kategori":"ATK"},"timestamp":"2026-01-14 09:00:42"}
+{"kategori":"ATK","level":"info","message":"ItemAgent: Fetching items dengan stok menipis","timestamp":"2026-01-14 09:00:42"}
+{"level":"info","message":"ItemController: Get stok menipis","query":{"kategori":"OBAT"},"timestamp":"2026-01-14 09:00:42"}
+{"kategori":"OBAT","level":"info","message":"ItemAgent: Fetching items dengan stok menipis","timestamp":"2026-01-14 09:00:42"}
+{"count":8,"level":"info","message":"ItemAgent: Stok menipis items fetched","timestamp":"2026-01-14 09:00:42"}
+{"duration":"147ms","ip":"::1","level":"info","message":"HTTP ✅ GET /stok-menipis - 200","method":"GET","path":"/api/item/stok-menipis?kategori=ATK","status":200,"timestamp":"2026-01-14 09:00:42","userAgent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Mobile Safari/537.36"}
+{"level":"info","message":"ItemController: Get stok menipis","query":{},"timestamp":"2026-01-14 09:00:42"}
+{"level":"info","message":"ItemAgent: Fetching items dengan stok menipis","timestamp":"2026-01-14 09:00:42"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"1000","page":"1"},"timestamp":"2026-01-14 09:00:42"}
+{"level":"info","limit":1000,"message":"ItemAgent: Fetching items","page":1,"stokMenipis":false,"timestamp":"2026-01-14 09:00:42"}
+{"count":0,"level":"info","message":"ItemAgent: Stok menipis items fetched","timestamp":"2026-01-14 09:00:42"}
+{"duration":"145ms","ip":"::1","level":"info","message":"HTTP ✅ GET /stok-menipis - 200","method":"GET","path":"/api/item/stok-menipis?kategori=OBAT","status":200,"timestamp":"2026-01-14 09:00:42","userAgent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Mobile Safari/537.36"}
+{"count":8,"level":"info","message":"ItemAgent: Stok menipis items fetched","timestamp":"2026-01-14 09:00:42"}
+{"duration":"107ms","ip":"::1","level":"info","message":"HTTP ✅ GET /stok-menipis - 200","method":"GET","path":"/api/item/stok-menipis?","status":200,"timestamp":"2026-01-14 09:00:43","userAgent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Mobile Safari/537.36"}
+{"count":124,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 09:00:43","total":124}
+{"duration":"532ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?page=1&limit=1000","status":200,"timestamp":"2026-01-14 09:00:43","userAgent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Mobile Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"kategori":"ATK","limit":"10","page":"1"},"timestamp":"2026-01-14 09:00:55"}
+{"kategori":"ATK","level":"info","limit":10,"message":"ItemAgent: Fetching items","page":1,"stokMenipis":false,"timestamp":"2026-01-14 09:00:55"}
+{"count":10,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 09:00:55","total":121}
+{"duration":"257ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?kategori=ATK&page=1&limit=10","status":200,"timestamp":"2026-01-14 09:00:55","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"kategori":"OBAT","limit":"10","page":"1"},"timestamp":"2026-01-14 09:00:57"}
+{"kategori":"OBAT","level":"info","limit":10,"message":"ItemAgent: Fetching items","page":1,"stokMenipis":false,"timestamp":"2026-01-14 09:00:57"}
+{"count":3,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 09:00:57","total":3}
+{"duration":"22ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?kategori=OBAT&page=1&limit=10","status":200,"timestamp":"2026-01-14 09:00:57","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"kategori":"all","limit":"10","page":"1"},"timestamp":"2026-01-14 09:00:59"}
+{"kategori":"all","level":"info","limit":10,"message":"ItemAgent: Fetching items","page":1,"stokMenipis":false,"timestamp":"2026-01-14 09:00:59"}
+{"level":"error","message":"[ErrorHandler] \nInvalid `prisma.item.findMany()` invocation in\nC:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\src\\agents\\item.agent.ts:124:19\n\n  121 const skip = (page - 1) * limit;\n  122 \n  123 const [items, total] = await Promise.all([\n→ 124   prisma.item.findMany({\n          where: {\n            kategori: \"all\"\n                      ~~~~~\n          },\n          skip: 0,\n          take: 10,\n          orderBy: {\n            createdAt: \"desc\"\n          }\n        })\n\nInvalid value for argument `kategori`. Expected KategoriItem.","stack":"PrismaClientValidationError: \nInvalid `prisma.item.findMany()` invocation in\nC:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\src\\agents\\item.agent.ts:124:19\n\n  121 const skip = (page - 1) * limit;\n  122 \n  123 const [items, total] = await Promise.all([\n→ 124   prisma.item.findMany({\n          where: {\n            kategori: \"all\"\n                      ~~~~~\n          },\n          skip: 0,\n          take: 10,\n          orderBy: {\n            createdAt: \"desc\"\n          }\n        })\n\nInvalid value for argument `kategori`. Expected KategoriItem.\n    at throwValidationException (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\node_modules\\@prisma\\client\\src\\runtime\\core\\errorRendering\\throwValidationException.ts:46:9)\n    at qr.handleRequestError (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\node_modules\\@prisma\\client\\src\\runtime\\RequestHandler.ts:202:7)\n    at qr.handleAndLogRequestError (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\node_modules\\@prisma\\client\\src\\runtime\\RequestHandler.ts:174:12)\n    at qr.request (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\node_modules\\@prisma\\client\\src\\runtime\\RequestHandler.ts:143:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async a (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\node_modules\\@prisma\\client\\src\\runtime\\getPrismaClient.ts:805:24)\n    at async Promise.all (index 0)\n    at async ItemAgent.findAll (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\src\\agents\\item.agent.ts:123:28)\n    at async ItemController.findAll (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\src\\controllers\\item.controller.ts:59:22)","timestamp":"2026-01-14 09:00:59"}
+{"error":"\nInvalid `prisma.item.findMany()` invocation in\nC:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\src\\agents\\item.agent.ts:124:19\n\n  121 const skip = (page - 1) * limit;\n  122 \n  123 const [items, total] = await Promise.all([\n→ 124   prisma.item.findMany({\n          where: {\n            kategori: \"all\"\n                      ~~~~~\n          },\n          skip: 0,\n          take: 10,\n          orderBy: {\n            createdAt: \"desc\"\n          }\n        })\n\nInvalid value for argument `kategori`. Expected KategoriItem.","level":"error","message":"Unhandled error occurred","method":"GET","name":"PrismaClientValidationError","path":"/api/item","stack":"PrismaClientValidationError: \nInvalid `prisma.item.findMany()` invocation in\nC:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\src\\agents\\item.agent.ts:124:19\n\n  121 const skip = (page - 1) * limit;\n  122 \n  123 const [items, total] = await Promise.all([\n→ 124   prisma.item.findMany({\n          where: {\n            kategori: \"all\"\n                      ~~~~~\n          },\n          skip: 0,\n          take: 10,\n          orderBy: {\n            createdAt: \"desc\"\n          }\n        })\n\nInvalid value for argument `kategori`. Expected KategoriItem.\n    at throwValidationException (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\node_modules\\@prisma\\client\\src\\runtime\\core\\errorRendering\\throwValidationException.ts:46:9)\n    at qr.handleRequestError (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\node_modules\\@prisma\\client\\src\\runtime\\RequestHandler.ts:202:7)\n    at qr.handleAndLogRequestError (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\node_modules\\@prisma\\client\\src\\runtime\\RequestHandler.ts:174:12)\n    at qr.request (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\node_modules\\@prisma\\client\\src\\runtime\\RequestHandler.ts:143:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async a (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\node_modules\\@prisma\\client\\src\\runtime\\getPrismaClient.ts:805:24)\n    at async Promise.all (index 0)\n    at async ItemAgent.findAll (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\src\\agents\\item.agent.ts:123:28)\n    at async ItemController.findAll (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\src\\controllers\\item.controller.ts:59:22)","timestamp":"2026-01-14 09:00:59"}
+{"duration":"168ms","ip":"::1","level":"info","message":"HTTP 💥 GET /api/item - 500","method":"GET","path":"/api/item?kategori=all&page=1&limit=10","status":500,"timestamp":"2026-01-14 09:00:59","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"kategori":"all","limit":"10","page":"1"},"timestamp":"2026-01-14 09:01:00"}
+{"kategori":"all","level":"info","limit":10,"message":"ItemAgent: Fetching items","page":1,"stokMenipis":false,"timestamp":"2026-01-14 09:01:00"}
+{"level":"error","message":"[ErrorHandler] \nInvalid `prisma.item.findMany()` invocation in\nC:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\src\\agents\\item.agent.ts:124:19\n\n  121 const skip = (page - 1) * limit;\n  122 \n  123 const [items, total] = await Promise.all([\n→ 124   prisma.item.findMany({\n          where: {\n            kategori: \"all\"\n                      ~~~~~\n          },\n          skip: 0,\n          take: 10,\n          orderBy: {\n            createdAt: \"desc\"\n          }\n        })\n\nInvalid value for argument `kategori`. Expected KategoriItem.","stack":"PrismaClientValidationError: \nInvalid `prisma.item.findMany()` invocation in\nC:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\src\\agents\\item.agent.ts:124:19\n\n  121 const skip = (page - 1) * limit;\n  122 \n  123 const [items, total] = await Promise.all([\n→ 124   prisma.item.findMany({\n          where: {\n            kategori: \"all\"\n                      ~~~~~\n          },\n          skip: 0,\n          take: 10,\n          orderBy: {\n            createdAt: \"desc\"\n          }\n        })\n\nInvalid value for argument `kategori`. Expected KategoriItem.\n    at throwValidationException (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\node_modules\\@prisma\\client\\src\\runtime\\core\\errorRendering\\throwValidationException.ts:46:9)\n    at qr.handleRequestError (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\node_modules\\@prisma\\client\\src\\runtime\\RequestHandler.ts:202:7)\n    at qr.handleAndLogRequestError (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\node_modules\\@prisma\\client\\src\\runtime\\RequestHandler.ts:174:12)\n    at qr.request (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\node_modules\\@prisma\\client\\src\\runtime\\RequestHandler.ts:143:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async a (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\node_modules\\@prisma\\client\\src\\runtime\\getPrismaClient.ts:805:24)\n    at async Promise.all (index 0)\n    at async ItemAgent.findAll (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\src\\agents\\item.agent.ts:123:28)\n    at async ItemController.findAll (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\src\\controllers\\item.controller.ts:59:22)","timestamp":"2026-01-14 09:01:00"}
+{"error":"\nInvalid `prisma.item.findMany()` invocation in\nC:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\src\\agents\\item.agent.ts:124:19\n\n  121 const skip = (page - 1) * limit;\n  122 \n  123 const [items, total] = await Promise.all([\n→ 124   prisma.item.findMany({\n          where: {\n            kategori: \"all\"\n                      ~~~~~\n          },\n          skip: 0,\n          take: 10,\n          orderBy: {\n            createdAt: \"desc\"\n          }\n        })\n\nInvalid value for argument `kategori`. Expected KategoriItem.","level":"error","message":"Unhandled error occurred","method":"GET","name":"PrismaClientValidationError","path":"/api/item","stack":"PrismaClientValidationError: \nInvalid `prisma.item.findMany()` invocation in\nC:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\src\\agents\\item.agent.ts:124:19\n\n  121 const skip = (page - 1) * limit;\n  122 \n  123 const [items, total] = await Promise.all([\n→ 124   prisma.item.findMany({\n          where: {\n            kategori: \"all\"\n                      ~~~~~\n          },\n          skip: 0,\n          take: 10,\n          orderBy: {\n            createdAt: \"desc\"\n          }\n        })\n\nInvalid value for argument `kategori`. Expected KategoriItem.\n    at throwValidationException (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\node_modules\\@prisma\\client\\src\\runtime\\core\\errorRendering\\throwValidationException.ts:46:9)\n    at qr.handleRequestError (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\node_modules\\@prisma\\client\\src\\runtime\\RequestHandler.ts:202:7)\n    at qr.handleAndLogRequestError (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\node_modules\\@prisma\\client\\src\\runtime\\RequestHandler.ts:174:12)\n    at qr.request (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\node_modules\\@prisma\\client\\src\\runtime\\RequestHandler.ts:143:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async a (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\node_modules\\@prisma\\client\\src\\runtime\\getPrismaClient.ts:805:24)\n    at async Promise.all (index 0)\n    at async ItemAgent.findAll (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\src\\agents\\item.agent.ts:123:28)\n    at async ItemController.findAll (C:\\Users\\Arssy-Sundaya\\Documents\\Work-Office\\Bu Dahlia\\backend-cuti\\src\\controllers\\item.controller.ts:59:22)","timestamp":"2026-01-14 09:01:00"}
+{"duration":"15ms","ip":"::1","level":"info","message":"HTTP 💥 GET /api/item - 500","method":"GET","path":"/api/item?kategori=all&page=1&limit=10","status":500,"timestamp":"2026-01-14 09:01:00","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"PembelianController: Get all pembelian","query":{"limit":"10","page":"1"},"timestamp":"2026-01-14 09:01:08"}
+{"level":"info","limit":10,"message":"PembelianAgent: Fetching pembelian list","page":1,"timestamp":"2026-01-14 09:01:08"}
+{"count":10,"level":"info","message":"PembelianAgent: Pembelian list fetched","timestamp":"2026-01-14 09:01:08","total":33}
+{"duration":"451ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/pembelian?page=1&limit=10","status":200,"timestamp":"2026-01-14 09:01:08","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"PengeluaranController: Get all pengeluaran","query":{"limit":"10","page":"1"},"timestamp":"2026-01-14 09:01:11"}
+{"level":"info","limit":10,"message":"PengeluaranAgent: Fetching pengeluaran list","page":1,"timestamp":"2026-01-14 09:01:11"}
+{"count":10,"level":"info","message":"PengeluaranAgent: Pengeluaran list fetched","timestamp":"2026-01-14 09:01:11","total":40}
+{"duration":"131ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/pengeluaran?page=1&limit=10","status":200,"timestamp":"2026-01-14 09:01:11","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"PembelianController: Get rekap pembelian","query":{"groupBy":"item","tanggalMulai":"2026-01-01","tanggalSelesai":"2026-01-31"},"timestamp":"2026-01-14 09:01:14"}
+{"groupBy":"item","level":"info","message":"PembelianAgent: Getting rekap pembelian","tanggalMulai":"2026-01-01","tanggalSelesai":"2026-01-31","timestamp":"2026-01-14 09:01:14"}
+{"level":"info","message":"PengeluaranController: Get rekap pengeluaran","query":{"groupBy":"item","tanggalMulai":"2026-01-01","tanggalSelesai":"2026-01-31"},"timestamp":"2026-01-14 09:01:14"}
+{"groupBy":"item","level":"info","message":"PengeluaranAgent: Getting rekap pengeluaran","tanggalMulai":"2026-01-01","tanggalSelesai":"2026-01-31","timestamp":"2026-01-14 09:01:14"}
+{"duration":"176ms","ip":"::1","level":"info","message":"HTTP ✅ GET /rekap - 200","method":"GET","path":"/api/pembelian/rekap?tanggalMulai=2026-01-01&tanggalSelesai=2026-01-31&groupBy=item","status":200,"timestamp":"2026-01-14 09:01:14","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"duration":"120ms","ip":"::1","level":"info","message":"HTTP ✅ GET /rekap - 200","method":"GET","path":"/api/pengeluaran/rekap?tanggalMulai=2026-01-01&tanggalSelesai=2026-01-31&groupBy=item","status":200,"timestamp":"2026-01-14 09:01:14","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"PembelianController: Get rekap pembelian","query":{"groupBy":"item","tanggalMulai":"2026-01-01","tanggalSelesai":"2026-01-31"},"timestamp":"2026-01-14 09:07:00"}
+{"groupBy":"item","level":"info","message":"PembelianAgent: Getting rekap pembelian","tanggalMulai":"2026-01-01","tanggalSelesai":"2026-01-31","timestamp":"2026-01-14 09:07:00"}
+{"level":"info","message":"PengeluaranController: Get rekap pengeluaran","query":{"groupBy":"item","tanggalMulai":"2026-01-01","tanggalSelesai":"2026-01-31"},"timestamp":"2026-01-14 09:07:00"}
+{"groupBy":"item","level":"info","message":"PengeluaranAgent: Getting rekap pengeluaran","tanggalMulai":"2026-01-01","tanggalSelesai":"2026-01-31","timestamp":"2026-01-14 09:07:00"}
+{"duration":"190ms","ip":"::1","level":"info","message":"HTTP ✅ GET /rekap - 200","method":"GET","path":"/api/pembelian/rekap?tanggalMulai=2026-01-01&tanggalSelesai=2026-01-31&groupBy=item","status":200,"timestamp":"2026-01-14 09:07:00","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"duration":"282ms","ip":"::1","level":"info","message":"HTTP ✅ GET /rekap - 200","method":"GET","path":"/api/pengeluaran/rekap?tanggalMulai=2026-01-01&tanggalSelesai=2026-01-31&groupBy=item","status":200,"timestamp":"2026-01-14 09:07:00","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"1000","page":"1"},"timestamp":"2026-01-14 09:07:02"}
+{"level":"info","limit":1000,"message":"ItemAgent: Fetching items","page":1,"stokMenipis":false,"timestamp":"2026-01-14 09:07:02"}
+{"level":"info","message":"ItemController: Get stok menipis","query":{"kategori":"ATK"},"timestamp":"2026-01-14 09:07:02"}
+{"kategori":"ATK","level":"info","message":"ItemAgent: Fetching items dengan stok menipis","timestamp":"2026-01-14 09:07:02"}
+{"level":"info","message":"ItemController: Get stok menipis","query":{"kategori":"OBAT"},"timestamp":"2026-01-14 09:07:02"}
+{"kategori":"OBAT","level":"info","message":"ItemAgent: Fetching items dengan stok menipis","timestamp":"2026-01-14 09:07:02"}
+{"level":"info","message":"ItemController: Get stok menipis","query":{},"timestamp":"2026-01-14 09:07:02"}
+{"level":"info","message":"ItemAgent: Fetching items dengan stok menipis","timestamp":"2026-01-14 09:07:02"}
+{"count":124,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 09:07:02","total":124}
+{"duration":"414ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?page=1&limit=1000","status":200,"timestamp":"2026-01-14 09:07:02","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"count":8,"level":"info","message":"ItemAgent: Stok menipis items fetched","timestamp":"2026-01-14 09:07:03"}
+{"duration":"679ms","ip":"::1","level":"info","message":"HTTP ✅ GET /stok-menipis - 200","method":"GET","path":"/api/item/stok-menipis?kategori=ATK","status":200,"timestamp":"2026-01-14 09:07:03","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"count":0,"level":"info","message":"ItemAgent: Stok menipis items fetched","timestamp":"2026-01-14 09:07:03"}
+{"duration":"752ms","ip":"::1","level":"info","message":"HTTP ✅ GET /stok-menipis - 200","method":"GET","path":"/api/item/stok-menipis?kategori=OBAT","status":200,"timestamp":"2026-01-14 09:07:03","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"count":8,"level":"info","message":"ItemAgent: Stok menipis items fetched","timestamp":"2026-01-14 09:07:03"}
+{"duration":"877ms","ip":"::1","level":"info","message":"HTTP ✅ GET /stok-menipis - 200","method":"GET","path":"/api/item/stok-menipis?","status":200,"timestamp":"2026-01-14 09:07:03","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"10","page":"1"},"timestamp":"2026-01-14 09:07:05"}
+{"level":"info","limit":10,"message":"ItemAgent: Fetching items","page":1,"stokMenipis":false,"timestamp":"2026-01-14 09:07:05"}
+{"count":10,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 09:07:05","total":124}
+{"duration":"136ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?page=1&limit=10","status":200,"timestamp":"2026-01-14 09:07:05","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"body":{"kategori":"ATK","keterangan":"","kode":"ATK-1231","nama":"Test 1","satuan":"pcs","stokMinimal":1,"stokSekarang":0},"level":"info","message":"ItemController: Create item request","timestamp":"2026-01-14 09:07:28"}
+{"kategori":"ATK","kode":"ATK-1231","level":"info","message":"ItemAgent: Creating new item","timestamp":"2026-01-14 09:07:28"}
+{"id":"4ce53109-71db-4cae-afcf-a9938890f0ef","kode":"ATK-1231","level":"info","message":"ItemAgent: Item created successfully","timestamp":"2026-01-14 09:07:29"}
+{"duration":"520ms","ip":"::1","level":"info","message":"HTTP ✅ POST / - 201","method":"POST","path":"/api/item","status":201,"timestamp":"2026-01-14 09:07:29","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"10","page":"1"},"timestamp":"2026-01-14 09:07:29"}
+{"level":"info","limit":10,"message":"ItemAgent: Fetching items","page":1,"stokMenipis":false,"timestamp":"2026-01-14 09:07:29"}
+{"count":10,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 09:07:29","total":125}
+{"duration":"235ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?page=1&limit=10","status":200,"timestamp":"2026-01-14 09:07:29","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"PembelianController: Get all pembelian","query":{"limit":"10","page":"1"},"timestamp":"2026-01-14 09:07:44"}
+{"level":"info","limit":10,"message":"PembelianAgent: Fetching pembelian list","page":1,"timestamp":"2026-01-14 09:07:44"}
+{"count":10,"level":"info","message":"PembelianAgent: Pembelian list fetched","timestamp":"2026-01-14 09:07:44","total":33}
+{"duration":"213ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/pembelian?page=1&limit=10","status":200,"timestamp":"2026-01-14 09:07:44","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"PengeluaranController: Get all pengeluaran","query":{"limit":"10","page":"1"},"timestamp":"2026-01-14 09:07:46"}
+{"level":"info","limit":10,"message":"PengeluaranAgent: Fetching pengeluaran list","page":1,"timestamp":"2026-01-14 09:07:46"}
+{"count":10,"level":"info","message":"PengeluaranAgent: Pengeluaran list fetched","timestamp":"2026-01-14 09:07:46","total":40}
+{"duration":"45ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/pengeluaran?page=1&limit=10","status":200,"timestamp":"2026-01-14 09:07:46","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"PembelianController: Get rekap pembelian","query":{"groupBy":"item","kategori":"ATK","tanggalMulai":"2026-01-01","tanggalSelesai":"2026-01-31"},"timestamp":"2026-01-14 09:07:52"}
+{"groupBy":"item","kategori":"ATK","level":"info","message":"PembelianAgent: Getting rekap pembelian","tanggalMulai":"2026-01-01","tanggalSelesai":"2026-01-31","timestamp":"2026-01-14 09:07:52"}
+{"duration":"52ms","ip":"::1","level":"info","message":"HTTP ✅ GET /rekap - 200","method":"GET","path":"/api/pembelian/rekap?kategori=ATK&tanggalMulai=2026-01-01&tanggalSelesai=2026-01-31&groupBy=item","status":200,"timestamp":"2026-01-14 09:07:52","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"PembelianController: Get rekap pembelian","query":{"groupBy":"item","kategori":"ATK","tanggalMulai":"2026-01-14","tanggalSelesai":"2026-01-31"},"timestamp":"2026-01-14 09:07:57"}
+{"groupBy":"item","kategori":"ATK","level":"info","message":"PembelianAgent: Getting rekap pembelian","tanggalMulai":"2026-01-14","tanggalSelesai":"2026-01-31","timestamp":"2026-01-14 09:07:57"}
+{"duration":"72ms","ip":"::1","level":"info","message":"HTTP ✅ GET /rekap - 200","method":"GET","path":"/api/pembelian/rekap?kategori=ATK&tanggalMulai=2026-01-14&tanggalSelesai=2026-01-31&groupBy=item","status":200,"timestamp":"2026-01-14 09:07:57","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"PembelianController: Get rekap pembelian","query":{"groupBy":"item","kategori":"ATK","tanggalMulai":"2026-01-01","tanggalSelesai":"2026-01-06"},"timestamp":"2026-01-14 09:08:03"}
+{"groupBy":"item","kategori":"ATK","level":"info","message":"PembelianAgent: Getting rekap pembelian","tanggalMulai":"2026-01-01","tanggalSelesai":"2026-01-06","timestamp":"2026-01-14 09:08:03"}
+{"duration":"26ms","ip":"::1","level":"info","message":"HTTP ✅ GET /rekap - 200","method":"GET","path":"/api/pembelian/rekap?kategori=ATK&tanggalMulai=2026-01-01&tanggalSelesai=2026-01-06&groupBy=item","status":200,"timestamp":"2026-01-14 09:08:03","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"PembelianController: Get rekap pembelian","query":{"groupBy":"item","kategori":"ATK","tanggalMulai":"2026-01-01","tanggalSelesai":"2026-01-14"},"timestamp":"2026-01-14 09:08:06"}
+{"groupBy":"item","kategori":"ATK","level":"info","message":"PembelianAgent: Getting rekap pembelian","tanggalMulai":"2026-01-01","tanggalSelesai":"2026-01-14","timestamp":"2026-01-14 09:08:06"}
+{"duration":"47ms","ip":"::1","level":"info","message":"HTTP ✅ GET /rekap - 200","method":"GET","path":"/api/pembelian/rekap?kategori=ATK&tanggalMulai=2026-01-01&tanggalSelesai=2026-01-14&groupBy=item","status":200,"timestamp":"2026-01-14 09:08:06","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"PembelianController: Get rekap pembelian","query":{"groupBy":"item","kategori":"OBAT","tanggalMulai":"2026-01-01","tanggalSelesai":"2026-01-14"},"timestamp":"2026-01-14 09:08:15"}
+{"groupBy":"item","kategori":"OBAT","level":"info","message":"PembelianAgent: Getting rekap pembelian","tanggalMulai":"2026-01-01","tanggalSelesai":"2026-01-14","timestamp":"2026-01-14 09:08:15"}
+{"duration":"8ms","ip":"::1","level":"info","message":"HTTP ✅ GET /rekap - 200","method":"GET","path":"/api/pembelian/rekap?kategori=OBAT&tanggalMulai=2026-01-01&tanggalSelesai=2026-01-14&groupBy=item","status":200,"timestamp":"2026-01-14 09:08:15","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"1000","page":"1"},"timestamp":"2026-01-14 09:08:19"}
+{"level":"info","limit":1000,"message":"ItemAgent: Fetching items","page":1,"stokMenipis":false,"timestamp":"2026-01-14 09:08:20"}
+{"level":"info","message":"ItemController: Get stok menipis","query":{"kategori":"ATK"},"timestamp":"2026-01-14 09:08:20"}
+{"kategori":"ATK","level":"info","message":"ItemAgent: Fetching items dengan stok menipis","timestamp":"2026-01-14 09:08:20"}
+{"level":"info","message":"ItemController: Get stok menipis","query":{"kategori":"OBAT"},"timestamp":"2026-01-14 09:08:20"}
+{"kategori":"OBAT","level":"info","message":"ItemAgent: Fetching items dengan stok menipis","timestamp":"2026-01-14 09:08:20"}
+{"level":"info","message":"ItemController: Get stok menipis","query":{},"timestamp":"2026-01-14 09:08:20"}
+{"level":"info","message":"ItemAgent: Fetching items dengan stok menipis","timestamp":"2026-01-14 09:08:20"}
+{"count":0,"level":"info","message":"ItemAgent: Stok menipis items fetched","timestamp":"2026-01-14 09:08:20"}
+{"duration":"90ms","ip":"::1","level":"info","message":"HTTP ✅ GET /stok-menipis - 200","method":"GET","path":"/api/item/stok-menipis?kategori=OBAT","status":200,"timestamp":"2026-01-14 09:08:20","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"count":125,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 09:08:20","total":125}
+{"duration":"323ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?page=1&limit=1000","status":200,"timestamp":"2026-01-14 09:08:20","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"count":9,"level":"info","message":"ItemAgent: Stok menipis items fetched","timestamp":"2026-01-14 09:08:20"}
+{"duration":"322ms","ip":"::1","level":"info","message":"HTTP ✅ GET /stok-menipis - 200","method":"GET","path":"/api/item/stok-menipis?kategori=ATK","status":200,"timestamp":"2026-01-14 09:08:20","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"count":9,"level":"info","message":"ItemAgent: Stok menipis items fetched","timestamp":"2026-01-14 09:08:20"}
+{"duration":"297ms","ip":"::1","level":"info","message":"HTTP ✅ GET /stok-menipis - 200","method":"GET","path":"/api/item/stok-menipis?","status":200,"timestamp":"2026-01-14 09:08:20","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"KaryawanController: Get all karyawan request","query":{},"timestamp":"2026-01-14 09:09:29"}
+{"level":"info","message":"KaryawanAgent: Fetching all karyawan","timestamp":"2026-01-14 09:09:29"}
+{"level":"info","message":"CutiTahunanController: Get rekap cuti tahunan","query":{"tahun":"2026"},"timestamp":"2026-01-14 09:09:29"}
+{"level":"info","message":"CutiTahunanAgent: Fetching rekap cuti tahunan","tahun":2026,"timestamp":"2026-01-14 09:09:29"}
+{"level":"info","message":"CutiController: Get all cuti","query":{"tahun":"2026"},"timestamp":"2026-01-14 09:09:29"}
+{"level":"info","limit":20,"message":"CutiAgent: Fetching cuti list","page":1,"tahun":2026,"timestamp":"2026-01-14 09:09:29"}
+{"count":0,"level":"info","message":"CutiTahunanAgent: Rekap fetched","timestamp":"2026-01-14 09:09:30"}
+{"duration":"373ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti-tahunan?tahun=2026","status":200,"timestamp":"2026-01-14 09:09:30","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"count":0,"level":"info","message":"KaryawanAgent: Fetched karyawan","timestamp":"2026-01-14 09:09:30"}
+{"duration":"571ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/karyawan","status":200,"timestamp":"2026-01-14 09:09:30","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"count":0,"level":"info","message":"CutiAgent: Cuti list fetched","timestamp":"2026-01-14 09:09:30","total":0}
+{"duration":"550ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti?tahun=2026","status":200,"timestamp":"2026-01-14 09:09:30","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"🗄️  Database PostgreSQL connected successfully","timestamp":"2026-01-14 09:10:48"}
+{"apiUrl":"http://localhost:3000/api","env":"development","healthCheck":"http://localhost:3000/api/health","level":"info","message":"🚀 Server started successfully","port":3000,"timestamp":"2026-01-14 09:10:48"}
+{"level":"info","message":"📚 API Documentation available at http://localhost:3000/api","timestamp":"2026-01-14 09:10:48"}
+{"level":"info","message":"⏰ Scheduler disabled: Set ENABLE_SCHEDULER=true to enable auto-generation","timestamp":"2026-01-14 09:10:48"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"10","page":"1"},"timestamp":"2026-01-14 09:11:10"}
+{"level":"info","limit":10,"message":"ItemAgent: Fetching items","page":1,"stokMenipis":false,"timestamp":"2026-01-14 09:11:10"}
+{"count":10,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 09:11:11","total":125}
+{"duration":"265ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?page=1&limit=10","status":200,"timestamp":"2026-01-14 09:11:11","userAgent":"Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.26100.7462"}
+{"level":"info","message":"🗄️  Database PostgreSQL connected successfully","timestamp":"2026-01-14 09:26:49"}
+{"apiUrl":"http://localhost:3000/api","env":"development","healthCheck":"http://localhost:3000/api/health","level":"info","message":"🚀 Server started successfully","port":3000,"timestamp":"2026-01-14 09:26:49"}
+{"level":"info","message":"📚 API Documentation available at http://localhost:3000/api","timestamp":"2026-01-14 09:26:49"}
+{"level":"info","message":"⏰ Scheduler disabled: Set ENABLE_SCHEDULER=true to enable auto-generation","timestamp":"2026-01-14 09:26:49"}
+{"level":"info","message":"CutiTahunanController: Get rekap cuti tahunan","query":{"tahun":"2026"},"timestamp":"2026-01-14 09:29:28"}
+{"level":"info","message":"CutiTahunanAgent: Fetching rekap cuti tahunan","tahun":2026,"timestamp":"2026-01-14 09:29:28"}
+{"level":"info","message":"KaryawanController: Get all karyawan request","query":{},"timestamp":"2026-01-14 09:29:29"}
+{"level":"info","message":"KaryawanAgent: Fetching all karyawan","timestamp":"2026-01-14 09:29:29"}
+{"count":0,"level":"info","message":"KaryawanAgent: Fetched karyawan","timestamp":"2026-01-14 09:29:30"}
+{"duration":"857ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/karyawan","status":200,"timestamp":"2026-01-14 09:29:30","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"count":0,"level":"info","message":"CutiTahunanAgent: Rekap fetched","timestamp":"2026-01-14 09:29:30"}
+{"duration":"1856ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti-tahunan?tahun=2026","status":200,"timestamp":"2026-01-14 09:29:30","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"10","page":"1"},"timestamp":"2026-01-14 09:29:32"}
+{"level":"info","limit":10,"message":"ItemAgent: Fetching items","page":1,"stokMenipis":false,"timestamp":"2026-01-14 09:29:32"}
+{"count":10,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 09:29:33","total":125}
+{"duration":"188ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?page=1&limit=10","status":200,"timestamp":"2026-01-14 09:29:33","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"10","page":"1","stokMenipis":"true"},"timestamp":"2026-01-14 09:29:39"}
+{"level":"info","limit":10,"message":"ItemAgent: Fetching items","page":1,"stokMenipis":true,"timestamp":"2026-01-14 09:29:39"}
+{"count":9,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 09:29:39","total":9}
+{"duration":"127ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?stokMenipis=true&page=1&limit=10","status":200,"timestamp":"2026-01-14 09:29:39","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"kategori":"ATK","limit":"10","page":"1"},"timestamp":"2026-01-14 09:30:02"}
+{"kategori":"ATK","level":"info","limit":10,"message":"ItemAgent: Fetching items","page":1,"stokMenipis":false,"timestamp":"2026-01-14 09:30:02"}
+{"count":10,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 09:30:03","total":122}
+{"duration":"265ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?kategori=ATK&page=1&limit=10","status":200,"timestamp":"2026-01-14 09:30:03","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"kategori":"OBAT","limit":"10","page":"1"},"timestamp":"2026-01-14 09:30:04"}
+{"kategori":"OBAT","level":"info","limit":10,"message":"ItemAgent: Fetching items","page":1,"stokMenipis":false,"timestamp":"2026-01-14 09:30:04"}
+{"count":3,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 09:30:05","total":3}
+{"duration":"39ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?kategori=OBAT&page=1&limit=10","status":200,"timestamp":"2026-01-14 09:30:05","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"PembelianController: Get all pembelian","query":{"limit":"10","page":"1"},"timestamp":"2026-01-14 09:30:13"}
+{"level":"info","limit":10,"message":"PembelianAgent: Fetching pembelian list","page":1,"timestamp":"2026-01-14 09:30:13"}
+{"count":10,"level":"info","message":"PembelianAgent: Pembelian list fetched","timestamp":"2026-01-14 09:30:13","total":33}
+{"duration":"163ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/pembelian?page=1&limit=10","status":200,"timestamp":"2026-01-14 09:30:13","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"PengeluaranController: Get all pengeluaran","query":{"limit":"10","page":"1"},"timestamp":"2026-01-14 09:30:21"}
+{"level":"info","limit":10,"message":"PengeluaranAgent: Fetching pengeluaran list","page":1,"timestamp":"2026-01-14 09:30:21"}
+{"count":10,"level":"info","message":"PengeluaranAgent: Pengeluaran list fetched","timestamp":"2026-01-14 09:30:22","total":40}
+{"duration":"91ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/pengeluaran?page=1&limit=10","status":200,"timestamp":"2026-01-14 09:30:22","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"PembelianController: Get rekap pembelian","query":{"groupBy":"item","tanggalMulai":"2026-01-01","tanggalSelesai":"2026-01-31"},"timestamp":"2026-01-14 09:30:27"}
+{"groupBy":"item","level":"info","message":"PembelianAgent: Getting rekap pembelian","tanggalMulai":"2026-01-01","tanggalSelesai":"2026-01-31","timestamp":"2026-01-14 09:30:27"}
+{"level":"info","message":"PengeluaranController: Get rekap pengeluaran","query":{"groupBy":"item","tanggalMulai":"2026-01-01","tanggalSelesai":"2026-01-31"},"timestamp":"2026-01-14 09:30:27"}
+{"groupBy":"item","level":"info","message":"PengeluaranAgent: Getting rekap pengeluaran","tanggalMulai":"2026-01-01","tanggalSelesai":"2026-01-31","timestamp":"2026-01-14 09:30:27"}
+{"duration":"220ms","ip":"::1","level":"info","message":"HTTP ✅ GET /rekap - 200","method":"GET","path":"/api/pengeluaran/rekap?tanggalMulai=2026-01-01&tanggalSelesai=2026-01-31&groupBy=item","status":200,"timestamp":"2026-01-14 09:30:28","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"duration":"384ms","ip":"::1","level":"info","message":"HTTP ✅ GET /rekap - 200","method":"GET","path":"/api/pembelian/rekap?tanggalMulai=2026-01-01&tanggalSelesai=2026-01-31&groupBy=item","status":200,"timestamp":"2026-01-14 09:30:28","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"10","page":"1"},"timestamp":"2026-01-14 09:30:41"}
+{"level":"info","limit":10,"message":"ItemAgent: Fetching items","page":1,"stokMenipis":false,"timestamp":"2026-01-14 09:30:41"}
+{"count":10,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 09:30:41","total":125}
+{"duration":"198ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?page=1&limit=10","status":200,"timestamp":"2026-01-14 09:30:41","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"100","page":"1"},"timestamp":"2026-01-14 09:30:53"}
+{"level":"info","limit":100,"message":"ItemAgent: Fetching items","page":1,"stokMenipis":false,"timestamp":"2026-01-14 09:30:53"}
+{"count":100,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 09:30:53","total":125}
+{"duration":"504ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?page=1&limit=100","status":200,"timestamp":"2026-01-14 09:30:53","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"ItemController: Get stok menipis","query":{"kategori":"ATK"},"timestamp":"2026-01-14 09:31:13"}
+{"kategori":"ATK","level":"info","message":"ItemAgent: Fetching items dengan stok menipis","timestamp":"2026-01-14 09:31:13"}
+{"level":"info","message":"ItemController: Get stok menipis","query":{"kategori":"OBAT"},"timestamp":"2026-01-14 09:31:14"}
+{"kategori":"OBAT","level":"info","message":"ItemAgent: Fetching items dengan stok menipis","timestamp":"2026-01-14 09:31:14"}
+{"level":"info","message":"ItemController: Get stok menipis","query":{},"timestamp":"2026-01-14 09:31:14"}
+{"level":"info","message":"ItemAgent: Fetching items dengan stok menipis","timestamp":"2026-01-14 09:31:14"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"1000","page":"1"},"timestamp":"2026-01-14 09:31:14"}
+{"level":"info","limit":1000,"message":"ItemAgent: Fetching items","page":1,"stokMenipis":false,"timestamp":"2026-01-14 09:31:14"}
+{"count":9,"level":"info","message":"ItemAgent: Stok menipis items fetched","timestamp":"2026-01-14 09:31:14"}
+{"duration":"551ms","ip":"::1","level":"info","message":"HTTP ✅ GET /stok-menipis - 200","method":"GET","path":"/api/item/stok-menipis?kategori=ATK","status":200,"timestamp":"2026-01-14 09:31:14","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"count":9,"level":"info","message":"ItemAgent: Stok menipis items fetched","timestamp":"2026-01-14 09:31:14"}
+{"duration":"489ms","ip":"::1","level":"info","message":"HTTP ✅ GET /stok-menipis - 200","method":"GET","path":"/api/item/stok-menipis?","status":200,"timestamp":"2026-01-14 09:31:14","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"count":125,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 09:31:14","total":125}
+{"duration":"528ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?page=1&limit=1000","status":200,"timestamp":"2026-01-14 09:31:14","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"count":0,"level":"info","message":"ItemAgent: Stok menipis items fetched","timestamp":"2026-01-14 09:31:14"}
+{"duration":"670ms","ip":"::1","level":"info","message":"HTTP ✅ GET /stok-menipis - 200","method":"GET","path":"/api/item/stok-menipis?kategori=OBAT","status":200,"timestamp":"2026-01-14 09:31:14","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"KaryawanController: Get all karyawan request","query":{},"timestamp":"2026-01-14 09:34:03"}
+{"level":"info","message":"KaryawanAgent: Fetching all karyawan","timestamp":"2026-01-14 09:34:03"}
+{"count":0,"level":"info","message":"KaryawanAgent: Fetched karyawan","timestamp":"2026-01-14 09:34:04"}
+{"duration":"963ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/karyawan","status":200,"timestamp":"2026-01-14 09:34:04","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"CutiController: Get all cuti","query":{"tahun":"2026"},"timestamp":"2026-01-14 09:34:06"}
+{"level":"info","limit":20,"message":"CutiAgent: Fetching cuti list","page":1,"tahun":2026,"timestamp":"2026-01-14 09:34:06"}
+{"level":"info","message":"CutiTahunanController: Get rekap cuti tahunan","query":{"tahun":"2026"},"timestamp":"2026-01-14 09:34:07"}
+{"level":"info","message":"CutiTahunanAgent: Fetching rekap cuti tahunan","tahun":2026,"timestamp":"2026-01-14 09:34:07"}
+{"count":0,"level":"info","message":"CutiTahunanAgent: Rekap fetched","timestamp":"2026-01-14 09:34:07"}
+{"duration":"510ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti-tahunan?tahun=2026","status":200,"timestamp":"2026-01-14 09:34:07","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"count":0,"level":"info","message":"CutiAgent: Cuti list fetched","timestamp":"2026-01-14 09:34:07","total":0}
+{"duration":"772ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti?tahun=2026","status":200,"timestamp":"2026-01-14 09:34:07","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"1000","page":"1"},"timestamp":"2026-01-14 09:34:22"}
+{"level":"info","limit":1000,"message":"ItemAgent: Fetching items","page":1,"stokMenipis":false,"timestamp":"2026-01-14 09:34:22"}
+{"level":"info","message":"ItemController: Get stok menipis","query":{"kategori":"ATK"},"timestamp":"2026-01-14 09:34:22"}
+{"kategori":"ATK","level":"info","message":"ItemAgent: Fetching items dengan stok menipis","timestamp":"2026-01-14 09:34:22"}
+{"level":"info","message":"ItemController: Get stok menipis","query":{"kategori":"OBAT"},"timestamp":"2026-01-14 09:34:22"}
+{"kategori":"OBAT","level":"info","message":"ItemAgent: Fetching items dengan stok menipis","timestamp":"2026-01-14 09:34:22"}
+{"level":"info","message":"ItemController: Get stok menipis","query":{},"timestamp":"2026-01-14 09:34:22"}
+{"level":"info","message":"ItemAgent: Fetching items dengan stok menipis","timestamp":"2026-01-14 09:34:22"}
+{"count":125,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 09:34:22","total":125}
+{"duration":"601ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?page=1&limit=1000","status":200,"timestamp":"2026-01-14 09:34:22","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"count":0,"level":"info","message":"ItemAgent: Stok menipis items fetched","timestamp":"2026-01-14 09:34:22"}
+{"duration":"506ms","ip":"::1","level":"info","message":"HTTP ✅ GET /stok-menipis - 200","method":"GET","path":"/api/item/stok-menipis?kategori=OBAT","status":200,"timestamp":"2026-01-14 09:34:23","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"count":9,"level":"info","message":"ItemAgent: Stok menipis items fetched","timestamp":"2026-01-14 09:34:23"}
+{"duration":"869ms","ip":"::1","level":"info","message":"HTTP ✅ GET /stok-menipis - 200","method":"GET","path":"/api/item/stok-menipis?kategori=ATK","status":200,"timestamp":"2026-01-14 09:34:23","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"count":9,"level":"info","message":"ItemAgent: Stok menipis items fetched","timestamp":"2026-01-14 09:34:23"}
+{"duration":"997ms","ip":"::1","level":"info","message":"HTTP ✅ GET /stok-menipis - 200","method":"GET","path":"/api/item/stok-menipis?","status":200,"timestamp":"2026-01-14 09:34:23","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"🗄️  Database PostgreSQL connected successfully","timestamp":"2026-01-14 09:35:18"}
+{"apiUrl":"http://localhost:3000/api","env":"development","healthCheck":"http://localhost:3000/api/health","level":"info","message":"🚀 Server started successfully","port":3000,"timestamp":"2026-01-14 09:35:18"}
+{"level":"info","message":"📚 API Documentation available at http://localhost:3000/api","timestamp":"2026-01-14 09:35:18"}
+{"level":"info","message":"⏰ Scheduler disabled: Set ENABLE_SCHEDULER=true to enable auto-generation","timestamp":"2026-01-14 09:35:18"}
+{"level":"info","message":"KaryawanController: Get all karyawan request","query":{},"timestamp":"2026-01-14 09:41:58"}
+{"level":"info","message":"KaryawanAgent: Fetching all karyawan","timestamp":"2026-01-14 09:41:58"}
+{"level":"info","message":"CutiTahunanController: Get rekap cuti tahunan","query":{"tahun":"2026"},"timestamp":"2026-01-14 09:41:58"}
+{"level":"info","message":"CutiTahunanAgent: Fetching rekap cuti tahunan","tahun":2026,"timestamp":"2026-01-14 09:41:58"}
+{"level":"info","message":"CutiController: Get all cuti","query":{"tahun":"2026"},"timestamp":"2026-01-14 09:41:58"}
+{"level":"info","limit":20,"message":"CutiAgent: Fetching cuti list","page":1,"tahun":2026,"timestamp":"2026-01-14 09:41:58"}
+{"count":0,"level":"info","message":"CutiTahunanAgent: Rekap fetched","timestamp":"2026-01-14 09:41:58"}
+{"duration":"235ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti-tahunan?tahun=2026","status":200,"timestamp":"2026-01-14 09:41:58","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"count":0,"level":"info","message":"CutiAgent: Cuti list fetched","timestamp":"2026-01-14 09:41:58","total":0}
+{"duration":"232ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti?tahun=2026","status":200,"timestamp":"2026-01-14 09:41:58","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"count":0,"level":"info","message":"KaryawanAgent: Fetched karyawan","timestamp":"2026-01-14 09:41:58"}
+{"duration":"315ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/karyawan","status":200,"timestamp":"2026-01-14 09:41:58","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"1000","page":"1"},"timestamp":"2026-01-14 09:42:56"}
+{"level":"info","limit":1000,"message":"ItemAgent: Fetching items","page":1,"stokMenipis":false,"timestamp":"2026-01-14 09:42:56"}
+{"count":125,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 09:42:56","total":125}
+{"duration":"182ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?page=1&limit=1000","status":200,"timestamp":"2026-01-14 09:42:56","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"KaryawanController: Get all karyawan request","query":{},"timestamp":"2026-01-14 09:43:38"}
+{"level":"info","message":"KaryawanAgent: Fetching all karyawan","timestamp":"2026-01-14 09:43:38"}
+{"level":"info","message":"CutiTahunanController: Get rekap cuti tahunan","query":{"tahun":"2026"},"timestamp":"2026-01-14 09:43:38"}
+{"level":"info","message":"CutiTahunanAgent: Fetching rekap cuti tahunan","tahun":2026,"timestamp":"2026-01-14 09:43:38"}
+{"level":"info","message":"CutiController: Get all cuti","query":{"tahun":"2026"},"timestamp":"2026-01-14 09:43:38"}
+{"level":"info","limit":20,"message":"CutiAgent: Fetching cuti list","page":1,"tahun":2026,"timestamp":"2026-01-14 09:43:38"}
+{"count":0,"level":"info","message":"CutiTahunanAgent: Rekap fetched","timestamp":"2026-01-14 09:43:38"}
+{"duration":"107ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti-tahunan?tahun=2026","status":200,"timestamp":"2026-01-14 09:43:38","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"1000","page":"1"},"timestamp":"2026-01-14 09:43:38"}
+{"level":"info","limit":1000,"message":"ItemAgent: Fetching items","page":1,"stokMenipis":false,"timestamp":"2026-01-14 09:43:38"}
+{"count":125,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 09:43:38","total":125}
+{"duration":"95ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?page=1&limit=1000","status":200,"timestamp":"2026-01-14 09:43:38","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"count":0,"level":"info","message":"KaryawanAgent: Fetched karyawan","timestamp":"2026-01-14 09:43:38"}
+{"duration":"339ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/karyawan","status":200,"timestamp":"2026-01-14 09:43:38","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"count":0,"level":"info","message":"CutiAgent: Cuti list fetched","timestamp":"2026-01-14 09:43:39","total":0}
+{"duration":"475ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti?tahun=2026","status":200,"timestamp":"2026-01-14 09:43:39","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"KaryawanController: Get all karyawan request","query":{},"timestamp":"2026-01-14 09:43:49"}
+{"level":"info","message":"KaryawanAgent: Fetching all karyawan","timestamp":"2026-01-14 09:43:49"}
+{"level":"info","message":"CutiTahunanController: Get rekap cuti tahunan","query":{"tahun":"2026"},"timestamp":"2026-01-14 09:43:49"}
+{"level":"info","message":"CutiTahunanAgent: Fetching rekap cuti tahunan","tahun":2026,"timestamp":"2026-01-14 09:43:49"}
+{"count":0,"level":"info","message":"CutiTahunanAgent: Rekap fetched","timestamp":"2026-01-14 09:43:49"}
+{"duration":"94ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti-tahunan?tahun=2026","status":200,"timestamp":"2026-01-14 09:43:49","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"CutiController: Get all cuti","query":{"tahun":"2026"},"timestamp":"2026-01-14 09:43:49"}
+{"level":"info","limit":20,"message":"CutiAgent: Fetching cuti list","page":1,"tahun":2026,"timestamp":"2026-01-14 09:43:49"}
+{"count":0,"level":"info","message":"KaryawanAgent: Fetched karyawan","timestamp":"2026-01-14 09:43:49"}
+{"duration":"184ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/karyawan","status":200,"timestamp":"2026-01-14 09:43:49","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"count":0,"level":"info","message":"CutiAgent: Cuti list fetched","timestamp":"2026-01-14 09:43:49","total":0}
+{"duration":"107ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti?tahun=2026","status":200,"timestamp":"2026-01-14 09:43:49","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"1000","page":"1"},"timestamp":"2026-01-14 09:43:49"}
+{"level":"info","limit":1000,"message":"ItemAgent: Fetching items","page":1,"stokMenipis":false,"timestamp":"2026-01-14 09:43:49"}
+{"count":125,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 09:43:49","total":125}
+{"duration":"14ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?page=1&limit=1000","status":200,"timestamp":"2026-01-14 09:43:49","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"KaryawanController: Get all karyawan request","query":{},"timestamp":"2026-01-14 09:49:31"}
+{"level":"info","message":"KaryawanAgent: Fetching all karyawan","timestamp":"2026-01-14 09:49:31"}
+{"level":"info","message":"CutiTahunanController: Get rekap cuti tahunan","query":{"tahun":"2026"},"timestamp":"2026-01-14 09:49:31"}
+{"level":"info","message":"CutiTahunanAgent: Fetching rekap cuti tahunan","tahun":2026,"timestamp":"2026-01-14 09:49:31"}
+{"level":"info","message":"CutiController: Get all cuti","query":{"tahun":"2026"},"timestamp":"2026-01-14 09:49:31"}
+{"level":"info","limit":20,"message":"CutiAgent: Fetching cuti list","page":1,"tahun":2026,"timestamp":"2026-01-14 09:49:31"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"1000","page":"1"},"timestamp":"2026-01-14 09:49:31"}
+{"level":"info","limit":1000,"message":"ItemAgent: Fetching items","page":1,"stokMenipis":false,"timestamp":"2026-01-14 09:49:31"}
+{"count":0,"level":"info","message":"KaryawanAgent: Fetched karyawan","timestamp":"2026-01-14 09:49:31"}
+{"duration":"160ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/karyawan","status":200,"timestamp":"2026-01-14 09:49:31","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"count":0,"level":"info","message":"CutiAgent: Cuti list fetched","timestamp":"2026-01-14 09:49:31","total":0}
+{"duration":"272ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti?tahun=2026","status":200,"timestamp":"2026-01-14 09:49:31","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"count":125,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 09:49:31","total":125}
+{"duration":"321ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?page=1&limit=1000","status":200,"timestamp":"2026-01-14 09:49:31","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"count":0,"level":"info","message":"CutiTahunanAgent: Rekap fetched","timestamp":"2026-01-14 09:49:31"}
+{"duration":"375ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti-tahunan?tahun=2026","status":200,"timestamp":"2026-01-14 09:49:31","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"10","page":"1"},"timestamp":"2026-01-14 09:49:57"}
+{"level":"info","limit":10,"message":"ItemAgent: Fetching items","page":1,"stokMenipis":false,"timestamp":"2026-01-14 09:49:57"}
+{"count":10,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 09:49:57","total":125}
+{"duration":"210ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?page=1&limit=10","status":200,"timestamp":"2026-01-14 09:49:57","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"KaryawanController: Get all karyawan request","query":{},"timestamp":"2026-01-14 09:50:41"}
+{"level":"info","message":"KaryawanAgent: Fetching all karyawan","timestamp":"2026-01-14 09:50:41"}
+{"level":"info","message":"CutiTahunanController: Get rekap cuti tahunan","query":{"tahun":"2026"},"timestamp":"2026-01-14 09:50:41"}
+{"level":"info","message":"CutiTahunanAgent: Fetching rekap cuti tahunan","tahun":2026,"timestamp":"2026-01-14 09:50:41"}
+{"level":"info","message":"CutiController: Get all cuti","query":{"tahun":"2026"},"timestamp":"2026-01-14 09:50:41"}
+{"level":"info","limit":20,"message":"CutiAgent: Fetching cuti list","page":1,"tahun":2026,"timestamp":"2026-01-14 09:50:41"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"1000","page":"1"},"timestamp":"2026-01-14 09:50:41"}
+{"level":"info","limit":1000,"message":"ItemAgent: Fetching items","page":1,"stokMenipis":false,"timestamp":"2026-01-14 09:50:41"}
+{"count":0,"level":"info","message":"KaryawanAgent: Fetched karyawan","timestamp":"2026-01-14 09:50:41"}
+{"duration":"169ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/karyawan","status":200,"timestamp":"2026-01-14 09:50:41","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"count":0,"level":"info","message":"CutiAgent: Cuti list fetched","timestamp":"2026-01-14 09:50:41","total":0}
+{"duration":"233ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti?tahun=2026","status":200,"timestamp":"2026-01-14 09:50:41","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"count":125,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 09:50:41","total":125}
+{"duration":"231ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?page=1&limit=1000","status":200,"timestamp":"2026-01-14 09:50:41","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"count":0,"level":"info","message":"CutiTahunanAgent: Rekap fetched","timestamp":"2026-01-14 09:50:41"}
+{"duration":"263ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti-tahunan?tahun=2026","status":200,"timestamp":"2026-01-14 09:50:41","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"KaryawanController: Get all karyawan request","query":{},"timestamp":"2026-01-14 09:52:19"}
+{"level":"info","message":"KaryawanAgent: Fetching all karyawan","timestamp":"2026-01-14 09:52:19"}
+{"level":"info","message":"CutiTahunanController: Get rekap cuti tahunan","query":{"tahun":"2026"},"timestamp":"2026-01-14 09:52:19"}
+{"level":"info","message":"CutiTahunanAgent: Fetching rekap cuti tahunan","tahun":2026,"timestamp":"2026-01-14 09:52:19"}
+{"level":"info","message":"CutiController: Get all cuti","query":{"tahun":"2026"},"timestamp":"2026-01-14 09:52:19"}
+{"level":"info","limit":20,"message":"CutiAgent: Fetching cuti list","page":1,"tahun":2026,"timestamp":"2026-01-14 09:52:19"}
+{"count":0,"level":"info","message":"KaryawanAgent: Fetched karyawan","timestamp":"2026-01-14 09:52:20"}
+{"duration":"213ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/karyawan","status":200,"timestamp":"2026-01-14 09:52:20","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"count":0,"level":"info","message":"CutiTahunanAgent: Rekap fetched","timestamp":"2026-01-14 09:52:20"}
+{"duration":"212ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti-tahunan?tahun=2026","status":200,"timestamp":"2026-01-14 09:52:20","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"count":0,"level":"info","message":"CutiAgent: Cuti list fetched","timestamp":"2026-01-14 09:52:20","total":0}
+{"duration":"233ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti?tahun=2026","status":200,"timestamp":"2026-01-14 09:52:20","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"1000","page":"1"},"timestamp":"2026-01-14 09:52:20"}
+{"level":"info","limit":1000,"message":"ItemAgent: Fetching items","page":1,"stokMenipis":false,"timestamp":"2026-01-14 09:52:20"}
+{"count":125,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 09:52:20","total":125}
+{"duration":"20ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?page=1&limit=1000","status":200,"timestamp":"2026-01-14 09:52:20","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"10","page":"1"},"timestamp":"2026-01-14 09:53:51"}
+{"level":"info","limit":10,"message":"ItemAgent: Fetching items","page":1,"stokMenipis":false,"timestamp":"2026-01-14 09:53:51"}
+{"count":10,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 09:53:51","total":125}
+{"duration":"197ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?page=1&limit=10","status":200,"timestamp":"2026-01-14 09:53:51","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"PembelianController: Get all pembelian","query":{"limit":"10","page":"1"},"timestamp":"2026-01-14 09:53:53"}
+{"level":"info","limit":10,"message":"PembelianAgent: Fetching pembelian list","page":1,"timestamp":"2026-01-14 09:53:53"}
+{"count":10,"level":"info","message":"PembelianAgent: Pembelian list fetched","timestamp":"2026-01-14 09:53:53","total":33}
+{"duration":"106ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/pembelian?page=1&limit=10","status":200,"timestamp":"2026-01-14 09:53:53","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"🗄️  Database PostgreSQL connected successfully","timestamp":"2026-01-14 10:12:24"}
+{"apiUrl":"http://localhost:3000/api","env":"development","healthCheck":"http://localhost:3000/api/health","level":"info","message":"🚀 Server started successfully","port":3000,"timestamp":"2026-01-14 10:12:24"}
+{"level":"info","message":"📚 API Documentation available at http://localhost:3000/api","timestamp":"2026-01-14 10:12:24"}
+{"level":"info","message":"⏰ Scheduler disabled: Set ENABLE_SCHEDULER=true to enable auto-generation","timestamp":"2026-01-14 10:12:24"}
+{"level":"info","message":"CutiController: Get all cuti","query":{"tahun":"2026"},"timestamp":"2026-01-14 10:12:31"}
+{"level":"info","limit":20,"message":"CutiAgent: Fetching cuti list","page":1,"tahun":2026,"timestamp":"2026-01-14 10:12:32"}
+{"level":"info","message":"CutiTahunanController: Get rekap cuti tahunan","query":{"tahun":"2026"},"timestamp":"2026-01-14 10:12:32"}
+{"level":"info","message":"CutiTahunanAgent: Fetching rekap cuti tahunan","tahun":2026,"timestamp":"2026-01-14 10:12:32"}
+{"level":"info","message":"KaryawanController: Get all karyawan request","query":{},"timestamp":"2026-01-14 10:12:32"}
+{"level":"info","message":"KaryawanAgent: Fetching all karyawan","timestamp":"2026-01-14 10:12:32"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"1000","page":"1"},"timestamp":"2026-01-14 10:12:32"}
+{"level":"info","limit":1000,"message":"ItemAgent: Fetching items","page":1,"stokMenipis":false,"timestamp":"2026-01-14 10:12:32"}
+{"count":0,"level":"info","message":"CutiAgent: Cuti list fetched","timestamp":"2026-01-14 10:12:32","total":0}
+{"duration":"952ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti?tahun=2026","status":200,"timestamp":"2026-01-14 10:12:32","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"count":0,"level":"info","message":"KaryawanAgent: Fetched karyawan","timestamp":"2026-01-14 10:12:32"}
+{"duration":"666ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/karyawan","status":200,"timestamp":"2026-01-14 10:12:33","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"count":0,"level":"info","message":"CutiTahunanAgent: Rekap fetched","timestamp":"2026-01-14 10:12:33"}
+{"duration":"856ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti-tahunan?tahun=2026","status":200,"timestamp":"2026-01-14 10:12:33","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"count":125,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 10:12:33","total":125}
+{"duration":"773ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?page=1&limit=1000","status":200,"timestamp":"2026-01-14 10:12:33","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"10","page":"1"},"timestamp":"2026-01-14 10:12:35"}
+{"level":"info","limit":10,"message":"ItemAgent: Fetching items","page":1,"stokMenipis":false,"timestamp":"2026-01-14 10:12:35"}
+{"count":10,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 10:12:35","total":125}
+{"duration":"49ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?page=1&limit=10","status":200,"timestamp":"2026-01-14 10:12:35","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"PengeluaranController: Get all pengeluaran","query":{"limit":"10","page":"1"},"timestamp":"2026-01-14 10:12:36"}
+{"level":"info","limit":10,"message":"PengeluaranAgent: Fetching pengeluaran list","page":1,"timestamp":"2026-01-14 10:12:36"}
+{"count":10,"level":"info","message":"PengeluaranAgent: Pengeluaran list fetched","timestamp":"2026-01-14 10:12:36","total":40}
+{"duration":"47ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/pengeluaran?page=1&limit=10","status":200,"timestamp":"2026-01-14 10:12:36","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"PembelianController: Get all pembelian","query":{"limit":"10","page":"1"},"timestamp":"2026-01-14 10:12:41"}
+{"level":"info","limit":10,"message":"PembelianAgent: Fetching pembelian list","page":1,"timestamp":"2026-01-14 10:12:41"}
+{"count":10,"level":"info","message":"PembelianAgent: Pembelian list fetched","timestamp":"2026-01-14 10:12:41","total":33}
+{"duration":"71ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/pembelian?page=1&limit=10","status":200,"timestamp":"2026-01-14 10:12:41","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"100","page":"1"},"timestamp":"2026-01-14 10:12:51"}
+{"level":"info","limit":100,"message":"ItemAgent: Fetching items","page":1,"stokMenipis":false,"timestamp":"2026-01-14 10:12:51"}
+{"count":100,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 10:12:51","total":125}
+{"duration":"75ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?page=1&limit=100","status":200,"timestamp":"2026-01-14 10:12:51","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"KaryawanController: Get all karyawan request","query":{"status":"AKTIF"},"timestamp":"2026-01-14 10:12:59"}
+{"level":"info","message":"KaryawanAgent: Fetching all karyawan","status":"AKTIF","timestamp":"2026-01-14 10:12:59"}
+{"level":"info","message":"CutiController: Get all cuti","query":{"limit":"10","page":"1","tahun":"2026"},"timestamp":"2026-01-14 10:12:59"}
+{"level":"info","limit":10,"message":"CutiAgent: Fetching cuti list","page":1,"tahun":2026,"timestamp":"2026-01-14 10:12:59"}
+{"count":0,"level":"info","message":"KaryawanAgent: Fetched karyawan","timestamp":"2026-01-14 10:12:59"}
+{"duration":"121ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/karyawan?status=AKTIF","status":200,"timestamp":"2026-01-14 10:12:59","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"count":0,"level":"info","message":"CutiAgent: Cuti list fetched","timestamp":"2026-01-14 10:13:00","total":0}
+{"duration":"212ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti?tahun=2026&page=1&limit=10","status":200,"timestamp":"2026-01-14 10:13:00","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"KaryawanController: Get all karyawan request","query":{},"timestamp":"2026-01-14 10:18:11"}
+{"level":"info","message":"KaryawanAgent: Fetching all karyawan","timestamp":"2026-01-14 10:18:11"}
+{"level":"info","message":"CutiTahunanController: Get rekap cuti tahunan","query":{"tahun":"2026"},"timestamp":"2026-01-14 10:18:11"}
+{"level":"info","message":"CutiTahunanAgent: Fetching rekap cuti tahunan","tahun":2026,"timestamp":"2026-01-14 10:18:11"}
+{"level":"info","message":"CutiController: Get all cuti","query":{"tahun":"2026"},"timestamp":"2026-01-14 10:18:11"}
+{"level":"info","limit":20,"message":"CutiAgent: Fetching cuti list","page":1,"tahun":2026,"timestamp":"2026-01-14 10:18:11"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"1000","page":"1"},"timestamp":"2026-01-14 10:18:11"}
+{"level":"info","limit":1000,"message":"ItemAgent: Fetching items","page":1,"stokMenipis":false,"timestamp":"2026-01-14 10:18:11"}
+{"count":0,"level":"info","message":"KaryawanAgent: Fetched karyawan","timestamp":"2026-01-14 10:18:12"}
+{"duration":"558ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/karyawan","status":200,"timestamp":"2026-01-14 10:18:12","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"count":0,"level":"info","message":"CutiAgent: Cuti list fetched","timestamp":"2026-01-14 10:18:12","total":0}
+{"duration":"547ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti?tahun=2026","status":200,"timestamp":"2026-01-14 10:18:12","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"count":0,"level":"info","message":"CutiTahunanAgent: Rekap fetched","timestamp":"2026-01-14 10:18:12"}
+{"duration":"753ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/cuti-tahunan?tahun=2026","status":200,"timestamp":"2026-01-14 10:18:12","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"count":125,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 10:18:12","total":125}
+{"duration":"769ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?page=1&limit=1000","status":200,"timestamp":"2026-01-14 10:18:12","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"PengeluaranController: Get all pengeluaran","query":{"limit":"10","page":"1"},"timestamp":"2026-01-14 10:18:15"}
+{"level":"info","limit":10,"message":"PengeluaranAgent: Fetching pengeluaran list","page":1,"timestamp":"2026-01-14 10:18:15"}
+{"count":10,"level":"info","message":"PengeluaranAgent: Pengeluaran list fetched","timestamp":"2026-01-14 10:18:15","total":40}
+{"duration":"108ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/pengeluaran?page=1&limit=10","status":200,"timestamp":"2026-01-14 10:18:15","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"PembelianController: Get rekap pembelian","query":{"groupBy":"item","tanggalMulai":"2026-01-01","tanggalSelesai":"2026-01-14"},"timestamp":"2026-01-14 10:19:28"}
+{"groupBy":"item","level":"info","message":"PembelianAgent: Getting rekap pembelian","tanggalMulai":"2026-01-01","tanggalSelesai":"2026-01-14","timestamp":"2026-01-14 10:19:28"}
+{"level":"info","message":"PengeluaranController: Get rekap pengeluaran","query":{"groupBy":"item","tanggalMulai":"2026-01-01","tanggalSelesai":"2026-01-14"},"timestamp":"2026-01-14 10:19:28"}
+{"groupBy":"item","level":"info","message":"PengeluaranAgent: Getting rekap pengeluaran","tanggalMulai":"2026-01-01","tanggalSelesai":"2026-01-14","timestamp":"2026-01-14 10:19:28"}
+{"duration":"168ms","ip":"::1","level":"info","message":"HTTP ✅ GET /rekap - 200","method":"GET","path":"/api/pengeluaran/rekap?tanggalMulai=2026-01-01&tanggalSelesai=2026-01-14&groupBy=item","status":200,"timestamp":"2026-01-14 10:19:28","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"duration":"187ms","ip":"::1","level":"info","message":"HTTP ✅ GET /rekap - 200","method":"GET","path":"/api/pembelian/rekap?tanggalMulai=2026-01-01&tanggalSelesai=2026-01-14&groupBy=item","status":200,"timestamp":"2026-01-14 10:19:28","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"PembelianController: Get rekap pembelian","query":{"groupBy":"item","tanggalMulai":"2026-01-01","tanggalSelesai":"2026-01-14"},"timestamp":"2026-01-14 10:19:41"}
+{"groupBy":"item","level":"info","message":"PembelianAgent: Getting rekap pembelian","tanggalMulai":"2026-01-01","tanggalSelesai":"2026-01-14","timestamp":"2026-01-14 10:19:41"}
+{"level":"info","message":"PengeluaranController: Get rekap pengeluaran","query":{"groupBy":"item","tanggalMulai":"2026-01-01","tanggalSelesai":"2026-01-14"},"timestamp":"2026-01-14 10:19:41"}
+{"groupBy":"item","level":"info","message":"PengeluaranAgent: Getting rekap pengeluaran","tanggalMulai":"2026-01-01","tanggalSelesai":"2026-01-14","timestamp":"2026-01-14 10:19:41"}
+{"duration":"181ms","ip":"::1","level":"info","message":"HTTP ✅ GET /rekap - 200","method":"GET","path":"/api/pembelian/rekap?tanggalMulai=2026-01-01&tanggalSelesai=2026-01-14&groupBy=item","status":200,"timestamp":"2026-01-14 10:19:41","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"duration":"209ms","ip":"::1","level":"info","message":"HTTP ✅ GET /rekap - 200","method":"GET","path":"/api/pengeluaran/rekap?tanggalMulai=2026-01-01&tanggalSelesai=2026-01-14&groupBy=item","status":200,"timestamp":"2026-01-14 10:19:41","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"PembelianController: Get rekap pembelian","query":{"groupBy":"item","tanggalMulai":"2026-01-01","tanggalSelesai":"2026-01-14"},"timestamp":"2026-01-14 10:19:56"}
+{"groupBy":"item","level":"info","message":"PembelianAgent: Getting rekap pembelian","tanggalMulai":"2026-01-01","tanggalSelesai":"2026-01-14","timestamp":"2026-01-14 10:19:56"}
+{"level":"info","message":"PengeluaranController: Get rekap pengeluaran","query":{"groupBy":"item","tanggalMulai":"2026-01-01","tanggalSelesai":"2026-01-14"},"timestamp":"2026-01-14 10:19:56"}
+{"groupBy":"item","level":"info","message":"PengeluaranAgent: Getting rekap pengeluaran","tanggalMulai":"2026-01-01","tanggalSelesai":"2026-01-14","timestamp":"2026-01-14 10:19:56"}
+{"duration":"193ms","ip":"::1","level":"info","message":"HTTP ✅ GET /rekap - 200","method":"GET","path":"/api/pengeluaran/rekap?tanggalMulai=2026-01-01&tanggalSelesai=2026-01-14&groupBy=item","status":200,"timestamp":"2026-01-14 10:19:56","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"duration":"204ms","ip":"::1","level":"info","message":"HTTP ✅ GET /rekap - 200","method":"GET","path":"/api/pembelian/rekap?tanggalMulai=2026-01-01&tanggalSelesai=2026-01-14&groupBy=item","status":200,"timestamp":"2026-01-14 10:19:56","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"PengeluaranController: Get all pengeluaran","query":{"limit":"10","page":"1"},"timestamp":"2026-01-14 10:20:34"}
+{"level":"info","limit":10,"message":"PengeluaranAgent: Fetching pengeluaran list","page":1,"timestamp":"2026-01-14 10:20:34"}
+{"count":10,"level":"info","message":"PengeluaranAgent: Pengeluaran list fetched","timestamp":"2026-01-14 10:20:34","total":40}
+{"duration":"210ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/pengeluaran?page=1&limit=10","status":200,"timestamp":"2026-01-14 10:20:34","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"ItemController: Get all items","query":{"limit":"100","page":"1"},"timestamp":"2026-01-14 10:20:42"}
+{"level":"info","limit":100,"message":"ItemAgent: Fetching items","page":1,"stokMenipis":false,"timestamp":"2026-01-14 10:20:42"}
+{"count":100,"level":"info","message":"ItemAgent: Items fetched","timestamp":"2026-01-14 10:20:42","total":125}
+{"duration":"178ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/item?page=1&limit=100","status":200,"timestamp":"2026-01-14 10:20:42","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"PembelianController: Get rekap pembelian","query":{"groupBy":"item","tanggalMulai":"2026-01-01","tanggalSelesai":"2026-01-14"},"timestamp":"2026-01-14 10:20:54"}
+{"groupBy":"item","level":"info","message":"PembelianAgent: Getting rekap pembelian","tanggalMulai":"2026-01-01","tanggalSelesai":"2026-01-14","timestamp":"2026-01-14 10:20:54"}
+{"level":"info","message":"PengeluaranController: Get rekap pengeluaran","query":{"groupBy":"item","tanggalMulai":"2026-01-01","tanggalSelesai":"2026-01-14"},"timestamp":"2026-01-14 10:20:54"}
+{"groupBy":"item","level":"info","message":"PengeluaranAgent: Getting rekap pengeluaran","tanggalMulai":"2026-01-01","tanggalSelesai":"2026-01-14","timestamp":"2026-01-14 10:20:54"}
+{"duration":"336ms","ip":"::1","level":"info","message":"HTTP ✅ GET /rekap - 200","method":"GET","path":"/api/pengeluaran/rekap?tanggalMulai=2026-01-01&tanggalSelesai=2026-01-14&groupBy=item","status":200,"timestamp":"2026-01-14 10:20:54","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"duration":"469ms","ip":"::1","level":"info","message":"HTTP ✅ GET /rekap - 200","method":"GET","path":"/api/pembelian/rekap?tanggalMulai=2026-01-01&tanggalSelesai=2026-01-14&groupBy=item","status":200,"timestamp":"2026-01-14 10:20:54","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"PembelianController: Get rekap pembelian","query":{"groupBy":"item","tanggalMulai":"2026-01-01","tanggalSelesai":"2026-01-14"},"timestamp":"2026-01-14 10:21:31"}
+{"groupBy":"item","level":"info","message":"PembelianAgent: Getting rekap pembelian","tanggalMulai":"2026-01-01","tanggalSelesai":"2026-01-14","timestamp":"2026-01-14 10:21:31"}
+{"level":"info","message":"PengeluaranController: Get rekap pengeluaran","query":{"groupBy":"item","tanggalMulai":"2026-01-01","tanggalSelesai":"2026-01-14"},"timestamp":"2026-01-14 10:21:31"}
+{"groupBy":"item","level":"info","message":"PengeluaranAgent: Getting rekap pengeluaran","tanggalMulai":"2026-01-01","tanggalSelesai":"2026-01-14","timestamp":"2026-01-14 10:21:31"}
+{"duration":"159ms","ip":"::1","level":"info","message":"HTTP ✅ GET /rekap - 200","method":"GET","path":"/api/pengeluaran/rekap?tanggalMulai=2026-01-01&tanggalSelesai=2026-01-14&groupBy=item","status":200,"timestamp":"2026-01-14 10:21:31","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"duration":"172ms","ip":"::1","level":"info","message":"HTTP ✅ GET /rekap - 200","method":"GET","path":"/api/pembelian/rekap?tanggalMulai=2026-01-01&tanggalSelesai=2026-01-14&groupBy=item","status":200,"timestamp":"2026-01-14 10:21:31","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"PembelianController: Get rekap pembelian","query":{"groupBy":"item","tanggalMulai":"2026-01-01","tanggalSelesai":"2026-01-14"},"timestamp":"2026-01-14 10:23:11"}
+{"groupBy":"item","level":"info","message":"PembelianAgent: Getting rekap pembelian","tanggalMulai":"2026-01-01","tanggalSelesai":"2026-01-14","timestamp":"2026-01-14 10:23:11"}
+{"level":"info","message":"PengeluaranController: Get rekap pengeluaran","query":{"groupBy":"item","tanggalMulai":"2026-01-01","tanggalSelesai":"2026-01-14"},"timestamp":"2026-01-14 10:23:11"}
+{"groupBy":"item","level":"info","message":"PengeluaranAgent: Getting rekap pengeluaran","tanggalMulai":"2026-01-01","tanggalSelesai":"2026-01-14","timestamp":"2026-01-14 10:23:11"}
+{"duration":"140ms","ip":"::1","level":"info","message":"HTTP ✅ GET /rekap - 200","method":"GET","path":"/api/pembelian/rekap?tanggalMulai=2026-01-01&tanggalSelesai=2026-01-14&groupBy=item","status":200,"timestamp":"2026-01-14 10:23:11","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"duration":"148ms","ip":"::1","level":"info","message":"HTTP ✅ GET /rekap - 200","method":"GET","path":"/api/pengeluaran/rekap?tanggalMulai=2026-01-01&tanggalSelesai=2026-01-14&groupBy=item","status":200,"timestamp":"2026-01-14 10:23:11","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"PembelianController: Get rekap pembelian","query":{"groupBy":"item","tanggalMulai":"2026-01-01","tanggalSelesai":"2026-01-14"},"timestamp":"2026-01-14 10:23:30"}
+{"groupBy":"item","level":"info","message":"PembelianAgent: Getting rekap pembelian","tanggalMulai":"2026-01-01","tanggalSelesai":"2026-01-14","timestamp":"2026-01-14 10:23:30"}
+{"level":"info","message":"PengeluaranController: Get rekap pengeluaran","query":{"groupBy":"item","tanggalMulai":"2026-01-01","tanggalSelesai":"2026-01-14"},"timestamp":"2026-01-14 10:23:30"}
+{"groupBy":"item","level":"info","message":"PengeluaranAgent: Getting rekap pengeluaran","tanggalMulai":"2026-01-01","tanggalSelesai":"2026-01-14","timestamp":"2026-01-14 10:23:30"}
+{"duration":"105ms","ip":"::1","level":"info","message":"HTTP ✅ GET /rekap - 200","method":"GET","path":"/api/pembelian/rekap?tanggalMulai=2026-01-01&tanggalSelesai=2026-01-14&groupBy=item","status":200,"timestamp":"2026-01-14 10:23:30","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"duration":"115ms","ip":"::1","level":"info","message":"HTTP ✅ GET /rekap - 200","method":"GET","path":"/api/pengeluaran/rekap?tanggalMulai=2026-01-01&tanggalSelesai=2026-01-14&groupBy=item","status":200,"timestamp":"2026-01-14 10:23:30","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"PembelianController: Get rekap pembelian","query":{"groupBy":"item","tanggalMulai":"2026-01-01","tanggalSelesai":"2026-01-14"},"timestamp":"2026-01-14 10:23:56"}
+{"groupBy":"item","level":"info","message":"PembelianAgent: Getting rekap pembelian","tanggalMulai":"2026-01-01","tanggalSelesai":"2026-01-14","timestamp":"2026-01-14 10:23:56"}
+{"level":"info","message":"PengeluaranController: Get rekap pengeluaran","query":{"groupBy":"item","tanggalMulai":"2026-01-01","tanggalSelesai":"2026-01-14"},"timestamp":"2026-01-14 10:23:56"}
+{"groupBy":"item","level":"info","message":"PengeluaranAgent: Getting rekap pengeluaran","tanggalMulai":"2026-01-01","tanggalSelesai":"2026-01-14","timestamp":"2026-01-14 10:23:56"}
+{"duration":"407ms","ip":"::1","level":"info","message":"HTTP ✅ GET /rekap - 200","method":"GET","path":"/api/pembelian/rekap?tanggalMulai=2026-01-01&tanggalSelesai=2026-01-14&groupBy=item","status":200,"timestamp":"2026-01-14 10:23:57","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"duration":"575ms","ip":"::1","level":"info","message":"HTTP ✅ GET /rekap - 200","method":"GET","path":"/api/pengeluaran/rekap?tanggalMulai=2026-01-01&tanggalSelesai=2026-01-14&groupBy=item","status":200,"timestamp":"2026-01-14 10:23:57","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"PembelianController: Get rekap pembelian","query":{"groupBy":"item","tanggalMulai":"2026-01-01","tanggalSelesai":"2026-01-14"},"timestamp":"2026-01-14 10:24:31"}
+{"groupBy":"item","level":"info","message":"PembelianAgent: Getting rekap pembelian","tanggalMulai":"2026-01-01","tanggalSelesai":"2026-01-14","timestamp":"2026-01-14 10:24:31"}
+{"level":"info","message":"PengeluaranController: Get rekap pengeluaran","query":{"groupBy":"item","tanggalMulai":"2026-01-01","tanggalSelesai":"2026-01-14"},"timestamp":"2026-01-14 10:24:31"}
+{"groupBy":"item","level":"info","message":"PengeluaranAgent: Getting rekap pengeluaran","tanggalMulai":"2026-01-01","tanggalSelesai":"2026-01-14","timestamp":"2026-01-14 10:24:31"}
+{"duration":"131ms","ip":"::1","level":"info","message":"HTTP ✅ GET /rekap - 200","method":"GET","path":"/api/pembelian/rekap?tanggalMulai=2026-01-01&tanggalSelesai=2026-01-14&groupBy=item","status":200,"timestamp":"2026-01-14 10:24:31","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"duration":"154ms","ip":"::1","level":"info","message":"HTTP ✅ GET /rekap - 200","method":"GET","path":"/api/pengeluaran/rekap?tanggalMulai=2026-01-01&tanggalSelesai=2026-01-14&groupBy=item","status":200,"timestamp":"2026-01-14 10:24:31","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"PembelianController: Get rekap pembelian","query":{"groupBy":"item","tanggalMulai":"2026-01-01","tanggalSelesai":"2026-01-14"},"timestamp":"2026-01-14 10:24:54"}
+{"groupBy":"item","level":"info","message":"PembelianAgent: Getting rekap pembelian","tanggalMulai":"2026-01-01","tanggalSelesai":"2026-01-14","timestamp":"2026-01-14 10:24:54"}
+{"level":"info","message":"PengeluaranController: Get rekap pengeluaran","query":{"groupBy":"item","tanggalMulai":"2026-01-01","tanggalSelesai":"2026-01-14"},"timestamp":"2026-01-14 10:24:54"}
+{"groupBy":"item","level":"info","message":"PengeluaranAgent: Getting rekap pengeluaran","tanggalMulai":"2026-01-01","tanggalSelesai":"2026-01-14","timestamp":"2026-01-14 10:24:54"}
+{"duration":"162ms","ip":"::1","level":"info","message":"HTTP ✅ GET /rekap - 200","method":"GET","path":"/api/pembelian/rekap?tanggalMulai=2026-01-01&tanggalSelesai=2026-01-14&groupBy=item","status":200,"timestamp":"2026-01-14 10:24:54","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"duration":"189ms","ip":"::1","level":"info","message":"HTTP ✅ GET /rekap - 200","method":"GET","path":"/api/pengeluaran/rekap?tanggalMulai=2026-01-01&tanggalSelesai=2026-01-14&groupBy=item","status":200,"timestamp":"2026-01-14 10:24:54","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"PembelianController: Get rekap pembelian","query":{"groupBy":"item","kategori":"ATK","tanggalMulai":"2026-01-01","tanggalSelesai":"2026-01-14"},"timestamp":"2026-01-14 10:25:19"}
+{"groupBy":"item","kategori":"ATK","level":"info","message":"PembelianAgent: Getting rekap pembelian","tanggalMulai":"2026-01-01","tanggalSelesai":"2026-01-14","timestamp":"2026-01-14 10:25:19"}
+{"duration":"121ms","ip":"::1","level":"info","message":"HTTP ✅ GET /rekap - 200","method":"GET","path":"/api/pembelian/rekap?kategori=ATK&tanggalMulai=2026-01-01&tanggalSelesai=2026-01-14&groupBy=item","status":200,"timestamp":"2026-01-14 10:25:19","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"PembelianController: Get rekap pembelian","query":{"groupBy":"item","kategori":"OBAT","tanggalMulai":"2026-01-01","tanggalSelesai":"2026-01-14"},"timestamp":"2026-01-14 10:25:21"}
+{"groupBy":"item","kategori":"OBAT","level":"info","message":"PembelianAgent: Getting rekap pembelian","tanggalMulai":"2026-01-01","tanggalSelesai":"2026-01-14","timestamp":"2026-01-14 10:25:21"}
+{"duration":"8ms","ip":"::1","level":"info","message":"HTTP ✅ GET /rekap - 200","method":"GET","path":"/api/pembelian/rekap?kategori=OBAT&tanggalMulai=2026-01-01&tanggalSelesai=2026-01-14&groupBy=item","status":200,"timestamp":"2026-01-14 10:25:21","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"PengeluaranController: Get all pengeluaran","query":{"limit":"10","page":"1"},"timestamp":"2026-01-14 10:25:28"}
+{"level":"info","limit":10,"message":"PengeluaranAgent: Fetching pengeluaran list","page":1,"timestamp":"2026-01-14 10:25:28"}
+{"count":10,"level":"info","message":"PengeluaranAgent: Pengeluaran list fetched","timestamp":"2026-01-14 10:25:28","total":40}
+{"duration":"285ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/pengeluaran?page=1&limit=10","status":200,"timestamp":"2026-01-14 10:25:28","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"PembelianController: Get all pembelian","query":{"limit":"10","page":"1"},"timestamp":"2026-01-14 10:25:30"}
+{"level":"info","limit":10,"message":"PembelianAgent: Fetching pembelian list","page":1,"timestamp":"2026-01-14 10:25:30"}
+{"count":10,"level":"info","message":"PembelianAgent: Pembelian list fetched","timestamp":"2026-01-14 10:25:30","total":33}
+{"duration":"50ms","ip":"::1","level":"info","message":"HTTP ✅ GET / - 200","method":"GET","path":"/api/pembelian?page=1&limit=10","status":200,"timestamp":"2026-01-14 10:25:30","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"level":"info","message":"PembelianController: Get rekap pembelian","query":{"groupBy":"item","tanggalMulai":"2026-01-01","tanggalSelesai":"2026-01-14"},"timestamp":"2026-01-14 10:28:29"}
+{"groupBy":"item","level":"info","message":"PembelianAgent: Getting rekap pembelian","tanggalMulai":"2026-01-01","tanggalSelesai":"2026-01-14","timestamp":"2026-01-14 10:28:29"}
+{"level":"info","message":"PengeluaranController: Get rekap pengeluaran","query":{"groupBy":"item","tanggalMulai":"2026-01-01","tanggalSelesai":"2026-01-14"},"timestamp":"2026-01-14 10:28:29"}
+{"groupBy":"item","level":"info","message":"PengeluaranAgent: Getting rekap pengeluaran","tanggalMulai":"2026-01-01","tanggalSelesai":"2026-01-14","timestamp":"2026-01-14 10:28:29"}
+{"duration":"164ms","ip":"::1","level":"info","message":"HTTP ✅ GET /rekap - 200","method":"GET","path":"/api/pembelian/rekap?tanggalMulai=2026-01-01&tanggalSelesai=2026-01-14&groupBy=item","status":200,"timestamp":"2026-01-14 10:28:29","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+{"duration":"366ms","ip":"::1","level":"info","message":"HTTP ✅ GET /rekap - 200","method":"GET","path":"/api/pengeluaran/rekap?tanggalMulai=2026-01-01&tanggalSelesai=2026-01-14&groupBy=item","status":200,"timestamp":"2026-01-14 10:28:29","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}

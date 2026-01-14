@@ -2,6 +2,9 @@ import { Router } from 'express';
 import karyawanRoutes from './karyawan.routes.js';
 import cutiTahunanRoutes from './cuti-tahunan.routes.js';
 import cutiRoutes from './cuti.routes.js';
+import itemRoutes from './item.routes.js';
+import pembelianRoutes from './pembelian.routes.js';
+import pengeluaranRoutes from './pengeluaran.routes.js';
 
 const router = Router();
 
@@ -19,9 +22,14 @@ router.get('/health', (req, res) => {
   });
 });
 
-// Mount routes
+// Mount routes - Cuti Management
 router.use('/karyawan', karyawanRoutes);
 router.use('/cuti-tahunan', cutiTahunanRoutes);
 router.use('/cuti', cutiRoutes);
+
+// Mount routes - Inventory Management
+router.use('/item', itemRoutes);
+router.use('/pembelian', pembelianRoutes);
+router.use('/pengeluaran', pengeluaranRoutes);
 
 export default router;

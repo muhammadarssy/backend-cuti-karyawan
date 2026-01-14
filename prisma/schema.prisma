@@ -36,6 +36,11 @@ enum JenisCuti {
   LAINNYA
 }
 
+enum KategoriItem {
+  ATK
+  OBAT
+}
+
 // =========================
 // MODEL KARYAWAN (MASTER)
 // =========================
@@ -104,4 +109,71 @@ model Cuti {
   cutiTahunan    CutiTahunan   @relation(fields: [cutiTahunanId], references: [id])
 
   createdAt      DateTime      @default(now())
+}
+
+// =========================
+// MODEL INVENTORY
+// =========================
+
+model Item {
+  id              String          @id @default(uuid())
+  kode            String          @unique
+  nama            String
+  kategori        KategoriItem
+  satuan          String          // pcs, box, rim, botol, tablet, strip, dll
+  stokMinimal     Int             @default(0)
+  stokSekarang    Int             @default(0)
+  keterangan      String?
+
+  pembelian       Pembelian[]
+  pengeluaran     Pengeluaran[]
+
+  createdAt       DateTime        @default(now())
+  updatedAt       DateTime        @updatedAt
+
+  @@index([kategori])
+  @@index([kode])
+}
+
+// =========================
+// MODEL PEMBELIAN (STOCK MASUK)
+// =========================
+
+model Pembelian {
+  id              String          @id @default(uuid())
+  itemId          String
+  jumlah          Int
+  tanggal         DateTime
+  supplier        String?         // nama supplier/toko
+  hargaSatuan     Int             // harga per satuan dalam rupiah
+  totalHarga      Int             // jumlah * hargaSatuan
+  keterangan      String?         // catatan tambahan
+
+  item            Item            @relation(fields: [itemId], references: [id])
+
+  createdAt       DateTime        @default(now())
+
+  @@index([itemId])
+  @@index([tanggal])
+}
+
+// =========================
+// MODEL PENGELUARAN (STOCK KELUAR)
+// =========================
+
+model Pengeluaran {
+  id              String          @id @default(uuid())
+  itemId          String
+  jumlah          Int
+  tanggal         DateTime
+  keperluan       String          // untuk siapa/apa
+  penerima        String?         // nama penerima
+  keterangan      String?         // catatan tambahan
+
+  item            Item            @relation(fields: [itemId], references: [id])
+
+  createdAt       DateTime        @default(now())
+
+  @@index([itemId])
+  @@index([tanggal])
 }

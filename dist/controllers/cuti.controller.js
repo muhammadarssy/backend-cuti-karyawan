@@ -5,10 +5,16 @@ import { logger } from '../utils/logger.js';
 // Validation schemas
 const createCutiSchema = z.object({
     karyawanId: z.string().uuid('Karyawan ID tidak valid'),
-    jenis: z.enum(['TAHUNAN', 'SAKIT', 'IZIN', 'LAINNYA']),
+    jenis: z.enum(['TAHUNAN', 'SAKIT', 'IZIN', 'BAKU', 'TANPA_KETERANGAN', 'LAINNYA']),
     alasan: z.string().min(1, 'Alasan wajib diisi'),
     tanggalMulai: z.string().datetime('Format tanggal mulai tidak valid'),
     tanggalSelesai: z.string().datetime('Format tanggal selesai tidak valid'),
+});
+const updateCutiSchema = z.object({
+    jenis: z.enum(['TAHUNAN', 'SAKIT', 'IZIN', 'BAKU', 'TANPA_KETERANGAN', 'LAINNYA']).optional(),
+    alasan: z.string().min(1, 'Alasan wajib diisi').optional(),
+    tanggalMulai: z.string().datetime('Format tanggal mulai tidak valid').optional(),
+    tanggalSelesai: z.string().datetime('Format tanggal selesai tidak valid').optional(),
 });
 /**
  * CutiController - API handlers untuk manajemen transaksi cuti
@@ -26,6 +32,24 @@ export class CutiController {
             const cuti = await cutiAgent.create(validatedData);
             // Send response
             res.status(201).json(successResponse('Cuti berhasil dicatat', cuti));
+        }
+        catch (error) {
+            next(error);
+        }
+    }
+    /**
+     * PUT /api/cuti/:id - Update cuti
+     */
+    async update(req, res, next) {
+        try {
+            const { id } = req.params;
+            logger.info('CutiController: Update cuti request', { id, body: req.body });
+            // Validasi input
+            const validatedData = updateCutiSchema.parse(req.body);
+            // Call agent
+            const cuti = await cutiAgent.update(id, validatedData);
+            // Send response
+            res.json(successResponse('Cuti berhasil diupdate', cuti));
         }
         catch (error) {
             next(error);

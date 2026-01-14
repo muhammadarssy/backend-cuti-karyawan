@@ -1,5 +1,5 @@
 import prisma from '../lib/prisma.js';
-import { BusinessLogicError, NotFoundError, ValidationError } from '../utils/errors.js';
+import { NotFoundError, ValidationError } from '../utils/errors.js';
 import { logger } from '../utils/logger.js';
 import {
   calculateWorkingDays,
