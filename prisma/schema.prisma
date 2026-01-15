@@ -44,8 +44,9 @@ enum StatusKehadiran {
   TANPA_KETERANGAN
   CUTI
   CUTI_BAKU
-  SATPAM
+  SECURITY
   TUGAS
+  BELUM_FINGERPRINT
 }
 
 enum KategoriItem {

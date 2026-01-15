@@ -774,9 +774,13 @@ export class AbsensiAgent {
       absensiMap.set(key, abs);
     }
 
+    // Collect unique statuses for debugging
+    const uniqueStatuses = new Set(absensi.map(a => a.statusKehadiran));
+    
     logger.info('AbsensiAgent: Map created', {
       mapSize: absensiMap.size,
       sampleKeys: Array.from(absensiMap.keys()).slice(0, 3),
+      uniqueStatuses: Array.from(uniqueStatuses),
     });
 
     // Generate rows for Excel
