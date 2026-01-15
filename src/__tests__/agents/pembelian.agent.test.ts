@@ -1,7 +1,7 @@
 import { describe, it, expect, beforeEach } from '@jest/globals';
 import { pembelianAgent } from '../../agents/pembelian.agent.js';
 import { itemAgent } from '../../agents/item.agent.js';
-import { NotFoundError, ValidationError, BusinessLogicError } from '../../utils/errors.js';
+import { NotFoundError, ValidationError } from '../../utils/errors.js';
 
 describe('PembelianAgent', () => {
   let itemId: string;

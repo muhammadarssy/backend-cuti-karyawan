@@ -36,6 +36,18 @@ enum JenisCuti {
   LAINNYA
 }
 
+enum StatusKehadiran {
+  HADIR
+  SAKIT
+  IZIN
+  WFH
+  TANPA_KETERANGAN
+  CUTI
+  CUTI_BAKU
+  SATPAM
+  TUGAS
+}
+
 enum KategoriItem {
   ATK
   OBAT
@@ -48,6 +60,7 @@ enum KategoriItem {
 model Karyawan {
   id            String         @id @default(uuid())
   nik           String         @unique
+  fingerprintId Int?           @unique
   nama          String
   jabatan       String?
   departemen    String?
@@ -56,6 +69,7 @@ model Karyawan {
 
   cutiTahunan   CutiTahunan[]
   cuti          Cuti[]
+  absensi       Absensi[]
 
   createdAt     DateTime       @default(now())
   updatedAt     DateTime       @updatedAt
@@ -99,7 +113,7 @@ model Cuti {
 
   tahun          Int
   jenis          JenisCuti
-  alasan         String
+  alasan         String?
 
   tanggalMulai   DateTime
   tanggalSelesai DateTime
@@ -176,4 +190,30 @@ model Pengeluaran {
 
   @@index([itemId])
   @@index([tanggal])
+}
+
+// =========================
+// MODEL ABSENSI
+// =========================
+
+model Absensi {
+  id                String            @id @default(uuid())
+  karyawanId        String
+  tanggal           DateTime
+  jam               DateTime?         // Jam masuk dari fingerprint
+  
+  statusKehadiran   StatusKehadiran   @default(HADIR)
+  isManual          Boolean           @default(false)  // false = dari fingerprint, true = input manual
+  
+  keterangan        String?           // Alasan sakit/izin/WFH jika manual
+  diinputOleh       String?           // Siapa yang input (untuk manual)
+  
+  karyawan          Karyawan          @relation(fields: [karyawanId], references: [id])
+  
+  createdAt         DateTime          @default(now())
+  updatedAt         DateTime          @updatedAt
+  
+  @@unique([karyawanId, tanggal])
+  @@index([tanggal])
+  @@index([statusKehadiran])
 }

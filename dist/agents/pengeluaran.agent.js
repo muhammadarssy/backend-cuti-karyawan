@@ -22,6 +22,10 @@ export class PengeluaranAgent {
         if (data.jumlah <= 0) {
             throw new ValidationError('Jumlah harus lebih dari 0');
         }
+        // Validate stock availability
+        if (item.stokSekarang < data.jumlah) {
+            throw new ValidationError(`Stok tidak mencukupi. Stok tersedia: ${item.stokSekarang}, Jumlah diminta: ${data.jumlah}`);
+        }
         // Parse tanggal
         const tanggal = parseDate(data.tanggal);
         // Transaction: Create pengeluaran dan update stok
@@ -178,6 +182,20 @@ export class PengeluaranAgent {
         const tanggal = data.tanggal ? parseDate(data.tanggal) : undefined;
         // Get new jumlah
         const newJumlah = data.jumlah ?? oldPengeluaran.jumlah;
+        // Validate stock availability if jumlah changes
+        if (data.jumlah !== undefined && data.jumlah !== oldPengeluaran.jumlah) {
+            const item = await prisma.item.findUnique({
+                where: { id: oldPengeluaran.itemId },
+            });
+            if (!item) {
+                throw new NotFoundError('Item tidak ditemukan');
+            }
+            // Calculate stock after adjustment (rollback old + deduct new)
+            const stockAfterAdjustment = item.stokSekarang + oldPengeluaran.jumlah - newJumlah;
+            if (stockAfterAdjustment < 0) {
+                throw new ValidationError(`Stok tidak mencukupi untuk perubahan ini. Stok tersedia: ${item.stokSekarang + oldPengeluaran.jumlah}, Jumlah diminta: ${newJumlah}`);
+            }
+        }
         // Transaction: Update pengeluaran dan adjust stok
         const updated = await prisma.$transaction(async (tx) => {
             // Update pengeluaran

@@ -5,6 +5,7 @@ import type { StatusKaryawan } from '@prisma/client';
 
 export interface CreateKaryawanDto {
   nik: string;
+  fingerprintId?: number;
   nama: string;
   jabatan?: string;
   departemen?: string;
@@ -12,6 +13,7 @@ export interface CreateKaryawanDto {
 }
 
 export interface UpdateKaryawanDto {
+  fingerprintId?: number;
   nama?: string;
   jabatan?: string;
   departemen?: string;

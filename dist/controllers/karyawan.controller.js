@@ -1,10 +1,11 @@
 import { z } from 'zod';
 import { karyawanAgent } from '../agents/karyawan.agent.js';
-import { successResponse } from '../utils/response.js';
+import { successResponse, paginatedResponse } from '../utils/response.js';
 import { logger } from '../utils/logger.js';
 // Validation schemas
 const createKaryawanSchema = z.object({
     nik: z.string().min(1, 'NIK wajib diisi'),
+    fingerprintId: z.number().int().positive().optional(),
     nama: z.string().min(1, 'Nama wajib diisi'),
     jabatan: z.string().optional(),
     departemen: z.string().optional(),
@@ -15,6 +16,7 @@ const createKaryawanSchema = z.object({
     path: ['tanggal_bergabung'],
 });
 const updateKaryawanSchema = z.object({
+    fingerprintId: z.number().int().positive().optional(),
     nama: z.string().min(1).optional(),
     jabatan: z.string().optional(),
     departemen: z.string().optional(),
@@ -39,6 +41,7 @@ export class KaryawanController {
             // Call agent
             const karyawan = await karyawanAgent.create({
                 nik: validatedData.nik,
+                fingerprintId: validatedData.fingerprintId,
                 nama: validatedData.nama,
                 jabatan: validatedData.jabatan,
                 departemen: validatedData.departemen,
@@ -58,12 +61,14 @@ export class KaryawanController {
         try {
             logger.info('KaryawanController: Get all karyawan request', { query: req.query });
             const { status } = req.query;
+            const page = req.query.page ? parseInt(req.query.page) : 1;
+            const limit = req.query.limit ? parseInt(req.query.limit) : 20;
             // Validasi status jika ada
             const validStatus = status && (status === 'AKTIF' || status === 'NONAKTIF') ? status : undefined;
             // Call agent
-            const karyawan = await karyawanAgent.findAll(validStatus);
+            const result = await karyawanAgent.findAll(validStatus, page, limit);
             // Send response
-            res.json(successResponse('Data karyawan berhasil diambil', karyawan));
+            res.json(paginatedResponse('Data karyawan berhasil diambil', result.data, result.pagination));
         }
         catch (error) {
             next(error);

@@ -67,6 +67,7 @@ Create new karyawan
 ```json
 {
   "nik": "123456789",
+  "fingerprintId": 101, // optional, positive integer
   "nama": "John Doe",
   "jabatan": "Software Engineer", // optional
   "departemen": "IT", // optional
@@ -91,6 +92,7 @@ Create new karyawan
   "data": {
     "id": "uuid",
     "nik": "123456789",
+    "fingerprintId": 101,
     "nama": "John Doe",
     "jabatan": "Software Engineer",
     "departemen": "IT",
@@ -104,6 +106,7 @@ Create new karyawan
 
 **Validation Rules:**
 - `nik` (required): Minimal 1 karakter, unique
+- `fingerprintId` (optional): Positive integer, unique (untuk matching dengan mesin absensi fingerprint)
 - `nama` (required): Minimal 1 karakter
 - `tanggalMasuk` or `tanggal_bergabung` (required): Valid ISO 8601 datetime string
 - `jabatan` (optional): String
@@ -135,6 +138,7 @@ GET /karyawan?status=AKTIF
     {
       "id": "uuid",
       "nik": "123456789",
+      "fingerprintId": 101,
       "nama": "John Doe",
       "jabatan": "Software Engineer",
       "departemen": "IT",
@@ -926,5 +930,331 @@ NODE_ENV=development
 
 ---
 
-**Last Updated:** January 9, 2026  
-**API Version:** 1.0.0
+## 5. Absensi Endpoints
+
+### POST /absensi/upload-fingerprint
+Upload file Excel dari mesin fingerprint untuk proses absensi masuk
+
+**Request:**
+- **Content-Type:** `multipart/form-data`
+- **Body:**
+  - `file` (required): File Excel (.xls atau .xlsx)
+  - `tanggal` (required): Tanggal absensi (ISO 8601 format)
+
+**Excel Format:**
+- Column A: No. ID (Fingerprint ID)
+- Column B: NIK
+- Column C: Nama
+- Column D: Waktu
+- Column E: Status
+
+**Response:**
+```json
+{
+  "success": true,
+  "message": "Upload fingerprint berhasil diproses",
+  "data": {
+    "success": 45,
+    "failed": 0,
+    "notFound": 2,
+    "duplicate": 3,
+    "details": {
+      "processed": ["Budi Santoso", "Ani Wijaya", "..."],
+      "notMatched": [
+        {
+          "id": 123,
+          "nik": "12345",
+          "nama": "Nama Karyawan",
+          "waktu": "1/14/2026 7:46 AM",
+          "status": "Masuk"
+        }
+      ],
+      "duplicates": ["Ahmad", "Siti"]
+    }
+  }
+}
+```
+
+**Status Codes:**
+- `200 OK` - Upload berhasil diproses
+- `400 Bad Request` - File tidak valid atau format salah
+- `422 Unprocessable Entity` - Validasi gagal
+
+---
+
+### GET /absensi/belum-absen
+Get daftar karyawan aktif yang belum absen pada tanggal tertentu
+
+**Query Parameters:**
+- `tanggal` (required): Tanggal yang akan dicek (ISO 8601 format)
+
+**Response:**
+```json
+{
+  "success": true,
+  "message": "Data karyawan belum absen berhasil diambil",
+  "data": {
+    "karyawan": [
+      {
+        "id": "uuid",
+        "nik": "12345",
+        "nama": "Budi Santoso",
+        "jabatan": "Staff IT",
+        "departemen": "Technology",
+        "fingerprintId": 101
+      }
+    ],
+    "total": 5
+  }
+}
+```
+
+**Status Codes:**
+- `200 OK` - Berhasil
+- `400 Bad Request` - Parameter tanggal tidak valid
+
+---
+
+### POST /absensi/manual
+Buat absensi manual untuk karyawan (sakit, izin, WFH, tanpa keterangan)
+
+**Request Body:**
+```json
+{
+  "karyawanId": "uuid",
+  "tanggal": "2026-01-15T00:00:00.000Z",
+  "statusKehadiran": "SAKIT",
+  "keterangan": "Demam tinggi",
+  "diinputOleh": "Admin HR"
+}
+```
+
+**Fields:**
+- `karyawanId` (required): UUID karyawan
+- `tanggal` (required): Tanggal absensi (ISO 8601 format)
+- `statusKehadiran` (required): Enum: `SAKIT`, `IZIN`, `WFH`, `TANPA_KETERANGAN`
+- `keterangan` (optional): Alasan/keterangan
+- `diinputOleh` (optional): Nama yang menginput
+
+**Response:**
+```json
+{
+  "success": true,
+  "message": "Absensi manual berhasil dibuat",
+  "data": {
+    "id": "uuid",
+    "karyawanId": "uuid",
+    "tanggal": "2026-01-15T00:00:00.000Z",
+    "statusKehadiran": "SAKIT",
+    "isManual": true,
+    "keterangan": "Demam tinggi",
+    "diinputOleh": "Admin HR",
+    "karyawan": {
+      "id": "uuid",
+      "nik": "12345",
+      "nama": "Budi Santoso",
+      "jabatan": "Staff IT",
+      "departemen": "Technology"
+    },
+    "createdAt": "2026-01-15T10:30:00.000Z",
+    "updatedAt": "2026-01-15T10:30:00.000Z"
+  }
+}
+```
+
+**Status Codes:**
+- `201 Created` - Absensi berhasil dibuat
+- `400 Bad Request` - Validasi gagal atau karyawan tidak aktif
+- `404 Not Found` - Karyawan tidak ditemukan
+- `409 Conflict` - Absensi untuk tanggal ini sudah ada
+- `422 Unprocessable Entity` - Validasi gagal
+
+---
+
+### GET /absensi
+Get semua data absensi dengan berbagai filter
+
+**Query Parameters:**
+- `tanggalMulai` (optional): Filter dari tanggal (ISO 8601 format)
+- `tanggalSelesai` (optional): Filter sampai tanggal (ISO 8601 format)
+- `karyawanId` (optional): Filter berdasarkan karyawan
+- `statusKehadiran` (optional): Filter berdasarkan status (`HADIR`, `SAKIT`, `IZIN`, `WFH`, `TANPA_KETERANGAN`)
+- `isManual` (optional): Filter manual/fingerprint (`true` atau `false`)
+- `page` (optional, default: 1): Halaman
+- `limit` (optional, default: 50): Jumlah data per halaman
+
+**Response:**
+```json
+{
+  "success": true,
+  "message": "Data absensi berhasil diambil",
+  "data": [
+    {
+      "id": "uuid",
+      "karyawanId": "uuid",
+      "tanggal": "2026-01-15T00:00:00.000Z",
+      "statusKehadiran": "HADIR",
+      "isManual": false,
+      "keterangan": null,
+      "diinputOleh": null,
+      "karyawan": {
+        "id": "uuid",
+        "nik": "12345",
+        "nama": "Budi Santoso",
+        "jabatan": "Staff IT",
+        "departemen": "Technology"
+      },
+      "createdAt": "2026-01-15T07:46:00.000Z",
+      "updatedAt": "2026-01-15T07:46:00.000Z"
+    }
+  ],
+  "pagination": {
+    "page": 1,
+    "limit": 50,
+    "total": 150,
+    "totalPages": 3
+  }
+}
+```
+
+**Status Codes:**
+- `200 OK` - Berhasil
+- `422 Unprocessable Entity` - Validasi parameter gagal
+
+---
+
+### GET /absensi/:id
+Get detail absensi berdasarkan ID
+
+**Response:**
+```json
+{
+  "success": true,
+  "message": "Data absensi berhasil diambil",
+  "data": {
+    "id": "uuid",
+    "karyawanId": "uuid",
+    "tanggal": "2026-01-15T00:00:00.000Z",
+    "statusKehadiran": "SAKIT",
+    "isManual": true,
+    "keterangan": "Demam tinggi",
+    "diinputOleh": "Admin HR",
+    "karyawan": {
+      "id": "uuid",
+      "nik": "12345",
+      "nama": "Budi Santoso",
+      "jabatan": "Staff IT",
+      "departemen": "Technology"
+    },
+    "createdAt": "2026-01-15T10:30:00.000Z",
+    "updatedAt": "2026-01-15T10:30:00.000Z"
+  }
+}
+```
+
+**Status Codes:**
+- `200 OK` - Berhasil
+- `404 Not Found` - Absensi tidak ditemukan
+
+---
+
+### PUT /absensi/:id
+Update absensi (hanya untuk absensi manual)
+
+**Request Body:**
+```json
+{
+  "statusKehadiran": "IZIN",
+  "keterangan": "Keperluan keluarga",
+  "diinputOleh": "Admin HR"
+}
+```
+
+**Fields (semua optional):**
+- `statusKehadiran`: Enum: `HADIR`, `SAKIT`, `IZIN`, `WFH`, `TANPA_KETERANGAN`
+- `keterangan`: Alasan/keterangan
+- `diinputOleh`: Nama yang menginput
+
+**Response:**
+```json
+{
+  "success": true,
+  "message": "Absensi berhasil diupdate",
+  "data": {
+    "id": "uuid",
+    "karyawanId": "uuid",
+    "tanggal": "2026-01-15T00:00:00.000Z",
+    "statusKehadiran": "IZIN",
+    "isManual": true,
+    "keterangan": "Keperluan keluarga",
+    "diinputOleh": "Admin HR",
+    "karyawan": {
+      "id": "uuid",
+      "nik": "12345",
+      "nama": "Budi Santoso",
+      "jabatan": "Staff IT",
+      "departemen": "Technology"
+    },
+    "createdAt": "2026-01-15T10:30:00.000Z",
+    "updatedAt": "2026-01-15T11:00:00.000Z"
+  }
+}
+```
+
+**Status Codes:**
+- `200 OK` - Berhasil diupdate
+- `400 Bad Request` - Tidak bisa update absensi dari fingerprint (isManual=false)
+- `404 Not Found` - Absensi tidak ditemukan
+- `422 Unprocessable Entity` - Validasi gagal
+
+---
+
+### DELETE /absensi/:id
+Hapus data absensi
+
+**Response:**
+```json
+{
+  "success": true,
+  "message": "Absensi berhasil dihapus",
+  "data": null
+}
+```
+
+**Status Codes:**
+- `200 OK` - Berhasil dihapus
+- `404 Not Found` - Absensi tidak ditemukan
+
+---
+
+### GET /absensi/ringkasan
+Get ringkasan absensi untuk periode tertentu
+
+**Query Parameters:**
+- `tanggalMulai` (required): Tanggal mulai periode (ISO 8601 format)
+- `tanggalSelesai` (required): Tanggal akhir periode (ISO 8601 format)
+- `karyawanId` (optional): Filter untuk karyawan tertentu
+
+**Response:**
+```json
+{
+  "success": true,
+  "message": "Ringkasan absensi berhasil diambil",
+  "data": {
+    "HADIR": 220,
+    "SAKIT": 5,
+    "IZIN": 3,
+    "WFH": 12,
+    "TANPA_KETERANGAN": 2
+  }
+}
+```
+
+**Status Codes:**
+- `200 OK` - Berhasil
+- `400 Bad Request` - Parameter tanggal tidak lengkap
+
+---
+
+**Last Updated:** January 15, 2026  
+**API Version:** 1.1.0

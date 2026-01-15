@@ -1,6 +1,6 @@
 import { z } from 'zod';
 import { cutiTahunanAgent } from '../agents/cuti-tahunan.agent.js';
-import { successResponse } from '../utils/response.js';
+import { successResponse, paginatedResponse } from '../utils/response.js';
 import { logger } from '../utils/logger.js';
 import { getCurrentYear } from '../utils/date.js';
 // Validation schemas
@@ -45,10 +45,12 @@ export class CutiTahunanController {
             logger.info('CutiTahunanController: Get rekap cuti tahunan', { query: req.query });
             const tahun = req.query.tahun ? parseInt(req.query.tahun) : undefined;
             const karyawanId = req.query.karyawanId;
+            const page = req.query.page ? parseInt(req.query.page) : 1;
+            const limit = req.query.limit ? parseInt(req.query.limit) : 20;
             // Call agent
-            const rekap = await cutiTahunanAgent.getRekapCutiTahunan(tahun, karyawanId);
+            const result = await cutiTahunanAgent.getRekapCutiTahunan(tahun, karyawanId, page, limit);
             // Send response
-            res.json(successResponse('Rekap cuti tahunan berhasil diambil', rekap));
+            res.json(paginatedResponse('Rekap cuti tahunan berhasil diambil', result.data, result.pagination));
         }
         catch (error) {
             next(error);

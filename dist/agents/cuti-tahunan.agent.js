@@ -194,30 +194,64 @@ export class CutiTahunanAgent {
     /**
      * Get rekap cuti tahunan dengan filter
      */
-    async getRekapCutiTahunan(tahun, karyawanId) {
-        logger.info('CutiTahunanAgent: Fetching rekap cuti tahunan', { tahun, karyawanId });
-        const where = {};
-        if (tahun)
-            where.tahun = tahun;
-        if (karyawanId)
+    async getRekapCutiTahunan(tahun, karyawanId, page = 1, limit = 20) {
+        const currentYear = tahun || getCurrentYear();
+        logger.info('CutiTahunanAgent: Getting rekap cuti tahunan', {
+            tahun: currentYear,
+            karyawanId,
+            page,
+            limit,
+        });
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        const where = {
+            tahun: currentYear,
+        };
+        if (karyawanId) {
             where.karyawanId = karyawanId;
-        const rekap = await prisma.cutiTahunan.findMany({
-            where,
-            include: {
-                karyawan: {
-                    select: {
-                        id: true,
-                        nik: true,
-                        nama: true,
-                        jabatan: true,
-                        departemen: true,
+        }
+        const skip = (page - 1) * limit;
+        const [rekap, total] = await Promise.all([
+            prisma.cutiTahunan.findMany({
+                where,
+                skip,
+                take: limit,
+                include: {
+                    karyawan: {
+                        select: {
+                            id: true,
+                            nik: true,
+                            nama: true,
+                            jabatan: true,
+                            departemen: true,
+                            tanggalMasuk: true,
+                            status: true,
+                        },
+                    },
+                    cuti: {
+                        select: {
+                            id: true,
+                            tanggalMulai: true,
+                            tanggalSelesai: true,
+                            jumlahHari: true,
+                        },
                     },
                 },
+                orderBy: {
+                    tahun: 'desc',
+                },
+            }),
+            prisma.cutiTahunan.count({ where }),
+        ]);
+        logger.info('CutiTahunanAgent: Rekap fetched', { count: rekap.length, total });
+        return {
+            data: rekap,
+            pagination: {
+                page,
+                limit,
+                total,
+                totalPages: Math.ceil(total / limit),
             },
-            orderBy: [{ tahun: 'desc' }, { karyawan: { nama: 'asc' } }],
-        });
-        logger.info('CutiTahunanAgent: Rekap fetched', { count: rekap.length });
-        return rekap;
+        };
     }
     /**
      * Update saldo cuti (dipanggil saat cuti dicatat atau dihapus)

@@ -7,6 +7,7 @@ import { logger } from '../utils/logger.js';
 // Validation schemas
 const createKaryawanSchema = z.object({
   nik: z.string().min(1, 'NIK wajib diisi'),
+  fingerprintId: z.number().int().positive().optional(),
   nama: z.string().min(1, 'Nama wajib diisi'),
   jabatan: z.string().optional(),
   departemen: z.string().optional(),
@@ -18,6 +19,7 @@ const createKaryawanSchema = z.object({
 });
 
 const updateKaryawanSchema = z.object({
+  fingerprintId: z.number().int().positive().optional(),
   nama: z.string().min(1).optional(),
   jabatan: z.string().optional(),
   departemen: z.string().optional(),
@@ -46,6 +48,7 @@ export class KaryawanController {
       // Call agent
       const karyawan = await karyawanAgent.create({
         nik: validatedData.nik,
+        fingerprintId: validatedData.fingerprintId,
         nama: validatedData.nama,
         jabatan: validatedData.jabatan,
         departemen: validatedData.departemen,
