@@ -39,16 +39,16 @@ describe('KaryawanAgent', () => {
     });
 
     it('should return all karyawan', async () => {
-      const karyawan = await karyawanAgent.findAll();
+      const result = await karyawanAgent.findAll();
 
-      expect(karyawan).toHaveLength(2);
+      expect(result.data).toHaveLength(2);
     });
 
     it('should filter by status AKTIF', async () => {
-      const karyawan = await karyawanAgent.findAll('AKTIF');
+      const result = await karyawanAgent.findAll('AKTIF');
 
-      expect(karyawan).toHaveLength(2);
-      expect(karyawan.every((k) => k.status === 'AKTIF')).toBe(true);
+      expect(result.data).toHaveLength(2);
+      expect(result.data.every((k) => k.status === 'AKTIF')).toBe(true);
     });
   });
 

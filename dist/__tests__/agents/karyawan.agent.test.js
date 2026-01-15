@@ -32,13 +32,13 @@ describe('KaryawanAgent', () => {
             });
         });
         it('should return all karyawan', async () => {
-            const karyawan = await karyawanAgent.findAll();
-            expect(karyawan).toHaveLength(2);
+            const result = await karyawanAgent.findAll();
+            expect(result.data).toHaveLength(2);
         });
         it('should filter by status AKTIF', async () => {
-            const karyawan = await karyawanAgent.findAll('AKTIF');
-            expect(karyawan).toHaveLength(2);
-            expect(karyawan.every((k) => k.status === 'AKTIF')).toBe(true);
+            const result = await karyawanAgent.findAll('AKTIF');
+            expect(result.data).toHaveLength(2);
+            expect(result.data.every((k) => k.status === 'AKTIF')).toBe(true);
         });
     });
     describe('findById', () => {

@@ -120,14 +120,14 @@ describe('CutiTahunanAgent', () => {
     describe('getRekapCutiTahunan', () => {
         it('should return rekap with filters', async () => {
             await cutiTahunanAgent.generateCutiTahunan(karyawanId, 2026);
-            const rekap = await cutiTahunanAgent.getRekapCutiTahunan(2026, karyawanId);
-            expect(rekap).toHaveLength(1);
-            expect(rekap[0].tahun).toBe(2026);
+            const result = await cutiTahunanAgent.getRekapCutiTahunan(2026, karyawanId);
+            expect(result.data).toHaveLength(1);
+            expect(result.data[0].tahun).toBe(2026);
         });
         it('should return all rekap without filters', async () => {
             await cutiTahunanAgent.generateCutiTahunan(karyawanId, 2026);
-            const rekap = await cutiTahunanAgent.getRekapCutiTahunan();
-            expect(rekap.length).toBeGreaterThan(0);
+            const result = await cutiTahunanAgent.getRekapCutiTahunan();
+            expect(result.data.length).toBeGreaterThan(0);
         });
     });
 });

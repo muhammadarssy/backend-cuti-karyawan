@@ -10,7 +10,7 @@ const uploadFingerprintSchema = z.object({
 const createAbsensiManualSchema = z.object({
     karyawanId: z.string().uuid('Karyawan ID tidak valid'),
     tanggal: z.string().datetime('Format tanggal tidak valid'),
-    statusKehadiran: z.enum(['SAKIT', 'IZIN', 'WFH', 'TANPA_KETERANGAN', 'CUTI', 'CUTI_BAKU', 'SATPAM'], {
+    statusKehadiran: z.enum(['SAKIT', 'IZIN', 'WFH', 'TANPA_KETERANGAN', 'CUTI', 'CUTI_BAKU', 'SATPAM', 'TUGAS'], {
         message: 'Status kehadiran tidak valid',
     }),
     keterangan: z.string().optional(),
@@ -19,14 +19,14 @@ const createAbsensiManualSchema = z.object({
 const bulkCreateAbsensiManualSchema = z.object({
     karyawanIds: z.array(z.string().uuid('Karyawan ID tidak valid')).min(1, 'Minimal satu karyawan harus dipilih'),
     tanggal: z.string().datetime('Format tanggal tidak valid'),
-    statusKehadiran: z.enum(['SAKIT', 'IZIN', 'WFH', 'TANPA_KETERANGAN', 'CUTI', 'CUTI_BAKU', 'SATPAM'], {
+    statusKehadiran: z.enum(['SAKIT', 'IZIN', 'WFH', 'TANPA_KETERANGAN', 'CUTI', 'CUTI_BAKU', 'SATPAM', 'TUGAS'], {
         message: 'Status kehadiran tidak valid',
     }),
     keterangan: z.string().optional(),
     diinputOleh: z.string().optional(),
 });
 const updateAbsensiSchema = z.object({
-    statusKehadiran: z.enum(['HADIR', 'SAKIT', 'IZIN', 'WFH', 'TANPA_KETERANGAN', 'CUTI', 'CUTI_BAKU', 'SATPAM']).optional(),
+    statusKehadiran: z.enum(['HADIR', 'SAKIT', 'IZIN', 'WFH', 'TANPA_KETERANGAN', 'CUTI', 'CUTI_BAKU', 'SATPAM', 'TUGAS']).optional(),
     keterangan: z.string().optional(),
     diinputOleh: z.string().optional(),
 });
@@ -34,7 +34,7 @@ const queryAbsensiSchema = z.object({
     tanggalMulai: z.string().datetime().optional(),
     tanggalSelesai: z.string().datetime().optional(),
     karyawanId: z.string().uuid().optional(),
-    statusKehadiran: z.enum(['HADIR', 'SAKIT', 'IZIN', 'WFH', 'TANPA_KETERANGAN', 'CUTI', 'CUTI_BAKU', 'SATPAM']).optional(),
+    statusKehadiran: z.enum(['HADIR', 'SAKIT', 'IZIN', 'WFH', 'TANPA_KETERANGAN', 'CUTI', 'CUTI_BAKU', 'SATPAM', 'TUGAS']).optional(),
     isManual: z.enum(['true', 'false']).optional(),
     page: z.string().regex(/^\d+$/).optional(),
     limit: z.string().regex(/^\d+$/).optional(),
