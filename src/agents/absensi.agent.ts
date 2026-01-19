@@ -730,6 +730,20 @@ export class AbsensiAgent {
   async exportToExcel(tanggalMulai: Date, tanggalSelesai: Date): Promise<Buffer> {
     logger.info('AbsensiAgent: Exporting absensi to Excel', { tanggalMulai, tanggalSelesai });
 
+    // Mapping status kehadiran enum ke label yang lebih readable
+    const statusKehadiranLabel: Record<string, string> = {
+      'HADIR': 'Hadir',
+      'SAKIT': 'Sakit',
+      'IZIN': 'Izin',
+      'WFH': 'WFH',
+      'TANPA_KETERANGAN': 'Tanpa Keterangan',
+      'CUTI': 'Cuti',
+      'CUTI_BAKU': 'Cuti Baku',
+      'SECURITY': 'Security',
+      'TUGAS': 'Tugas',
+      'BELUM_FINGERPRINT': 'Belum Fingerprint',
+    };
+
     // Normalize dates to start and end of day
     const startDate = new Date(tanggalMulai);
     startDate.setHours(0, 0, 0, 0);
@@ -837,7 +851,7 @@ export class AbsensiAgent {
           k.nik,
           k.nama,
           jamMasuk,
-          abs ? abs.statusKehadiran : '-',
+          abs ? (statusKehadiranLabel[abs.statusKehadiran] || abs.statusKehadiran) : '-',
           abs ? (abs.isManual ? 'Manual' : 'Fingerprint') : '-',
           abs?.keterangan || '-',
           remark,
