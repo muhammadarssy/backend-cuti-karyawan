@@ -265,7 +265,7 @@ Membuat record absensi secara manual untuk karyawan yang sakit, izin, WFH, atau 
 - `karyawanId` (required): UUID karyawan
 - `tanggal` (required): Tanggal absensi (ISO 8601 format)
 - `statusKehadiran` (required): Status kehadiran
-  - Valid values: `SAKIT`, `IZIN`, `WFH`, `TANPA_KETERANGAN`
+  - Valid values: `SAKIT`, `IZIN`, `WFH`, `TANPA_KETERANGAN`, `CUTI`, `CUTI_BAKU`, `SECURITY`, `TUGAS`, `BELUM_FINGERPRINT`
   - Note: `HADIR` tidak bisa di-input manual, hanya dari fingerprint
 - `keterangan` (optional): Alasan atau keterangan tambahan
 - `diinputOleh` (optional): Nama user yang menginput
@@ -385,7 +385,7 @@ Membuat multiple record absensi manual sekaligus untuk beberapa karyawan dengan 
 - `karyawanIds` (required): Array of UUID karyawan (minimal 1)
 - `tanggal` (required): Tanggal absensi (ISO 8601 format)
 - `statusKehadiran` (required): Status kehadiran yang sama untuk semua
-  - Valid values: `SAKIT`, `IZIN`, `WFH`, `TANPA_KETERANGAN`, `CUTI`, `BAKU`, `SATPAM`
+  - Valid values: `SAKIT`, `IZIN`, `WFH`, `TANPA_KETERANGAN`, `CUTI`, `CUTI_BAKU`, `SECURITY`, `TUGAS`, `BELUM_FINGERPRINT`
 - `keterangan` (optional): Keterangan yang sama untuk semua
 - `diinputOleh` (optional): Nama user yang menginput
 
@@ -645,7 +645,7 @@ Update data absensi yang di-input manual. **Catatan:** Absensi dari fingerprint 
 ```
 
 **Request Fields (semua optional):**
-- `statusKehadiran`: Enum: `HADIR`, `SAKIT`, `IZIN`, `WFH`, `TANPA_KETERANGAN`
+- `statusKehadiran`: Enum: `HADIR`, `SAKIT`, `IZIN`, `WFH`, `TANPA_KETERANGAN`, `CUTI`, `CUTI_BAKU`, `SECURITY`, `TUGAS`, `BELUM_FINGERPRINT`
 - `keterangan`: Update keterangan
 - `diinputOleh`: Update nama yang menginput
 
@@ -883,7 +883,8 @@ curl -X GET "http://localhost:3000/api/absensi/export?tanggalMulai=2026-01-01T00
   id: string;                    // UUID
   karyawanId: string;            // UUID karyawan
   tanggal: string;               // ISO 8601 date
-  statusKehadiran: string;       // HADIR | SAKIT | IZIN | WFH | TANPA_KETERANGAN
+  jam: string | null;            // ISO 8601 datetime (waktu masuk dari fingerprint)
+  statusKehadiran: string;       // HADIR | SAKIT | IZIN | WFH | TANPA_KETERANGAN | CUTI | CUTI_BAKU | SECURITY | TUGAS | BELUM_FINGERPRINT
   isManual: boolean;             // false = dari fingerprint, true = input manual
   keterangan: string | null;     // Alasan (untuk manual)
   diinputOleh: string | null;    // Nama yang input (untuk manual)
@@ -905,6 +906,11 @@ curl -X GET "http://localhost:3000/api/absensi/export?tanggalMulai=2026-01-01T00
 - `IZIN` - Karyawan izin (manual input)
 - `WFH` - Work From Home (manual input)
 - `TANPA_KETERANGAN` - Tidak hadir tanpa keterangan (manual input)
+- `CUTI` - Karyawan cuti (manual input)
+- `CUTI_BAKU` - Karyawan cuti baku (manual input)
+- `SECURITY` - Security/Satpam (manual input)
+- `TUGAS` - Karyawan sedang tugas (manual input)
+- `BELUM_FINGERPRINT` - Belum fingerprint (manual input)
 
 ---
 
@@ -919,7 +925,7 @@ curl -X GET "http://localhost:3000/api/absensi/export?tanggalMulai=2026-01-01T00
 6. Record yang tidak match akan masuk ke `notMatched` array
 
 ### Absensi Manual
-1. Hanya bisa untuk status: `SAKIT`, `IZIN`, `WFH`, `TANPA_KETERANGAN`
+1. Hanya bisa untuk status: `SAKIT`, `IZIN`, `WFH`, `TANPA_KETERANGAN`, `CUTI`, `CUTI_BAKU`, `SECURITY`, `TUGAS`, `BELUM_FINGERPRINT`
 2. Status `HADIR` hanya bisa dibuat dari upload fingerprint
 3. Karyawan harus berstatus `AKTIF`
 4. Tidak boleh duplikasi tanggal untuk karyawan yang sama
