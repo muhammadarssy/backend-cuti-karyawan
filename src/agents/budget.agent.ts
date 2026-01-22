@@ -1,196 +1,234 @@
 import prisma from '../lib/prisma.js';
-import { ConflictError, NotFoundError, BusinessLogicError } from '../utils/errors.js';
+import { ConflictError, NotFoundError, BusinessLogicError, ValidationError } from '../utils/errors.js';
 import { logger } from '../utils/logger.js';
 
+export interface RincianBudgetDto {
+  kategoriBudgetId: string;
+  alokasi: number;
+}
+
 export interface CreateBudgetDto {
-  bulan: number; // 1-12
+  bulan: number;
   tahun: number;
-  totalBudget: number;
+  rincian: RincianBudgetDto[]; // Pantry 2.5jt, HRD 1.5jt, dll
 }
 
 export interface UpdateBudgetDto {
-  totalBudget?: number;
+  rincian?: RincianBudgetDto[];
 }
 
 /**
- * BudgetAgent - Business Logic untuk manajemen budget bulanan
+ * BudgetAgent - Business Logic untuk manajemen budget bulanan (dengan rincian per kategori/departemen)
  */
 export class BudgetAgent {
-  /**
-   * Create new budget
-   */
   async create(data: CreateBudgetDto) {
     logger.info('BudgetAgent: Creating new budget', { bulan: data.bulan, tahun: data.tahun });
 
-    // Validasi bulan (1-12)
     if (data.bulan < 1 || data.bulan > 12) {
       throw new BusinessLogicError('Bulan harus antara 1-12');
     }
 
-    // Validasi budget tidak duplikat
+    if (!data.rincian || data.rincian.length === 0) {
+      throw new ValidationError('Budget harus memiliki minimal 1 rincian kategori');
+    }
+
     const existing = await prisma.budget.findUnique({
-      where: {
-        bulan_tahun: {
-          bulan: data.bulan,
-          tahun: data.tahun,
-        },
-      },
+      where: { bulan_tahun: { bulan: data.bulan, tahun: data.tahun } },
     });
 
     if (existing) {
-      logger.warn('BudgetAgent: Budget already exists', { bulan: data.bulan, tahun: data.tahun });
       throw new ConflictError(`Budget untuk bulan ${data.bulan} tahun ${data.tahun} sudah ada`);
     }
 
-    // Simpan budget
-    const budget = await prisma.budget.create({
-      data: {
-        bulan: data.bulan,
-        tahun: data.tahun,
-        totalBudget: data.totalBudget,
-      },
+    const totalBudget = data.rincian.reduce((s, r) => s + r.alokasi, 0);
+    if (totalBudget <= 0) {
+      throw new ValidationError('Total alokasi harus lebih dari 0');
+    }
+
+    const kategoriIds = data.rincian.map((r) => r.kategoriBudgetId);
+    const kategoris = await prisma.kategoriBudget.findMany({
+      where: { id: { in: kategoriIds }, isAktif: true },
+    });
+    if (kategoris.length !== new Set(kategoriIds).size) {
+      throw new NotFoundError('Salah satu atau lebih kategori budget tidak ditemukan atau tidak aktif');
+    }
+
+    const dup = new Set<string>();
+    for (const r of data.rincian) {
+      if (dup.has(r.kategoriBudgetId)) {
+        throw new ValidationError(`Kategori budget duplikat: ${r.kategoriBudgetId}`);
+      }
+      dup.add(r.kategoriBudgetId);
+      if (r.alokasi <= 0) {
+        throw new ValidationError('Alokasi per kategori harus lebih dari 0');
+      }
+    }
+
+    const budget = await prisma.$transaction(async (tx) => {
+      const b = await tx.budget.create({
+        data: { bulan: data.bulan, tahun: data.tahun, totalBudget },
+      });
+      await tx.budgetKategori.createMany({
+        data: data.rincian.map((r) => ({
+          budgetId: b.id,
+          kategoriBudgetId: r.kategoriBudgetId,
+          alokasi: r.alokasi,
+        })),
+      });
+      return tx.budget.findUnique({
+        where: { id: b.id },
+        include: {
+          budgetKategori: {
+            include: { kategoriBudget: true },
+          },
+        },
+      });
     });
 
-    logger.info('BudgetAgent: Budget created successfully', {
-      id: budget.id,
-      bulan: budget.bulan,
-      tahun: budget.tahun,
-    });
-
+    logger.info('BudgetAgent: Budget created', { id: budget!.id, totalBudget });
     return budget;
   }
 
-  /**
-   * Get all budget with optional filters
-   */
   async findAll(tahun?: number, page: number = 1, limit: number = 20) {
-    logger.info('BudgetAgent: Fetching all budget', { tahun, page, limit });
-
     const where = tahun ? { tahun } : undefined;
     const skip = (page - 1) * limit;
 
-    const [budget, total] = await Promise.all([
+    const [data, total] = await Promise.all([
       prisma.budget.findMany({
         where,
         skip,
         take: limit,
         orderBy: [{ tahun: 'desc' }, { bulan: 'desc' }],
         include: {
-          _count: {
-            select: {
-              struk: true,
-            },
-          },
+          budgetKategori: { include: { kategoriBudget: true } },
+          _count: { select: { struk: true } },
         },
       }),
       prisma.budget.count({ where }),
     ]);
 
-    logger.info('BudgetAgent: Fetched budget', { count: budget.length, total });
-
     return {
-      data: budget,
-      pagination: {
-        page,
-        limit,
-        total,
-        totalPages: Math.ceil(total / limit),
-      },
+      data,
+      pagination: { page, limit, total, totalPages: Math.ceil(total / limit) },
     };
   }
 
-  /**
-   * Get budget by ID
-   */
   async findById(id: string) {
-    logger.info('BudgetAgent: Fetching budget by ID', { id });
-
     const budget = await prisma.budget.findUnique({
       where: { id },
       include: {
+        budgetKategori: { include: { kategoriBudget: true } },
         struk: {
           orderBy: { tanggal: 'desc' },
-          include: {
-            _count: {
-              select: {
-                strukItem: true,
-              },
-            },
-          },
+          include: { _count: { select: { strukItem: true } } },
         },
       },
     });
 
     if (!budget) {
-      logger.warn('BudgetAgent: Budget not found', { id });
       throw new NotFoundError('Budget tidak ditemukan');
     }
-
-    logger.info('BudgetAgent: Budget found', { id });
 
     return budget;
   }
 
-  /**
-   * Get budget by bulan and tahun
-   */
   async findByBulanTahun(bulan: number, tahun: number) {
-    logger.info('BudgetAgent: Fetching budget by bulan and tahun', { bulan, tahun });
-
     const budget = await prisma.budget.findUnique({
-      where: {
-        bulan_tahun: {
-          bulan,
-          tahun,
-        },
-      },
+      where: { bulan_tahun: { bulan, tahun } },
       include: {
-        struk: {
-          orderBy: { tanggal: 'desc' },
-        },
+        budgetKategori: { include: { kategoriBudget: true } },
+        struk: { orderBy: { tanggal: 'desc' } },
       },
     });
 
     if (!budget) {
-      logger.warn('BudgetAgent: Budget not found', { bulan, tahun });
       throw new NotFoundError('Budget tidak ditemukan');
     }
 
     return budget;
   }
 
-  /**
-   * Update budget
-   */
   async update(id: string, data: UpdateBudgetDto) {
-    logger.info('BudgetAgent: Updating budget', { id });
-
-    // Check if budget exists
     await this.findById(id);
 
-    const budget = await prisma.budget.update({
-      where: { id },
-      data,
+    if (!data.rincian || data.rincian.length === 0) {
+      throw new ValidationError('Budget harus memiliki minimal 1 rincian kategori');
+    }
+
+    const totalBudget = data.rincian.reduce((s, r) => s + r.alokasi, 0);
+    if (totalBudget <= 0) {
+      throw new ValidationError('Total alokasi harus lebih dari 0');
+    }
+
+    const kategoriIds = data.rincian.map((r) => r.kategoriBudgetId);
+    const kategoris = await prisma.kategoriBudget.findMany({
+      where: { id: { in: kategoriIds }, isAktif: true },
+    });
+    if (kategoris.length !== new Set(kategoriIds).size) {
+      throw new NotFoundError('Salah satu atau lebih kategori budget tidak ditemukan atau tidak aktif');
+    }
+
+    const dup = new Set<string>();
+    for (const r of data.rincian) {
+      if (dup.has(r.kategoriBudgetId)) {
+        throw new ValidationError('Kategori budget duplikat');
+      }
+      dup.add(r.kategoriBudgetId);
+      if (r.alokasi <= 0) {
+        throw new ValidationError('Alokasi per kategori harus lebih dari 0');
+      }
+    }
+
+    const strukCount = await prisma.struk.count({ where: { budgetId: id } });
+    if (strukCount > 0) {
+      const existingKategoriIds = await prisma.budgetKategori.findMany({
+        where: { budgetId: id },
+        select: { kategoriBudgetId: true },
+      });
+      const existingSet = new Set(existingKategoriIds.map((e) => e.kategoriBudgetId));
+      const newSet = new Set(kategoriIds);
+      for (const kid of existingSet) {
+        if (!newSet.has(kid)) {
+          const used = await prisma.strukItem.count({
+            where: {
+              struk: { budgetId: id },
+              kategoriBudgetId: kid,
+            },
+          });
+          if (used > 0) {
+            throw new BusinessLogicError(
+              'Tidak bisa menghapus kategori yang sudah dipakai di struk. Nonaktifkan saja jika perlu.'
+            );
+          }
+        }
+      }
+    }
+
+    const budget = await prisma.$transaction(async (tx) => {
+      await tx.budgetKategori.deleteMany({ where: { budgetId: id } });
+      await tx.budgetKategori.createMany({
+        data: data.rincian!.map((r) => ({
+          budgetId: id,
+          kategoriBudgetId: r.kategoriBudgetId,
+          alokasi: r.alokasi,
+        })),
+      });
+      return tx.budget.update({
+        where: { id },
+        data: { totalBudget },
+        include: {
+          budgetKategori: { include: { kategoriBudget: true } },
+        },
+      });
     });
 
-    logger.info('BudgetAgent: Budget updated successfully', { id });
-
+    logger.info('BudgetAgent: Budget updated', { id });
     return budget;
   }
 
-  /**
-   * Delete budget
-   */
   async delete(id: string) {
-    logger.info('BudgetAgent: Deleting budget', { id });
-
-    // Check if budget exists
     const budget = await this.findById(id);
-
-    // Check if budget has struk
-    const strukCount = await prisma.struk.count({
-      where: { budgetId: id },
-    });
+    const strukCount = await prisma.struk.count({ where: { budgetId: id } });
 
     if (strukCount > 0) {
       throw new BusinessLogicError(
@@ -198,44 +236,59 @@ export class BudgetAgent {
       );
     }
 
-    await prisma.budget.delete({
-      where: { id },
-    });
-
+    await prisma.budget.delete({ where: { id } });
     logger.info('BudgetAgent: Budget deleted', { id });
-
     return budget;
   }
 
   /**
-   * Get budget summary (total budget, total pengeluaran, sisa budget)
+   * Summary: total + rincian per kategori (alokasi, terpakai, sisa)
    */
   async getSummary(id: string) {
-    logger.info('BudgetAgent: Getting budget summary', { id });
-
     const budget = await this.findById(id);
 
-    // Hitung total pengeluaran dari semua struk
-    const result = await prisma.struk.aggregate({
+    const totalPengeluaranResult = await prisma.struk.aggregate({
       where: { budgetId: id },
-      _sum: {
-        totalSetelahTax: true,
-      },
+      _sum: { totalSetelahTax: true },
+    });
+    const totalPengeluaran = totalPengeluaranResult._sum.totalSetelahTax || 0;
+    const sisaBudget = budget.totalBudget - totalPengeluaran;
+
+    const byKategori = await prisma.strukItem.groupBy({
+      by: ['kategoriBudgetId'],
+      where: { struk: { budgetId: id } },
+      _sum: { totalSetelahDiscount: true },
     });
 
-    const totalPengeluaran = result._sum.totalSetelahTax || 0;
-    const sisaBudget = budget.totalBudget - totalPengeluaran;
+    const kategoriMap = new Map(
+      budget.budgetKategori.map((bk) => [
+        bk.kategoriBudgetId,
+        {
+          kategoriBudget: bk.kategoriBudget,
+          alokasi: bk.alokasi,
+          terpakai: 0,
+          sisa: bk.alokasi,
+        },
+      ])
+    );
+
+    for (const g of byKategori) {
+      const v = kategoriMap.get(g.kategoriBudgetId);
+      if (v) {
+        v.terpakai = g._sum.totalSetelahDiscount || 0;
+        v.sisa = v.alokasi - v.terpakai;
+      }
+    }
 
     return {
       ...budget,
       totalPengeluaran,
       sisaBudget,
-      persentaseTerpakai: budget.totalBudget > 0 
-        ? (totalPengeluaran / budget.totalBudget) * 100 
-        : 0,
+      persentaseTerpakai:
+        budget.totalBudget > 0 ? (totalPengeluaran / budget.totalBudget) * 100 : 0,
+      rincianPerKategori: Array.from(kategoriMap.values()),
     };
   }
 }
 
-// Export singleton instance
 export const budgetAgent = new BudgetAgent();

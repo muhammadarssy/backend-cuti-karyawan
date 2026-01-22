@@ -14,6 +14,9 @@ router.post('/', (req, res, next) => strukController.create(req, res, next));
 // GET /api/struk/rekap/label - Get rekap struk by label
 router.get('/rekap/label', (req, res, next) => strukController.getRekapByLabel(req, res, next));
 
+// GET /api/struk/rekap/kategori - Get rekap struk by kategori/departemen
+router.get('/rekap/kategori', (req, res, next) => strukController.getRekapByKategori(req, res, next));
+
 // GET /api/struk - Get all struk
 router.get('/', (req, res, next) => strukController.findAll(req, res, next));
 

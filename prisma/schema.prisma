@@ -226,15 +226,37 @@ model Absensi {
 }
 
 // =========================
+// MODEL KATEGORI BUDGET (DEPARTEMEN)
+// Pantry, HRD, dll — bisa ditambah/diubah
+// =========================
+
+model KategoriBudget {
+  id            String      @id @default(uuid())
+  nama          String      @unique  // "Pantry", "HRD", dll
+  deskripsi     String?
+  isAktif       Boolean     @default(true)
+  
+  budgetKategori BudgetKategori[]
+  strukItem     StrukItem[]
+  
+  createdAt     DateTime    @default(now())
+  updatedAt     DateTime    @updatedAt
+  
+  @@index([isAktif])
+}
+
+// =========================
 // MODEL BUDGET (UNTUK STRUK PEMBELIAN)
+// Per bulan-tahun; total = jumlah rincian per kategori
 // =========================
 
 model Budget {
   id            String      @id @default(uuid())
   bulan         Int         // 1-12 (Januari-Desember)
   tahun         Int
-  totalBudget   Int         // Total budget dalam rupiah
+  totalBudget   Int         // Total budget (sum dari BudgetKategori.alokasi)
   
+  budgetKategori BudgetKategori[]
   struk         Struk[]
   
   createdAt     DateTime    @default(now())
@@ -242,6 +264,28 @@ model Budget {
   
   @@unique([bulan, tahun])
   @@index([tahun, bulan])
+}
+
+// =========================
+// RINCIAN BUDGET PER KATEGORI/DEPARTEMEN
+// Contoh: Januari → Pantry 2.5jt, HRD 1.5jt
+// =========================
+
+model BudgetKategori {
+  id              String          @id @default(uuid())
+  budgetId        String
+  kategoriBudgetId String
+  alokasi         Int             // Nominal alokasi (rupiah)
+  
+  budget          Budget          @relation(fields: [budgetId], references: [id], onDelete: Cascade)
+  kategoriBudget  KategoriBudget  @relation(fields: [kategoriBudgetId], references: [id])
+  
+  createdAt       DateTime        @default(now())
+  updatedAt       DateTime        @updatedAt
+  
+  @@unique([budgetId, kategoriBudgetId])
+  @@index([budgetId])
+  @@index([kategoriBudgetId])
 }
 
 // =========================
@@ -304,6 +348,7 @@ model StrukItem {
   id                String          @id @default(uuid())
   strukId           String
   labelStrukId      String
+  kategoriBudgetId  String          // Departemen yang menanggung (Pantry, HRD, dll)
   
   namaItem          String          // Nama item (bisa dari Item atau custom)
   itemId            String?         // Relasi ke Item jika ada (opsional)
@@ -322,11 +367,13 @@ model StrukItem {
   
   struk             Struk          @relation(fields: [strukId], references: [id])
   labelStruk        LabelStruk     @relation(fields: [labelStrukId], references: [id])
+  kategoriBudget    KategoriBudget @relation(fields: [kategoriBudgetId], references: [id])
   item              Item?          @relation(fields: [itemId], references: [id])
   
   createdAt         DateTime        @default(now())
   
   @@index([strukId])
   @@index([labelStrukId])
+  @@index([kategoriBudgetId])
   @@index([itemId])
 }

@@ -54,19 +54,76 @@ http://localhost:3000/api
 
 ---
 
-## 1. Budget Endpoints
+## 1. Kategori Budget (Departemen) Endpoints
 
-### POST /budget
-Create new budget untuk bulan tertentu
+Kategori budget = departemen (Pantry, HRD, dll). Bisa ditambah/diubah. Budget per bulan dirinci per kategori.
+
+### POST /kategori-budget
+Buat kategori budget baru.
 
 **Request Body:**
 ```json
 {
-  "bulan": 1,           // 1-12 (Januari-Desember)
-  "tahun": 2026,
-  "totalBudget": 5000000  // Total budget dalam rupiah
+  "nama": "Pantry",
+  "deskripsi": "Departemen pantry"  // optional
 }
 ```
+
+**Response (201):**
+```json
+{
+  "success": true,
+  "message": "Kategori budget berhasil ditambahkan",
+  "data": {
+    "id": "uuid",
+    "nama": "Pantry",
+    "deskripsi": "Departemen pantry",
+    "isAktif": true,
+    "createdAt": "...",
+    "updatedAt": "..."
+  },
+  "meta": { "timestamp": "..." }
+}
+```
+
+### GET /kategori-budget
+Semua kategori (pagination). Query: `isAktif`, `page`, `limit`.
+
+### GET /kategori-budget/active
+Hanya kategori aktif (tanpa pagination). Dipakai untuk dropdown saat buat budget / struk.
+
+### GET /kategori-budget/:id
+Detail kategori by ID.
+
+### PUT /kategori-budget/:id
+Update. Body: `nama`, `deskripsi`, `isAktif` (optional).
+
+### DELETE /kategori-budget/:id
+Hapus. Jika sudah dipakai di struk → soft delete (isAktif=false).
+
+---
+
+## 2. Budget Endpoints
+
+Budget per bulan-tahun. **Total = jumlah rincian per kategori** (contoh: Januari 4jt = Pantry 2,5jt + HRD 1,5jt).
+
+### POST /budget
+Buat budget dengan rincian per kategori.
+
+**Request Body:**
+```json
+{
+  "bulan": 1,
+  "tahun": 2026,
+  "rincian": [
+    { "kategoriBudgetId": "uuid-pantry", "alokasi": 2500000 },
+    { "kategoriBudgetId": "uuid-hrd", "alokasi": 1500000 }
+  ]
+}
+```
+
+- `rincian`: minimal 1. Tiap kategori boleh sekali saja. `alokasi` > 0.
+- `totalBudget` dihitung otomatis = sum(alokasi).
 
 **Response (201):**
 ```json
@@ -77,19 +134,22 @@ Create new budget untuk bulan tertentu
     "id": "uuid",
     "bulan": 1,
     "tahun": 2026,
-    "totalBudget": 5000000,
-    "createdAt": "2026-01-15T10:00:00.000Z",
-    "updatedAt": "2026-01-15T10:00:00.000Z"
+    "totalBudget": 4000000,
+    "budgetKategori": [
+      { "kategoriBudgetId": "...", "alokasi": 2500000, "kategoriBudget": { "nama": "Pantry", ... } },
+      { "kategoriBudgetId": "...", "alokasi": 1500000, "kategoriBudget": { "nama": "HRD", ... } }
+    ],
+    "createdAt": "...",
+    "updatedAt": "..."
   },
-  "meta": {
-    "timestamp": "2026-01-15T10:00:00.000Z"
-  }
+  "meta": { "timestamp": "..." }
 }
 ```
 
 **Error Responses:**
-- `409 Conflict`: Budget untuk bulan dan tahun tersebut sudah ada
-- `400 Bad Request`: Validasi error (bulan harus 1-12, totalBudget harus > 0)
+- `409 Conflict`: Budget bulan-tahun sudah ada
+- `400 Bad Request`: Validasi (bulan 1–12, rincian minimal 1, alokasi > 0)
+- `404 Not Found`: Kategori budget tidak ada / tidak aktif
 
 ---
 
@@ -116,12 +176,14 @@ GET /api/budget?tahun=2026&page=1&limit=20
       "id": "uuid",
       "bulan": 1,
       "tahun": 2026,
-      "totalBudget": 5000000,
-      "_count": {
-        "struk": 5
-      },
-      "createdAt": "2026-01-15T10:00:00.000Z",
-      "updatedAt": "2026-01-15T10:00:00.000Z"
+      "totalBudget": 4000000,
+      "budgetKategori": [
+        { "kategoriBudgetId": "...", "alokasi": 2500000, "kategoriBudget": { "nama": "Pantry" } },
+        { "kategoriBudgetId": "...", "alokasi": 1500000, "kategoriBudget": { "nama": "HRD" } }
+      ],
+      "_count": { "struk": 5 },
+      "createdAt": "...",
+      "updatedAt": "..."
     }
   ],
   "pagination": {
@@ -139,71 +201,17 @@ GET /api/budget?tahun=2026&page=1&limit=20
 ---
 
 ### GET /budget/:id
-Get budget by ID
-
-**Response (200):**
-```json
-{
-  "success": true,
-  "message": "Data budget berhasil diambil",
-  "data": {
-    "id": "uuid",
-    "bulan": 1,
-    "tahun": 2026,
-    "totalBudget": 5000000,
-    "struk": [
-      {
-        "id": "uuid",
-        "tanggal": "2026-01-15T10:00:00.000Z",
-        "totalSetelahTax": 150000,
-        "_count": {
-          "strukItem": 3
-        }
-      }
-    ],
-    "createdAt": "2026-01-15T10:00:00.000Z",
-    "updatedAt": "2026-01-15T10:00:00.000Z"
-  },
-  "meta": {
-    "timestamp": "2026-01-15T10:00:00.000Z"
-  }
-}
-```
+Get budget by ID (termasuk `budgetKategori` dan list `struk`).
 
 ---
 
 ### GET /budget/bulan/:bulan/tahun/:tahun
-Get budget by bulan and tahun
-
-**Example:**
-```
-GET /api/budget/bulan/1/tahun/2026
-```
-
-**Response (200):**
-```json
-{
-  "success": true,
-  "message": "Data budget berhasil diambil",
-  "data": {
-    "id": "uuid",
-    "bulan": 1,
-    "tahun": 2026,
-    "totalBudget": 5000000,
-    "struk": [],
-    "createdAt": "2026-01-15T10:00:00.000Z",
-    "updatedAt": "2026-01-15T10:00:00.000Z"
-  },
-  "meta": {
-    "timestamp": "2026-01-15T10:00:00.000Z"
-  }
-}
-```
+Get budget by bulan and tahun. Response include `budgetKategori` dan `struk`.
 
 ---
 
 ### GET /budget/:id/summary
-Get budget summary (total budget, total pengeluaran, sisa budget)
+Summary: total budget, total pengeluaran, sisa, **rincian per kategori** (alokasi, terpakai, sisa).
 
 **Response (200):**
 ```json
@@ -214,49 +222,35 @@ Get budget summary (total budget, total pengeluaran, sisa budget)
     "id": "uuid",
     "bulan": 1,
     "tahun": 2026,
-    "totalBudget": 5000000,
+    "totalBudget": 4000000,
     "totalPengeluaran": 1500000,
-    "sisaBudget": 3500000,
-    "persentaseTerpakai": 30,
-    "createdAt": "2026-01-15T10:00:00.000Z",
-    "updatedAt": "2026-01-15T10:00:00.000Z"
+    "sisaBudget": 2500000,
+    "persentaseTerpakai": 37.5,
+    "rincianPerKategori": [
+      {
+        "kategoriBudget": { "id": "...", "nama": "Pantry" },
+        "alokasi": 2500000,
+        "terpakai": 1000000,
+        "sisa": 1500000
+      },
+      {
+        "kategoriBudget": { "id": "...", "nama": "HRD" },
+        "alokasi": 1500000,
+        "terpakai": 500000,
+        "sisa": 1000000
+      }
+    ],
+    "createdAt": "...",
+    "updatedAt": "..."
   },
-  "meta": {
-    "timestamp": "2026-01-15T10:00:00.000Z"
-  }
+  "meta": { "timestamp": "..." }
 }
 ```
 
 ---
 
 ### PUT /budget/:id
-Update budget
-
-**Request Body:**
-```json
-{
-  "totalBudget": 6000000  // Optional
-}
-```
-
-**Response (200):**
-```json
-{
-  "success": true,
-  "message": "Data budget berhasil diupdate",
-  "data": {
-    "id": "uuid",
-    "bulan": 1,
-    "tahun": 2026,
-    "totalBudget": 6000000,
-    "createdAt": "2026-01-15T10:00:00.000Z",
-    "updatedAt": "2026-01-15T10:30:00.000Z"
-  },
-  "meta": {
-    "timestamp": "2026-01-15T10:30:00.000Z"
-  }
-}
-```
+Update budget (ganti rincian per kategori). Body: `rincian` (array sama seperti create). Total dihitung ulang. Tidak boleh hapus kategori yang sudah dipakai di struk.
 
 ---
 
@@ -507,21 +501,23 @@ Create new struk dengan items
   "items": [
     {
       "labelStrukId": "uuid",
+      "kategoriBudgetId": "uuid-pantry",  // Wajib. Departemen yang menanggung (Pantry/HRD/dll)
       "namaItem": "Nasi Goreng",
-      "itemId": "uuid",  // Optional, bisa relasi ke Item atau custom
+      "itemId": "uuid",  // Optional
       "harga": 25000,
       "qty": 2,
-      "discountType": "PERSEN",  // Optional: "BONUS" atau "PERSEN"
-      "discountValue": 10,  // Optional: nominal jika BONUS, persen jika PERSEN
-      "keterangan": "Diskon 10%"  // Optional
+      "discountType": "PERSEN",
+      "discountValue": 10,
+      "keterangan": "Diskon 10%"
     },
     {
       "labelStrukId": "uuid",
+      "kategoriBudgetId": "uuid-hrd",
       "namaItem": "Es Teh",
       "harga": 5000,
       "qty": 2,
       "discountType": "BONUS",
-      "discountValue": 2000  // Discount nominal 2000
+      "discountValue": 2000
     }
   ],
   "taxPersen": 10,  // Optional: tax dalam persen (0-100)
@@ -827,45 +823,25 @@ Delete struk (akan menghapus semua items juga)
 ---
 
 ### GET /struk/rekap/label
-Get rekap pengeluaran berdasarkan label
+Rekap pengeluaran berdasarkan **label** (Food and Drink, Other, dll). Query: `budgetId`, `tahun`, `bulan`.
 
-**Query Parameters:**
-- `budgetId` (optional): Filter by budget ID
-- `tahun` (optional): Filter by tahun
-- `bulan` (optional): Filter by bulan (1-12)
-
-**Example:**
-```
-GET /api/struk/rekap/label?tahun=2026&bulan=1
-GET /api/struk/rekap/label?budgetId=uuid
-```
+### GET /struk/rekap/kategori
+Rekap pengeluaran berdasarkan **kategori/departemen** (Pantry, HRD, dll). Query: `budgetId`, `tahun`, `bulan`.
 
 **Response (200):**
 ```json
 {
   "success": true,
-  "message": "Rekap struk by label berhasil diambil",
+  "message": "Rekap struk by kategori berhasil diambil",
   "data": [
     {
-      "label": {
-        "id": "uuid",
-        "nama": "Food and Drink",
-        "deskripsi": "Makanan dan minuman",
-        "warna": "#FF5733",
-        "isAktif": true
-      },
+      "kategoriBudget": { "id": "uuid", "nama": "Pantry", "deskripsi": "...", "isAktif": true },
       "totalPengeluaran": 1500000,
       "totalQty": 50,
       "jumlahItem": 25
     },
     {
-      "label": {
-        "id": "uuid",
-        "nama": "Other",
-        "deskripsi": "Lainnya",
-        "warna": "#33C3F0",
-        "isAktif": true
-      },
+      "kategoriBudget": { "id": "uuid", "nama": "HRD", "deskripsi": "...", "isAktif": true },
       "totalPengeluaran": 500000,
       "totalQty": 20,
       "jumlahItem": 10
@@ -881,60 +857,73 @@ GET /api/struk/rekap/label?budgetId=uuid
 
 ## Flow Penggunaan
 
-### 1. Setup Budget
+### 1. Setup Kategori Budget (Departemen)
+```
+POST /api/kategori-budget  { "nama": "Pantry", "deskripsi": "..." }
+POST /api/kategori-budget  { "nama": "HRD", "deskripsi": "..." }
+GET /api/kategori-budget/active   // dipakai untuk dropdown
+```
+
+### 2. Setup Budget per bulan (dengan rincian per kategori)
 ```
 POST /api/budget
 {
   "bulan": 1,
   "tahun": 2026,
-  "totalBudget": 5000000
+  "rincian": [
+    { "kategoriBudgetId": "uuid-pantry", "alokasi": 2500000 },
+    { "kategoriBudgetId": "uuid-hrd", "alokasi": 1500000 }
+  ]
 }
+// totalBudget = 4jt (otomatis)
 ```
 
-### 2. Setup Label (jika belum ada)
+### 3. Setup Label (jika belum ada)
 ```
-POST /api/label-struk
-{
-  "nama": "Food and Drink",
-  "warna": "#FF5733"
-}
-
-POST /api/label-struk
-{
-  "nama": "Other",
-  "warna": "#33C3F0"
-}
+POST /api/label-struk  { "nama": "Food and Drink", "warna": "#FF5733" }
+POST /api/label-struk  { "nama": "Other", "warna": "#33C3F0" }
+GET /api/label-struk/active
 ```
 
-### 3. Create Struk
+### 4. Create Struk
+Tiap item wajib punya `kategoriBudgetId` (departemen yang menanggung). Satu struk bisa mix Pantry + HRD.
 ```
 POST /api/struk
 {
-  "budgetId": "uuid-dari-step-1",
+  "budgetId": "uuid-budget-januari",
   "tanggal": "2026-01-15T10:00:00.000Z",
   "nomorStruk": "STR-001",
   "items": [
     {
-      "labelStrukId": "uuid-food-and-drink",
+      "labelStrukId": "uuid-food",
+      "kategoriBudgetId": "uuid-pantry",
       "namaItem": "Nasi Goreng",
       "harga": 25000,
       "qty": 2,
       "discountType": "PERSEN",
       "discountValue": 10
+    },
+    {
+      "labelStrukId": "uuid-other",
+      "kategoriBudgetId": "uuid-hrd",
+      "namaItem": "Kertas A4",
+      "harga": 50000,
+      "qty": 1
     }
   ],
   "taxPersen": 10
 }
 ```
 
-### 4. Cek Summary Budget
+### 5. Cek Summary Budget (total + rincian per kategori)
 ```
 GET /api/budget/{budgetId}/summary
 ```
 
-### 5. Cek Rekap by Label
+### 6. Cek Rekap
 ```
-GET /api/struk/rekap/label?budgetId={budgetId}
+GET /api/struk/rekap/label?budgetId={id}    // by label (Food, Other)
+GET /api/struk/rekap/kategori?budgetId={id} // by departemen (Pantry, HRD)
 ```
 
 ---
@@ -950,15 +939,16 @@ GET /api/struk/rekap/label?budgetId={budgetId}
 
 ## Catatan Penting
 
-1. **Budget**: Satu budget per bulan-tahun (unique constraint)
-2. **Label**: Bisa ditambah kapan saja, soft delete jika sudah digunakan
-3. **Struk**: 
-   - Harus memiliki minimal 1 item
-   - Nomor struk unique (jika diisi)
-   - Tax bisa persen atau nominal (hanya salah satu)
-   - Discount per item bisa BONUS (nominal) atau PERSEN
-4. **File Upload**: Field `fileBukti` dan `namaFileAsli` untuk menyimpan path dan nama file asli dari upload
-5. **Calculation**:
+1. **Kategori Budget (Departemen)**: Pantry, HRD, dll. Bisa ditambah/ubah. Dipakai untuk alokasi budget dan assign item struk.
+2. **Budget**: Satu per bulan-tahun. Total = jumlah rincian per kategori. Create/update pakai `rincian` (array `{ kategoriBudgetId, alokasi }`).
+3. **Label**: Untuk jenis barang (Food, Other). Berdiri sendiri dari kategori budget.
+4. **Struk**: 
+   - Minimal 1 item. Tiap item wajib `kategoriBudgetId` (harus salah satu kategori di budget bulan itu).
+   - Satu struk boleh gabung banyak kategori (mis. item Pantry + item HRD).
+   - Nomor struk unique (jika diisi). Tax persen atau nominal (salah satu).
+   - Discount per item: BONUS atau PERSEN.
+5. **File Upload**: `fileBukti`, `namaFileAsli` untuk bukti struk.
+6. **Calculation**:
    - `subtotal` = `harga * qty`
    - `discountNominal` = dihitung berdasarkan `discountType` dan `discountValue`
    - `totalSetelahDiscount` = `subtotal - discountNominal`

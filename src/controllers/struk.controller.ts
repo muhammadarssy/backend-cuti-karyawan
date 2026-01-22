@@ -7,6 +7,7 @@ import { logger } from '../utils/logger.js';
 // Validation schemas
 const strukItemSchema = z.object({
   labelStrukId: z.string().uuid('Label ID tidak valid'),
+  kategoriBudgetId: z.string().uuid('Kategori/departemen budget wajib diisi'),
   namaItem: z.string().min(1, 'Nama item wajib diisi'),
   itemId: z.string().uuid().optional(),
   harga: z.number().int().positive('Harga harus lebih dari 0'),
@@ -162,14 +163,27 @@ export class StrukController {
   async getRekapByLabel(req: Request, res: Response, next: NextFunction) {
     try {
       logger.info('StrukController: Get rekap by label request', { query: req.query });
-
       const budgetId = req.query.budgetId as string | undefined;
       const tahun = req.query.tahun ? parseInt(req.query.tahun as string) : undefined;
       const bulan = req.query.bulan ? parseInt(req.query.bulan as string) : undefined;
-
       const rekap = await strukAgent.getRekapByLabel(budgetId, tahun, bulan);
-
       res.json(successResponse('Rekap struk by label berhasil diambil', rekap));
+    } catch (error) {
+      next(error);
+    }
+  }
+
+  /**
+   * GET /api/struk/rekap/kategori - Get rekap struk by kategori/departemen
+   */
+  async getRekapByKategori(req: Request, res: Response, next: NextFunction) {
+    try {
+      logger.info('StrukController: Get rekap by kategori request', { query: req.query });
+      const budgetId = req.query.budgetId as string | undefined;
+      const tahun = req.query.tahun ? parseInt(req.query.tahun as string) : undefined;
+      const bulan = req.query.bulan ? parseInt(req.query.bulan as string) : undefined;
+      const rekap = await strukAgent.getRekapByKategori(budgetId, tahun, bulan);
+      res.json(successResponse('Rekap struk by kategori berhasil diambil', rekap));
     } catch (error) {
       next(error);
     }

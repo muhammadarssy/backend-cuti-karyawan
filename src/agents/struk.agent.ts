@@ -5,12 +5,13 @@ import type { TipeDiscount, Prisma } from '@prisma/client';
 
 export interface StrukItemDto {
   labelStrukId: string;
+  kategoriBudgetId: string; // Departemen yang menanggung (Pantry, HRD, dll)
   namaItem: string;
-  itemId?: string; // Optional, bisa relasi ke Item atau custom
+  itemId?: string;
   harga: number;
   qty: number;
   discountType?: TipeDiscount;
-  discountValue?: number; // Nominal jika BONUS, persen jika PERSEN
+  discountValue?: number;
   keterangan?: string;
 }
 
@@ -75,14 +76,18 @@ export class StrukAgent {
       itemCount: data.items.length,
     });
 
-    // Validasi budget exists
     const budget = await prisma.budget.findUnique({
       where: { id: data.budgetId },
+      include: { budgetKategori: { select: { kategoriBudgetId: true } } },
     });
 
     if (!budget) {
       throw new NotFoundError('Budget tidak ditemukan');
     }
+
+    const allowedKategoriIds = new Set(
+      budget.budgetKategori.map((bk) => bk.kategoriBudgetId)
+    );
 
     // Validasi items tidak kosong
     if (!data.items || data.items.length === 0) {
@@ -113,6 +118,7 @@ export class StrukAgent {
     let totalDiscount = 0;
     const strukItems: Array<{
       labelStrukId: string;
+      kategoriBudgetId: string;
       namaItem: string;
       itemId?: string;
       harga: number;
@@ -125,17 +131,20 @@ export class StrukAgent {
       keterangan?: string;
     }> = [];
 
-    // Validasi semua label exists
-    const labelIds = [...new Set(data.items.map((item) => item.labelStrukId))];
+    const labelIds = [...new Set(data.items.map((i) => i.labelStrukId))];
     const labels = await prisma.labelStruk.findMany({
-      where: {
-        id: { in: labelIds },
-        isAktif: true,
-      },
+      where: { id: { in: labelIds }, isAktif: true },
     });
-
     if (labels.length !== labelIds.length) {
       throw new NotFoundError('Salah satu atau lebih label tidak ditemukan atau tidak aktif');
+    }
+
+    for (const item of data.items) {
+      if (!allowedKategoriIds.has(item.kategoriBudgetId)) {
+        throw new ValidationError(
+          `Kategori budget untuk item "${item.namaItem}" tidak termasuk dalam budget bulan ini`
+        );
+      }
     }
 
     // Process setiap item
@@ -161,6 +170,7 @@ export class StrukAgent {
 
       strukItems.push({
         labelStrukId: item.labelStrukId,
+        kategoriBudgetId: item.kategoriBudgetId,
         namaItem: item.namaItem,
         itemId: item.itemId,
         harga: item.harga,
@@ -213,11 +223,11 @@ export class StrukAgent {
         },
       });
 
-      // Create items
       await tx.strukItem.createMany({
         data: strukItems.map((item) => ({
           strukId: newStruk.id,
           labelStrukId: item.labelStrukId,
+          kategoriBudgetId: item.kategoriBudgetId,
           namaItem: item.namaItem,
           itemId: item.itemId,
           harga: item.harga,
@@ -235,10 +245,11 @@ export class StrukAgent {
       return tx.struk.findUnique({
         where: { id: newStruk.id },
         include: {
-          budget: true,
+          budget: { include: { budgetKategori: { include: { kategoriBudget: true } } } },
           strukItem: {
             include: {
               labelStruk: true,
+              kategoriBudget: true,
               item: true,
             },
           },
@@ -286,12 +297,10 @@ export class StrukAgent {
         take: limit,
         orderBy: { tanggal: 'desc' },
         include: {
-          budget: true,
-          _count: {
-            select: {
-              strukItem: true,
-            },
+          budget: {
+            include: { budgetKategori: { include: { kategoriBudget: true } } },
           },
+          _count: { select: { strukItem: true } },
         },
       }),
       prisma.struk.count({ where }),
@@ -319,10 +328,11 @@ export class StrukAgent {
     const struk = await prisma.struk.findUnique({
       where: { id },
       include: {
-        budget: true,
+        budget: { include: { budgetKategori: { include: { kategoriBudget: true } } } },
         strukItem: {
           include: {
             labelStruk: true,
+            kategoriBudget: true,
             item: true,
           },
           orderBy: { createdAt: 'asc' },
@@ -419,10 +429,11 @@ export class StrukAgent {
       where: { id },
       data: updateData,
       include: {
-        budget: true,
+        budget: { include: { budgetKategori: { include: { kategoriBudget: true } } } },
         strukItem: {
           include: {
             labelStruk: true,
+            kategoriBudget: true,
             item: true,
           },
         },
@@ -509,6 +520,51 @@ export class StrukAgent {
     });
 
     return result;
+  }
+
+  /**
+   * Get rekap struk by kategori/departemen
+   */
+  async getRekapByKategori(budgetId?: string, tahun?: number, bulan?: number) {
+    logger.info('StrukAgent: Getting rekap by kategori', { budgetId, tahun, bulan });
+
+    const where: Prisma.StrukItemWhereInput = {};
+
+    if (budgetId) {
+      where.struk = { budgetId };
+    } else if (tahun) {
+      where.struk = {
+        budget: {
+          tahun,
+          ...(bulan ? { bulan } : {}),
+        },
+      };
+    }
+
+    const rekap = await prisma.strukItem.groupBy({
+      by: ['kategoriBudgetId'],
+      where,
+      _sum: {
+        totalSetelahDiscount: true,
+        qty: true,
+      },
+      _count: { id: true },
+    });
+
+    const kategoriIds = rekap.map((r) => r.kategoriBudgetId);
+    const kategoris = await prisma.kategoriBudget.findMany({
+      where: { id: { in: kategoriIds } },
+    });
+
+    return rekap.map((r) => {
+      const k = kategoris.find((x) => x.id === r.kategoriBudgetId);
+      return {
+        kategoriBudget: k ?? null,
+        totalPengeluaran: r._sum.totalSetelahDiscount ?? 0,
+        totalQty: r._sum.qty ?? 0,
+        jumlahItem: r._count.id,
+      };
+    });
   }
 }
 
