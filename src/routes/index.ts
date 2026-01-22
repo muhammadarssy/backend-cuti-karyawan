@@ -6,6 +6,9 @@ import itemRoutes from './item.routes.js';
 import pembelianRoutes from './pembelian.routes.js';
 import pengeluaranRoutes from './pengeluaran.routes.js';
 import absensiRoutes from './absensi.routes.js';
+import budgetRoutes from './budget.routes.js';
+import labelStrukRoutes from './label-struk.routes.js';
+import strukRoutes from './struk.routes.js';
 
 const router = Router();
 
@@ -35,5 +38,10 @@ router.use('/absensi', absensiRoutes);
 router.use('/item', itemRoutes);
 router.use('/pembelian', pembelianRoutes);
 router.use('/pengeluaran', pengeluaranRoutes);
+
+// Mount routes - Struk Pembelian Management
+router.use('/budget', budgetRoutes);
+router.use('/label-struk', labelStrukRoutes);
+router.use('/struk', strukRoutes);
 
 export default router;

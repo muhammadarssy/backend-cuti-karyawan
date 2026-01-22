@@ -54,6 +54,11 @@ enum KategoriItem {
   OBAT
 }
 
+enum TipeDiscount {
+  BONUS      // Discount berupa bonus (nominal tetap)
+  PERSEN     // Discount berupa persentase
+}
+
 // =========================
 // MODEL KARYAWAN (MASTER)
 // =========================
@@ -142,6 +147,7 @@ model Item {
 
   pembelian       Pembelian[]
   pengeluaran     Pengeluaran[]
+  strukItem       StrukItem[]
 
   createdAt       DateTime        @default(now())
   updatedAt       DateTime        @updatedAt
@@ -217,4 +223,110 @@ model Absensi {
   @@unique([karyawanId, tanggal])
   @@index([tanggal])
   @@index([statusKehadiran])
+}
+
+// =========================
+// MODEL BUDGET (UNTUK STRUK PEMBELIAN)
+// =========================
+
+model Budget {
+  id            String      @id @default(uuid())
+  bulan         Int         // 1-12 (Januari-Desember)
+  tahun         Int
+  totalBudget   Int         // Total budget dalam rupiah
+  
+  struk         Struk[]
+  
+  createdAt     DateTime    @default(now())
+  updatedAt     DateTime    @updatedAt
+  
+  @@unique([bulan, tahun])
+  @@index([tahun, bulan])
+}
+
+// =========================
+// MODEL LABEL STRUK
+// (Label untuk kategorisasi item: food and drink, other, dll)
+// =========================
+
+model LabelStruk {
+  id            String      @id @default(uuid())
+  nama          String      @unique  // "Food and Drink", "Other", dll
+  deskripsi     String?
+  warna         String?     // Untuk UI (hex color)
+  isAktif       Boolean     @default(true)
+  
+  strukItem     StrukItem[]
+  
+  createdAt     DateTime    @default(now())
+  updatedAt     DateTime    @updatedAt
+  
+  @@index([isAktif])
+}
+
+// =========================
+// MODEL STRUK PEMBELIAN
+// =========================
+
+model Struk {
+  id                String      @id @default(uuid())
+  budgetId          String
+  tanggal           DateTime
+  nomorStruk        String?     @unique // Nomor struk dari toko (opsional, unique jika ada)
+  fileBukti         String?     // Path/file name untuk upload bukti struk (opsional)
+  namaFileAsli      String?     // Nama file asli saat diupload (untuk display)
+  
+  totalHarga        Int         // Total harga sebelum tax dan discount
+  totalDiscount     Int         @default(0)  // Total discount dari semua item
+  taxPersen         Decimal?    // Tax dalam persen (opsional, bisa null)
+  taxNominal        Int?        // Tax dalam nominal (opsional, bisa null)
+  totalSetelahTax   Int         // Total akhir setelah tax
+  
+  keterangan        String?     // Catatan tambahan
+  
+  budget            Budget      @relation(fields: [budgetId], references: [id])
+  strukItem         StrukItem[]
+  
+  createdAt         DateTime    @default(now())
+  updatedAt         DateTime    @updatedAt
+  
+  @@index([budgetId])
+  @@index([tanggal])
+  @@index([nomorStruk])
+}
+
+// =========================
+// MODEL ITEM STRUK
+// (Item-item dalam satu struk)
+// =========================
+
+model StrukItem {
+  id                String          @id @default(uuid())
+  strukId           String
+  labelStrukId      String
+  
+  namaItem          String          // Nama item (bisa dari Item atau custom)
+  itemId            String?         // Relasi ke Item jika ada (opsional)
+  
+  harga             Int             // Harga per satuan
+  qty               Int             // Quantity
+  subtotal          Int             // harga * qty (sebelum discount)
+  
+  // Discount
+  discountType      TipeDiscount?   // BONUS atau PERSEN (opsional)
+  discountValue     Int?            // Nilai discount (nominal jika BONUS, persen jika PERSEN)
+  discountNominal   Int             @default(0)  // Nominal discount yang dihitung
+  totalSetelahDiscount Int          // subtotal - discountNominal
+  
+  keterangan        String?         // Catatan untuk item ini
+  
+  struk             Struk          @relation(fields: [strukId], references: [id])
+  labelStruk        LabelStruk     @relation(fields: [labelStrukId], references: [id])
+  item              Item?          @relation(fields: [itemId], references: [id])
+  
+  createdAt         DateTime        @default(now())
+  
+  @@index([strukId])
+  @@index([labelStrukId])
+  @@index([itemId])
 }
