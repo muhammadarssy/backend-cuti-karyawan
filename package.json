@@ -16,7 +16,10 @@
     "prisma:generate": "prisma generate",
     "prisma:migrate": "prisma migrate dev",
     "prisma:studio": "prisma studio",
-    "prisma:seed": "tsx prisma/seed.ts"
+    "prisma:seed": "tsx prisma/seed.ts",
+    "prisma:backup": "tsx prisma/backup.ts",
+    "prisma:restore": "tsx prisma/restore.ts",
+    "prisma:reset": "tsx prisma/reset-db.ts"
   },
   "prisma": {
     "seed": "tsx prisma/seed.ts"
