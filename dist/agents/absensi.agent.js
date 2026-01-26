@@ -2,6 +2,7 @@ import prisma from '../lib/prisma.js';
 import { ConflictError, NotFoundError, BadRequestError } from '../utils/errors.js';
 import { logger } from '../utils/logger.js';
 import * as XLSX from 'xlsx';
+import ExcelJS from 'exceljs';
 /**
  * AbsensiAgent - Business Logic untuk manajemen absensi
  */
@@ -559,6 +560,19 @@ export class AbsensiAgent {
      */
     async exportToExcel(tanggalMulai, tanggalSelesai) {
         logger.info('AbsensiAgent: Exporting absensi to Excel', { tanggalMulai, tanggalSelesai });
+        // Mapping status kehadiran enum ke label yang lebih readable
+        const statusKehadiranLabel = {
+            'HADIR': 'Hadir',
+            'SAKIT': 'Sakit',
+            'IZIN': 'Izin',
+            'WFH': 'WFH',
+            'TANPA_KETERANGAN': 'Tanpa Keterangan',
+            'CUTI': 'Cuti',
+            'CUTI_BAKU': 'Cuti Baku',
+            'SECURITY': 'Security',
+            'TUGAS': 'Tugas',
+            'BELUM_FINGERPRINT': 'Belum Fingerprint',
+        };
         // Normalize dates to start and end of day
         const startDate = new Date(tanggalMulai);
         startDate.setHours(0, 0, 0, 0);
@@ -597,23 +611,26 @@ export class AbsensiAgent {
             const key = `${abs.karyawanId}-${dateStr}`;
             absensiMap.set(key, abs);
         }
+        // Collect unique statuses for debugging
+        const uniqueStatuses = new Set(absensi.map(a => a.statusKehadiran));
         logger.info('AbsensiAgent: Map created', {
             mapSize: absensiMap.size,
             sampleKeys: Array.from(absensiMap.keys()).slice(0, 3),
+            uniqueStatuses: Array.from(uniqueStatuses),
         });
-        // Generate rows for Excel
-        const rows = [];
-        // Header row
-        rows.push([
-            'Tanggal',
-            'NIK',
-            'Nama',
-            'Jam Masuk',
-            'Status',
-            'Sumber',
-            'Keterangan',
-            'Remark',
-        ]);
+        // Mapping fill color berdasarkan status kehadiran (format ARGB dengan prefix FF)
+        // HADIR: tidak ada fill color (tidak dimasukkan ke mapping)
+        const statusFillColor = {
+            'SAKIT': 'FFFFFF00', // Yellow (#FFFF00)
+            'IZIN': 'FFFFFF00', // Yellow (#FFFF00)
+            'CUTI': 'FFFFFF00', // Yellow (#FFFF00)
+            'CUTI_BAKU': 'FFFFFF00', // Yellow (#FFFF00)
+            'WFH': 'FFA9D08E', // Light Green (#A9D08E)
+            'TANPA_KETERANGAN': 'FFFF0000', // Red (#FF0000)
+            'SECURITY': 'FFB4C6E7', // Light Blue (#B4C6E7)
+            'TUGAS': 'FFF8CBAD', // Light Orange (#F8CBAD)
+            'BELUM_FINGERPRINT': 'FFFBCC05', // Yellow-Orange (#FBCC05)
+        };
         // Generate dates in period
         const dates = [];
         const current = new Date(tanggalMulai);
@@ -621,7 +638,29 @@ export class AbsensiAgent {
             dates.push(new Date(current));
             current.setDate(current.getDate() + 1);
         }
+        // Create workbook dengan ExcelJS untuk support styling
+        const workbook = new ExcelJS.Workbook();
+        const worksheet = workbook.addWorksheet('Absensi');
+        // Set column headers
+        worksheet.columns = [
+            { header: 'Tanggal', key: 'tanggal', width: 12 },
+            { header: 'NIK', key: 'nik', width: 15 },
+            { header: 'Nama', key: 'nama', width: 25 },
+            { header: 'Jam Masuk', key: 'jamMasuk', width: 12 },
+            { header: 'Status', key: 'status', width: 20 },
+            { header: 'Sumber', key: 'sumber', width: 12 },
+            { header: 'Keterangan', key: 'keterangan', width: 30 },
+            { header: 'Remark', key: 'remark', width: 10 },
+        ];
+        // Style header row
+        worksheet.getRow(1).font = { bold: true };
+        worksheet.getRow(1).fill = {
+            type: 'pattern',
+            pattern: 'solid',
+            fgColor: { argb: 'FFE0E0E0' },
+        };
         // For each employee, for each date
+        let rowNumber = 2; // Start from row 2 (row 1 is header)
         for (const k of karyawan) {
             for (const date of dates) {
                 // Format date as YYYY-MM-DD in local timezone
@@ -633,6 +672,8 @@ export class AbsensiAgent {
                 const abs = absensiMap.get(key);
                 let jamMasuk = '-';
                 let remark = '';
+                let statusText = '-';
+                let statusKehadiranValue;
                 if (abs?.jam) {
                     const jamDate = new Date(abs.jam);
                     const hours = jamDate.getHours();
@@ -643,41 +684,41 @@ export class AbsensiAgent {
                         remark = 'TELAT';
                     }
                 }
-                rows.push([
-                    dateStr,
-                    k.nik,
-                    k.nama,
-                    jamMasuk,
-                    abs ? abs.statusKehadiran : '-',
-                    abs ? (abs.isManual ? 'Manual' : 'Fingerprint') : '-',
-                    abs?.keterangan || '-',
-                    remark,
-                ]);
+                if (abs) {
+                    statusText = statusKehadiranLabel[abs.statusKehadiran] || abs.statusKehadiran;
+                    statusKehadiranValue = abs.statusKehadiran;
+                }
+                // Add row
+                const row = worksheet.addRow({
+                    tanggal: dateStr,
+                    nik: k.nik,
+                    nama: k.nama,
+                    jamMasuk: jamMasuk,
+                    status: statusText,
+                    sumber: abs ? (abs.isManual ? 'Manual' : 'Fingerprint') : '-',
+                    keterangan: abs?.keterangan || '-',
+                    remark: remark,
+                });
+                // Apply fill color pada kolom Status (hanya kolom Status, bukan seluruh row)
+                if (statusKehadiranValue && statusFillColor[statusKehadiranValue]) {
+                    const statusCell = row.getCell('status'); // Kolom Status
+                    statusCell.fill = {
+                        type: 'pattern',
+                        pattern: 'solid',
+                        fgColor: { argb: statusFillColor[statusKehadiranValue] },
+                    };
+                }
+                rowNumber++;
             }
         }
-        // Create workbook and worksheet
-        const wb = XLSX.utils.book_new();
-        const ws = XLSX.utils.aoa_to_sheet(rows);
-        // Set column widths
-        ws['!cols'] = [
-            { wch: 12 }, // Tanggal
-            { wch: 15 }, // NIK
-            { wch: 25 }, // Nama
-            { wch: 12 }, // Jam Masuk
-            { wch: 20 }, // Status
-            { wch: 12 }, // Sumber
-            { wch: 30 }, // Keterangan
-            { wch: 10 }, // Remark
-        ];
-        XLSX.utils.book_append_sheet(wb, ws, 'Absensi');
         // Generate buffer
-        const buffer = XLSX.write(wb, { type: 'buffer', bookType: 'xlsx' });
+        const buffer = await workbook.xlsx.writeBuffer();
         logger.info('AbsensiAgent: Excel export completed', {
             totalKaryawan: karyawan.length,
             totalDays: dates.length,
-            totalRows: rows.length - 1,
+            totalRows: rowNumber - 1,
         });
-        return buffer;
+        return Buffer.from(buffer);
     }
 }
 // Export singleton instance
