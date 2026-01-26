@@ -890,14 +890,16 @@ export class AbsensiAgent {
           remark: remark,
         });
 
-        // Apply fill color pada kolom Status (hanya kolom Status, bukan seluruh row)
+        // Apply fill color pada seluruh row (Tanggal s/d Remark) sesuai status
         if (statusKehadiranValue && statusFillColor[statusKehadiranValue]) {
-          const statusCell = row.getCell('status'); // Kolom Status
-          statusCell.fill = {
-            type: 'pattern',
-            pattern: 'solid',
+          const fillStyle = {
+            type: 'pattern' as const,
+            pattern: 'solid' as const,
             fgColor: { argb: statusFillColor[statusKehadiranValue] },
           };
+          for (let col = 1; col <= 8; col++) {
+            row.getCell(col).fill = fillStyle;
+          }
         }
 
         rowNumber++;
