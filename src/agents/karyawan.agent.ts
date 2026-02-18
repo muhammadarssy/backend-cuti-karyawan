@@ -1,14 +1,14 @@
 import prisma from '../lib/prisma.js';
 import { ConflictError, NotFoundError } from '../utils/errors.js';
 import { logger } from '../utils/logger.js';
-import type { StatusKaryawan } from '@prisma/client';
+import type { StatusKaryawan, Departemen } from '@prisma/client';
 
 export interface CreateKaryawanDto {
   nik: string;
   fingerprintId?: number;
   nama: string;
   jabatan?: string;
-  departemen?: string;
+  departemen?: Departemen;
   tanggalMasuk: Date;
 }
 
@@ -16,7 +16,7 @@ export interface UpdateKaryawanDto {
   fingerprintId?: number;
   nama?: string;
   jabatan?: string;
-  departemen?: string;
+  departemen?: Departemen;
   tanggalMasuk?: Date;
   status?: StatusKaryawan;
 }

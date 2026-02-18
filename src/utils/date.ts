@@ -17,6 +17,18 @@ export function calculateTotalDays(startDate: Date, endDate: Date): number {
 }
 
 /**
+ * Menghitung jumlah hari cuti berdasarkan departemen
+ * - SECURITY: Senin-Minggu (semua hari dihitung)
+ * - Lainnya: Senin-Jumat (exclude weekend)
+ */
+export function calculateCutiDays(startDate: Date, endDate: Date, includeWeekend: boolean = false): number {
+  if (includeWeekend) {
+    return calculateTotalDays(startDate, endDate);
+  }
+  return calculateWorkingDays(startDate, endDate);
+}
+
+/**
  * Validasi tanggal
  */
 export function validateDateRange(startDate: Date, endDate: Date): boolean {

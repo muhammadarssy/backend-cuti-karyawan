@@ -7,7 +7,7 @@ describe('KaryawanAgent', () => {
     nik: '123456',
     nama: 'John Doe',
     jabatan: 'Software Engineer',
-    departemen: 'IT',
+    departemen: 'STAFF' as const,
     tanggalMasuk: new Date('2024-01-15'),
   };
 

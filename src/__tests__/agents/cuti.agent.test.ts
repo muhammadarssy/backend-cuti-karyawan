@@ -13,7 +13,7 @@ describe('CutiAgent', () => {
       nik: '123456',
       nama: 'Test User',
       jabatan: 'Engineer',
-      departemen: 'IT',
+      departemen: 'STAFF',
       tanggalMasuk: new Date('2024-01-15'),
     });
     karyawanId = karyawan.id;

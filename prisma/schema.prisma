@@ -59,6 +59,11 @@ enum TipeDiscount {
   PERSEN     // Discount berupa persentase
 }
 
+enum Departemen {
+  SECURITY
+  STAFF
+}
+
 // =========================
 // MODEL KARYAWAN (MASTER)
 // =========================
@@ -69,7 +74,7 @@ model Karyawan {
   fingerprintId Int?           @unique
   nama          String
   jabatan       String?
-  departemen    String?
+  departemen    Departemen?
   tanggalMasuk  DateTime
   status        StatusKaryawan @default(AKTIF)
 

@@ -3,6 +3,7 @@ import { NotFoundError, ValidationError } from '../utils/errors.js';
 import { logger } from '../utils/logger.js';
 import {
   calculateWorkingDays,
+  calculateCutiDays,
   getYearFromDate,
   parseDate,
   validateDateRange,
@@ -48,13 +49,6 @@ export class CutiAgent {
       throw new ValidationError('Tanggal selesai harus lebih besar atau sama dengan tanggal mulai');
     }
 
-    // Hitung jumlah hari
-    const jumlahHari = calculateWorkingDays(tanggalMulai, tanggalSelesai);
-
-    if (jumlahHari <= 0) {
-      throw new ValidationError('Jumlah hari cuti harus lebih dari 0');
-    }
-
     // Tentukan tahun dari tanggal mulai
     const tahun = getYearFromDate(tanggalMulai);
 
@@ -65,6 +59,16 @@ export class CutiAgent {
 
     if (!karyawan) {
       throw new NotFoundError('Karyawan tidak ditemukan');
+    }
+
+    // Hitung jumlah hari berdasarkan departemen
+    // SECURITY: Senin-Minggu (semua hari dihitung, tidak ada libur)
+    // Lainnya: Senin-Jumat (exclude weekend)
+    const includeWeekend = karyawan.departemen === 'SECURITY';
+    const jumlahHari = calculateCutiDays(tanggalMulai, tanggalSelesai, includeWeekend);
+
+    if (jumlahHari <= 0) {
+      throw new ValidationError('Jumlah hari cuti harus lebih dari 0');
     }
 
     // Ambil data cuti tahunan untuk tahun terkait
@@ -192,6 +196,7 @@ export class CutiAgent {
       where: { id },
       include: {
         cutiTahunan: true,
+        karyawan: true, // Include karyawan untuk cek departemen
       },
     });
 
@@ -214,7 +219,11 @@ export class CutiAgent {
         throw new ValidationError('Tanggal selesai harus lebih besar atau sama dengan tanggal mulai');
       }
 
-      jumlahHari = calculateWorkingDays(tanggalMulai, tanggalSelesai);
+      // Hitung jumlah hari berdasarkan departemen
+      // SECURITY: Senin-Minggu (semua hari dihitung, tidak ada libur)
+      // Lainnya: Senin-Jumat (exclude weekend)
+      const includeWeekend = oldCuti.karyawan.departemen === 'SECURITY';
+      jumlahHari = calculateCutiDays(tanggalMulai, tanggalSelesai, includeWeekend);
 
       if (jumlahHari <= 0) {
         throw new ValidationError('Jumlah hari cuti harus lebih dari 0');

@@ -10,7 +10,7 @@ const createKaryawanSchema = z.object({
   fingerprintId: z.number().int().positive().optional(),
   nama: z.string().min(1, 'Nama wajib diisi'),
   jabatan: z.string().optional(),
-  departemen: z.string().optional(),
+  departemen: z.enum(['SECURITY', 'STAFF']).optional(),
   tanggalMasuk: z.string().datetime('Format tanggal tidak valid').optional(),
   tanggal_bergabung: z.string().datetime('Format tanggal tidak valid').optional(),
 }).refine((data) => data.tanggalMasuk || data.tanggal_bergabung, {
@@ -22,7 +22,7 @@ const updateKaryawanSchema = z.object({
   fingerprintId: z.number().int().positive().optional(),
   nama: z.string().min(1).optional(),
   jabatan: z.string().optional(),
-  departemen: z.string().optional(),
+  departemen: z.enum(['SECURITY', 'STAFF']).optional(),
   tanggalMasuk: z.string().datetime().optional(),
   tanggal_bergabung: z.string().datetime().optional(),
   status: z.enum(['AKTIF', 'NONAKTIF']).optional(),

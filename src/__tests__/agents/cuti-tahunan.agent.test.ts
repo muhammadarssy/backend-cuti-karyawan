@@ -11,7 +11,7 @@ describe('CutiTahunanAgent', () => {
       nik: '123456',
       nama: 'Test User',
       jabatan: 'Engineer',
-      departemen: 'IT',
+      departemen: 'STAFF',
       tanggalMasuk: new Date('2024-01-15'),
     });
     karyawanId = karyawan.id;
@@ -58,7 +58,7 @@ describe('CutiTahunanAgent', () => {
         nama: 'Late Joiner',
         tanggalMasuk: new Date('2026-08-01'), // Q3
         jabatan: 'Engineer',
-        departemen: 'IT',
+        departemen: 'STAFF',
       });
 
       const cutiTahunan = await cutiTahunanAgent.generateCutiTahunan(newKaryawan.id, 2026);
@@ -73,7 +73,7 @@ describe('CutiTahunanAgent', () => {
         nama: 'Early Joiner',
         tanggalMasuk: new Date('2026-03-01'), // Q1
         jabatan: 'Engineer',
-        departemen: 'IT',
+        departemen: 'STAFF',
       });
 
       const cutiTahunan = await cutiTahunanAgent.generateCutiTahunan(newKaryawan.id, 2026);
