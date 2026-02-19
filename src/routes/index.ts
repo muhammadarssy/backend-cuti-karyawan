@@ -6,6 +6,7 @@ import itemRoutes from './item.routes.js';
 import pembelianRoutes from './pembelian.routes.js';
 import pengeluaranRoutes from './pengeluaran.routes.js';
 import absensiRoutes from './absensi.routes.js';
+import absensiRekapRoutes from './absensi-rekap.routes.js';
 import budgetRoutes from './budget.routes.js';
 import kategoriBudgetRoutes from './kategori-budget.routes.js';
 import labelStrukRoutes from './label-struk.routes.js';
@@ -34,6 +35,7 @@ router.use('/cuti', cutiRoutes);
 
 // Mount routes - Absensi Management
 router.use('/absensi', absensiRoutes);
+router.use('/absensi-rekap', absensiRekapRoutes);
 
 // Mount routes - Inventory Management
 router.use('/item', itemRoutes);
