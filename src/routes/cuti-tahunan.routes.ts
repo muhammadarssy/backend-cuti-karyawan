@@ -14,6 +14,9 @@ router.post('/generate', (req, res, next) => cutiTahunanController.generate(req,
 // GET /api/cuti-tahunan - Get rekap cuti tahunan
 router.get('/', (req, res, next) => cutiTahunanController.getRekap(req, res, next));
 
+// GET /api/cuti-tahunan/export - Export sisa cuti semua karyawan
+router.get('/export', (req, res, next) => cutiTahunanController.exportSisaCuti(req, res, next));
+
 // GET /api/cuti-tahunan/:id - Get detail cuti tahunan by ID
 router.get('/:id', (req, res, next) => cutiTahunanController.findById(req, res, next));
 

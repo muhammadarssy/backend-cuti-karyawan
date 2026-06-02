@@ -3,6 +3,7 @@ import { BusinessLogicError, NotFoundError } from '../utils/errors.js';
 import { logger } from '../utils/logger.js';
 import { getYearFromDate, getCurrentYear } from '../utils/date.js';
 import type { TipeCutiTahunan } from '@prisma/client';
+import ExcelJS from 'exceljs';
 
 /**
  * CutiTahunanAgent - Business Logic untuk pengelolaan hak cuti tahunan
@@ -289,6 +290,104 @@ export class CutiTahunanAgent {
         totalPages: Math.ceil(total / limit),
       },
     };
+  }
+
+  /**
+   * Export sisa cuti semua karyawan ke file Excel
+   */
+  async exportSisaCutiToExcel(tahun?: number): Promise<Buffer> {
+    const targetTahun = tahun || getCurrentYear();
+
+    logger.info('CutiTahunanAgent: Exporting sisa cuti to Excel', {
+      tahun: targetTahun,
+    });
+
+    const rekap = await prisma.cutiTahunan.findMany({
+      where: { tahun: targetTahun },
+      include: {
+        karyawan: {
+          select: {
+            nik: true,
+            nama: true,
+            jabatan: true,
+            departemen: true,
+            tanggalMasuk: true,
+            status: true,
+          },
+        },
+      },
+      orderBy: {
+        karyawan: {
+          nama: 'asc',
+        },
+      },
+    });
+
+    const workbook = new ExcelJS.Workbook();
+    const worksheet = workbook.addWorksheet(`Sisa Cuti ${targetTahun}`);
+
+    worksheet.columns = [
+      { header: 'No', key: 'no', width: 6 },
+      { header: 'NIK', key: 'nik', width: 16 },
+      { header: 'Nama', key: 'nama', width: 28 },
+      { header: 'Jabatan', key: 'jabatan', width: 20 },
+      { header: 'Departemen', key: 'departemen', width: 20 },
+      { header: 'Tanggal Masuk', key: 'tanggalMasuk', width: 16 },
+      { header: 'Status', key: 'status', width: 12 },
+      { header: 'Jatah Dasar', key: 'jatahDasar', width: 14 },
+      { header: 'Carry Forward', key: 'carryForward', width: 14 },
+      { header: 'Total Hak Cuti', key: 'totalHakCuti', width: 15 },
+      { header: 'Cuti Terpakai', key: 'cutiTerpakai', width: 14 },
+      { header: 'Sisa Cuti', key: 'sisaCuti', width: 12 },
+      { header: 'Tipe', key: 'tipe', width: 12 },
+    ];
+
+    worksheet.getRow(1).font = { bold: true };
+    worksheet.getRow(1).fill = {
+      type: 'pattern',
+      pattern: 'solid',
+      fgColor: { argb: 'FFE2F0D9' },
+    };
+
+    rekap.forEach((item, index) => {
+      const tanggalMasuk = item.karyawan.tanggalMasuk.toLocaleDateString('id-ID');
+
+      worksheet.addRow({
+        no: index + 1,
+        nik: item.karyawan.nik,
+        nama: item.karyawan.nama,
+        jabatan: item.karyawan.jabatan || '-',
+        departemen: item.karyawan.departemen || '-',
+        tanggalMasuk,
+        status: item.karyawan.status,
+        jatahDasar: item.jatahDasar,
+        carryForward: item.carryForward,
+        totalHakCuti: item.totalHakCuti,
+        cutiTerpakai: item.cutiTerpakai,
+        sisaCuti: item.sisaCuti,
+        tipe: item.tipe,
+      });
+    });
+
+    worksheet.eachRow((row) => {
+      row.eachCell((cell) => {
+        cell.border = {
+          top: { style: 'thin' },
+          left: { style: 'thin' },
+          bottom: { style: 'thin' },
+          right: { style: 'thin' },
+        };
+      });
+    });
+
+    const buffer = await workbook.xlsx.writeBuffer();
+
+    logger.info('CutiTahunanAgent: Sisa cuti export completed', {
+      tahun: targetTahun,
+      totalRows: rekap.length,
+    });
+
+    return Buffer.from(buffer);
   }
 
   /**

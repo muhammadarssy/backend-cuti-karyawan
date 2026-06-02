@@ -83,6 +83,27 @@ export class CutiTahunanController {
       next(error);
     }
   }
+
+  /**
+   * GET /api/cuti-tahunan/export - Export sisa cuti tahunan semua karyawan
+   */
+  async exportSisaCuti(req: Request, res: Response, next: NextFunction) {
+    try {
+      const tahun = req.query.tahun ? parseInt(req.query.tahun as string) : undefined;
+
+      logger.info('CutiTahunanController: Export sisa cuti request', { tahun });
+
+      const buffer = await cutiTahunanAgent.exportSisaCutiToExcel(tahun);
+      const targetTahun = tahun || getCurrentYear();
+      const filename = `Sisa_Cuti_${targetTahun}.xlsx`;
+
+      res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+      res.setHeader('Content-Disposition', `attachment; filename="${filename}"`);
+      res.send(buffer);
+    } catch (error) {
+      next(error);
+    }
+  }
 }
 
 // Export singleton instance
